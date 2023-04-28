@@ -9,7 +9,11 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
+				["name"] = <"Martin Koch">
+				["organisation"] = <"CatSalut">
+				["email"] = <"martinandreaskoch@catsalut.cat">
 			>
+			accreditation = <"asdasdasd">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -27,33 +31,32 @@ description
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© openEHR Foundation">
 		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
-		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
-		["original_namespace"] = <"org.catsalut">
-		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
-		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"736262E947BF046C6A40621FBF745710">
-		["build_uid"] = <"da13ac57-83f8-4e1a-9406-a873e49f4de7">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"A177B857733A92FDC14CEDDC2E0F51A8">
+		["build_uid"] = <"f5553f8e-ea3a-413c-b2d3-eb2b1e632133">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -84,6 +87,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology
@@ -163,12 +167,12 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Pes">
-					description = <"">
+					text = <"Gewicht">
+					description = <"sdf">
 				>
 				["at0005"] = <
-					text = <"Embarassada">
-					description = <"">
+					text = <"Schwanger">
+					description = <"sdfsdf">
 				>
 			>
 		>
