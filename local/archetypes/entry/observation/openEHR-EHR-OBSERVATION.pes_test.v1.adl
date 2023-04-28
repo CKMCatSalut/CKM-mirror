@@ -18,7 +18,11 @@ language
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			author = <
+				["name"] = <"Martin Koch">
+				["organisation"] = <"CatSalut">
+				["email"] = <"martinandreaskoch@catsalut.cat">
 			>
+			accreditation = <"ads">
 		>
 	>
 description
@@ -55,8 +59,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"02F786FA55C2B63AD6B4829A2FAD5272">
-		["build_uid"] = <"54f45d79-2d13-44d3-9f74-cded6d739a5a">
+		["MD5-CAM-1.0.1"] = <"DC758B5ACCFFE71E6948EE2FFA8C7389">
+		["build_uid"] = <"9b552a47-0644-4657-8e80-b788220e65c6">
 		["revision"] = <"1.0.1-alpha">
 	>
 
@@ -123,8 +127,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"*pes TEST (ca)">
-					description = <"*pes TEST (ca)">
+					text = <"weight TEST (ca)">
+					description = <"weight TEST (ca)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -139,11 +143,11 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*DV_QUANTITY (ca)">
+					text = <"Weight">
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"*DV_BOOLEAN (ca)">
+					text = <"Pregnant">
 					description = <"">
 				>
 			>
