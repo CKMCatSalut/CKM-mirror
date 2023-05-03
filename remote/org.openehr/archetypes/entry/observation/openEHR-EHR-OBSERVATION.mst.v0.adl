@@ -1,0 +1,287 @@
+﻿archetype (adl_version=1.4; uid=04d455b3-f4d1-4de4-9e01-bed46076f970)
+	openEHR-EHR-OBSERVATION.mst.v0
+
+concept
+	[at0000]	-- Malnutrition screening tool (MST)
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			author = <
+				["name"] = <"John Tore Valand">
+				["organisation"] = <"Helse Bergen">
+				["email"] = <"john.tore.valand@helse-vest-ikt.no">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Priscila Maranhão; Gustavo Bacelar">
+		["organisation"] = <"MEDCIDS-FMUP">
+		["email"] = <"priscilamaranhao@gmail.com; gbacelar@gmail.com">
+		["date"] = <"2017-03-09">
+	>
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"for å registrere resultatene for hvert parameter og deres totalsum for MST skår.">
+			use = <"Brukes for å registrere resultatene for hvert parameter og deres totalsum for MST skår.
+
+openEHR-arketyper er fritt tilgjengelige under en åpen lisens, men det spesifikke innholdet i denne Malnutrition screening tool (MST)-arketypen er opphavsrettslig beskyttet. All bruk av denne arketypen i implementasjoner må gjøres i henhold til vilkår gitt av innehaverne av opphavsretten.
+
+Informasjon om opphavsretten: Rightslink® by Copyright Clearance Center, https://s100.copyright.com/AppDispatchServlet?publisherName=ELS&contentID=S0899900799000842&orderBeanReset=true.">
+			keywords = <"ernæringsundersøkelse", "underernæring", "screening", "mst", "risikovurdering", "malnutrition screening tool">
+			misuse = <"">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the results for each component parameter and their total sum for the MST score.">
+			use = <"Use to record the results for each component parameter and their total sum for the MST score.
+
+While openEHR archetypes are all freely available under an open license, the specific content of this Malnutrition screening tool archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+For permission: Rightslink® by Copyright Clearance Center, https://s100.copyright.com/AppDispatchServlet?publisherName=ELS&contentID=S0899900799000842&orderBeanReset=true.">
+			keywords = <"Nutrition assessment", "Malnutrition", "Screening", "MST">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Ricardo Cruz-Correia, MEDCIDS-FMUP; Portugal", "Duarte Ferreira, MEDCIDS-FMUP; Portugal", "Pedro Marques, MEDCIDS-FMUP; Portugal", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)">
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Fergusa, M; Capra, S; Bauer, J; Banks, M. Development of a valid and reliable malnutrition screening tool for adult acute hospitals patients. Nutrition, v.15: 458-64, 1999.
+
+Beghetto, M.G.; Manna, B.; Candal, A.; Mello, E.D.; Polanczyk, C.A.;  Triagem nutricional em adultos hospitalizados. Rev. Nutr; Campinas, 21 (5): 589-601, 2008.
+
+For å vurdere risiko for underernæring anbefales verktøyet MST (Malnutrition Screening Tool) [Internet]. Helsedirektoratet. Norwegian translation [cited 20.02.23]. Available from: https://www.helsedirektoratet.no/retningslinjer/forebygging-og-behandling-av-underernaering/vurdering-av-risiko-for-underernaering/for-a-vurdere-risiko-for-underernaering-anbefales-verktoyet-mst-malnutrition-screening-tool#a6e6ec1f-4031-4c67-b2f6-7a9790db7e97-praktisk">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"9282015FF207D4C197675F44FDC51ACD">
+		["build_uid"] = <"8cfb1870-a3bd-481b-b1e2-64192c8822c0">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Malnutrition screening tool (MST)
+		data matches {
+			HISTORY[at0001] matches {    -- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any point in time event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Have you lost weight recently without trying?
+										value matches {
+											0|[local::at0020],
+											2|[local::at0021]
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- If yes, how much weight (kilograms) have you lost?
+										value matches {
+											1|[local::at0022],
+											2|[local::at0023],
+											3|[local::at0024],
+											4|[local::at0025],
+											2|[local::at0026]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Have you been eating poorly because of a decreased appetite?
+										value matches {
+											0|[local::at0027],
+											1|[local::at0028]
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- MST score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..7|}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0029] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0030] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Malnutrition screening tool (MST)">
+					description = <"An assessment score used to identify individuals who are malnourished or at risk of becoming malnourished and who may benefit from nutrition support.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal.">
+				>
+				["at0002"] = <
+					text = <"Any point in time event">
+					description = <"Unspecified point in time event which may be explicitly defined in a template or at run-time.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Have you lost weight recently without trying?">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"If yes, how much weight (kilograms) have you lost?">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Have you been eating poorly because of a decreased appetite?">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"MST score">
+					description = <"The sum of each component variable for the MST score.">
+				>
+				["at0020"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Unsure">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"1-5">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"6-10">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"11-15">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <">15">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Unsure">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0030"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models/formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+			>
+		>
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"Malnutrition screening tool (MST)">
+					description = <"Et verktøy som brukes for å vurdere om en pasient er i risiko for underernæring eller ikke.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal">
+				>
+				["at0002"] = <
+					text = <"Uspesifisert tidspunkthendelse">
+					description = <"Standard, uspesifisert tidspunkt som kan defineres mer eksplisitt i et templat eller i en applikasjon.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Har du/pasienten gått ned i vekt i det siste uten å ha gjort forsøk på det?">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Ja. Hvor mange kilo?">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Har du/pasienten spist mindre enn vanlig på grunn av nedsatt matlyst?">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Total poengskår">
+					description = <"Summen av poeng på hvert enkelt parameter for total poengskår.">
+				>
+				["at0020"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Vet ikke">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"1-5 kg">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"6-10 kg">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"11-15 kg">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"over 15 kg">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Vet ikke hvor mange kilo">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0030"] = <
+					text = <"Tilleggsinformasjon">
+					description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
+					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR.">
+				>
+			>
+		>
+	>
