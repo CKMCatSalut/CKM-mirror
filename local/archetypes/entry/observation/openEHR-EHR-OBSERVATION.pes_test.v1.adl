@@ -55,8 +55,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"02F786FA55C2B63AD6B4829A2FAD5272">
-		["build_uid"] = <"81bc04fc-e16b-4d6b-9fe8-b9c0620fb112">
+		["MD5-CAM-1.0.1"] = <"A323E866760E30D1F46F64A48DB48040">
+		["build_uid"] = <"b306d59d-6799-43c6-bd79-de1604919264">
 		["revision"] = <"1.0.6-alpha">
 	>
 
@@ -69,12 +69,12 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- DV_QUANTITY
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Pes
 										value matches {
 											DV_QUANTITY matches {*}
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {    -- DV_BOOLEAN
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Embarassada
 										value matches {
 											DV_BOOLEAN matches {*}
 										}
@@ -87,7 +87,6 @@ definition
 			}
 		}
 	}
-
 
 
 ontology
@@ -111,11 +110,11 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"DV_QUANTITY">
+					text = <"Pes">
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"DV_BOOLEAN">
+					text = <"Embarassada">
 					description = <"">
 				>
 			>
@@ -139,11 +138,11 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*DV_QUANTITY (ca)">
+					text = <"*Pes (ca)">
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"*DV_BOOLEAN (ca)">
+					text = <"*Embarassada (ca)">
 					description = <"">
 				>
 			>
@@ -167,11 +166,11 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Gewicht">
+					text = <"*Pes (ca)">
 					description = <"sdf">
 				>
 				["at0005"] = <
-					text = <"Schwanger">
+					text = <"*Embarassada (ca)">
 					description = <"sdfsdf">
 				>
 			>
