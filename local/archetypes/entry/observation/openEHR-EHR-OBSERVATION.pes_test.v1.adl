@@ -47,7 +47,7 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -56,8 +56,8 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"A323E866760E30D1F46F64A48DB48040">
-		["build_uid"] = <"b306d59d-6799-43c6-bd79-de1604919264">
-		["revision"] = <"1.0.6-alpha">
+		["build_uid"] = <"22f59473-4fb5-4fcb-a6b8-13fcf771f753">
+		["revision"] = <"1.1.0">
 	>
 
 definition
