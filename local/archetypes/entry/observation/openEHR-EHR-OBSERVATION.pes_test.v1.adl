@@ -2,7 +2,7 @@
 	openEHR-EHR-OBSERVATION.pes_test.v1
 
 concept
-	[at0000]	-- pes TEST
+	[at0000]	-- pes_test
 language
 	original_language = <[ISO_639-1::ca]>
 	translations = <
@@ -47,7 +47,7 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -55,13 +55,13 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"A323E866760E30D1F46F64A48DB48040">
-		["build_uid"] = <"22f59473-4fb5-4fcb-a6b8-13fcf771f753">
-		["revision"] = <"1.1.0">
+		["MD5-CAM-1.0.1"] = <"C2B41FCB6950D63DF49454487D512EAB">
+		["build_uid"] = <"512e3f4f-2bb5-43d2-a96a-12ef97ce4475">
+		["revision"] = <"1.1.1-alpha">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- pes TEST
+	OBSERVATION[at0000] matches {    -- pes_test
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -79,12 +79,21 @@ definition
 											DV_BOOLEAN matches {*}
 										}
 									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- BMI
+										value matches {
+											DV_COUNT matches {*}
+											DV_QUANTITY matches {*}
+										}
+									}
 								}
 							}
 						}
 					}
 				}
 			}
+		}
+		protocol matches {
+			ITEM_TREE matches {*}
 		}
 	}
 
@@ -94,7 +103,7 @@ ontology
 		["ca"] = <
 			items = <
 				["at0000"] = <
-					text = <"pes TEST">
+					text = <"pes_test">
 					description = <"pes TEST">
 				>
 				["at0001"] = <
@@ -117,12 +126,16 @@ ontology
 					text = <"Embarassada">
 					description = <"">
 				>
+				["at0007"] = <
+					text = <"BMI">
+					description = <"">
+				>
 			>
 		>
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"*pes TEST (ca)">
+					text = <"pes_test">
 					description = <"*pes TEST (ca)">
 				>
 				["at0001"] = <
@@ -145,12 +158,16 @@ ontology
 					text = <"*Embarassada (ca)">
 					description = <"">
 				>
+				["at0007"] = <
+					text = <"*BMI (ca)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Test arquetip per introduir el pes">
+					text = <"pes_test">
 					description = <"*pes TEST (ca)">
 				>
 				["at0001"] = <
@@ -172,6 +189,10 @@ ontology
 				["at0005"] = <
 					text = <"*Embarassada (ca)">
 					description = <"sdfsdf">
+				>
+				["at0007"] = <
+					text = <"*BMI (ca)">
+					description = <"">
 				>
 			>
 		>
