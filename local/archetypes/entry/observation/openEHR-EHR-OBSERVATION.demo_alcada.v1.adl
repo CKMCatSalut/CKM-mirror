@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=a4e2a75c-42b7-4cad-a4c9-cb71d064a5c9)
-	openEHR-EHR-OBSERVATION.demo_alcada.v0
+﻿archetype (adl_version=1.4; uid=bfbe547f-c9c5-41ab-84c6-084cf9544988)
+	openEHR-EHR-OBSERVATION.demo_alcada.v1
 
 concept
 	[at0000]	-- Demo Alçada
@@ -17,7 +17,7 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -25,9 +25,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"CD6FF0718BAD6682AAD95076DF478C6D">
-		["build_uid"] = <"63506df4-1fb6-4e5f-bbda-9c77c5a55460">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"DC7E1649E8C5FC5CCC92EECBF7F308DE">
+		["build_uid"] = <"b5e2c10f-097c-44ee-a1c8-f42029efdf02">
+		["revision"] = <"1.0.0">
 	>
 
 definition
