@@ -15,19 +15,18 @@ description
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
-		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
-		["original_namespace"] = <"org.catsalut">
-		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
-		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"089808E6EC9F9F220CBE9281ECF11D1C">
-		["build_uid"] = <"cafd3cc6-ae21-4df3-87f6-6cd3e369f5bd">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"CD6FF0718BAD6682AAD95076DF478C6D">
+		["build_uid"] = <"63506df4-1fb6-4e5f-bbda-9c77c5a55460">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -38,7 +37,25 @@ definition
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Alçada
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::122]>
+												list = <
+													["1"] = <
+														units = <"cm">
+													>
+													["2"] = <
+														units = <"m">
+													>
+												>
+											>
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -66,6 +83,10 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Alçada">
+					description = <"">
 				>
 			>
 		>
