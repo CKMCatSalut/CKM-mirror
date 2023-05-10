@@ -34,7 +34,7 @@ description
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
@@ -42,9 +42,9 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"C08538D40B0EDB15423263269386CE62">
-		["build_uid"] = <"0d81244b-24d8-4f18-9415-b7ac861b18df">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"51CE2BE3E2ECD3F5FC56CF4044AB3160">
+		["build_uid"] = <"aa8da25c-926b-4b04-90b0-af571d2e30ce">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
@@ -69,6 +69,16 @@ definition
 													>
 												>
 											>
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Comentari
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Embarassada
+										value matches {
+											DV_BOOLEAN matches {*}
 										}
 									}
 								}
@@ -105,12 +115,20 @@ ontology
 					text = <"Pes">
 					description = <"">
 				>
+				["at0005"] = <
+					text = <"Comentari">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Embarassada">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Demo Gewicht">
+					text = <"*Demo Pes (ca)">
 					description = <"Das Gewicht für Demozwecke.">
 				>
 				["at0001"] = <
@@ -127,6 +145,14 @@ ontology
 				>
 				["at0004"] = <
 					text = <"*Pes (ca)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*Comentari (ca)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*Embarassada (ca)">
 					description = <"">
 				>
 			>
