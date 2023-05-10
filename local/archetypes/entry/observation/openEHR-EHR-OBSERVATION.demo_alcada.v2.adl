@@ -1,0 +1,94 @@
+﻿archetype (adl_version=1.4; uid=7e518d67-6628-44cb-a166-c91020a49146)
+	openEHR-EHR-OBSERVATION.demo_alcada.v2
+
+concept
+	[at0000]	-- Demo Alçada
+language
+	original_language = <[ISO_639-1::ca]>
+description
+	original_author = <
+		["date"] = <"2023-05-09">
+	>
+	details = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"C88AE1E682A1C947760A1D66E15AC911">
+		["build_uid"] = <"dd6d4cd5-dd79-4232-a7f9-3faf7630317b">
+		["revision"] = <"2.0.0-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Demo Alçada
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Alçada
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::122]>
+												list = <
+													["1"] = <
+														units = <"cm">
+													>
+													["2"] = <
+														units = <"m">
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Demo Alçada">
+					description = <"Demo_alcada">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Alçada">
+					description = <"">
+				>
+			>
+		>
+	>
