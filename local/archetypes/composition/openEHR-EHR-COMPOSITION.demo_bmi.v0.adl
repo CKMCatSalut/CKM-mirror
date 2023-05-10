@@ -1,0 +1,75 @@
+﻿archetype (adl_version=1.4; uid=1f803bf0-0374-461b-b3fe-27c425dc00d0)
+	openEHR-EHR-COMPOSITION.demo_bmi.v0
+
+concept
+	[at0000]	-- Demo BMI
+language
+	original_language = <[ISO_639-1::ca]>
+description
+	original_author = <
+		["date"] = <"2023-05-09">
+	>
+	details = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"F17B7EFAEDC13074BE24390DD044DEC1">
+		["build_uid"] = <"bc630e44-2f79-4cb3-88ca-ed2ca04b7be6">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- Demo BMI
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE matches {
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0001] occurrences matches {0..1} matches {    -- BMI
+								value matches {
+									DV_QUANTITY matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Demo BMI">
+					description = <"Demo_BMI">
+				>
+				["at0001"] = <
+					text = <"BMI">
+					description = <"">
+				>
+			>
+		>
+	>
