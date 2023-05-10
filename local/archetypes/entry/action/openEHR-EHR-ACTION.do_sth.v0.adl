@@ -1,0 +1,64 @@
+﻿archetype (adl_version=1.4; uid=127e61b4-554e-48f7-9155-031215f18935)
+	openEHR-EHR-ACTION.do_sth.v0
+
+concept
+	[at0000]	-- do_sth
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2023-05-10">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"363768AAD459DA2AA9A89BB1C10A82B2">
+		["build_uid"] = <"8e29c563-d1b4-46d4-8ffb-0bfad5ab5d46">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ACTION[at0000] matches {    -- do_sth
+		description matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0001] occurrences matches {0..1} matches {    -- valor
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"do_sth">
+					description = <"do_sth">
+				>
+				["at0001"] = <
+					text = <"valor">
+					description = <"">
+				>
+			>
+		>
+	>
