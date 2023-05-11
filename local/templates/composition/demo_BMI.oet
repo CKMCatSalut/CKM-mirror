@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>2.0.0</value>
+                <value>12.34.56</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -42,7 +42,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>ec0d6b5ebdecf3316ccb597a0906483d</value>
+                <value>69df3d85d7ba23e46b7b47c9f4382ed5</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
