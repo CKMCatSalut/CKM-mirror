@@ -1,0 +1,159 @@
+﻿archetype (adl_version=1.4; uid=653549e5-a33c-45f4-be35-8bb9e4edaaae)
+	openEHR-EHR-OBSERVATION.test_registre_temperatura.v0
+
+concept
+	[at0000]	-- test_registre_temperatura
+language
+	original_language = <[ISO_639-1::ca]>
+description
+	original_author = <
+		["date"] = <"2023-05-15">
+	>
+	details = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Arquetip TEST">
+			use = <"Ús durant el registre de constants vitals">
+			keywords = <"temperatura", "febre", "constants vitals">
+			misuse = <"No fer servir per al registre de temperatura ambiental durant la realització d'exploracions complementàries (p. ex: espirometria). ">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"4DB24EA48E28A20562624673A743EFE0">
+		["build_uid"] = <"1a6a25cf-5206-484b-bb8c-25710a44e662">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- test_registre_temperatura
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Data i hora
+										value matches {
+											DV_DATE_TIME matches {
+												value matches {yyyy-mm-ddThh:mm:ss}
+											}
+										}
+									}
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Valor temperatura
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::127]>
+												list = <
+													["1"] = <
+														units = <"Cel">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Lloc de la mesura
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0008,    -- Axilar
+													at0009,    -- Oral
+													at0010,    -- Conducte auditiu
+													at0011,    -- Vaginal
+													at0012,    -- Rectal
+													at0013;    -- Frontal
+													at0008]
+												}
+											}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Presa d'antipirètics
+										value matches {
+											DV_BOOLEAN matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"test_registre_temperatura">
+					description = <"Arquetip TEST per al registre de temperatura corporal.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Valor temperatura">
+					description = <"Graus de temperatura observats durant el registre de constants vitals.">
+				>
+				["at0006"] = <
+					text = <"Data i hora">
+					description = <"Dia, hora i mes del registre de temperatura.">
+				>
+				["at0007"] = <
+					text = <"Lloc de la mesura">
+					description = <"Àrea corporal on s'ha realitzat la presa de temperatura. ">
+				>
+				["at0008"] = <
+					text = <"Axilar">
+					description = <"Presa de temperatura al plex axil·lar.">
+				>
+				["at0009"] = <
+					text = <"Oral">
+					description = <"Presa de temperatura a la cavitat oral.">
+				>
+				["at0010"] = <
+					text = <"Conducte auditiu">
+					description = <"Presa de temperatura al conducte auditiu.">
+				>
+				["at0011"] = <
+					text = <"Vaginal">
+					description = <"Presa de temperatura a la vagina.">
+				>
+				["at0012"] = <
+					text = <"Rectal">
+					description = <"Presa de temperatura al recte.">
+				>
+				["at0013"] = <
+					text = <"Frontal">
+					description = <"Persa de temperatura a la regió frontal.">
+				>
+				["at0014"] = <
+					text = <"Presa d'antipirètics">
+					description = <"Registre de la presa d'antipirètics que puguis modificar la temperatura corporal.">
+				>
+			>
+		>
+	>
