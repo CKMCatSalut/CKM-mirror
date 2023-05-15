@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=653549e5-a33c-45f4-be35-8bb9e4edaaae)
-	openEHR-EHR-OBSERVATION.test_registre_temperatura.v0
+﻿archetype (adl_version=1.4; uid=d92e4a51-42bc-48df-bd4a-2a3f5a07e079)
+	openEHR-EHR-OBSERVATION.test_registre_temperatura.v1
 
 concept
 	[at0000]	-- test_registre_temperatura
@@ -19,7 +19,7 @@ description
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
@@ -27,9 +27,9 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"4DB24EA48E28A20562624673A743EFE0">
-		["build_uid"] = <"1a6a25cf-5206-484b-bb8c-25710a44e662">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"0DD52989463F6868982405681E5B84F4">
+		["build_uid"] = <"a015ece0-e8db-4271-a1af-cf0e0e630e43">
+		["revision"] = <"1.0.0">
 	>
 
 definition
