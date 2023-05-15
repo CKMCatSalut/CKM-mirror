@@ -5,6 +5,17 @@ concept
 	[at0000]	-- test_registre_temperatura
 language
 	original_language = <[ISO_639-1::ca]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+				["name"] = <"Clara Editor">
+				["organisation"] = <"-">
+				["email"] = <"clara.ccv@gmail.com">
+			>
+			accreditation = <"Test de CKM team">
+		>
+	>
 description
 	original_author = <
 		["date"] = <"2023-05-15">
@@ -18,18 +29,25 @@ description
 			misuse = <"No fer servir per al registre de temperatura ambiental durant la realització d'exploracions complementàries (p. ex: espirometria). ">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Arquetipo TEST.">
+			use = <"Uso durante el registro de constantes vitales.">
+			keywords = <"temperatura", "fiebre", "constantes vitales">
+			misuse = <"No utilizar para el registro de temperatura ambiental durante la realización de exploraciones complementarias (p. ej. espirometría).">
+		>
 	>
-	lifecycle_state = <"published">
-	other_contributors = <>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Clara Editor, -, Spain (CatSalut Editor)", "Test User, Spain (CatSalut Editor)">
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
 		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"0DD52989463F6868982405681E5B84F4">
-		["build_uid"] = <"a015ece0-e8db-4271-a1af-cf0e0e630e43">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"1816DB21F7C77FEEF6B060B8756FDD4A">
+		["build_uid"] = <"94a6e1a7-07d8-4180-af3b-80256dd41649">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
@@ -94,6 +112,7 @@ definition
 	}
 
 
+
 ontology
 	term_definitions = <
 		["ca"] = <
@@ -153,6 +172,66 @@ ontology
 				["at0014"] = <
 					text = <"Presa d'antipirètics">
 					description = <"Registre de la presa d'antipirètics que puguis modificar la temperatura corporal.">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"test_registro_temperatura">
+					description = <"Arquetipo TEST para el registro de temperatura corporal.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Cualquier evento">
+					description = <"-">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Valor temperatura">
+					description = <"Grados de temperatura observador durante el registro de constantes vitales.">
+				>
+				["at0006"] = <
+					text = <"Fecha y hora">
+					description = <"Día, hora y mes del registro de temperatura.">
+				>
+				["at0007"] = <
+					text = <"Lugar de la medida">
+					description = <"Área corporal donde se ha realizado la toma de temperatura.">
+				>
+				["at0008"] = <
+					text = <"Axilar">
+					description = <"Toma de temperatura en el pliegue axilar.">
+				>
+				["at0009"] = <
+					text = <"Oral">
+					description = <"---">
+				>
+				["at0010"] = <
+					text = <"Conducto auditivo">
+					description = <"Toma de temperatura en el conducto auditivo.">
+				>
+				["at0011"] = <
+					text = <"Vaginal">
+					description = <"---">
+				>
+				["at0012"] = <
+					text = <"Rectal">
+					description = <"---">
+				>
+				["at0013"] = <
+					text = <"Frontal">
+					description = <"---">
+				>
+				["at0014"] = <
+					text = <"toma de antipiréticos">
+					description = <"Registro de la toma de antipiréticos...">
 				>
 			>
 		>
