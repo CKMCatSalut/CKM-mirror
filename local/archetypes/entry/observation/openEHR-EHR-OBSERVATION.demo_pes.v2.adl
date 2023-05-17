@@ -6,6 +6,14 @@ concept
 language
 	original_language = <[ISO_639-1::ca]>
 	translations = <
+		["de-at"] = <
+			language = <[ISO_639-1::de-at]>
+			author = <
+				["name"] = <"Martin Koch">
+				["organisation"] = <"CatSalut">
+				["email"] = <"martinandreaskoch@catsalut.cat">
+			>
+		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
@@ -20,6 +28,12 @@ description
 		["date"] = <"2023-05-09">
 	>
 	details = <
+		["de-at"] = <
+			language = <[ISO_639-1::de-at]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"">
@@ -42,9 +56,9 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"4C002D8D54252DFCA23DBABABC749B46">
-		["build_uid"] = <"b96fd9ec-55f4-42cc-9c72-8e0454e30369">
-		["revision"] = <"2.0.3">
+		["MD5-CAM-1.0.1"] = <"0824BC17F50BC6DEB6BB679BD1BD9978">
+		["build_uid"] = <"eab382af-11ce-4fe9-a62c-db652809fdc6">
+		["revision"] = <"2.1.0">
 	>
 
 definition
@@ -153,6 +167,38 @@ ontology
 				>
 				["at0006"] = <
 					text = <"*Embarassada (ca)">
+					description = <"">
+				>
+			>
+		>
+		["de-at"] = <
+			items = <
+				["at0000"] = <
+					text = <"Demogewicht">
+					description = <"*Demo Pes(ca)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(ca)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Pes(ca)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*Comentari(ca)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*Embarassada(ca)">
 					description = <"">
 				>
 			>
