@@ -27,14 +27,14 @@ description
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© openEHR Foundation">
 		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
@@ -53,7 +53,7 @@ description
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
 		["MD5-CAM-1.0.1"] = <"4AF474CC3EB5D84CD5806D2D06D7F63C">
-		["build_uid"] = <"c4b80142-a704-4f21-bcf9-2f227b6266e0">
+		["build_uid"] = <"13900934-850d-4855-9f9d-58b2edf25b06">
 		["revision"] = <"0.0.1-alpha">
 	>
 
