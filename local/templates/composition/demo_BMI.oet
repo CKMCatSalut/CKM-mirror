@@ -76,6 +76,6 @@
         archetype_id="openEHR-EHR-OBSERVATION.demo_alcada.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">DC7E1649E8C5FC5CCC92EECBF7F308DE</digest>
+        <digest id="MD5-CAM-1.0.1">C4603CA92D1CF5C297D4CE2642382BCB</digest>
     </integrity_checks>
 </template>
