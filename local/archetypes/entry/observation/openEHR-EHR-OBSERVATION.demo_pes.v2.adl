@@ -34,7 +34,7 @@ description
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
@@ -43,8 +43,8 @@ description
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
 		["MD5-CAM-1.0.1"] = <"4C002D8D54252DFCA23DBABABC749B46">
-		["build_uid"] = <"6810ea9a-b55f-4d2f-8b81-d7783d1a39b5">
-		["revision"] = <"2.0.3-alpha">
+		["build_uid"] = <"b96fd9ec-55f4-42cc-9c72-8e0454e30369">
+		["revision"] = <"2.0.3">
 	>
 
 definition
