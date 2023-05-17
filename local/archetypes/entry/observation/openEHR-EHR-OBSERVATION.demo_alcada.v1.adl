@@ -5,11 +5,27 @@ concept
 	[at0000]	-- Demo Alçada
 language
 	original_language = <[ISO_639-1::ca]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Martin Koch">
+				["organisation"] = <"CatSalut">
+				["email"] = <"martinandreaskoch@catsalut.cat">
+			>
+		>
+	>
 description
 	original_author = <
 		["date"] = <"2023-05-09">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
 			purpose = <"">
@@ -25,9 +41,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"DC7E1649E8C5FC5CCC92EECBF7F308DE">
-		["build_uid"] = <"b5e2c10f-097c-44ee-a1c8-f42029efdf02">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"C4603CA92D1CF5C297D4CE2642382BCB">
+		["build_uid"] = <"9f77bd97-5698-419a-bfaa-97c652fa5192">
+		["revision"] = <"1.1.0">
 	>
 
 definition
@@ -86,6 +102,30 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Alçada">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Dema Körpergrösse">
+					description = <"Die Körpergröße eines Menschen ist, wie das Körpergewicht, ein einfaches biometrisches Merkmal.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(ca)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Alçada(ca)">
 					description = <"">
 				>
 			>
