@@ -48,7 +48,7 @@ description
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
@@ -56,9 +56,9 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"0824BC17F50BC6DEB6BB679BD1BD9978">
-		["build_uid"] = <"eab382af-11ce-4fe9-a62c-db652809fdc6">
-		["revision"] = <"2.1.0">
+		["MD5-CAM-1.0.1"] = <"F0B22C1671675BAF1A5EA3BFB4EE5D58">
+		["build_uid"] = <"1c725ffe-9181-42df-ad9a-d29a5465fe8d">
+		["revision"] = <"2.1.1-alpha">
 	>
 
 definition
@@ -158,7 +158,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Pes (ca)">
+					text = <"Gewicht">
 					description = <"">
 				>
 				["at0005"] = <
