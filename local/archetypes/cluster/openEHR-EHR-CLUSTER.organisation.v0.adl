@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=18f96334-947e-4451-ba42-1d790977f553)
-	openEHR-EHR-CLUSTER.organisation.v1
+﻿archetype (adl_version=1.4; uid=9454d8e5-abde-43d1-8184-05d8ab10e79f)
+	openEHR-EHR-CLUSTER.organisation.v0
 
 concept
 	[at0000]	-- Organisation
@@ -54,6 +54,7 @@ Dieser Archetyp könnte auch als Proxy für formale demografische Daten verwende
 			misuse = <"Der Archetyp darf nicht verwendet werden, um ein offizielles Register oder einen Index darzustellen, zu ersetzen oder zu führen. Verwenden Sie zu diesem Zweck einen formellen Gesundheitsanbieter-Index (Health Provider Index) oder Archetypen, die auf dem openEHR Demographic Information Model basieren.
 
 Der Archetyp darf nicht verwendet werden, um den Pflegeort und ähnliche Datenelemente darzustellen, die formal in der Patientenakte unter Verwendung der Reference Model-Attribute dargestellt werden sollten.">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
 		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
@@ -71,6 +72,7 @@ Den här arketypen kan också användas som en proxy för formell demografisk da
 			misuse = <"*Not to be used to represent, replace or maintain an official register or index. Use a formal Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.
 
 Not to be used to represent the location of care and similar data elements that should be represented formally in the health record using the Reference Model attributes. (en)">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -88,6 +90,7 @@ Denne arketypen kan også brukes som en midlertidig erstatning for formelle demo
 			misuse = <"Brukes ikke til å representere, erstatte eller vedlikeholde formelle demografiske opplysninger. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.
 
 Brukes ikke for å representere behandlingssted eller lignende dataelementer, som skal representeres formelt i pasientjournalen. Bruk attributter fra Referansemodellen for dette formålet.">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -103,23 +106,25 @@ This archetype could also be used as a proxy for formal demographic data when re
 			misuse = <"Not to be used to represent, replace or maintain an official register or index. Use a formal Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.
 
 Not to be used to represent the location of care and similar data elements that should be represented formally in the health record using the Reference Model attributes.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Dag Aarhus, Vestre Viken HF, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Keisha Barwise, MOHW/IDB HSSP Project, Jamaica", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Yexuan Cheng, 浙江大学, China", "Candice de Lisser, Ministry of Health and Wellness, Jamaica", "Valborg Ellingsen, Haraldsplass Diakonale sykehus, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Martin Grundberg, Cambio Healthcare Systems, Sweden", "Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (openEHR Editor)", "Joost Holslag, Nedap, Netherlands", "Evelyn Hovenga, EJSH Consulting, Australia", "Gunnar Jårvik, Helse Vest IKT AS, Norway", "Gunn-Lisbeth Kleiven, Oslo universitetssykehus HF, Norway", "Shinji Kobayashi, National Institute of Public Health, Japan", "Kanika Kuwelker, Helse Vest IKT, Norway", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Lars Morgan Karlsen, Nordlandssykehuset Bodø, Norway", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Sidharth Ramesh, Kasturba Medical College, India", "Erik Skjemstad, Helse Nord RHF, Norway", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "Erik Sundvall, Karolinska Institutet + Karolinska University Hospital, Region Stockholm + Linköping University, Sweden", "Nyree Taylor, Ocean Health Systems, Australia", "Anders Thurin, VGR, Sweden", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"Health Care Provider Identification - AS 4846-2006. New South Wales (AU): Standards Australia; 2006.
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["references"] = <"Derivat de: <Afegeix aquí una referència al recurs original>
+
+Health Care Provider Identification - AS 4846-2006. New South Wales (AU): Standards Australia; 2006.
 
 HL7 FHIR Resource - Organization v4.0.1: R4 [Internet]. Health Level Seven International; [accessed 2021 05 04]. Available from: http://hl7.org/fhir/2021May/organization.html">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5DFD0809E7CD46EA0712A590C68F545B">
-		["build_uid"] = <"8543bf4b-0e15-4990-8a02-c7d082df8617">
-		["revision"] = <"1.0.1">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"F58FC5B3621E72ACC891A8ADC1A5CF62">
+		["build_uid"] = <"c8bbbdcf-0177-470f-a761-311aee1a37d6">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
