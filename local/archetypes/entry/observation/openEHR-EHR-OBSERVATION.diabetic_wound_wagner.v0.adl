@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=500df185-ae1c-32c0-9caa-ade2278f80c5)
+﻿archetype (adl_version=1.4; uid=df76750d-368c-409b-95c1-aad3363420f6)
 	openEHR-EHR-OBSERVATION.diabetic_wound_wagner.v0
 
 concept
@@ -27,7 +27,7 @@ description
 			use = <"*Use to record a classification of wounds present in a diabetic foot according to the Wagner classification.(en)">
 			keywords = <"*diabetic foot(en)", "*wound(en)", "*ulcer(en)", "*classification(en)">
 			misuse = <"*Other than recording a classification of wounds present in a diabetic foot. The Wagner classification does not include a category for an amputated foot. (en)">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -35,23 +35,25 @@ description
 			use = <"Use to record an assessment of a diabetic foot ulcer, according to the Wagner Classification.">
 			keywords = <"diabetic foot", "wound", "ulcer", "classification">
 			misuse = <"Not to be used to record assessments of other wounds.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Heather Leslie, Atomica Informatics, Australia", ...>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"Wagner FW. The dysvascular foot: a system of diagnosis and treatment. Foot Ankle 1981; 2: 64–122.
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["references"] = <"Derivat de: <Afegeix aquí una referència al recurs original>
+
+Wagner FW. The dysvascular foot: a system of diagnosis and treatment. Foot Ankle 1981; 2: 64–122.
 
 Oyibo SO, Jude EB, Tarawneh I et al. A comparison of two diabetic foot ulcer classification systems: the Wagner and the University of Texas wound classification systems. Diabetes Care 2001; 24: 84–8.">
 		["current_contact"] = <"Alan D. March, Hospital Universitario Austral - Buenos Aires - Argentina, alandmarch@gmail.com">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"26F4BBFB14C9634CBBB528267850BCE0">
-		["build_uid"] = <"db284b8a-2694-41de-a810-b8f6f3c86a3a">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"E2ED69226B8E8DFB3DB72D1DF418B7C3">
+		["build_uid"] = <"836078b2-7e4f-41ba-b0a7-eb243a9ecf63">
 		["revision"] = <"0.0.1-alpha">
 	>
 
