@@ -56,9 +56,9 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"ACEE67016F365A3190BB661AF79AEC74">
-		["build_uid"] = <"b2024b97-7e3b-481e-98bb-5aa5de65ad10">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"B119D18E79878A0E1DB78E18F0F01D9F">
+		["build_uid"] = <"389e6a37-1ac0-4f5b-9f05-33eb7156296e">
+		["revision"] = <"1.1.0">
 	>
 
 definition
@@ -90,6 +90,11 @@ definition
 									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Data
 										value matches {
 											DV_TIME matches {*}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- DV_BOOLEAN
+										value matches {
+											DV_BOOLEAN matches {*}
 										}
 									}
 								}
@@ -134,6 +139,10 @@ ontology
 					text = <"Data">
 					description = <"">
 				>
+				["at0007"] = <
+					text = <"DV_BOOLEAN">
+					description = <"">
+				>
 			>
 		>
 		["en"] = <
@@ -166,6 +175,10 @@ ontology
 					text = <"Date">
 					description = <"">
 				>
+				["at0007"] = <
+					text = <"Infection">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -196,6 +209,10 @@ ontology
 				>
 				["at0006"] = <
 					text = <"Zeit">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*DV_BOOLEAN (ca)">
 					description = <"">
 				>
 			>
