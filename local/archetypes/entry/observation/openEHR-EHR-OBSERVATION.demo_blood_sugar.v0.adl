@@ -56,8 +56,8 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"F240C593634919304F1ADF60F1285CD2">
-		["build_uid"] = <"96cc1bcd-86d2-487d-a4bb-449055558997">
+		["MD5-CAM-1.0.1"] = <"729CC0B1219FEE2BD99C6CDBAC91D908">
+		["build_uid"] = <"69d9f68b-ec74-4d23-b0ff-c81342b4854e">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -87,6 +87,11 @@ definition
 											DV_TEXT matches {*}
 										}
 									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Data
+										value matches {
+											DV_TIME matches {*}
+										}
+									}
 								}
 							}
 						}
@@ -95,7 +100,6 @@ definition
 			}
 		}
 	}
-
 
 
 ontology
@@ -126,6 +130,10 @@ ontology
 					text = <"Comentari">
 					description = <"">
 				>
+				["at0006"] = <
+					text = <"Data">
+					description = <"">
+				>
 			>
 		>
 		["en"] = <
@@ -154,12 +162,16 @@ ontology
 					text = <"Comments">
 					description = <"">
 				>
+				["at0006"] = <
+					text = <"Date">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Demo Sucre en sang (ca)">
+					text = <"Blutzucker">
 					description = <"*Arquetip de demostració de sucre en sang només amb finalitats de demostració. (ca)">
 				>
 				["at0001"] = <
@@ -167,7 +179,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Cualsevol esdeveniment (ca)">
+					text = <"Jegliches Event">
 					description = <"">
 				>
 				["at0003"] = <
@@ -175,11 +187,15 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Sucre en sanng (ca)">
+					text = <"Blutzucker">
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"*Comentari (ca)">
+					text = <"Kommentar">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Zeit">
 					description = <"">
 				>
 			>
