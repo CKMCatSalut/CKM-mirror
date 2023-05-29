@@ -1,0 +1,189 @@
+﻿archetype (adl_version=1.4; uid=5e810a29-dbaf-4251-8382-3cd315ae8bef)
+	openEHR-EHR-OBSERVATION.demo_blood_sugar.v0
+
+concept
+	[at0000]	-- Demo Sucre en sang
+language
+	original_language = <[ISO_639-1::ca]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Test User">
+				["email"] = <"martin.andreas.koch@gmail.com">
+			>
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+				["name"] = <"Test User">
+				["email"] = <"martin.andreas.koch@gmail.com">
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2023-05-09">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Archetyp für Demozwecke erstellt.">
+			use = <"*Do not use for medical purposes.(ca)">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"*Archetype developed for demonstration purposes.(ca)">
+			use = <"*Do not use for medical purposes.(ca)">
+			keywords = <"blood, sugar, demo", ...>
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Archetype developed for demonstration purposes.">
+			use = <"Do not use for medical purposes.">
+			keywords = <"blood, sugar, demo", ...>
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"6C1A3189951A4AD079771F6031FB3657">
+		["build_uid"] = <"cc71dcdf-8098-4848-be4c-aedc18991df0">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Demo Sucre en sang
+		data matches {
+			HISTORY[at0001] matches {    -- Historia
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Cualsevol esdeveniment
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Arbre
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Sucre en sanng
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::119]>
+												list = <
+													["1"] = <
+														units = <"mg/L">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Comentari
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Demo Sucre en sang">
+					description = <"Arquetip de demostració de sucre en sang només amb finalitats de demostració.">
+				>
+				["at0001"] = <
+					text = <"Historia">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Cualsevol esdeveniment">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Arbre">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Sucre en sanng">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Comentari">
+					description = <"">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Demo Blood Sugar">
+					description = <"*Arquetip de demostració de sucre en sang només amb finalitats de demostració.(ca)">
+				>
+				["at0001"] = <
+					text = <"Historia">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Arbre">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Blood sugar">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Comments">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Demo Sucre en sang (ca)">
+					description = <"*Arquetip de demostració de sucre en sang només amb finalitats de demostració. (ca)">
+				>
+				["at0001"] = <
+					text = <"Historia">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Cualsevol esdeveniment (ca)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Arbre">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Sucre en sanng (ca)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*Comentari (ca)">
+					description = <"">
+				>
+			>
+		>
+	>
