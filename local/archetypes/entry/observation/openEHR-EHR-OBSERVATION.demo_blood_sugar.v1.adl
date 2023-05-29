@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=65c7f9c9-6816-4c75-b91e-5c8b1623904c)
-	openEHR-EHR-OBSERVATION.demo_blood_sugar.v0
+﻿archetype (adl_version=1.4; uid=044b7ed0-a73e-4930-82ae-4187040e2814)
+	openEHR-EHR-OBSERVATION.demo_blood_sugar.v1
 
 concept
 	[at0000]	-- Demo Sucre en sang
@@ -48,7 +48,7 @@ description
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
@@ -56,9 +56,9 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"729CC0B1219FEE2BD99C6CDBAC91D908">
-		["build_uid"] = <"69d9f68b-ec74-4d23-b0ff-c81342b4854e">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"ACEE67016F365A3190BB661AF79AEC74">
+		["build_uid"] = <"b2024b97-7e3b-481e-98bb-5aa5de65ad10">
+		["revision"] = <"1.0.0">
 	>
 
 definition
