@@ -1,0 +1,84 @@
+﻿archetype (adl_version=1.4; uid=c84c2d3d-74a1-463d-a08b-4e890e6cf38a)
+	openEHR-EHR-OBSERVATION.test_ckm.v0
+
+concept
+	[at0000]	-- test ckm
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2023-05-30">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"645EE4B162CD54572087DB53ADCB08ED">
+		["build_uid"] = <"8777900e-3dd2-4768-92ca-3e6e15ac29d5">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- test ckm
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- variable
+										value matches {
+											DV_CODED_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"test ckm">
+					description = <"test ckm">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"variable">
+					description = <"">
+				>
+			>
+		>
+	>
