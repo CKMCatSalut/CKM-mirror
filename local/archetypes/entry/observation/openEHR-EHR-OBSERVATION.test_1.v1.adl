@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=bd66d552-cac0-423d-9108-7a0e947411d4)
-	openEHR-EHR-OBSERVATION.test_1.v0
+﻿archetype (adl_version=1.4; uid=09b62f50-f1b3-4c0c-bcb6-f4075ead6e3d)
+	openEHR-EHR-OBSERVATION.test_1.v1
 
 concept
 	[at0000]	-- test_1
@@ -18,7 +18,7 @@ description
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"B6544D93A8795659F018E09ADD887DFA">
-		["build_uid"] = <"91ead5c8-c365-41e5-b1eb-970ba4b12213">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"4F748CCD17DEB064106D1B22B1ABE7B5">
+		["build_uid"] = <"ab988c0a-f12a-4f53-b15c-c396e8b134dc">
+		["revision"] = <"1.0.0">
 	>
 
 definition
