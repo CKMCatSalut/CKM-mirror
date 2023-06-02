@@ -27,8 +27,8 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"D5775252F06346E052C0EBD0FB6D29D2">
-		["build_uid"] = <"b437ef2b-3afa-455a-ada6-df54f925a514">
+		["MD5-CAM-1.0.1"] = <"7FFF3AFFAD705A17813DB421348F2501">
+		["build_uid"] = <"cf4fc6b8-5629-43e2-b497-cdd96d0ff1e3">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -44,6 +44,11 @@ definition
 									ELEMENT[at0004] occurrences matches {0..1} matches {    -- variable
 										value matches {
 											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- new var
+										value matches {
+											DV_CODED_TEXT matches {*}
 										}
 									}
 								}
@@ -78,6 +83,10 @@ ontology
 				>
 				["at0004"] = <
 					text = <"variable">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"new var">
 					description = <"">
 				>
 			>
