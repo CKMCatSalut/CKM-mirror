@@ -36,7 +36,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>1.0.0</value>
+                <value>1.0.1</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -54,9 +54,14 @@
                 <key>original_language</key>
                 <value>ISO_639-1::ca</value>
             </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::ca</value>
+            </item>
         </other_details>
     </description>
     <definition archetype_id="openEHR-EHR-COMPOSITION.encounter.v0"
+        concept_name="*Encounter(en)" name="Trobada"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
         <Content archetype_id="openEHR-EHR-OBSERVATION.demo_pes.v2"
