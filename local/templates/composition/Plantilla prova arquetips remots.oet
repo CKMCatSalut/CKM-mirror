@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="openEHR/v1/Template">
+    <id>10bf7602-be22-45b2-beca-8d1f71f94eb8</id>
+    <name>Plantilla prova arquetips remots</name>
+    <description>
+        <original_author>
+            <item>
+                <key>date</key>
+                <value>2023-06-09</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>0.1.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
+        </other_details>
+    </description>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.care_plan.v0"
+        concept_name="Care plan" name="Plantilla prova arquetips remots"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Context>
+            <Items archetype_id="openEHR-EHR-CLUSTER.address.v1" max="1"
+                path="/context[at0001]/other_context[at0002]/items[at0004]" xsi:type="tem:CLUSTER"/>
+            <Items
+                archetype_id="openEHR-EHR-CLUSTER.clinical_evidence.v1"
+                max="1"
+                path="/context[at0001]/other_context[at0002]/items[at0004]" xsi:type="tem:CLUSTER"/>
+        </Context>
+    </definition>
+    <integrity_checks
+        archetype_id="openEHR-EHR-COMPOSITION.care_plan.v0"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">611E29DA4F53EA8344AD9B2AA38E0F0E</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.address.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">2CF1BF28DCEC6DCF92B55E6F39DF75A6</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-CLUSTER.clinical_evidence.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">39EE07955B1B122DBCF1C1F5B7C492FC</digest>
+    </integrity_checks>
+</template>
