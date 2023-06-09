@@ -56,8 +56,8 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"B119D18E79878A0E1DB78E18F0F01D9F">
-		["build_uid"] = <"de141bd2-d3c6-4ac0-bd5a-33ed33e6b9e5">
+		["MD5-CAM-1.0.1"] = <"85A1B4C81EC445A456A0EB530643B93A">
+		["build_uid"] = <"59ffa33a-1e63-4bca-9caa-df0f627e8761">
 		["revision"] = <"1.1.1-alpha">
 	>
 
@@ -92,7 +92,7 @@ definition
 											DV_TIME matches {*}
 										}
 									}
-									ELEMENT[at0007] occurrences matches {0..1} matches {    -- DV_BOOLEAN
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Dejú
 										value matches {
 											DV_BOOLEAN matches {*}
 										}
@@ -140,7 +140,7 @@ ontology
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"DV_BOOLEAN">
+					text = <"Dejú">
 					description = <"">
 				>
 			>
@@ -176,7 +176,7 @@ ontology
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"Infection">
+					text = <"*Dejú (ca)">
 					description = <"">
 				>
 			>
@@ -212,7 +212,7 @@ ontology
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"*DV_BOOLEAN (ca)">
+					text = <"*Dejú (ca)">
 					description = <"">
 				>
 			>
