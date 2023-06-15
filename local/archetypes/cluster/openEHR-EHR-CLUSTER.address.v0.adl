@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=9d44ce81-a4e4-4edc-a828-20f5e4b88af5)
-	openEHR-EHR-CLUSTER.address.v1
+﻿archetype (adl_version=1.4; uid=4fef8409-b599-463f-95c2-d89d3c05f4c5)
+	openEHR-EHR-CLUSTER.address.v0
 
 concept
 	[at0000]	-- Address
@@ -54,6 +54,7 @@ Dieser Archetyp könnte auch als Ersatz für formelle demografische Daten verwen
 Darf nicht verwendet werden, um digitale Adressen zur Verwendung in der elektronischen Kommunikation darzustellen. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.electronic_communication.
 
 Darf nicht verwendet werden, um Details über Wohnungs- oder Obdachlosigkeit darzustellen. Verwenden Sie für diesen Zweck den Archetyp EVALUATION.housing_summary.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -79,6 +80,7 @@ Denne CLUSTER-arketypen kan også brukes istedenfor formelle demografiske adress
 Brukes ikke til å representere digitale adresser for bruk i elektronisk kommunikasjon. Bruk CLUSTER.electronic_communication (Elektronisk kommunikasjon) for dette formålet.
 
 Brukes ikke for å registrere detaljer om bolig eller hjemløshet, Bruk arketypen EVALUATION.housing_summary (Boligsammendrag) for dette formålet.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -103,14 +105,17 @@ This CLUSTER.address could also be used as a proxy for an address in formal demo
 Not to be used to represent digital addresses for use in electronic communication. Use CLUSTER.electronic_communication for this purpose.
 
 Not to be used to record details about housing or homelessness. Use the EVALUATION.housing_summary for this purpose.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Dag Aarhus, Vestre Viken HF, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Astrid Askeland, Dips AS, Norway", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Keisha Barwise, MOHW/IDB HSSP Project, Jamaica", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Yexuan Cheng, 浙江大学, China", "Candice de Lisser, Ministry of Health and Wellness, Jamaica", "Ludvig Eek Hofmann, Cambio Healthcare Systems AB, Sweden", "Valborg Ellingsen, Haraldsplass Diakonale sykehus, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Martin Grundberg, Cambio Healthcare Systems, Sweden", "Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (openEHR Editor)", "Rebecka Hansson, Cambio Healthcare Systems AB, Sweden", "Anca Heyd, DIPS ASA, Norway", "Joost Holslag, Nedap, Netherlands", "Evelyn Hovenga, EJSH Consulting, Australia", "Gunnar Jårvik, Helse Vest IKT AS, Norway", "Gunn-Lisbeth Kleiven, Oslo universitetssykehus HF, Norway", "Shinji Kobayashi, National Institute of Public Health, Japan", "Kanika Kuwelker, Helse Vest IKT, Norway", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Lars Morgan Karlsen, Nordlandssykehuset Bodø, Norway", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Jayashree Panickar, Karolinska Institute, Sweden", "Erik Skjemstad, Helse Nord RHF, Norway", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "Nyree Taylor, Ocean Health Systems, Australia", "Anders Thurin, VGR, Sweden", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)", "Ina Wille, Helse-Vest RHF, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"Health Care Client Identification - AS 5017-2006. New South Wales (AU): Standards Australia; 2006.
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["references"] = <"Derivat de: <Afegeix aquí una referència al recurs original>
+
+Health Care Client Identification - AS 5017-2006. New South Wales (AU): Standards Australia; 2006.
 
 Health Care Provider Identification - AS 4846-2006. New South Wales (AU): Standards Australia; 2006.
 
@@ -119,12 +124,12 @@ Health informatics — Identification of subjects of health care - ISO/TS 22220:
 HL7 FHIR Resource - Person v4.0.1: R4 [Internet]. Health Level Seven International; [accessed 2021 05 04]. Available from: http://hl7.org/fhir/2021May/person.html.
 
 HL7 FHIR Resource - Organization v4.0.1: R4 [Internet]. Health Level Seven International; [accessed 2021 05 04]. Available from: http://hl7.org/fhir/2021May/organization.html">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2CF1BF28DCEC6DCF92B55E6F39DF75A6">
-		["build_uid"] = <"43a1c158-14aa-4147-a514-b1f0d7fcf94d">
-		["revision"] = <"1.0.4">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"0BE1E1D214E0A454B22D48E858C94BFB">
+		["build_uid"] = <"96e224eb-c6f3-407b-911b-fe4803c0248d">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
