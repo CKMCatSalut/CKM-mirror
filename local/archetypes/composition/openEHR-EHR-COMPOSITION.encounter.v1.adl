@@ -417,24 +417,26 @@ TC 251, European Committee for Standardization: EN 13940-1:2007 Health informati
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"0065E38F283B0BE544C3BDC96A895A16">
-		["build_uid"] = <"9fc019fb-8c2f-4819-b7eb-54b5e76bc5e8">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"56EE44DC4DE40F2D12BA0615C88B816A">
+		["build_uid"] = <"d22c999f-5644-4eea-9d13-68046a2c0f2c">
+		["revision"] = <"1.1.0">
 	>
 
 definition
-	COMPOSITION[at0000] matches {	-- Encounter
+	COMPOSITION[at0000] matches {    -- Encounter
 		category matches {
 			DV_CODED_TEXT matches {
-				defining_code matches {[openehr::433]}
+				defining_code matches {
+					[openehr::433]
+				}
 			}
 		}
 		context matches {
 			EVENT_CONTEXT matches {
 				other_context matches {
-					ITEM_TREE[at0001] matches {	-- Tree
+					ITEM_TREE[at0001] matches {    -- Tree
 						items cardinality matches {0..*; unordered} matches {
-							allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {	-- Extension
+							allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {    -- Extension
 								include
 									archetype_id/value matches {/.*/}
 							}
@@ -443,7 +445,11 @@ definition
 				}
 			}
 		}
+		content cardinality matches {1..*; unordered} matches {
+			SECTION[at0003] occurrences matches {0..1} matches {*}    -- sadasd
+		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -462,6 +468,10 @@ ontology
 					description = <"*Additional information required to capture local context or to align with other reference models/formalisms.(en)">
 					comment = <"*e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
 				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
+				>
 			>
 		>
 		["en"] = <
@@ -478,6 +488,10 @@ ontology
 					text = <"Extension">
 					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
 					comment = <"e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+				["at0003"] = <
+					text = <"sadasd">
+					description = <"">
 				>
 			>
 		>
@@ -496,6 +510,10 @@ ontology
 					description = <"Información adicional requerida para representar el contexto local o para alineamiento con otros modelos de referencia y formalismos.">
 					comment = <"Ej.: Información local del departamento hospitalario o metadatos adicionales para alineamiento con los equivalentes en FHIR o CIMI.">
 				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
+				>
 			>
 		>
 		["ko"] = <
@@ -512,6 +530,10 @@ ontology
 					text = <"*Extension(en)">
 					description = <"*Additional information required to capture local context or to align with other reference models/formalisms.(en)">
 					comment = <"*e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
 				>
 			>
 		>
@@ -530,6 +552,10 @@ ontology
 					description = <"Informações adicionais necessárias para identificar contexto local ou alinhar com outros formalismos/modelos de referência.">
 					comment = <"Por exemplo: informação departamental local de hospital ou metadados adicionais para alinhar com equivalentes FHIR ou CIMI.">
 				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
+				>
 			>
 		>
 		["es"] = <
@@ -546,6 +572,10 @@ ontology
 					text = <"Extensión">
 					description = <"Información adicional requerida para capturar el contexto local o alinear con otros modelos de referencia o formalismos.">
 					comment = <"*e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
 				>
 			>
 		>
@@ -564,6 +594,10 @@ ontology
 					description = <"Aanvullende informatie die vereist is om de lokale context vast te leggen of in lijn te brengen met andere referentie-modellen/formalismen.">
 					comment = <"Bijvoorbeeld lokale ziekenhuisafdeling informatie of aanvullende metadata om uit in lijn te brengen met FHIR of CIMI-equivalenten.">
 				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
+				>
 			>
 		>
 		["sv"] = <
@@ -580,6 +614,10 @@ ontology
 					text = <"Extra information">
 					description = <"Extra information som krävs för att fånga lokal kontext eller för anpassning till andra referensmodeller och formalismer.">
 					comment = <"Exempelvis information om en lokal sjukhusavdelning eller ytterligare metadata för anpassning till FHIR- eller CIMI-motsvarigheter.">
+				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
 				>
 			>
 		>
@@ -598,6 +636,10 @@ ontology
 					description = <"Zusätzliche Informationen, zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle / Formalismen.">
 					comment = <"Zum Beispiel Informationen zu lokalen Krankenhausabteilungen oder zusätzliche Metadaten zur Übereinstimmung mit FHIR- oder CIMI-Äquivalenten.">
 				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
+				>
 			>
 		>
 		["fi"] = <
@@ -614,6 +656,10 @@ ontology
 					text = <"Laajennus">
 					description = <"*Additional information required to capture local context or to align with other reference models/formalisms.(en)">
 					comment = <"*e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
 				>
 			>
 		>
@@ -632,6 +678,10 @@ ontology
 					description = <"Informazioni aggiuntive necessarie per catturare il contesto locale o per allinearsi con altri modelli/formalismi di riferimento.">
 					comment = <"e.g. Informazioni sul reparto ospedaliero locale o metadati aggiuntivi da allineare con gli equivalenti FHIR o CIMI.">
 				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
+				>
 			>
 		>
 		["fr"] = <
@@ -648,6 +698,10 @@ ontology
 					text = <"Extension">
 					description = <"Informations supplémentaires requises pour saisir le contexte local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
 					comment = <"Par exemple: les informations sur les services hospitaliers locaux ou des métadonnées supplémentaires pour s'aligner sur les équivalents FHIR ou CIMI.">
+				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
 				>
 			>
 		>
@@ -666,6 +720,10 @@ ontology
 					description = <"Tilleggsinformasjon som kan være nødvendig for å dokumentere lokal kontekst, eller for å tilpasse til andre referansemodeller/formalismer.">
 					comment = <"F.eks. lokal avdelingsinformasjon eller ytterligere metadata for tilpasning til FHIR eller CIMI.">
 				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
+				>
 			>
 		>
 		["ca"] = <
@@ -681,6 +739,10 @@ ontology
 				["at0002"] = <
 					text = <"*Extension(en)">
 					description = <"*Additional information required to capture local context or to align with other reference models/formalisms.(en)">
+				>
+				["at0003"] = <
+					text = <"*sadasd (en)">
+					description = <"">
 				>
 			>
 		>
