@@ -127,8 +127,8 @@ HL7 FHIR Resource - Organization v4.0.1: R4 [Internet]. Health Level Seven Inter
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"30E8CB740AD662A2A03AEBB087936089">
-		["build_uid"] = <"163f2112-1cf3-445a-a623-92e9e9174252">
+		["MD5-CAM-1.0.1"] = <"0BE1E1D214E0A454B22D48E858C94BFB">
+		["build_uid"] = <"6a12b550-1c0a-4666-97a7-4bc96a9fdd2e">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -242,11 +242,6 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0020] occurrences matches {0..1} matches {    -- Confirmed
-				value matches {
-					DV_BOOLEAN matches {*}
-				}
-			}
 		}
 	}
 
@@ -347,10 +342,6 @@ ontology
 					description = <"Link to a location on an online map.">
 					comment = <"For example: a location on a Google or iOS map.">
 				>
-				["at0020"] = <
-					text = <"Confirmed">
-					description = <"">
-				>
 			>
 		>
 		["nb"] = <
@@ -449,10 +440,6 @@ For eksempel:
 					description = <"Lenke til en lokalisering på et online kart.">
 					comment = <"For eksempel: en lokalisering i et Google eller iOS kart.">
 				>
-				["at0020"] = <
-					text = <"*Confirmed (en)">
-					description = <"">
-				>
 			>
 		>
 		["de"] = <
@@ -547,10 +534,6 @@ For eksempel:
 					text = <"Karte URL">
 					description = <"Link zu einem Ort auf einer Online-Karte.">
 					comment = <"Zum Beispiel: ein Standort auf einer Google- oder iOS-Map.">
-				>
-				["at0020"] = <
-					text = <"*Confirmed (en)">
-					description = <"">
 				>
 			>
 		>
