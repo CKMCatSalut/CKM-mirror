@@ -34,11 +34,23 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>0.1.0</value>
+                <value>0.2.0</value>
             </item>
             <item>
                 <key>build_uid</key>
                 <value/>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::ca</value>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>66d088c50394762eae1e529e491acfa7</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>0065E38F283B0BE544C3BDC96A895A16</value>
             </item>
             <item>
                 <key>original_language</key>
@@ -51,9 +63,6 @@
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
         <Content archetype_id="openEHR-EHR-OBSERVATION.demo_pes.v2"
-            max="1" path="/content" xsi:type="tem:OBSERVATION"/>
-        <Content
-            archetype_id="openEHR-EHR-OBSERVATION.demo_blood_sugar.v1"
             max="1" path="/content" xsi:type="tem:OBSERVATION"/>
         <Content
             archetype_id="openEHR-EHR-OBSERVATION.temperatura_test.v1"
@@ -69,12 +78,6 @@
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">F0B22C1671675BAF1A5EA3BFB4EE5D58</digest>
-    </integrity_checks>
-    <integrity_checks
-        archetype_id="openEHR-EHR-OBSERVATION.demo_blood_sugar.v1"
-        xmlns:tem="openEHR/v1/Template"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">ACEE67016F365A3190BB661AF79AEC74</digest>
     </integrity_checks>
     <integrity_checks
         archetype_id="openEHR-EHR-OBSERVATION.temperatura_test.v1"
