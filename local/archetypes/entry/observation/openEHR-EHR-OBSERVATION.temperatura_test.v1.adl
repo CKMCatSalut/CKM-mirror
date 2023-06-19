@@ -27,7 +27,7 @@ description
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
 		["MD5-CAM-1.0.1"] = <"EDC14FAC29AD5F2EF0B5529C0B931E96">
-		["build_uid"] = <"441979de-9573-4aa1-987d-9d443b758835">
+		["build_uid"] = <"7ede8545-d445-4eb9-bd13-63a5ce7ad798">
 		["revision"] = <"1.0.1-alpha">
 	>
 
@@ -75,6 +75,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology
