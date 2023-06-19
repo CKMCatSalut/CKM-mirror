@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>0.3.0</value>
+                <value>0.4.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -65,7 +65,7 @@
         <Content
             archetype_id="openEHR-EHR-OBSERVATION.temperatura_test.v1"
             max="1" path="/content" xsi:type="tem:OBSERVATION"/>
-        <Content archetype_id="openEHR-EHR-OBSERVATION.demo_pes.v1"
+        <Content archetype_id="openEHR-EHR-OBSERVATION.demo_pes.v2"
             max="1" path="/content" xsi:type="tem:OBSERVATION"/>
     </definition>
     <integrity_checks
@@ -78,11 +78,11 @@
         archetype_id="openEHR-EHR-OBSERVATION.temperatura_test.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">382EE727A298CF537CC60F8D769F7FA7</digest>
+        <digest id="MD5-CAM-1.0.1">EDC14FAC29AD5F2EF0B5529C0B931E96</digest>
     </integrity_checks>
-    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.demo_pes.v1"
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.demo_pes.v2"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">51CE2BE3E2ECD3F5FC56CF4044AB3160</digest>
+        <digest id="MD5-CAM-1.0.1">DD8F6245BB267309A4A8A35736353C60</digest>
     </integrity_checks>
 </template>
