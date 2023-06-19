@@ -18,7 +18,7 @@ description
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"382EE727A298CF537CC60F8D769F7FA7">
-		["build_uid"] = <"34da4369-dd8f-43a5-a00a-ba1d5c6cdd09">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"EDC14FAC29AD5F2EF0B5529C0B931E96">
+		["build_uid"] = <"441979de-9573-4aa1-987d-9d443b758835">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
@@ -53,6 +53,18 @@ definition
 													>
 												>
 											>
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Sexe
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0006,    -- Feminí
+													at0007,    -- Masculí
+													at0008]    -- No assignat
+												}
+											}
 										}
 									}
 								}
@@ -87,6 +99,22 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Temperatura">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Sexe">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Feminí">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Masculí">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"No assignat">
 					description = <"">
 				>
 			>
