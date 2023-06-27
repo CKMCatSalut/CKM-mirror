@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=d1dfdce9-cc8e-4268-bc2b-a5d09755cfd8)
-	openEHR-EHR-COMPOSITION.formacio_coneixement.v0
+﻿archetype (adl_version=1.4; uid=fc248b72-6d58-4fa4-806e-ee2cb50c527e)
+	openEHR-EHR-COMPOSITION.formacio_coneixement.v1
 
 concept
 	[at0000]	-- Formació coneixement
@@ -73,7 +73,7 @@ description
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
@@ -81,9 +81,9 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"87B861D9E191531C9AED1B2A32FAD150">
-		["build_uid"] = <"0bede7ff-7629-4cca-97a1-58daf841bace">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"01606B762793E7A977B6619485E560B1">
+		["build_uid"] = <"03752f73-0906-4b13-8d75-af87362963bb">
+		["revision"] = <"1.0.0">
 	>
 
 definition
