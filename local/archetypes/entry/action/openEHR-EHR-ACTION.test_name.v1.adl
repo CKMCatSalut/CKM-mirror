@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=14381446-9dc4-4db7-92b3-58b296a345cf)
-	openEHR-EHR-ACTION.test_name.v0
+﻿archetype (adl_version=1.4; uid=acf1e09c-2790-4847-91f7-a28e25efe300)
+	openEHR-EHR-ACTION.test_name.v1
 
 concept
 	[at0000]	-- test_name
@@ -17,7 +17,7 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -25,9 +25,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"B911A0A02DA2CBE7FD8F55513019AD6B">
-		["build_uid"] = <"96ef0b21-ac8a-4315-bf14-07b1d343a60b">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"D9313337A97D8EA89AF4435B088DD644">
+		["build_uid"] = <"06073f1c-7e77-4203-9b7b-cefe1e45e451">
+		["revision"] = <"1.0.0">
 	>
 
 definition
