@@ -1,0 +1,127 @@
+﻿archetype (adl_version=1.4; uid=f112a782-c0da-487e-b369-92c9d63f945d)
+	openEHR-EHR-CLUSTER.formacio_coneixement_dades.v0
+
+concept
+	[at0000]	-- *Formació coneixement dades (en)
+language
+	original_language = <[ISO_639-1::ca]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2023-06-23">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"0C9B2DFD5161A967247B684464CAF344">
+		["build_uid"] = <"badabc11-4646-4ce7-9bc3-d732fa62e329">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- *Formació coneixement dades (en)
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Nom
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Posició
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Formació coneixement dades">
+					description = <"Formacio coneixement dades">
+				>
+				["at0001"] = <
+					text = <"*Nom (ca)">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"*Posició (ca)">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Formació coneixement dades (en)">
+					description = <"*Formacio coneixement dades (en)">
+				>
+				["at0001"] = <
+					text = <"Nom">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Posició">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Formació coneixement dades (en)">
+					description = <"*Formacio coneixement dades (en)">
+				>
+				["at0001"] = <
+					text = <"*Nom (ca)">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"*Posició (ca)">
+					description = <"">
+				>
+			>
+		>
+	>
