@@ -15,24 +15,35 @@ description
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
-		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
-		["original_namespace"] = <"org.catsalut">
-		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
-		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"F239D7ED7E081EAC326590A73FF4B7C9">
-		["build_uid"] = <"82f0c2e8-128e-4b0c-a872-8e106d1fbcca">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"6CCB24F08401384891C65627EFFF4B72">
+		["build_uid"] = <"46f1f472-7315-4067-8e1e-51938090b0b4">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	ACTION[at0000] matches {*}    -- test_name
+	ACTION[at0000] matches {    -- test_name
+		description matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0001] occurrences matches {0..1} matches {    -- New_var
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
 
 
 ontology
@@ -42,6 +53,10 @@ ontology
 				["at0000"] = <
 					text = <"test_name">
 					description = <"test_name">
+				>
+				["at0001"] = <
+					text = <"New_var">
+					description = <"">
 				>
 			>
 		>
