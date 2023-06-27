@@ -1,0 +1,153 @@
+﻿archetype (adl_version=1.4; uid=d1dfdce9-cc8e-4268-bc2b-a5d09755cfd8)
+	openEHR-EHR-COMPOSITION.formacio_coneixement.v0
+
+concept
+	[at0000]	-- Formació coneixement
+language
+	original_language = <[ISO_639-1::ca]>
+	translations = <
+		["en-us"] = <
+			language = <[ISO_639-1::en-us]>
+			author = <
+				["name"] = <"Tutorial CKM">
+				["email"] = <"martin.andreas.koch+CKM@gmail.com">
+			>
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2023-06-23">
+	>
+	details = <
+		["en-us"] = <
+			language = <[ISO_639-1::en-us]>
+			purpose = <"">
+			use = <"">
+			keywords = <"*fomarció, coneixement, estructura(ca)", ...>
+			misuse = <"">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			keywords = <"*fomarció, coneixement, estructura (ca)", ...>
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			keywords = <"fomarció, coneixement, estructura", ...>
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			keywords = <"*fomarció, coneixement, estructura (ca)", ...>
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"BA634A8EC5BC0D86F3A30733364B43C0">
+		["build_uid"] = <"fb285590-3c49-49a7-87bc-6337d42c1d2f">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- Formació coneixement
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE matches {
+						items cardinality matches {0..*; unordered} matches {
+							allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {    -- Dades participant
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Formació coneixement">
+					description = <"Estructura per fer un formulari del coneixement">
+				>
+				["at0002"] = <
+					text = <"Dades participant">
+					description = <"">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Formació coneixement (ca)">
+					description = <"*Estructura per fer un formulari del coneixement (ca)">
+				>
+				["at0002"] = <
+					text = <"*Dades participant (ca)">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Formació coneixement (ca)">
+					description = <"*Estructura per fer un formulari del coneixement (ca)">
+				>
+				["at0002"] = <
+					text = <"*Dades participant (ca)">
+					description = <"">
+				>
+			>
+		>
+		["en-us"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Formació coneixement(ca)">
+					description = <"*Estructura per fer un formulari del coneixement(ca)">
+				>
+				["at0002"] = <
+					text = <"Participant Data">
+					description = <"">
+				>
+			>
+		>
+	>
