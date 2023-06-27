@@ -6,6 +6,11 @@ concept
 language
 	original_language = <[ISO_639-1::ca]>
 	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
 		["en-us"] = <
 			language = <[ISO_639-1::en-us]>
 			author = <
@@ -29,6 +34,13 @@ description
 		["date"] = <"2023-06-23">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
 		["en-us"] = <
 			language = <[ISO_639-1::en-us]>
 			purpose = <"">
@@ -69,8 +81,8 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"BA634A8EC5BC0D86F3A30733364B43C0">
-		["build_uid"] = <"fb285590-3c49-49a7-87bc-6337d42c1d2f">
+		["MD5-CAM-1.0.1"] = <"87B861D9E191531C9AED1B2A32FAD150">
+		["build_uid"] = <"0bede7ff-7629-4cca-97a1-58daf841bace">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -146,6 +158,18 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Participant Data">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Formació coneixement (ca)">
+					description = <"*Estructura per fer un formulari del coneixement (ca)">
+				>
+				["at0002"] = <
+					text = <"Daten der Anwesenden">
 					description = <"">
 				>
 			>
