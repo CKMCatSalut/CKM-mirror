@@ -1,0 +1,63 @@
+﻿archetype (adl_version=1.4; uid=9726e7c0-a9f6-4c19-bac2-5877ebc990a8)
+	openEHR-EHR-ACTION.test_name.v2
+
+concept
+	[at0000]	-- test_name
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2023-06-27">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+	>
+	lifecycle_state = <"published">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"0AB6048A567161862D1797C109ECCAD1">
+		["build_uid"] = <"1bc49754-2de1-4470-b484-bd041c4c6cf4">
+		["revision"] = <"2.0.0">
+	>
+
+definition
+	ACTION[at0000] matches {    -- test_name
+		description matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0001] occurrences matches {0..1} matches {    -- New_var
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"test_name">
+					description = <"test_name">
+				>
+				["at0001"] = <
+					text = <"New_var">
+					description = <"">
+				>
+			>
+		>
+	>
