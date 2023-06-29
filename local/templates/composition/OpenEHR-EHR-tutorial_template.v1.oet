@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template">
     <id>f937d81d-ce5e-4d28-be23-93e252f50232</id>
-    <name>Tutorial template</name>
+    <name>OpenEHR-EHR-tutorial_template.v1</name>
     <description>
         <original_author>
             <item>
@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>0.4.0</value>
+                <value>1.0.0</value>
             </item>
             <item>
                 <key>build_uid</key>
