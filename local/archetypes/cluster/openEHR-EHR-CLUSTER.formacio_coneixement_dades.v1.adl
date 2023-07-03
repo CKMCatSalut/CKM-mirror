@@ -65,7 +65,7 @@ description
 			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
@@ -75,9 +75,9 @@ description
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
 		["MD5-CAM-1.0.1"] = <"99762B33222A027FC71E9A5CA92AB97A">
-		["build_uid"] = <"e2978c69-2e49-48a4-bcf9-ad229bf825ef">
+		["build_uid"] = <"1ec7a14d-b252-4913-9c5e-1950684f0097">
 		["ip_acknowledgements"] = <"[espai per IP Acknowledgements]">
-		["revision"] = <"1.0.1-alpha">
+		["revision"] = <"1.0.1">
 	>
 
 definition
