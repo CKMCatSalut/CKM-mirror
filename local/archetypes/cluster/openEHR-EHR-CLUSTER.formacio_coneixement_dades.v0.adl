@@ -6,6 +6,13 @@ concept
 language
 	original_language = <[ISO_639-1::ca]>
 	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Tutorial CKM">
+				["email"] = <"martin.andreas.koch+CKM@gmail.com">
+			>
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			author = <
@@ -22,6 +29,12 @@ description
 		["date"] = <"2023-06-23">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"">
@@ -52,8 +65,8 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"0C9B2DFD5161A967247B684464CAF344">
-		["build_uid"] = <"badabc11-4646-4ce7-9bc3-d732fa62e329">
+		["MD5-CAM-1.0.1"] = <"5BE6E0F34BB11B4175FBEF626EA390E0">
+		["build_uid"] = <"020848be-57b7-4919-b0bd-85225ccf612b">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -120,6 +133,22 @@ ontology
 				>
 				["at0002"] = <
 					text = <"*Posició (ca)">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Daten des Trainings für das \"klinische Wissen\"">
+					description = <"Daten der Teilnaehmer am Kurs für das \"klinische Wissen\"">
+				>
+				["at0001"] = <
+					text = <"Name">
+					description = <"Vor- und Nachname des Teilnehmers/der Teilnehmerin">
+				>
+				["at0002"] = <
+					text = <"Arbeitsplatz">
 					description = <"">
 				>
 			>
