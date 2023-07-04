@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=107f9f4e-b278-4be8-a5f4-21cdf19985e7)
+﻿archetype (adl_version=1.4; uid=68e834ee-5a3a-47eb-b70e-532557348105)
 	openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0
 
 concept
@@ -42,6 +42,7 @@ Detallierte strukturierte Befunde werden in Child Cluster Archetypen erfasst.">
 			misuse = <"Nicht geeignet zur Darstellung von nichthistopathologischen Untersuchungsergebnissen, wie zum Beispiel biochemischen oder hämatologischen Untersuchungen. 
 
 Nicht zur Darstellung eines Autopsieberichts zu verwenden, auch wenn die durchgeführten Untersuchungen an einigen Proben bei der Autopsie anhand dieses Archetypen abbildbar wären.">
+			copyright = <"© openEHR Foundation, Nasjonal IKT HF, Departament de Salut de la Generalitat de Catalunya">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -55,6 +56,7 @@ Detaljerte strukturerte funn kan registreres i spesifikke CLUSTER-arketyper som 
 			misuse = <"Brukes ikke til å registrere funn som ikke kommer fra patologiundersøkelser, f.eks. klinisk biokjemi eller mikrobiologi.
 
 Brukes ikke for å registrere en obduksjon, selv om funn ved undersøkelser av spesifikke prøver som tas under en obduksjon kan representeres ved hjelp av denne arketypen.">
+			copyright = <"© openEHR Foundation, Nasjonal IKT HF, Departament de Salut de la Generalitat de Catalunya">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -66,20 +68,22 @@ This archetype is designed specifically to be used in the \"Test result\" SLOT w
 			misuse = <"Not to be used for reporting other types of laboratory test results, for example biochemistry or haematology.
 
 Not to be used to record an autopsy report, although tests on some specimens that are collected during an autopsy may be represented using this archetype.">
-			copyright = <"© openEHR Foundation, Nasjonal IKT HF">
+			copyright = <"© openEHR Foundation, Nasjonal IKT HF, Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Vebjørn Arntzen, Oslo universitetssykehus, Norway", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (Nasjonal IKT redaktør)", "Kristin Eik, Kreftregisteret, Norway", "Anca Heyd, DIPS ASA, Norway", "Sabine Leh, Helse-Bergen, Norway (Nasjonal IKT redaktør)", "Heather Leslie, Ocean Informatics, Australia (Nasjonal IKT redaktør)", "Jan-Arne Ludvigsen, DIPS ASA, Norway", "Ole Martin Sand, DIPS ASA, Norway", "Ian McNicoll, Ocean Informatics, United Kingdom (Nasjonal IKT redaktør)", "Bjørn Næss, DIPS ASA, Norway", "Sveinung Sørbye, UNN HF, Norway", "John Tore Valand, Helse Bergen HF, Norway", "Torleif Trydal, Fürst AS, Norway", "Johan Bjerner, Fürst AS, Norway", "Nils Petter Tveranger, Helse Vest IKT AS, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Nasjonal IKT">
-		["references"] = <"Derived from Histopathology test, Draft Archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2016-11-29]. Available from: http://openehr.org/ckm/#showArchetype_1013.1.2195">
-		["original_namespace"] = <"no.nasjonalikt">
-		["original_publisher"] = <"Nasjonal IKT">
-		["custodian_namespace"] = <"no.nasjonalikt">
-		["MD5-CAM-1.0.1"] = <"F537F96BF4102BD332807BA2111BDBD8">
-		["build_uid"] = <"c8a22f97-a622-4f8b-aa5c-178d2bcc37bb">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["references"] = <"Derivat de: <Afegeix aquí una referència al recurs original>
+
+Derived from Histopathology test, Draft Archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2016-11-29]. Available from: http://openehr.org/ckm/#showArchetype_1013.1.2195">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"3EFAD378C1D8F1E351405F655B269D19">
+		["build_uid"] = <"5a540a23-c845-4e31-91ce-d00ed11394a0">
 		["revision"] = <"0.0.1-alpha">
 	>
 
