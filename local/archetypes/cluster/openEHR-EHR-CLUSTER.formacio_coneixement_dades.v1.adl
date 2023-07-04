@@ -74,8 +74,8 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"99762B33222A027FC71E9A5CA92AB97A">
-		["build_uid"] = <"56981008-7bdc-4615-b60a-a0a4ce8ebc27">
+		["MD5-CAM-1.0.1"] = <"1DFEA1DF2151625848CFDBA9AF738B1F">
+		["build_uid"] = <"e7b634d6-4c73-41fe-8959-914588e0163f">
 		["ip_acknowledgements"] = <"[espai per IP Acknowledgements]">
 		["revision"] = <"1.0.2-alpha">
 	>
@@ -91,6 +91,11 @@ definition
 			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Posició
 				value matches {
 					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- DV_QUANTITY
+				value matches {
+					DV_QUANTITY matches {*}
 				}
 			}
 		}
@@ -113,6 +118,10 @@ ontology
 					text = <"*Posició (ca)">
 					description = <"">
 				>
+				["at0003"] = <
+					text = <"nou camp">
+					description = <"">
+				>
 			>
 		>
 		["ca"] = <
@@ -127,6 +136,10 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Posició">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"DV_QUANTITY">
 					description = <"">
 				>
 			>
@@ -145,6 +158,10 @@ ontology
 					text = <"*Posició (ca)">
 					description = <"">
 				>
+				["at0003"] = <
+					text = <"*DV_QUANTITY (ca)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -159,6 +176,10 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Arbeitsplatz">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"*DV_QUANTITY (ca)">
 					description = <"">
 				>
 			>
