@@ -1,0 +1,187 @@
+﻿archetype (adl_version=1.4; uid=d2047a4a-b406-409a-a4eb-41e8798da030)
+	openEHR-EHR-CLUSTER.formacio_coneixement_dades.v2
+
+concept
+	[at0000]	-- *Formació coneixement dades (en)
+language
+	original_language = <[ISO_639-1::ca]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Tutorial CKM">
+				["email"] = <"martin.andreas.koch+CKM@gmail.com">
+			>
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+				["name"] = <"[espai per traductor a Espanyol]">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"[espai per autor]">
+		["organisation"] = <"[espai per organització]">
+		["email"] = <"[esài per e-mail]">
+		["date"] = <"2023-06-23">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*[espai per Purpose] (ca)">
+			use = <"*[espai per use] (ca)">
+			keywords = <"*[espai per keywords] (ca)", ...>
+			misuse = <"*[espai per misuse] (ca)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"*[espai per Purpose] (ca)">
+			use = <"*[espai per use] (ca)">
+			keywords = <"*[espai per keywords] (ca)", ...>
+			misuse = <"*[espai per misuse] (ca)">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"[espai per Purpose]">
+			use = <"[espai per use]">
+			keywords = <"[espai per keywords]", ...>
+			misuse = <"[espai per misuse]">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"*[espai per Purpose] (ca)">
+			use = <"*[espai per use] (ca)">
+			keywords = <"*[espai per keywords] (ca)", ...>
+			misuse = <"*[espai per misuse] (ca)">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"published">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["references"] = <"[espai per references]">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"9EB556A62A1DEBDAA2CA8F4537700870">
+		["build_uid"] = <"02afab0e-9f80-400e-90b4-a7f825f0f0be">
+		["ip_acknowledgements"] = <"[espai per IP Acknowledgements]">
+		["revision"] = <"2.0.0">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- *Formació coneixement dades (en)
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Nom
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Posició
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- DV_DATE
+				value matches {
+					DV_DATE matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Formació coneixement dades">
+					description = <"Formacio coneixement dades">
+				>
+				["at0001"] = <
+					text = <"*Nom (ca)">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"*Posició (ca)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Data Naixement">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Formació coneixement dades (en)">
+					description = <"*Formacio coneixement dades (en)">
+				>
+				["at0001"] = <
+					text = <"Nom">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Posició">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"DV_DATE">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Formació coneixement dades (en)">
+					description = <"*Formacio coneixement dades (en)">
+				>
+				["at0001"] = <
+					text = <"*Nom (ca)">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"*Posició (ca)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*DV_DATE (ca)">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Daten des Trainings für das \"klinische Wissen\"">
+					description = <"Daten der Teilnaehmer am Kurs für das \"klinische Wissen\"">
+				>
+				["at0001"] = <
+					text = <"Name">
+					description = <"Vor- und Nachname des Teilnehmers/der Teilnehmerin">
+				>
+				["at0002"] = <
+					text = <"Arbeitsplatz">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*DV_DATE (ca)">
+					description = <"">
+				>
+			>
+		>
+	>
