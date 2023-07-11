@@ -9,6 +9,8 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
+				["name"] = <"Tutorial CKM">
+				["email"] = <"martin.andreas.koch+CKM@gmail.com">
 			>
 		>
 		["en-us"] = <
@@ -38,6 +40,7 @@ description
 			language = <[ISO_639-1::de]>
 			purpose = <"">
 			use = <"">
+			keywords = <"Lehrgang, Wissen, Struktur", ...>
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
@@ -81,9 +84,9 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"01606B762793E7A977B6619485E560B1">
-		["build_uid"] = <"03752f73-0906-4b13-8d75-af87362963bb">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"FB9D122F83EA4DEAA0F6FB3C1AC68DA0">
+		["build_uid"] = <"4c1b698e-3f43-4e9f-9762-cef156d3d253">
+		["revision"] = <"1.1.0">
 	>
 
 definition
