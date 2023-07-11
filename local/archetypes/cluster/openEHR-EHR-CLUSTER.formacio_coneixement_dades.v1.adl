@@ -65,7 +65,7 @@ description
 			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
@@ -74,10 +74,10 @@ description
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"1DFEA1DF2151625848CFDBA9AF738B1F">
-		["build_uid"] = <"5a257d79-c991-4ef7-ae73-29d37136ac0d">
+		["MD5-CAM-1.0.1"] = <"CE92521E3C3C35E30FE97CC5CCA763A0">
+		["build_uid"] = <"ba6d9bc8-cd59-4a1a-80e8-c989e6de52a6">
 		["ip_acknowledgements"] = <"[espai per IP Acknowledgements]">
-		["revision"] = <"1.1.0">
+		["revision"] = <"1.1.1-alpha">
 	>
 
 definition
@@ -93,9 +93,9 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {    -- DV_QUANTITY
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- DV_DATE
 				value matches {
-					DV_QUANTITY matches {*}
+					DV_DATE matches {*}
 				}
 			}
 		}
@@ -118,8 +118,8 @@ ontology
 					text = <"*Posició (ca)">
 					description = <"">
 				>
-				["at0003"] = <
-					text = <"nou camp">
+				["at0005"] = <
+					text = <"Data Naixement">
 					description = <"">
 				>
 			>
@@ -138,8 +138,8 @@ ontology
 					text = <"Posició">
 					description = <"">
 				>
-				["at0003"] = <
-					text = <"DV_QUANTITY">
+				["at0005"] = <
+					text = <"DV_DATE">
 					description = <"">
 				>
 			>
@@ -158,8 +158,8 @@ ontology
 					text = <"*Posició (ca)">
 					description = <"">
 				>
-				["at0003"] = <
-					text = <"*DV_QUANTITY (ca)">
+				["at0005"] = <
+					text = <"*DV_DATE (ca)">
 					description = <"">
 				>
 			>
@@ -178,8 +178,8 @@ ontology
 					text = <"Arbeitsplatz">
 					description = <"">
 				>
-				["at0003"] = <
-					text = <"*DV_QUANTITY (ca)">
+				["at0005"] = <
+					text = <"*DV_DATE (ca)">
 					description = <"">
 				>
 			>
