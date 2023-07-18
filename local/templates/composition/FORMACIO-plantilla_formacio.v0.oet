@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>0.1.0</value>
+                <value>0.3.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -42,11 +42,15 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>b036f0b8f340b1e343b31cc5d6c4f6c9</value>
+                <value>34c47e89b56b84296bb145955dcac41c</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
-                <value>01606B762793E7A977B6619485E560B1</value>
+                <value>FB9D122F83EA4DEAA0F6FB3C1AC68DA0</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::ca</value>
             </item>
             <item>
                 <key>original_language</key>
@@ -63,14 +67,16 @@
         <Context>
             <Items
                 archetype_id="openEHR-EHR-CLUSTER.formacio_coneixement_dades.v1"
-                max="1" path="/context/other_context/items[at0002]" xsi:type="tem:CLUSTER"/>
+                max="1" path="/context/other_context/items[at0002]" xsi:type="tem:CLUSTER">
+                <Rule max="0" path="/items[at0002]"/>
+            </Items>
         </Context>
     </definition>
     <integrity_checks
         archetype_id="openEHR-EHR-COMPOSITION.formacio_coneixement.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">01606B762793E7A977B6619485E560B1</digest>
+        <digest id="MD5-CAM-1.0.1">FB9D122F83EA4DEAA0F6FB3C1AC68DA0</digest>
     </integrity_checks>
     <integrity_checks
         archetype_id="openEHR-EHR-CLUSTER.formacio_coneixement_dades.v1"
