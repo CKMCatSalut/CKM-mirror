@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
+    <id>30d43532-6c63-47aa-845d-1e12ce8873fa</id>
+    <name>my_awesome_template_v0.1</name>
+    <description>
+        <original_author>
+            <item>
+                <key>date</key>
+                <value>2024-06-21</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>1.1.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value/>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>6c94981e98701fc99fdb0bfae36c928d</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>327A8885F97587660404644C3C6053B6</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
+        </other_details>
+    </description>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" concept_name="Encounter" name="my_awesome_template_v0.1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-OBSERVATION.apgar.v2" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule clone="true" name="Tree" path="/data[at0002]/events[at0026]/data[at0001]"/>
+            <Rule clone="true" name="Tree" path="/data[at0002]/events[at0027]/data[at0001]"/>
+            <Rule clone="true" name="Tree" path="/data[at0002]/events[at0028]/data[at0001]"/>
+            <Rule clone="true" name="Tree" path="/data[at0002]/events[at0031]/data[at0001]"/>
+            <Rule clone="true" name="Tree" path="/data[at0002]/events[at0037]/data[at0001]"/>
+        </Content>
+    </definition>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">327A8885F97587660404644C3C6053B6</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.apgar.v2" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">50812AAEC7A2200F3FC321FD3D9E067F</digest>
+    </integrity_checks>
+</template>
