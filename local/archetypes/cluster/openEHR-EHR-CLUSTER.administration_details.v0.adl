@@ -1,0 +1,219 @@
+﻿archetype (adl_version=1.4; uid=6505bb58-3bb6-4383-b934-c94f2211814b)
+	openEHR-EHR-CLUSTER.administration_details.v0
+
+concept
+	[at0000]	-- Administration details
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"David Hernández Rodríguez">
+		["organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["email"] = <"dhernandez@catsalut.cat">
+		["date"] = <"2024-07-25">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record relevant clinical information about medication administration.">
+			use = <"Use to record relevant clinical information about medication administration as a seconday source. This includes the administration route, body site details, administration method, administration device, administration start/end date, and details about a single administration of the medication (administration date and sequence number).">
+			keywords = <"Administration, body site, route, sequence number", ...>
+			misuse = <"Not to be used for recording administration information as primary source, use ACTION.medication for this purpose.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya (en), Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Per a registrar informació clínica rellevant sobre l'administració del medicament.">
+			use = <"Utilitzar per a registrar informació clínica rellevant sobre l'administració del medicament com a font secundària. Això inclou la via d'administració, detalls de la localització corporal, mètode d'administració, dispositiu d'administració, data primera/última administració i detalls sobre una administració específica del medicament (data d'administració i número de seqüència).">
+			keywords = <"Administració, localització corporal, via administració, número de seqüència.", ...>
+			misuse = <"No utilitzar per a registrar la informació d’administració com a font principal; utilitzeu ACTION.medication per a aquest propòsit.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya (en), Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"6EB43699519C48987F0EB9BAD9CD37D8">
+		["build_uid"] = <"2e9fe12c-bc32-42a5-9263-3f6a5d144a6e">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] occurrences matches {0..1} matches {    -- Administration details
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..*} matches {    -- Route
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Body site
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {    -- Structured body site
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1/}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Administration method
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0008] occurrences matches {0..*} matches {    -- Administration device
+				include
+					archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.openEHR-EHR-CLUSTER.device.v1\.v1/}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {    -- Onset of use
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0012] occurrences matches {0..1} matches {    -- Cessation of use
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			CLUSTER[at0014] occurrences matches {0..*} matches {    -- Administration sequence
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Sequence number
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..*} matches {    -- Administration date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Administration details">
+					description = <"Details of body site and administration of the medication.">
+				>
+				["at0001"] = <
+					text = <"Route">
+					description = <"The route by which the ordered item was, or is to be, administered into the subject's body.">
+					comment = <"Comment: For example: 'oral', 'intravenous', or 'topical'. Coding of the route with a terminology is preferred, where possible. Multiple potential routes may be specified.">
+				>
+				["at0002"] = <
+					text = <"Body site">
+					description = <"Structured description of the site of administration of the ordered item.">
+					comment = <"For example: 'left upper arm', 'intravenous catheter right hand'. 
+Coding of the body site with a terminology is preferred, where possible.">
+				>
+				["at0006"] = <
+					text = <"Structured body site">
+					description = <"Structured description of the site of administration of the medication, vaccine or therapeutic good.">
+					comment = <"For example: \"On the medial skin surface of the left forearm, from 10 cm to 20 cm distally from the point of the elbow\".">
+				>
+				["at0007"] = <
+					text = <"Administration method">
+					description = <"The technique or device by which the ordered item was, or is to be, administered.">
+					comment = <"Comment: For example: ' via Z-track injection'; 'via nebuliser'. Coding of the method with a terminology is preferred, where possible.">
+				>
+				["at0008"] = <
+					text = <"Administration device">
+					description = <"Details of the medical device used to assist administration of the medication.">
+				>
+				["at0009"] = <
+					text = <"Sequence number">
+					description = <"The sequence number specific to the administration step being recorded.">
+					comment = <"For example: Vaccine sequence number.">
+				>
+				["at0010"] = <
+					text = <"Administration date">
+					description = <"The datetime at which the administration action occurred.">
+				>
+				["at0011"] = <
+					text = <"Onset of use">
+					description = <"The date when the medication was first administered.">
+					comment = <"Can be a partial date, for example, only a year.">
+				>
+				["at0012"] = <
+					text = <"Cessation of use">
+					description = <"The date when the medication was last administered.">
+					comment = <"Can be a partial date, for example, only a year.">
+				>
+				["at0014"] = <
+					text = <"Administration sequence">
+					description = <"Details about a single administration of the medication.">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Detalls administració">
+					description = <"Detalls de l'administració del medicament.">
+				>
+				["at0001"] = <
+					text = <"Via administració">
+					description = <"La via d'administració per la qual l'element  va ser, o ha de ser, administrat al pacient.">
+					comment = <"Comentari: Per exemple: 'oral' o 'tòpic'. Es preferible codificar la via amb una terminologia, si és possible. Es poden especificar múltiples vies potencials.">
+				>
+				["at0002"] = <
+					text = <"Localització corporal">
+					description = <"*Structured description of the site of administration of the ordered item. (en)">
+					comment = <"*For example: 'left upper arm', 'intravenous catheter right hand'. 
+Coding of the body site with a terminology is preferred, where possible. (en)">
+				>
+				["at0006"] = <
+					text = <"Localització corporal estructurada">
+					description = <"Descripció estructurada del lloc d'administració del medicament, vacuna o producte terapèutic.">
+					comment = <"Per exemple: \"A la superfície medial de la pell de l'avantbraç esquerre, de 10 cm a 20 cm distalment des del  colze\".">
+				>
+				["at0007"] = <
+					text = <"Métode administració">
+					description = <"La tècnica o dispositiu amb el qual l'element prescrit va ser, o ha de ser, administrat.">
+					comment = <"Comentari: Per exemple: 'via injecció Z-track'; 'via nebulitzador'. Es prefereix codificar el mètode amb una terminologia, si és possible.">
+				>
+				["at0008"] = <
+					text = <"Dispositiu mèdic">
+					description = <"Detalls del dispositiu mèdic utilitzat per ajudar a l'administració del medicament.">
+				>
+				["at0009"] = <
+					text = <"Número seqüència administració">
+					description = <"El número de seqüència específic per a l'administració específica que s'està registrant.">
+					comment = <"Per exemple: Número de seqüència de la vacuna.">
+				>
+				["at0010"] = <
+					text = <"Data administració">
+					description = <"Data i hora en què es va realitzar l'acció d'administració.">
+				>
+				["at0011"] = <
+					text = <"Data inici tractament">
+					description = <"La data en què es va administrar el medicament per primera vegada.">
+				>
+				["at0012"] = <
+					text = <"Data fi tractament">
+					description = <"La data en què es va administrar el medicament per última vegada.">
+				>
+				["at0014"] = <
+					text = <"Seqüència administració">
+					description = <"Detalls sobre una administració específica del medicament.">
+				>
+			>
+		>
+	>
