@@ -1,0 +1,333 @@
+﻿archetype (adl_version=1.4; uid=16b88969-9f7a-4790-8876-252cfac7ff5e)
+	openEHR-EHR-CLUSTER.clinical_context.v0
+
+concept
+	[at0000]	-- Clinical context
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Modelatge del Coneixement Clínic  Catsalut">
+		["organisation"] = <"CatSalut">
+		["email"] = <"ckm.salut@gencat.cat">
+		["date"] = <"2024-07-03">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a reference of a clinical concept, wich information is persisted in detail in another archetype in the same information system. The intention of this cluster is to avoid duplicity but still be able to stablish an association.  e.g. Reference to an associated diagnosis in a Clinical note. ">
+			use = <"Use to record a reference of a clinical concept, wich information is persisted in detail in another archetype in the same information system. e.g. Reference to an associated diagnosis in a Clinical note. ">
+			keywords = <"context, clinical concept,  reference", ...>
+			misuse = <"Not to be used to record further details of the clinical concept. The information of the clinical concept is persisted in another Template.
+e.g. Details of the diagnosis, such as severity, certainty or others, will be persisted in another template,  specifically build to record detailed information of the mentioned concept.
+
+">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Registrar una referència d'un concepte clínic, la informació detallada del qual es persisteix en un altre arquetip del mateix sistema d'informació. La intenció d'aquest clúster és evitar la duplicitat però tot i així poder establir una associació.  Exemple. Referència a un diagnòstic associat a una nota clínica.">
+			use = <"S'utilitza per registrar una referència d'un concepte clínic, la informació detallada del qual es persisteix en un altre arquetip del mateix sistema d'informació. La intenció d'aquest clúster és evitar la duplicitat però tot i així poder establir una associació.  Exemple. Referència a un diagnòstic associat a un curs clínic.">
+			keywords = <"Context, concepte clínic, referencia", ...>
+			misuse = <"No s'ha d'utilitzar per registrar més detalls del concepte clínic. La informació del concepte clínic es manté en una altra plantilla. 
+e.g. Detalls del diagnòstic, com la severitat, la certesa o altres, seran persistits en una altre plantilla, construïda específicament per registrar informació detallada del mencionat concepte.
+">
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Registrar una referencia a un concepto clínico, cuya información detallada se persiste en otro arquetipo del propio sistema de información. La intención de este cluster es evitar la duplicidad pero aún así poder establecer una asociación.  Ejemplo. Referencia a un diagnóstico asociado a un curso clínico. ">
+			use = <"Se utiliza para registrar una referencia a un concepto clínico, cuya información detallada se persiste en otro arquetipo del propio sistema de información. La intención de este cluster es evitar la duplicidad pero aún así poder establecer una asociación.  Ejemplo. Referencia a un diagnóstico asociado a un curso clínico.">
+			keywords = <"Contexto, concepto clínico, referencia", ...>
+			misuse = <"No debe utilizarse para registrar más detalles del concepto clínico. La información del concepto clínico se persiste en otra Plantilla.
+e.g. Detalles del diagnóstico, como la severidad, la certeza u otros, serán persistidos en otra plantilla construida específicamente para registrar información detallada del mencionado concepto.
+">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut   ">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"909C148A13BA00E2C1EDE77F87D322F9">
+		["build_uid"] = <"60ec692f-9370-44bd-8e3f-00cec6429f54">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] occurrences matches {0..1} matches {    -- Clinical context
+		items cardinality matches {1..*; unordered} matches {
+			CLUSTER[at0029] occurrences matches {0..*} matches {    -- Diagnostic
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0030] occurrences matches {0..1} matches {    -- Diagnostic name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0031] occurrences matches {0..*} matches {    -- Diagnostic date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0032] occurrences matches {0..*} matches {    -- Health indicators
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0033] occurrences matches {0..1} matches {    -- Health indicator name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0034] occurrences matches {0..*} matches {    -- Health indicator date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0035] occurrences matches {0..1} matches {    -- Clinical Episode
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0036] occurrences matches {0..1} matches {    -- Episode name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0037] occurrences matches {0..*} matches {    -- Episode date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0038] occurrences matches {0..*} matches {    -- Allergy or Adverse reaction
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0039] occurrences matches {0..1} matches {    -- Allergy or Adverse reaction
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0040] occurrences matches {0..*} matches {    -- Allergy or Adverse reaction date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+			allow_archetype CLUSTER[at0019] occurrences matches {0..1} matches {    -- Additional details
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Clinical context">
+					description = <"Reference of a clinical concept, wich information is persisted in detail in another archetype in the same information system. Simple mention of a clinical concept, as a context. 
+e.g. In a Clinical note, a healthcare care professional, can be interested in pointing the problem or diagnosis the note is referred to.">
+				>
+				["at0019"] = <
+					text = <"Additional details">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Diagnostic">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Diagnostic name">
+					description = <"Identification of the problem or diagnosis, by name. The element in this Cluster is intended to work as a reference. 
+">
+					comment = <"Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.">
+				>
+				["at0031"] = <
+					text = <"Diagnostic date">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Health indicators">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Health indicator name">
+					description = <"Identification of the Health indicator, by name. The element in this Cluster is intended to work as a reference. ">
+					comment = <"Coding of the Health indicator with a terminology is preferred, where possible.">
+				>
+				["at0034"] = <
+					text = <"Health indicator date">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Clinical Episode">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Episode name">
+					description = <"Identification of the episode, by name. The element in this Cluster is intended to work as a reference.">
+				>
+				["at0037"] = <
+					text = <"Episode date">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Allergy or Adverse reaction">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Allergy or Adverse reaction">
+					description = <"Identification of the Allergy or Adverse reaction. The element in this Cluster is intended to work as a reference.">
+					comment = <"Coding of the name of the Allergy or Adverse reaction with a terminology is preferred, where possible.">
+				>
+				["at0040"] = <
+					text = <"Allergy or Adverse reaction date">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Context Clinic">
+					description = <"Referència a un concepte clínic, la informació detallada del qual es persisteix en un altre arquetip del mateix sistema d'informació. Simple menció d'un concepte clínic, com a context. e.g. En un curs clínic, un professional sanitari pot estar interessat a indicar el problema o el diagnòstic al qual es refereix la nota.">
+				>
+				["at0019"] = <
+					text = <"Detalls adicionals">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Diagnostic">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Diagnostic nom">
+					description = <"Identificació del problema o diagnòstic, pel nom. L'element d'aquest Clúster està pensat per funcionar com a referència. ">
+					comment = <" La codificació del nom del problema o diagnòstic amb una terminologia, és preferible sempre que sigui possible.">
+				>
+				["at0031"] = <
+					text = <"Data del Diagnostic">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Indicador de salut">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Nom del Indicador de salut">
+					description = <"Identificació del l'indicador de salut, pel nom. L'element d'aquest Clúster està pensat per funcionar com a referència. ">
+					comment = <"La codificació de l'indicador de salut amb una terminologia, és preferible sempre que sigui possible.">
+				>
+				["at0034"] = <
+					text = <"Data del Indicador de salut">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Episodi Clinic">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Nom Episodi">
+					description = <"Identificació de l'episodi, per nom. L'element en aquest clúster està pensat per a funcionar com a referència.  ">
+				>
+				["at0037"] = <
+					text = <"Data del episodi">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Alergia o reaccio adversa">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Alergia o reaccio adversa">
+					description = <"Identificació de l'al·lèrgia o reacció adversa, pel nom. L'element d'aquest Clúster està pensat per funcionar com a referència.">
+					comment = <"La codificació de l'al·lèrgia o reacció adversa amb una terminologia, és preferible sempre que sigui possible.">
+				>
+				["at0040"] = <
+					text = <"Data de Alergia o reaccio adversa">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Contexto clinico">
+					description = <"Referencia a un concepto clínico, cuya información detallada se persiste en otro arquetipo del propio sistema de información. Simple mención de un concepto clínico, como contexto. e.g. En un curso clínico, un profesional de la salud puede estar interesado en señalar el problema o diagnóstico al que se refiere la nota.">
+				>
+				["at0019"] = <
+					text = <"Detalles adicionales">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Diagnostico">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Diagnostico nombre">
+					description = <"Identificación del problema o diagnóstico, por nombre. El elemento de este Clúster está pensado para funcionar com referencia. ">
+					comment = <"La codificación del nombre del problema o diagnóstico con una terminologia, es preferible siempre que sea posible.">
+				>
+				["at0031"] = <
+					text = <"Fecha de Diagnostico">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Indicador de salud">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Nombre del Indicador de salud">
+					description = <"Identificación del indicador de salud , por nombre. El elemento de este Clúster está pensado para funcionar com a referencia. ">
+					comment = <"La codificación del indicador de salud con una terminologia, es preferible siempre que sea posible.">
+				>
+				["at0034"] = <
+					text = <"Fecha del Indicador de salud">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Episodio Clinico">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Nombre del Episodio">
+					description = <"Identificación del episodio, por nombre.  El elemento en este clúster está pensado para funcionar como referencia. ">
+				>
+				["at0037"] = <
+					text = <"Fecha del Episodio">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Alergia o reaccion adversa">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Alergia o reaccion adversa">
+					description = <"Identificación de la alergia o reacción adversa, por nombre. El elemento de este Clúster está pensado para funcionar com a referencia. ">
+					comment = <"La codificación del nombre de la alergia o reacción adversa con una terminologia, es preferible siempre que sea posible.">
+				>
+				["at0040"] = <
+					text = <"Fecha de la reaccion adversa">
+					description = <"">
+				>
+			>
+		>
+	>
