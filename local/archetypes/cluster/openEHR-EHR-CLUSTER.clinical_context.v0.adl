@@ -27,32 +27,29 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record a reference of a clinical concept, wich information is persisted in detail in another archetype in the same information system. The intention of this cluster is to avoid duplicity but still be able to stablish an association.  e.g. Reference to an associated diagnosis in a Clinical note. ">
-			use = <"Use to record a reference of a clinical concept, wich information is persisted in detail in another archetype in the same information system. e.g. Reference to an associated diagnosis in a Clinical note. ">
+			purpose = <"To record a reference of a clinical concept, wich information is persisted in detail in another Composition. The intention of this cluster is to avoid duplicity but still be able to stablish an association.  e.g. Reference to an associated diagnosis in a Clinical note. ">
+			use = <"It is used to associate concepts from two different Compositions to facilitate their recognition. The elements of this Cluster must be understood as a mention or reference of clinical data persisting in an Entry of another Composition. Example: registering the concept \"Clinical note\" in  Composition A and the concept \"Diagnosis\" in  Composition B, adding this Cluster to Composition A with the Element \"diagnosis\" would indicate that both concepts are associated; the concept \"diagnosis\" would be registered only once in Composition B and explicitly referenced in Composition A. Example. Reference to a diagnosis associated with a clinical course.">
 			keywords = <"context, clinical concept,  reference", ...>
-			misuse = <"Not to be used to record further details of the clinical concept. The information of the clinical concept is persisted in another Template.
-e.g. Details of the diagnosis, such as severity, certainty or others, will be persisted in another template,  specifically build to record detailed information of the mentioned concept.
+			misuse = <"It should not be used to record a clinical concept. It should not be used to record further details of the clinical concept. The clinical concept information is recorded in another Composition. For each clinical concept the corresponding archetype must be used. For example, it should not be used to record a new \"diagnosis\" or details of the diagnosis, such as severity, certainty or others - use the purpose-built openEHR-EHR-EVALUATION.problem_diagnosis archetype to record detailed information about the above concept
 
 ">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
-			purpose = <"Registrar una referència d'un concepte clínic, la informació detallada del qual es persisteix en un altre arquetip del mateix sistema d'informació. La intenció d'aquest clúster és evitar la duplicitat però tot i així poder establir una associació.  Exemple. Referència a un diagnòstic associat a una nota clínica.">
-			use = <"S'utilitza per registrar una referència d'un concepte clínic, la informació detallada del qual es persisteix en un altre arquetip del mateix sistema d'informació. La intenció d'aquest clúster és evitar la duplicitat però tot i així poder establir una associació.  Exemple. Referència a un diagnòstic associat a un curs clínic.">
-			keywords = <"Context, concepte clínic, referencia", ...>
-			misuse = <"No s'ha d'utilitzar per registrar més detalls del concepte clínic. La informació del concepte clínic es manté en una altra plantilla. 
-e.g. Detalls del diagnòstic, com la severitat, la certesa o altres, seran persistits en una altre plantilla, construïda específicament per registrar informació detallada del mencionat concepte.
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Registrar una referencia a un concepto clínico, cuya información detallada se persiste en otra Composition. La intención de este cluster es evitar la duplicidad pero aún así poder establecer una asociación.  Ejemplo. Referencia a un diagnóstico asociado a un curso clínico. ">
+			use = <"Se utiliza para asociar conceptos de dos Composition diferentes para facilitar su reconocimiento. Los elementos de este Cluster deben entenderse como una mención o referencia de datos clínicos persistidos en una Entry de otra Composition. Ejemplo: registrando el concepto \"Curso clínico\" en una Composition A y el concepto \"Diagnóstico\" en una Composition B, añadir este Cluster a la Composition A con el Elemento \"diagnóstico\" indicaría que ambos conceptos están asociados; el concepto \"diagnóstico\" estaría registrado sólo una vez en la Composition B y explícitamente referenciado en la Composition A. Ejemplo. Referencia a un diagnóstico asociado a un curso clínico.">
+			keywords = <"Contexto, concepto clínico, referencia", ...>
+			misuse = <"No debe utilizarse para registrar un concepto clínico. No debe utilizarse para registrar más detalles del concepto clínico. La información del concepto clínico se registra en otra Composition. Por cada concepto clínico debe utilizarse el arquetipo correspondiente. Por ejemplo, no debe utilizarse para registrar un nuevo \"diagnóstico\" ni detalles del diagnóstico, como la gravedad, la certeza u otros- utilice el arquetipo openEHR-EHR-EVALUATION.problem_diagnosis diseñado específicamente para registrar información detallada de dicho concepto.
 ">
 			copyright = <"© openEHR Foundation">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
-			purpose = <"Registrar una referencia a un concepto clínico, cuya información detallada se persiste en otro arquetipo del propio sistema de información. La intención de este cluster es evitar la duplicidad pero aún así poder establecer una asociación.  Ejemplo. Referencia a un diagnóstico asociado a un curso clínico. ">
-			use = <"Se utiliza para registrar una referencia a un concepto clínico, cuya información detallada se persiste en otro arquetipo del propio sistema de información. La intención de este cluster es evitar la duplicidad pero aún así poder establecer una asociación.  Ejemplo. Referencia a un diagnóstico asociado a un curso clínico.">
-			keywords = <"Contexto, concepto clínico, referencia", ...>
-			misuse = <"No debe utilizarse para registrar más detalles del concepto clínico. La información del concepto clínico se persiste en otra Plantilla.
-e.g. Detalles del diagnóstico, como la severidad, la certeza u otros, serán persistidos en otra plantilla construida específicamente para registrar información detallada del mencionado concepto.
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Registrar una referència d'un concepte clínic, la informació detallada del qual es persisteix en un altre Composition. La intenció d'aquest Cluster és fer explícita una associació entre conceptes registrats a diferents Composition, evitant persistir conceptes duplicats\". Exemple: Referència a un diagnòstic associat a una nota clínica.">
+			use = <"S'utilitza per associar conceptes de dos Composition diferents per facilitar el seu reconeixement. Els elements d'aquest Cluster s'han d'entendre com una menció o referència de dades clíniques persistides a una Entry d'altra Composition. Exemple: registrant el concepte \"Curs clínic\" a una Composition A i el concepte \"Diagnòstic\" a una Composition B, afegir aquest Cluster a la Composition A amb l'Element \"diagnòstic\" indicaria que ambdós conceptes estan associats; el concepte \"diagnòstic\" estaria registrat només una vegada a la Composition B i explícitament referenciat a la Composition A. Exemple. Referència a un diagnòstic associat a un curs clínic.">
+			keywords = <"Context, concepte clínic, referència", ...>
+			misuse = <"No s'ha d'utilitzar per registrar un concepte clínic. No s'ha d'utilitzar per registrar més detalls del concepte clínic. La informació del concepte clínic es registra en una altra Composition. Per cada concepte clínic s'ha d'utilitzar l'arquetip corresponent. Per exemple, no s'ha de fer servir per registrar un nou \"diagnòstic\" ni detalls del diagnòstic, com la gravetat, la certesa o altres- utilitzeu l'arquetip openEHR-EHR-EVALUATION.problem_diagnosis disenyat  específicament per registrar informació detallada del mencionat concepte.
 ">
 			copyright = <"© openEHR Foundation">
 		>
@@ -65,22 +62,22 @@ e.g. Detalles del diagnóstico, como la severidad, la certeza u otros, serán pe
 		["original_namespace"] = <"org.catsalut   ">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"909C148A13BA00E2C1EDE77F87D322F9">
-		["build_uid"] = <"13ac1b73-ce88-4741-a4fc-6c33ebc8a30c">
+		["MD5-CAM-1.0.1"] = <"564C63D4F549343B6E0F7E74C03C5765">
+		["build_uid"] = <"6bb4d9bc-dd0c-4307-9acd-d617a3436340">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
 	CLUSTER[at0000] occurrences matches {0..1} matches {    -- Clinical context
 		items cardinality matches {1..*; unordered} matches {
-			CLUSTER[at0029] occurrences matches {0..*} matches {    -- Diagnostic
+			CLUSTER[at0029] occurrences matches {0..*} matches {    -- Diagnosis
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0030] occurrences matches {0..1} matches {    -- Diagnostic name
+					ELEMENT[at0030] occurrences matches {0..1} matches {    -- Diagnosis name
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0031] occurrences matches {0..*} matches {    -- Diagnostic date
+					ELEMENT[at0031] occurrences matches {0..1} matches {    -- Date of registration of the diagnosis
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
@@ -91,24 +88,10 @@ definition
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0033] occurrences matches {0..1} matches {    -- Health indicator name
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0034] occurrences matches {0..*} matches {    -- Health indicator date
-						value matches {
-							DV_DATE_TIME matches {*}
-						}
-					}
-				}
-			}
-			CLUSTER[at0035] occurrences matches {0..1} matches {    -- Clinical Episode
-				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0036] occurrences matches {0..1} matches {    -- Episode name
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0037] occurrences matches {0..*} matches {    -- Episode date
+					ELEMENT[at0034] occurrences matches {0..1} matches {    -- Date of registration of the Health indicator
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
@@ -119,10 +102,10 @@ definition
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0039] occurrences matches {0..1} matches {    -- Allergy or Adverse reaction
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0040] occurrences matches {0..*} matches {    -- Allergy or Adverse reaction date
+					ELEMENT[at0040] occurrences matches {0..1} matches {    -- Date of registration of the Allergy or Adverse reaction date
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
@@ -137,33 +120,32 @@ definition
 	}
 
 
-
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
 					text = <"Clinical context">
-					description = <"Reference of a clinical concept, wich information is persisted in detail in another archetype in the same information system. Simple mention of a clinical concept, as a context. 
+					description = <"Reference of a clinical concept, wich information is persisted in detail in another Composition. Simple mention of a clinical concept, as a context. 
 e.g. In a Clinical note, a healthcare care professional, can be interested in pointing the problem or diagnosis the note is referred to.">
 				>
 				["at0019"] = <
 					text = <"Additional details">
-					description = <"">
+					description = <"Additional structured information about the clinical context not recorded in previous elements.">
 				>
 				["at0029"] = <
-					text = <"Diagnostic">
+					text = <"Diagnosis">
 					description = <"">
 				>
 				["at0030"] = <
-					text = <"Diagnostic name">
-					description = <"Identification of the problem or diagnosis, by name. The element in this Cluster is intended to work as a reference. 
+					text = <"Diagnosis name">
+					description = <"Mention of the diagnosis registered as a clinical concept in another Composition. P. example: reference the diagnosis recorded in another Composition in the \"Problem/Diagnosis name\" Element of the archetype openEHR-EHR-EVALUATION.problem_diagnosis.
 ">
-					comment = <"Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.">
+					comment = <"The element of this Cluster is intended to work as a reference. It doesn't have its own semantics.">
 				>
 				["at0031"] = <
-					text = <"Diagnostic date">
-					description = <"">
+					text = <"Date of registration of the diagnosis">
+					description = <"Date of diagnosis registered as a clinical concept in another Composition. It is the date on which a professional registers or records and therefore creates the patient's diagnosis in another composition.">
 				>
 				["at0032"] = <
 					text = <"Health indicators">
@@ -171,24 +153,12 @@ e.g. In a Clinical note, a healthcare care professional, can be interested in po
 				>
 				["at0033"] = <
 					text = <"Health indicator name">
-					description = <"Identification of the Health indicator, by name. The element in this Cluster is intended to work as a reference. ">
-					comment = <"Coding of the Health indicator with a terminology is preferred, where possible.">
+					description = <" Mention of the health indicator registered as a clinical concept in another Composition.">
+					comment = <"The element of this Cluster is intended to work as a reference. It doesn't have its own semantics.">
 				>
 				["at0034"] = <
-					text = <"Health indicator date">
-					description = <"">
-				>
-				["at0035"] = <
-					text = <"Clinical Episode">
-					description = <"">
-				>
-				["at0036"] = <
-					text = <"Episode name">
-					description = <"Identification of the episode, by name. The element in this Cluster is intended to work as a reference.">
-				>
-				["at0037"] = <
-					text = <"Episode date">
-					description = <"">
+					text = <"Date of registration of the Health indicator">
+					description = <"Date of the health indicator registered as a clinical concept in another Composition. It is the date on which a professional registers or registers and therefore creates the patient's health indicator in another composition.">
 				>
 				["at0038"] = <
 					text = <"Allergy or Adverse reaction">
@@ -196,87 +166,77 @@ e.g. In a Clinical note, a healthcare care professional, can be interested in po
 				>
 				["at0039"] = <
 					text = <"Allergy or Adverse reaction">
-					description = <"Identification of the Allergy or Adverse reaction. The element in this Cluster is intended to work as a reference.">
-					comment = <"Coding of the name of the Allergy or Adverse reaction with a terminology is preferred, where possible.">
+					description = <"Mention of the allergy or adverse reaction registered as a clinical concept to another Composition. P. example: reference the allergy registered in another Composition in the \"Substance\" Element of the openEHR-EHR-EVALUATION.adverse_reaction_risk archetype.">
+					comment = <"The element of this Cluster is intended to work as a reference. It doesn't have its own semantics.">
 				>
 				["at0040"] = <
-					text = <"Allergy or Adverse reaction date">
-					description = <"">
+					text = <"Date of registration of the Allergy or Adverse reaction date">
+					description = <"Date of allergy or adverse reaction recorded as a clinical concept to another Composition. It is the date on which a professional registers or records and therefore creates the patient's allergy or adverse reaction in another composition.">
 				>
 			>
 		>
 		["ca"] = <
 			items = <
 				["at0000"] = <
-					text = <"Context Clinic">
-					description = <"Referència a un concepte clínic, la informació detallada del qual es persisteix en un altre arquetip del mateix sistema d'informació. Simple menció d'un concepte clínic, com a context. e.g. En un curs clínic, un professional sanitari pot estar interessat a indicar el problema o el diagnòstic al qual es refereix la nota.">
+					text = <"Context Clínic">
+					description = <"Referència a un concepte clínic, la informació detallada del qual es persisteix en un altre Composition. Simple menció d'un concepte clínic, com a context. e.g. En un curs clínic, un professional sanitari pot estar interessat a indicar el problema o el diagnòstic al qual es refereix la nota.">
 				>
 				["at0019"] = <
-					text = <"Detalls adicionals">
-					description = <"">
+					text = <"Detalls addicionals">
+					description = <"Informació addicional estructurada sobre el context clínic no registrada a elements anteriors.">
 				>
 				["at0029"] = <
-					text = <"Diagnostic">
+					text = <"Diagnòstic">
 					description = <"">
 				>
 				["at0030"] = <
-					text = <"Diagnostic nom">
-					description = <"Identificació del problema o diagnòstic, pel nom. L'element d'aquest Clúster està pensat per funcionar com a referència. ">
-					comment = <" La codificació del nom del problema o diagnòstic amb una terminologia, és preferible sempre que sigui possible.">
+					text = <"Diagnòstic nom">
+					description = <"Menció del diagnòstic registrat com a concepte clínic a altra Composition. P. exemple: consignar el diagnòstic registrat a altra Composition a l'Element \"Problem/Diagnosis name\" de l'arquetip openEHR-EHR-EVALUATION.problem_diagnosis.">
+					comment = <"L'element d'aquest Clúster està pensat per funcionar com a referència. No te una semàntica pròpia.
+">
 				>
 				["at0031"] = <
-					text = <"Data del Diagnostic">
-					description = <"">
+					text = <"Data de registre del diagnòstic">
+					description = <"Data del diagnòstic registrat com a concepte clínic a altra Composition. És la data en que un professional dóna d'alta o enregistra i per tant crea el diagnòstic del pacient en una altre Composition. ">
 				>
 				["at0032"] = <
 					text = <"Indicador de salut">
 					description = <"">
 				>
 				["at0033"] = <
-					text = <"Nom del Indicador de salut">
-					description = <"Identificació del l'indicador de salut, pel nom. L'element d'aquest Clúster està pensat per funcionar com a referència. ">
-					comment = <"La codificació de l'indicador de salut amb una terminologia, és preferible sempre que sigui possible.">
+					text = <"Nom del indicador de salut">
+					description = <" Menció del indicador de salut registrat com a concepte clínic a altra Composition.">
+					comment = <"L'element d'aquest Clúster està pensat per funcionar com a referència. No te una semàntica pròpia.">
 				>
 				["at0034"] = <
-					text = <"Data del Indicador de salut">
-					description = <"">
-				>
-				["at0035"] = <
-					text = <"Episodi Clinic">
-					description = <"">
-				>
-				["at0036"] = <
-					text = <"Nom Episodi">
-					description = <"Identificació de l'episodi, per nom. L'element en aquest clúster està pensat per a funcionar com a referència.  ">
-				>
-				["at0037"] = <
-					text = <"Data del episodi">
-					description = <"">
+					text = <"Data de registre del indicador de salut">
+					description = <"Data del indicador de salut registrat com a concepte clínic a altra Composition. És la data en que un professional dóna d'alta o enregistra i per tant crea l'indicador de salut del pacient en una altre Composition.
+">
 				>
 				["at0038"] = <
-					text = <"Alergia o reaccio adversa">
+					text = <"Alèrgia o reacció adversa">
 					description = <"">
 				>
 				["at0039"] = <
-					text = <"Alergia o reaccio adversa">
-					description = <"Identificació de l'al·lèrgia o reacció adversa, pel nom. L'element d'aquest Clúster està pensat per funcionar com a referència.">
-					comment = <"La codificació de l'al·lèrgia o reacció adversa amb una terminologia, és preferible sempre que sigui possible.">
+					text = <"Alèrgia o reacció adversa">
+					description = <" Menció de l'al·lèrgia o reacció adversa registrada com a concepte clínic a altra Composition. P. exemple: consignar l'al·lèrgia registrada a altra Composition a l'Element \"Substance\" de l'arquetip openEHR-EHR-EVALUATION.adverse_reaction_risk.">
+					comment = <"L'element d'aquest Clúster està pensat per funcionar com a referència. No te una semàntica pròpia.">
 				>
 				["at0040"] = <
-					text = <"Data de Alergia o reaccio adversa">
-					description = <"">
+					text = <"Data de registre de Alèrgia o reacció adversa">
+					description = <"Data de l'al·lèrgia o reacció adversa registrada com a concepte clínic a altra Composition. És la data en que un professional dóna d'alta o enregistra i per tant crea l'al·lèrgia o reacció adversa del pacient en una altre Composition.">
 				>
 			>
 		>
 		["es"] = <
 			items = <
 				["at0000"] = <
-					text = <"Contexto clinico">
+					text = <"Contexto Clínico">
 					description = <"Referencia a un concepto clínico, cuya información detallada se persiste en otro arquetipo del propio sistema de información. Simple mención de un concepto clínico, como contexto. e.g. En un curso clínico, un profesional de la salud puede estar interesado en señalar el problema o diagnóstico al que se refiere la nota.">
 				>
 				["at0019"] = <
 					text = <"Detalles adicionales">
-					description = <"">
+					description = <"Información adicional estructurada sobre el contexto clínico no registrada en elementos anteriores.">
 				>
 				["at0029"] = <
 					text = <"Diagnostico">
@@ -284,12 +244,12 @@ e.g. In a Clinical note, a healthcare care professional, can be interested in po
 				>
 				["at0030"] = <
 					text = <"Diagnostico nombre">
-					description = <"Identificación del problema o diagnóstico, por nombre. El elemento de este Clúster está pensado para funcionar com referencia. ">
-					comment = <"La codificación del nombre del problema o diagnóstico con una terminologia, es preferible siempre que sea posible.">
+					description = <"Mención del diagnóstico registrado como concepto clínico en otra Composition. P. ejemplo: consignar el diagnóstico registrado en otra Composition en el Elemento \"Problem/Diagnosis name\" del arquetipo openEHR-EHR-EVALUATION.problem_diagnosis.">
+					comment = <"El elemento de este Clúster está pensado para funcionar como referencia. No tiene una semántica propia.">
 				>
 				["at0031"] = <
-					text = <"Fecha de Diagnostico">
-					description = <"">
+					text = <"Fecha del registro del diagnóstico">
+					description = <"Fecha del diagnóstico registrado como concepto clínico en otra Composition. Es la fecha en que un profesional da de alta o graba y por tanto crea el diagnóstico del paciente en otra Composition.">
 				>
 				["at0032"] = <
 					text = <"Indicador de salud">
@@ -297,24 +257,12 @@ e.g. In a Clinical note, a healthcare care professional, can be interested in po
 				>
 				["at0033"] = <
 					text = <"Nombre del Indicador de salud">
-					description = <"Identificación del indicador de salud , por nombre. El elemento de este Clúster está pensado para funcionar com a referencia. ">
-					comment = <"La codificación del indicador de salud con una terminologia, es preferible siempre que sea posible.">
+					description = <"Mención del indicador de salud registrado como concepto clínico en otra Composition.">
+					comment = <"El elemento de este Clúster está pensado para funcionar como referencia. No tiene una semántica propia.">
 				>
 				["at0034"] = <
-					text = <"Fecha del Indicador de salud">
-					description = <"">
-				>
-				["at0035"] = <
-					text = <"Episodio Clinico">
-					description = <"">
-				>
-				["at0036"] = <
-					text = <"Nombre del Episodio">
-					description = <"Identificación del episodio, por nombre.  El elemento en este clúster está pensado para funcionar como referencia. ">
-				>
-				["at0037"] = <
-					text = <"Fecha del Episodio">
-					description = <"">
+					text = <"Fecha de registro del Indicador de salud">
+					description = <"Fecha del indicador de salud registrado como concepto clínico en otra Composition. Es la fecha en que un profesional da de alta o registra y por tanto crea el indicador de salud del paciente en otra Composition.">
 				>
 				["at0038"] = <
 					text = <"Alergia o reaccion adversa">
@@ -322,12 +270,12 @@ e.g. In a Clinical note, a healthcare care professional, can be interested in po
 				>
 				["at0039"] = <
 					text = <"Alergia o reaccion adversa">
-					description = <"Identificación de la alergia o reacción adversa, por nombre. El elemento de este Clúster está pensado para funcionar com a referencia. ">
-					comment = <"La codificación del nombre de la alergia o reacción adversa con una terminologia, es preferible siempre que sea posible.">
+					description = <"Mención de la alergia o reacción adversa registrada como concepto clínico en otra Composition. P. ejemplo: consignar la alergia registrada a otra Composition en el Elemento \"Substance\" del arquetipo openEHR-EHR-EVALUATION.adverse_reaction_risk.">
+					comment = <"El elemento de este Clúster está pensado para funcionar como referencia. No tiene una semántica propia.">
 				>
 				["at0040"] = <
-					text = <"Fecha de la reaccion adversa">
-					description = <"">
+					text = <"Fecha de registro de la Alergia o reaccion adversa">
+					description = <"Fecha de la alergia o reacción adversa registrada como concepto clínico en otra Composition. Es la fecha en que un profesional da de alta o registra y por tanto crea la alergia o reacción adversa del paciente en otra Composition. ">
 				>
 			>
 		>
