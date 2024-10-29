@@ -66,7 +66,7 @@ e.g. Detalles del diagnóstico, como la severidad, la certeza u otros, serán pe
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
 		["MD5-CAM-1.0.1"] = <"909C148A13BA00E2C1EDE77F87D322F9">
-		["build_uid"] = <"60ec692f-9370-44bd-8e3f-00cec6429f54">
+		["build_uid"] = <"13ac1b73-ce88-4741-a4fc-6c33ebc8a30c">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -135,6 +135,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology
