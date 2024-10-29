@@ -28,15 +28,15 @@ description
 			use = <"">
 			misuse = <"">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
+		["es"] = <
+			language = <[ISO_639-1::es]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
@@ -51,8 +51,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"52448CFEEC046154EB2EDA5265D61626">
-		["build_uid"] = <"c92601a3-bc9e-4c2f-9057-fecfb09864cb">
+		["MD5-CAM-1.0.1"] = <"8B41A545D448137713B8815907732588">
+		["build_uid"] = <"e105d446-43b9-4d4b-851d-2686be1875fd">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -86,6 +86,16 @@ definition
 			}
 			CLUSTER[at0005] occurrences matches {0..1} matches {    -- Performing institution
 				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0026] occurrences matches {0..1} matches {    -- Performing EP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Performing UP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
 					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Performing centre
 						value matches {
 							DV_CODED_TEXT matches {*}
@@ -96,15 +106,20 @@ definition
 							DV_CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Performing UP
-						value matches {
-							DV_CODED_TEXT matches {*}
-						}
-					}
 				}
 			}
 			CLUSTER[at0007] occurrences matches {0..1} matches {    -- Publishing institution
 				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0027] occurrences matches {0..1} matches {    -- Publishing EP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0016] occurrences matches {0..1} matches {    -- Publishing UP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
 					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Publishing centre
 						value matches {
 							DV_CODED_TEXT matches {*}
@@ -115,15 +130,20 @@ definition
 							DV_CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0016] occurrences matches {0..1} matches {    -- Publishing UP
-						value matches {
-							DV_CODED_TEXT matches {*}
-						}
-					}
 				}
 			}
 			CLUSTER[at0010] occurrences matches {0..1} matches {    -- Custodial institution
 				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0028] occurrences matches {0..1} matches {    -- Custodial EP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0019] occurrences matches {0..1} matches {    -- Custodial UP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
 					ELEMENT[at0017] occurrences matches {0..1} matches {    -- Custodial centre
 						value matches {
 							DV_CODED_TEXT matches {*}
@@ -134,26 +154,26 @@ definition
 							DV_CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0019] occurrences matches {0..1} matches {    -- Custodial UP
-						value matches {
-							DV_CODED_TEXT matches {*}
-						}
-					}
 				}
 			}
 			CLUSTER[at0009] occurrences matches {0..1} matches {    -- Requesting institution
 				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0029] occurrences matches {0..1} matches {    -- Requesting EP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0022] occurrences matches {0..1} matches {    -- Requesting UP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
 					ELEMENT[at0020] occurrences matches {0..1} matches {    -- Requesting centre
 						value matches {
 							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0021] occurrences matches {0..1} matches {    -- Requesting SA
-						value matches {
-							DV_CODED_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0022] occurrences matches {0..1} matches {    -- Requesting UP
 						value matches {
 							DV_CODED_TEXT matches {*}
 						}
@@ -265,102 +285,195 @@ ontology
 					text = <"Additional details">
 					description = <"">
 				>
+				["at0026"] = <
+					text = <"Performing EP">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Publishing EP">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Custodial EP">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Requesting EP">
+					description = <"">
+				>
 			>
 		>
 		["es"] = <
 			items = <
 				["at0000"] = <
 					text = <"Admin Salud">
-					description = <"*Admin Salut (en)">
+					description = <"Datos administrativos relativos a la actuación sanitaria registrada, necesarios para complementar la semántica del contenido clínico, que no están presentes en el Modelo de Referencia, o que se decide modelar en el Template por motivos técnicos.">
+					comment = <"Los datos no clínicos de una actuación sanitaria que son necesarios para entender correctamente el registro clínico al ser consultado (localización de la actuación, tipo de actividad sanitaria, etc) tendrían que ser registrados en la Composición.
+Se pueden registrar en el Modelo de Referencia (no modelables) si están contemplados a las especificaciones. Si no existe esta posibilidad en el Modelo de Referencia o es preferible por razones técnicas, se pueden modelar como Cluster a nivel del contexto de la Composición.">
 				>
 				["at0001"] = <
-					text = <"Fecha de autorización del documento">
-					description = <"">
+					text = <"Fecha autorización documento">
+					description = <"Fecha en la que el documento se autoriza para poder publicarse.">
 				>
 				["at0002"] = <
-					text = <"Fecha de creación del documento">
-					description = <"*Date and time when the source document is generated by the supplier system. 
- (en)">
+					text = <"Fecha creación documento">
+					description = <"Fecha en que el sistema de origen crea el documento registrado.">
 				>
 				["at0003"] = <
-					text = <"Codificación económica">
-					description = <"">
+					text = <"Régimen económico">
+					description = <"Tipo de entidad aseguradora que proporciona el nivel de cobertura sanitaria (las prestaciones sanitarias a las cuales tienen derecho los ciudadanos asegurados). Por ejemplo: Propio (Servicio Catalán de la Salud), Otras comunidades autónomas (Servicio Catalán de la Salud), Entidades de seguro libre, Particular...
+El listado de valores de respuesta posibles de este elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"Servidor Terminológico \"U-DT 0072\" OID 2.16.840.1.113883.12.72">
 				>
 				["at0004"] = <
-					text = <"Región competente">
-					description = <"">
+					text = <"Región sanitaria">
+					description = <"En el sistema de salud catalán, una región sanitaria es una unidad territorial que organiza la prestación de servicios sanitarios en la población de una zona específica.
+El listado de valores de respuesta posibles de este elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"Cada región sanitaria cuenta con recursos sanitarios de atención primaria y de atención especializada y se ordena, a su vez, en sectores sanitarios, que agrupan las llamadas áreas básicas de salud, formadas por barrios o distritos a las áreas urbanas, o por uno o más municipios en el ámbito rural.
+Servidor Terminológico \"RS\" OID 2.16.724.4.9.20.7">
 				>
 				["at0005"] = <
-					text = <"Institución">
-					description = <"">
+					text = <"Institución que realiza">
+					description = <"Datos relativos a la institución que realiza la actuación sanitaria documentada, incluyendo identificación de la entidad, subdivisiones administrativas (unidades proveedoras, centros) y el tipo de actividad sanitaria prestada.
+Los listados de valores de respuesta posibles de los Elementos contenidos se tendrían que restringir a los de los correspondientes catálogos del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
 				>
 				["at0007"] = <
 					text = <"Institución publicadora">
-					description = <"">
+					description = <"Datos relativos a la institución que publica el resultado de la actuación sanitaria documentada, incluyendo identificación de la entidad, subdivisiones administrativas (unidades proveedoras, centros) y el tipo de actividad sanitaria prestada.
+Los listados de valores de respuesta posibles de los Elementos contenidos se tendrían que restringir a los de los correspondientes catálogos del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
 				>
 				["at0009"] = <
 					text = <"Institución solicitante">
-					description = <"">
+					description = <"Datos relativos a la institución que solicita la realización de la actuación sanitaria documentada, incluyendo identificación de la entidad, subdivisiones administrativas (unidades proveedoras, centros) y el tipo de actividad sanitaria prestada.
+Los listados de valores de respuesta posibles de los Elementos contenidos se tendrían que restringir a los de los correspondientes catálogos del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
 				>
 				["at0010"] = <
 					text = <"Institución custodia">
-					description = <"">
+					description = <"Datos relativos a la institución que custodia el resultado de la actuación sanitaria documentada, incluyendo identificación de la entidad, subdivisiones administrativas (unidades proveedoras, centros) y el tipo de actividad sanitaria prestada.
+Los listados de valores de respuesta posibles de los Elementos contenidos se tendrían que restringir a los de los correspondientes catálogos del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
 				>
 				["at0011"] = <
-					text = <"Centro de actuación">
-					description = <"">
+					text = <"Centro que realiza">
+					description = <"Instalación física dotada de medios técnicos donde profesionales con capacitación han realizado la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"Centro sanitario: conjunto organizado de instalaciones y medios técnicos donde profesionales con capacitación, bajo la dirección de un responsable sanitario, llevan a cabo actividades sanitarias. Cada centro pertenece a una Entidad Proveedora (EP) y realiza actividades sanitarias enmarcadas administrativamente en una o más Unidades Proveedoras (UP).
+Servidor Terminológico \"Catàleg centres\" OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0012"] = <
-					text = <"Servicio Asistencial (SA) de actuación">
-					description = <"">
+					text = <"Servicio Asistencial que realiza">
+					description = <"Código que indica el tipo de Servicio sanitario donde se realiza la actuación sanitaria documentada, según la categoría de la actividad asistencial que hace.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"Un Servicio Sanitario es una unidad funcional asistencial, con organización diferenciada, dotada de profesionales y recursos técnicos para hacer actividades sanitarias específicas dentro de un Centro sanitario, y se categoriza por el tipo de actividad que presta (Medicina general/de familia, Enfermería, Podología, Vacunación, Alergología, Cardiología, Dermatología...)
+El concepto registrado aquí es coincidente con el descrito en el Elemento \"Practice Setting Code\" del  Cluster \"XDS Metadata\".
+Se recomienda utilizar el Elemento \"Practice Setting Code\" en lugar de \"Servicio Asistencial que realiza\" para registrar el tipo de actividad prestada en un Servicio Sanitario (tipo de Servicio sanitario).
+Solo se recomienda utilizar este Elemento cuando se quiera registrar concomitantemente el tipo de actividad de otros Servicios sanitarios implicados (petición, publicación o custodia del resultado la actuación sanitaria). En este caso, se recomienda registrar el tipo de Servicio Sanitario que ejecuta la actuación sanitaria tanto en \"Practice Setting Code\" como en \"Servicio Asistencial que realiza\" para evitar inconsistencias de información.
+Servidor Terminológico \"ET99 SER\" OID 2.16.724.4.9.40.4">
 				>
 				["at0013"] = <
-					text = <"Unidad Productiva (UP) de actuación">
-					description = <"">
+					text = <"Unidad Proveedora que realiza">
+					description = <"Subdivisión operativa dentro de una \"Entidad proveedora\" que gestiona el conjunto específico de servicios responsable de realizar la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"UP (Unidad proveedora): división administrativa de una Entidad proveedora (EP) según el tipo de prestación sanitaria (líneas asistenciales) acordada con el Catsalut (por ejemplo A. primaria, Salud Mental, Hospitalización, Sociosanitario...). Cada UP puede incluir varios centros sanitarios.
+Servidor Terminológico \"Catàleg UPs\" OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0014"] = <
 					text = <"Centro publicador">
-					description = <"">
+					description = <"Instalación física dotada de medios técnicos donde profesionales con capacitación han publicado el resultado de la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"Centro sanitario: conjunto organizado de instalaciones y medios técnicos donde profesionales con capacitación, bajo la dirección de un responsable sanitario, llevan a cabo actividades sanitarias. Cada centro pertenece a una Entidad Proveedora (EP) y realiza actividades sanitarias enmarcadas administrativamente en una o más Unidades Proveedoras (UP).
+Servidor Terminológico \"Catàleg centres\" OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0015"] = <
-					text = <"SA publicador">
-					description = <"">
+					text = <"Servicio Asistencial publicador">
+					description = <"Código que indica el tipo de Servicio sanitario donde se publica el resultado de la actuación sanitaria documentada, según la categoría de la actividad asistencial que hace.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"Un Servicio Sanitario es una unidad funcional asistencial, con organización diferenciada, dotada de profesionales y recursos técnicos para hacer actividades sanitarias específicas dentro de un Centro sanitario, y se categoriza por el tipo de actividad que presta (Medicina general/de familia, Enfermería, Podología, Vacunación, Alergología, Cardiología, Dermatología...)
+Servidor Terminológico \"ET99 SER\" OID 2.16.724.4.9.40.4">
 				>
 				["at0016"] = <
-					text = <"UP publicador">
-					description = <"">
+					text = <"Unidad Proveedora publicadora">
+					description = <"Subdivisión operativa dentro de una \"Entidad proveedora\" que gestiona el conjunto específico de servicios responsable de publicar el resultado de la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"UP (Unidad proveedora): división administrativa de una Entidad proveedora (EP) según el tipo de prestación sanitaria (líneas asistenciales) acordada con el Catsalut (por ejemplo A. primaria, Salud Mental, Hospitalización, Sociosanitario...). Cada UP puede incluir varios centros sanitarios.
+Servidor Terminológico \"Catàleg UPs\" OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0017"] = <
-					text = <"Centro custodia">
-					description = <"">
+					text = <"Centro custodio">
+					description = <"Instalación física dotada de medios técnicos donde profesionales con capacitación custodian el resultado de la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"Centro sanitario: conjunto organizado de instalaciones y medios técnicos donde profesionales con capacitación, bajo la dirección de un responsable sanitario, llevan a cabo actividades sanitarias. Cada centro pertenece a una Entidad Proveedora (EP) y realiza actividades sanitarias enmarcadas administrativamente en una o más Unidades Proveedoras (UP).
+Servidor Terminológico \"Catàleg centres\" OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0018"] = <
-					text = <"SA custodia">
-					description = <"">
+					text = <"Servicio Asistencial custodio">
+					description = <"Código que indica el tipo de Servicio sanitario donde se custodia el resultado de la actuación sanitaria documentada, según la categoría de la actividad asistencial que hace.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados. ">
+					comment = <"Un Servicio Sanitario es una unidad funcional asistencial, con organización diferenciada, dotada de profesionales y recursos técnicos para hacer actividades sanitarias específicas dentro de un Centro sanitario, y se categoriza por el tipo de actividad que presta (Medicina general/de familia, Enfermería, Podología, Vacunación, Alergología, Cardiología, Dermatología...)
+Servidor Terminológico \"ET99 SER\" OID 2.16.724.4.9.40.4">
 				>
 				["at0019"] = <
-					text = <"UP custodia">
-					description = <"">
+					text = <"Unidad Proveedora custodia">
+					description = <"Subdivisión operativa dentro de una \"Entidad proveedora\" que gestiona el conjunto específico de servicios responsable de la custodia del resultado de la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"UP (Unidad proveedora): división administrativa de una Entidad proveedora (EP) según el tipo de prestación sanitaria (líneas asistenciales) acordada con el Catsalut (por ejemplo A. primaria, Salud Mental, Hospitalización, Sociosanitario...). Cada UP puede incluir varios centros sanitarios.
+Servidor Terminológico \"Catàleg UPs\" OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0020"] = <
 					text = <"Centro solicitante">
-					description = <"">
+					description = <"Instalación física dotada de medios técnicos donde profesionales con capacitación solicitan la realización de la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"Centro sanitario: conjunto organizado de instalaciones y medios técnicos donde profesionales con capacitación, bajo la dirección de un responsable sanitario, llevan a cabo actividades sanitarias. Cada centro pertenece a una Entidad Proveedora (EP) y realiza actividades sanitarias enmarcadas administrativamente en una o más Unidades Proveedoras (UP).
+Servidor Terminológico \"Catàleg centres\" OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0021"] = <
-					text = <"SA solicitante">
-					description = <"">
+					text = <"Servicio Asistencial solicitante">
+					description = <"Código que indica el tipo de Servicio sanitario que solicita la actuación sanitaria documentada, según la categoría de la actividad asistencial que hace.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"Un Servicio Sanitario es una unidad funcional asistencial, con organización diferenciada, dotada de profesionales y recursos técnicos para hacer actividades sanitarias específicas dentro de un Centro sanitario, y se categoriza por el tipo de actividad que presta (Medicina general/de familia, Enfermería, Podología, Vacunación, Alergología, Cardiología, Dermatología...)
+Servidor Terminológico \"ET99 SER\" OID 2.16.724.4.9.40.4">
 				>
 				["at0022"] = <
-					text = <"UP solicitante">
-					description = <"">
+					text = <"Unidad Proveedora solicitante">
+					description = <"ubdivisión operativa dentro de una \"Entidad proveedora\" que gestiona el conjunto específico de servicios responsable de solicitar la realización de la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"UP (Unidad proveedora): división administrativa de una Entidad proveedora (EP) según el tipo de prestación sanitaria (líneas asistenciales) acordada con el Catsalut (por ejemplo A. primaria, Salud Mental, Hospitalización, Sociosanitario...). Cada UP puede incluir varios centros sanitarios.
+Servidor Terminológico \"Catàleg UPs\" OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0023"] = <
-					text = <"Fecha de publicación del documento">
-					description = <"*Date and time when the previously created document is registered in the target database.  (en)">
+					text = <"Fecha publicación documento">
+					description = <"Fecha en la que el documento creado se registró a la base de datos de destino.">
 				>
 				["at0025"] = <
 					text = <"Detalles adicionales">
 					description = <"">
+				>
+				["at0026"] = <
+					text = <"Entidad Proveedora que realiza">
+					description = <"Organización que provee servicios de salud en Cataluña, dentro del Sistema Sanitario Integral de Utilización Pública de Cataluña (SISCAT), y que ha realizado la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"EP (Entidad proveedora): entidad con personalidad jurídica que acuerda con el Catsalut (asegurador) la prestación de servicios sanitarios a los usuarios (asegurados).
+Servidor Terminológico \"Catálogo EPs\" OID 2.16.840.1.113883.4.292.10.12.5">
+				>
+				["at0027"] = <
+					text = <"Entidad Proveedora publicadora">
+					description = <"Organización que provee servicios de salud en Cataluña, dentro del Sistema Sanitario Integral de Utilización Pública de Cataluña (SISCAT), y que publica el resultado de la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"EP (Entidad proveedora): entidad con personalidad jurídica que acuerda con el Catsalut (asegurador) la prestación de servicios sanitarios a los usuarios (asegurados).
+Servidor Terminológico \"Catálogo EPs\" OID 2.16.840.1.113883.4.292.10.12.5">
+				>
+				["at0028"] = <
+					text = <"Entidad Proveedora custodia">
+					description = <"Organización que provee servicios de salud en Cataluña, dentro del Sistema Sanitario Integral de Utilización Pública de Cataluña (SISCAT), y que custodia el resultado de la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"EP (Entidad proveedora): entidad con personalidad jurídica que acuerda con el Catsalut (asegurador) la prestación de servicios sanitarios a los usuarios (asegurados).
+Servidor Terminológico \"Catálogo EPs\" OID 2.16.840.1.113883.4.292.10.12.5">
+				>
+				["at0029"] = <
+					text = <"Entidad Proveedora solicitante">
+					description = <"Organización que provee servicios de salud en Cataluña, dentro del Sistema Sanitario Integral de Utilización Pública de Cataluña (SISCAT), y que solicita la realización de la actuación sanitaria documentada.
+El listado de valores de respuesta posibles de este Elemento se tendría que restringir a los del correspondiente catálogo del Servidor Terminológico del Departamento de Salud de Cataluña, donde están disponibles estandarizados y codificados.">
+					comment = <"EP (Entidad proveedora): entidad con personalidad jurídica que acuerda con el Catsalut (asegurador) la prestación de servicios sanitarios a los usuarios (asegurados).
+Servidor Terminológico \"Catálogo EPs\" OID 2.16.840.1.113883.4.292.10.12.5">
 				>
 			>
 		>
@@ -368,96 +481,173 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Admin Salut">
-					description = <"*Admin Salut (en)">
+					description = <"Dades administratives relatives a l'actuació sanitària registrada, necessàries per complementar la semàntica del contingut clínic, que no estan presents al Model de Referència, o que es decideix modelar al Template per motius tècnics.">
+					comment = <"Les dades no clíniques d'una actuació sanitària que són necessàries per entendre correctament el registre clínic en consultar-lo (localització de l'actuació, tipus d'activitat sanitària, etc.) haurien de ser registrades a la Composició.
+Es poden registrar al Model de Referència (no modelables) si estan contemplades a les especificacions. Si no existeix aquesta possibilitat al Model de Referència o és preferible per raons tècniques, es poden modelar com a Cluster a nivell del context de la Composició.">
 				>
 				["at0001"] = <
-					text = <"Data d'autorització del document">
-					description = <"">
+					text = <"Data autorització document">
+					description = <"Data en que el document s'autoritza per poder ser publicat.">
 				>
 				["at0002"] = <
-					text = <"Data de creació del document">
-					description = <"*Date and time when the source document is generated by the supplier system. 
- (en)">
+					text = <"Data creació document">
+					description = <"Data en que el sistema d'origen crea el document registrat.">
 				>
 				["at0003"] = <
-					text = <"Codificació econòmica">
-					description = <"">
+					text = <"Règim econòmic">
+					description = <"Tipus d'entitat asseguradora que proporciona el nivell de cobertura sanitària (les prestacions sanitàries a les quals tenen dret els ciutadans assegurats). Per exemple:  Propi (Servei Català de la Salut), Altres comunitats autònomes (Servei Català de la Salut), Entitats d'assegurança lliure, Particular...
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"Servidor Terminològic \"U-DT 0072\" OID 2.16.840.1.113883.12.72">
 				>
 				["at0004"] = <
-					text = <"Regió competent">
-					description = <"">
+					text = <"Regió sanitària">
+					description = <"En el sistema de salut català, una regió sanitària és una unitat territorial que organitza la prestació de serveis sanitaris a la població d'una zona específica. 
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"Cada regió sanitària compta amb recursos sanitaris d'atenció primària i d'atenció especialitzada i s'ordena, al seu torn, en sectors sanitaris, que agrupen les anomenades àrees bàsiques de salut, formades per barris o districtes a les àrees urbanes, o per un o més municipis en l'àmbit rural.
+Servidor Terminològic \"RS\" OID 2.16.724.4.9.20.7">
 				>
 				["at0005"] = <
-					text = <"Institució">
-					description = <"">
+					text = <"Institució que realitza">
+					description = <"Dades relatives a la institució que realitza l'actuació sanitària documentada, incloent-hi identificació de l'entitat, subdivisions administratives (unitats proveïdores, centres) i el tipus d'activitat sanitària prestada.
+Els llistats de valors de resposta possibles dels Elements continguts s'hauria de restringir als dels corresponents catàlegs del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
 				>
 				["at0007"] = <
 					text = <"Institució publicadora">
-					description = <"">
+					description = <"Dades relatives a la institució que publica el resultat de l'actuació sanitària documentada, incloent-hi identificació de l'entitat, subdivisions administratives (unitats proveïdores, centres) i el tipus d'activitat sanitària prestada.
+Els llistats de valors de resposta possibles dels Elements continguts s'hauria de restringir als dels corresponents catàlegs del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
 				>
 				["at0009"] = <
 					text = <"Institució sol·licitant">
-					description = <"">
+					description = <"Dades relatives a la institució que sol·licita la realització de l'actuació sanitària documentada, incloent identificació de l'entitat, subdivisions administratives (unitats proveïdores, centres) i el tipus d'activitat sanitària prestada. 
+Els llistats de valors de resposta possibles dels Elements continguts s'hauria de restringir als dels corresponents catàlegs del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
 				>
 				["at0010"] = <
 					text = <"Institució custòdia">
-					description = <"">
+					description = <"Dades relatives a la institució que custodia el resultat de l'actuació sanitària documentada, incloent identificació de l'entitat, subdivisions administratives (unitats proveïdores, centres) i el tipus d'activitat sanitària prestada. 
+Els llistats de valors de resposta possibles dels Elements continguts s'hauria de restringir als dels corresponents catàlegs del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
 				>
 				["at0011"] = <
-					text = <"Centre d'actuació">
-					description = <"">
+					text = <"Centre sanitari que realitza">
+					description = <"Instal·lació física dotada de mitjans tècnics on professionals amb capacitació han realitzat l'actuació sanitària documentada. 
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"Centre sanitari: conjunt organitzat d'instal·lacions i mitjans tècnics on professionals amb capacitació, sota la direcció d'un responsable sanitari, duen a terme activitats sanitàries. Cada centre pertany a una Entitat Proveïdora (EP) i realitza activitats sanitàries emmarcades administrativament en una o més Unitats Proveïdores (UP).
+Servidor Terminològic \"Catàleg centres\" OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0012"] = <
-					text = <"Servei Assistencial (SA) d'actuació">
-					description = <"">
+					text = <"Servei Assistencial que realitza">
+					description = <"Codi que indica el tipus de Servei sanitari on es realitza l'actuació sanitària documentada, segons la categoria de l'activitat assistencial que fa.  
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats. ">
+					comment = <"Un Servei Sanitari és una unitat funcional assistencial, amb organització diferenciada, dotada de professionals i recursos tècnics per fer activitats sanitàries específiques dintre d'un Centre sanitari, i es categoritza pel tipus d'activitat que presta (Medicina general/de família, Infermeria, Podologia, Vacunació, Al·lergologia, Cardiologia, Dermatologia...)
+El concepte registrat aquí és coincident amb el descrit a l'Element \"Practice Setting Code\" del cluster \"XDS Metadata\".
+Es recomana utilitzar l'Element \"Practice Setting Code\" en lloc de \"Servei Assistencial que realitza\" per registrar el tipus d'activitat prestada a un Servei Sanitari (tipus de Servei sanitari).
+Només es recomana utilitzar aquest Element quan es vulgui registrar concomitantment el tipus d'activitat d'altres Serveis sanitaris implicats (petició, publicació o custòdia del resultat l'actuació sanitària). En aquest cas, es recomana registrar el tipus de Servei Sanitari que executa l'actuació sanitària tant a \"Practice Setting Code\" com a \"Servei Assistencial que realitza\" per evitar inconsistències d'informació.
+Servidor Terminològic \"ET99 SER\" OID 2.16.724.4.9.40.4">
 				>
 				["at0013"] = <
-					text = <"Unitat Productiva (UP) d'actuació">
-					description = <"">
+					text = <"Unitat Proveïdora que realitza">
+					description = <"Subdivisió operativa dins d'una \"Entitat proveïdora\" que gestiona el conjunt específic de serveis responsable de realitzar l'actuació sanitària documentada.
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"UP (Unitat proveïdora): divisió administrativa d'una Entitat proveïdora (EP) segons el tipus de prestació sanitària (línies assistencials) acordada amb el Catsalut (per exemple A. primària, Salut Mental, Hospitalització, Sociosanitari...). Cada UP pot incloure diversos centres sanitaris.
+Servidor Terminològic \"Catàleg UPs\" OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0014"] = <
-					text = <"Centre publicador">
-					description = <"">
+					text = <"Centre sanitari publicador">
+					description = <"Instal·lació física dotada de mitjans tècnics on professionals amb capacitació han publicat el resultat de l'actuació sanitària documentada. 
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"Centre sanitari: conjunt organitzat d'instal·lacions i mitjans tècnics on professionals amb capacitació, sota la direcció d'un responsable sanitari, duen a terme activitats sanitàries. Cada centre pertany a una Entitat Proveïdora (EP) i realitza activitats sanitàries emmarcades administrativament en una o més Unitats Proveïdores (UP).
+Servidor Terminològic \"Catàleg centres\" OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0015"] = <
-					text = <"SA publicador">
-					description = <"">
+					text = <"Servei Assistencial publicador">
+					description = <"Codi que indica el tipus de Servei sanitari on es publica el resultat de l'actuació sanitària documentada, segons la categoria de l'activitat assistencial que fa.  
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats. ">
+					comment = <"Un Servei Sanitari és una unitat funcional assistencial, amb organització diferenciada, dotada de professionals i recursos tècnics per fer activitats sanitàries específiques dintre d'un Centre sanitari, i es categoritza pel tipus d'activitat que presta (Medicina general/de família, Infermeria, Podologia, Vacunació, Al·lergologia, Cardiologia, Dermatologia...).
+Servidor Terminològic \"ET99 SER\" OID 2.16.724.4.9.40.4">
 				>
 				["at0016"] = <
-					text = <"UP publicador">
-					description = <"">
+					text = <"Unitat Proveïdora publicadora">
+					description = <"Subdivisió operativa dins d'una \"Entitat proveïdora\" que gestiona el conjunt específic de serveis responsable de  publicar el resultat de l'actuació sanitària documentada. 
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"UP (Unitat proveïdora): divisió administrativa d'una Entitat proveïdora (EP) segons el tipus de prestació sanitària (línies assistencials) acordada amb el Catsalut (per exemple A. primària, Salut Mental, Hospitalització, Sociosanitari...). Cada UP pot incloure diversos centres sanitaris.
+Servidor Terminològic \"Catàleg UPs\" OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0017"] = <
-					text = <"Centre custòdia">
-					description = <"">
+					text = <"Centre sanitari custodi">
+					description = <"Instal·lació física dotada de mitjans tècnics on professionals amb capacitació custodien el resultat de l'actuació sanitària documentada. 
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"Centre sanitari: conjunt organitzat d'instal·lacions i mitjans tècnics on professionals amb capacitació, sota la direcció d'un responsable sanitari, duen a terme activitats sanitàries. Cada centre pertany a una Entitat Proveïdora (EP) i realitza activitats sanitàries emmarcades administrativament en una o més Unitats Proveïdores (UP).
+Servidor Terminològic \"Catàleg centres\" OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0018"] = <
-					text = <"SA custòdia">
-					description = <"">
+					text = <"Servei Assistencial custodi">
+					description = <"Codi que indica el tipus de Servei sanitari on es custodia el resultat de l'actuació sanitària documentada, segons la categoria de l'activitat assistencial que fa.  
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats. ">
+					comment = <"Un Servei Sanitari és una unitat funcional assistencial, amb organització diferenciada, dotada de professionals i recursos tècnics per fer activitats sanitàries específiques dintre d'un Centre sanitari, i es categoritza pel tipus d'activitat que presta (Medicina general/de família, Infermeria, Podologia, Vacunació, Al·lergologia, Cardiologia, Dermatologia...).
+Servidor Terminològic \"ET99 SER\" OID 2.16.724.4.9.40.4">
 				>
 				["at0019"] = <
-					text = <"UP custòdia">
-					description = <"">
+					text = <"Unitat Proveïdora custòdia">
+					description = <"Subdivisió operativa dins d'una \"Entitat proveïdora\" que gestiona el conjunt específic de serveis responsable de la custòdia del resultat de l'actuació sanitària documentada.
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"UP (Unitat proveïdora): divisió administrativa d'una Entitat proveïdora (EP) segons el tipus de prestació sanitària (línies assistencials) acordada amb el Catsalut (per exemple A. primària, Salut Mental, Hospitalització, Sociosanitari...). Cada UP pot incloure diversos centres sanitaris.
+Servidor Terminològic \"Catàleg UPs\" OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0020"] = <
-					text = <"Centre sol·licitant">
-					description = <"">
+					text = <"Centre sanitari sol·licitant">
+					description = <"Instal·lació física dotada de mitjans tècnics on professionals amb capacitació sol·liciten la realització de l'actuació sanitària documentada. 
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"Centre sanitari: conjunt organitzat d'instal·lacions i mitjans tècnics on professionals amb capacitació, sota la direcció d'un responsable sanitari, duen a terme activitats sanitàries. Cada centre pertany a una Entitat Proveïdora (EP) i realitza activitats sanitàries emmarcades administrativament en una o més Unitats Proveïdores (UP).
+Servidor Terminològic \"Catàleg centres\" OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0021"] = <
-					text = <"SA sol·licitant">
-					description = <"">
+					text = <"Servei Assistencial sol·licitant">
+					description = <"Codi que indica el tipus de Servei sanitari que sol·licita l'actuació sanitària documentada, segons la categoria de l'activitat assistencial que fa.  
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats. ">
+					comment = <"Un Servei Sanitari és una unitat funcional assistencial, amb organització diferenciada, dotada de professionals i recursos tècnics per fer activitats sanitàries específiques dintre d'un Centre sanitari, i es categoritza pel tipus d'activitat que presta (Medicina general/de família, Infermeria, Podologia, Vacunació, Al·lergologia, Cardiologia, Dermatologia...).
+Servidor Terminològic \"ET99 SER\" OID 2.16.724.4.9.40.4">
 				>
 				["at0022"] = <
-					text = <"UP sol·licitant">
-					description = <"">
+					text = <"Unitat Proveïdora sol·licitant">
+					description = <"Subdivisió operativa dins d'una \"Entitat proveïdora\" que gestiona el conjunt específic de serveis responsable de sol·licitar la realització de l'actuació sanitària documentada.
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"UP (Unitat proveïdora): divisió administrativa d'una Entitat proveïdora (EP) segons el tipus de prestació sanitària (línies assistencials) acordada amb el Catsalut (per exemple A. primària, Salut Mental, Hospitalització, Sociosanitari...). Cada UP pot incloure diversos centres sanitaris.
+Servidor Terminològic \"Catàleg UPs\" OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0023"] = <
-					text = <"Data de publicació del document">
-					description = <"*Date and time when the previously created document is registered in the target database.  (en)">
+					text = <"Data publicació document">
+					description = <"Data en la que el document creat es va registrar a la base de dades de destí. ">
 				>
 				["at0025"] = <
 					text = <"Detalls addicionals">
 					description = <"">
+				>
+				["at0026"] = <
+					text = <"Entitat Proveïdora que realitza">
+					description = <"Organització que proveeix serveis de salut a Catalunya, dins del Sistema Sanitari Integral d'Utilització Pública de Catalunya (SISCAT), i que ha realitzat l'actuació sanitària documentada. 
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"EP (Entitat proveïdora): entitat amb personalitat jurídica que acorda amb el Catsalut (assegurador) la prestació de serveis sanitaris als usuaris (assegurats).
+Servidor Terminològic \"Catàleg EPs\" OID 2.16.840.1.113883.4.292.10.12.5">
+				>
+				["at0027"] = <
+					text = <"Entitat Proveïdora publicadora">
+					description = <"Organització que proveeix serveis de salut a Catalunya, dins del Sistema Sanitari Integral d'Utilització Pública de Catalunya (SISCAT), i que publica el resultat de l'actuació sanitària documentada. 
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"EP (Entitat proveïdora): entitat amb personalitat jurídica que acorda amb el Catsalut (assegurador) la prestació de serveis sanitaris als usuaris (assegurats).
+Servidor Terminològic \"Catàleg EPs\" OID 2.16.840.1.113883.4.292.10.12.5">
+				>
+				["at0028"] = <
+					text = <"Entitat Proveïdora custòdia">
+					description = <"Organització que proveeix serveis de salut a Catalunya, dins del Sistema Sanitari Integral d'Utilització Pública de Catalunya (SISCAT), i que custodia el resultat de l'actuació sanitària documentada. 
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"EP (Entitat proveïdora): entitat amb personalitat jurídica que acorda amb el Catsalut (assegurador) la prestació de serveis sanitaris als usuaris (assegurats).
+Servidor Terminològic \"Catàleg EPs\" OID 2.16.840.1.113883.4.292.10.12.5">
+				>
+				["at0029"] = <
+					text = <"Entitat Proveïdora sol·licitant">
+					description = <"Organització que proveeix serveis de salut a Catalunya, dins del Sistema Sanitari Integral d'Utilització Pública de Catalunya (SISCAT), i que sol·licita la realització de l'actuació sanitària documentada. 
+El llistat de valors de resposta possibles d'aquest Element s'hauria de restringir als del corresponent catàleg del Servidor Terminològic del Departament de Salut de Catalunya, on estan disponibles estandarditzats i codificats.">
+					comment = <"EP (Entitat proveïdora): entitat amb personalitat jurídica que acorda amb el Catsalut (assegurador) la prestació de serveis sanitaris als usuaris (assegurats).
+Servidor Terminològic \"Catàleg EPs\" OID 2.16.840.1.113883.4.292.10.12.5">
 				>
 			>
 		>
