@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
+    <id>36d96775-e449-4be2-bfb8-d6b8ba4fb876</id>
+    <name>hc3_patient_context_v0.1</name>
+    <description>
+        <original_author>
+            <item>
+                <key>date</key>
+                <value>2023-12-05</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>0.2.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value>29f74e94-c18b-46f8-976a-cccc20efbc7d</value>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>3133cef5923503261c3a7f6da1dc8eef</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>21023B057036D9A78563E72E61C07499</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
+        </other_details>
+    </description>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.patient_context.v0" concept_name="Patient context" name="HC3 Patient context" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-ADMIN_ENTRY.patient_context.v0" max="1" path="/content" xsi:type="tem:ADMIN_ENTRY">
+            <Rule max="0" path="/data[at0001]/items[at0004]"/>
+        </Content>
+        <Context>
+            <Items archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER"/>
+        </Context>
+    </definition>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.patient_context.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">21023B057036D9A78563E72E61C07499</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">16AC7AFFA686A2550EAE2E1513BDFFFF</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">8B41A545D448137713B8815907732588</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-ADMIN_ENTRY.patient_context.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">568B7DD576E0C543B7852C60C73A5CDA</digest>
+    </integrity_checks>
+</template>
