@@ -1,0 +1,208 @@
+﻿archetype (adl_version=1.4; uid=30d6ae1f-5b6a-4f17-8dbe-ce3056a891db)
+	openEHR-EHR-ACTION.screening_activity.v0
+
+concept
+	[at0000]	-- Screening Activity
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2023-09-29">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"E509EEC554CAE664532663C07A6C4113">
+		["build_uid"] = <"884c4ed9-7095-4027-aaec-bca419be6cc8">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ACTION[at0000] matches {    -- Screening Activity
+		description matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Reason for participation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Reason for refusal
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Invitation date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+		ism_transition matches {
+			ISM_TRANSITION[at0005] matches {    -- Screening sent
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::524]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0005]    -- Screening sent
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0006] matches {    -- Screening not sent
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::524]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0006]    -- Screening not sent
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0007] matches {    -- Screening accepted
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::526]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0007]    -- Screening accepted
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0008] matches {    -- Screening scheduled
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::529]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0008]    -- Screening scheduled
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0009] matches {    -- Screening cancelled
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::528]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0009]    -- Screening cancelled
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0010] matches {    -- Screening refused
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::531]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0010]    -- Screening refused
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Screening Activity">
+					description = <"Screening Activity">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Reason for participation">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Reason for refusal">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Invitation date">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Screening sent">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Screening not sent">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Screening accepted">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Screening scheduled">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Screening cancelled">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Screening refused">
+					description = <"">
+				>
+			>
+		>
+	>
