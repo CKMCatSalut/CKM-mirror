@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<template xmlns="openEHR/v1/Template">
+<?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
     <id>3806c87e-40c6-4c85-9b7d-c128dc6de19e</id>
-    <name>HC3 Immunization List v0.6</name>
+    <name>HC3 Immunization List v0.5</name>
     <description>
         <original_author>
             <item>
@@ -34,7 +33,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>0.6.0</value>
+                <value>23.0.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -45,22 +44,18 @@
                 <value>b4edb688259f33e0493a27c5ed7068e4</value>
             </item>
             <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>F2C3BD9252691BB3975C53648208D672</value>
+            </item>
+            <item>
                 <key>original_language</key>
                 <value>ISO_639-1::en</value>
             </item>
         </other_details>
     </description>
-    <definition
-        archetype_id="openEHR-EHR-COMPOSITION.vaccination_list.v0"
-        concept_name="Vaccination list" name="HC3 Immunization List"
-        xmlns:tem="openEHR/v1/Template"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
-        <Content archetype_id="openEHR-EHR-SECTION.immunisation_list.v0"
-            concept_name="Vaccination list" max="1"
-            name="Immunization list" path="/content" xsi:type="tem:SECTION">
-            <Item archetype_id="openEHR-EHR-ACTION.medication.v1"
-                concept_name="Medication management"
-                name="Immunization management" path="/items[at0001]" xsi:type="tem:ACTION">
+    <definition archetype_id="openEHR-EHR-COMPOSITION.vaccination_list.v0" concept_name="Vaccination list" name="HC3 Immunization List" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-SECTION.immunisation_list.v0" concept_name="Vaccination list" max="1" name="Immunization list" path="/content" xsi:type="tem:SECTION">
+            <Item archetype_id="openEHR-EHR-ACTION.medication.v1" concept_name="Medication management" name="Immunization management" path="/items[at0001]" xsi:type="tem:ACTION">
                 <Rule max="0" min="0" path="/ism_transition[at0109]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0145]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0013]"/>
@@ -99,9 +94,12 @@
                 <Rule max="0" path="/description[at0017]/items[at0149]"/>
                 <Rule max="0" path="/description[at0017]/items[at0025]"/>
                 <Rule max="0" path="/description[at0017]/items[at0024]"/>
-                <Rule max="0" path="/protocol[at0030]/items[at0103]"/>
-                <Items archetype_id="openEHR-EHR-CLUSTER.medication.v2"
-                    max="1" path="/description[at0017]/items[at0104]" xsi:type="tem:CLUSTER">
+                <Rule max="0" path="/protocol[at0030]/items[at0103]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+                <Items archetype_id="openEHR-EHR-CLUSTER.medication.v2" max="1" path="/description[at0017]/items[at0104]" xsi:type="tem:CLUSTER">
                     <Rule max="0" path="/items[at0071]"/>
                     <Rule max="0" path="/items[at0142]">
                         <constraint xsi:type="tem:multipleConstraint">
@@ -121,10 +119,7 @@
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0133]"/>
-                    <Items
-                        archetype_id="openEHR-EHR-CLUSTER.medication.v2"
-                        concept_name="Medication details" max="1"
-                        name="Constituent details" path="/items[at0138]" xsi:type="tem:CLUSTER">
+                    <Items archetype_id="openEHR-EHR-CLUSTER.medication.v2" concept_name="Medication details" max="1" name="Constituent details" path="/items[at0138]" xsi:type="tem:CLUSTER">
                         <Rule max="0" path="/items[at0071]"/>
                         <Rule max="0" path="/items[at0142]">
                             <constraint xsi:type="tem:multipleConstraint">
@@ -156,44 +151,26 @@
             </Item>
         </Content>
         <Context>
-            <Items archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0"
-                max="1"
-                path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER"/>
-            <Items archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0"
-                max="1"
-                path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" max="1" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" max="1" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER"/>
         </Context>
     </definition>
-    <integrity_checks
-        archetype_id="openEHR-EHR-COMPOSITION.vaccination_list.v0"
-        xmlns:tem="openEHR/v1/Template"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.vaccination_list.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">F2C3BD9252691BB3975C53648208D672</digest>
     </integrity_checks>
-    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0"
-        xmlns:tem="openEHR/v1/Template"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">16AC7AFFA686A2550EAE2E1513BDFFFF</digest>
     </integrity_checks>
-    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0"
-        xmlns:tem="openEHR/v1/Template"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">F53A0FF2544DDEFED7DB9864AF3B45C8</digest>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">8B41A545D448137713B8815907732588</digest>
     </integrity_checks>
-    <integrity_checks
-        archetype_id="openEHR-EHR-SECTION.immunisation_list.v0"
-        xmlns:tem="openEHR/v1/Template"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+    <integrity_checks archetype_id="openEHR-EHR-SECTION.immunisation_list.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">6D33ECAE951870774131B9C6BB600560</digest>
     </integrity_checks>
-    <integrity_checks archetype_id="openEHR-EHR-ACTION.medication.v1"
-        xmlns:tem="openEHR/v1/Template"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">2BB9DDF7A85B366AC1C2A7C7CF21C282</digest>
+    <integrity_checks archetype_id="openEHR-EHR-ACTION.medication.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">0650B5F8DDBF358C1E02ED6A5B17D978</digest>
     </integrity_checks>
-    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.medication.v2"
-        xmlns:tem="openEHR/v1/Template"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.medication.v2" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">89BA41E6CD217F7E2639D05A6B02465C</digest>
     </integrity_checks>
 </template>
