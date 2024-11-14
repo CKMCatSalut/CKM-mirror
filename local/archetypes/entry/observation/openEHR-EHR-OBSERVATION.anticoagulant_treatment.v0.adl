@@ -1,0 +1,170 @@
+﻿archetype (adl_version=1.4; uid=9ead058a-c6ef-4029-9475-f0d706cb9c12)
+	openEHR-EHR-OBSERVATION.anticoagulant_treatment.v0
+
+concept
+	[at0000]	-- Anticoagulant treatment
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2023-10-03">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"9B5D7AC0A853341568BBA6125D9023C3">
+		["build_uid"] = <"ebd94b27-c371-4cf7-8575-533eb5d29e1a">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Anticoagulant treatment
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- INR Result
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Lower end of therapeutic range
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Upper end of the therapeutic range
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Days to next revision
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Warfarin dosage
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Acenocoumarol dosage
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Control modality
+										value matches {
+											1|[local::at0011],
+											2|[local::at0012],
+											3|[local::at0013]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0014] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0015] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Anticoagulant treatment">
+					description = <"Anticoagulant treatment">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"INR Result">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Lower end of therapeutic range">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Upper end of the therapeutic range">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Days to next revision">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Warfarin dosage">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Acenocoumarol dosage">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Control modality">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Primary">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Mixed (Primary-Hospital)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Hospital">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0015"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+	>
