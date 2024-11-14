@@ -1,0 +1,2324 @@
+<?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
+    <id>6d019bc8-57b3-4f1c-8c2c-a238b9a6e8cb</id>
+    <name>hc3_spirometry_test_result_v0.10</name>
+    <description>
+        <original_author>
+            <item>
+                <key>name</key>
+                <value>Clara Calleja Vega</value>
+            </item>
+            <item>
+                <key>organisation</key>
+                <value>CatSalut</value>
+            </item>
+            <item>
+                <key>email</key>
+                <value>ccalleja@catsalut.cat</value>
+            </item>
+            <item>
+                <key>date</key>
+                <value>2023-09-22</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>57.0.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value/>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>4a50e5ae395e85bbb93cbe734e04c775</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>2A64B8463AA11FF22EA7977CDF0E9959</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
+        </other_details>
+    </description>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.report-result.v1" concept_name="Result report" name="HC3 Spirometry test result" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" name="Patient information" path="/content" xsi:type="tem:SECTION">
+            <Item archetype_id="openEHR-EHR-OBSERVATION.height.v2" concept_name="Height/Length" max="1" name="Height" path="/items" xsi:type="tem:OBSERVATION">
+                <Rule name="Height" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]">
+                    <constraint xsi:type="tem:quantityConstraint">
+                        <unitMagnitude>
+                            <unit>[in_i]</unit>
+                            <maxMagnitude>250.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                        <unitMagnitude>
+                            <unit>cm</unit>
+                            <maxMagnitude>1000.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0018]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/state[at0013]/items[at0014]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/state[at0013]/items[at0019]"/>
+                <Rule max="0" path="/data[at0001]/events[at0021]"/>
+                <Rule clone="true" name="Simple" path="/data[at0001]/events[at0021]/data[at0003]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0021]/state[at0013]"/>
+            </Item>
+            <Item archetype_id="openEHR-EHR-OBSERVATION.body_weight.v2" concept_name="Body weight" max="1" name="Weight" path="/items" xsi:type="tem:OBSERVATION">
+                <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at0004]">
+                    <constraint xsi:type="tem:quantityConstraint">
+                        <unitMagnitude>
+                            <unit>g</unit>
+                            <maxMagnitude>1000000.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                        <unitMagnitude>
+                            <unit>kg</unit>
+                            <maxMagnitude>1000.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                        <unitMagnitude>
+                            <unit>[lb_av]</unit>
+                            <maxMagnitude>2000.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0002]/events[at0003]/data[at0001]/items[at0024]"/>
+                <Rule max="0" path="/data[at0002]/events[at0003]/state[at0008]/items[at0009]"/>
+                <Rule max="0" path="/data[at0002]/events[at0003]/state[at0008]/items[at0025]"/>
+                <Rule max="0" path="/data[at0002]/events[at0026]"/>
+                <Rule clone="true" name="Simple" path="/data[at0002]/events[at0026]/data[at0001]"/>
+                <Rule clone="true" name="state structure" path="/data[at0002]/events[at0026]/state[at0008]"/>
+            </Item>
+            <Item archetype_id="openEHR-EHR-EVALUATION.ethnicity.v1" concept_name="Ethnic identity" max="1" name="Ethnicity" path="/items" xsi:type="tem:EVALUATION">
+                <Rule max="0" path="/data[at0001]/items[at0002]"/>
+                <Rule max="1" min="1" path="/data[at0001]/items[at0003]"/>
+                <Rule max="0" path="/data[at0001]/items[at0004]"/>
+                <Rule max="0" path="/data[at0001]/items[at0010]"/>
+                <Rule max="0" path="/data[at0001]/items[at0005]"/>
+                <Rule max="0" path="/protocol[at0006]/items[at0008]"/>
+            </Item>
+            <Item archetype_id="openEHR-EHR-OBSERVATION.tobacco_use.v0" max="1" path="/items" xsi:type="tem:OBSERVATION">
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0006]"/>
+                <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0015]/items[at0014]">
+                    <constraint xsi:type="tem:quantityConstraint"/>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0015]/items[at0016]">
+                    <constraint xsi:type="tem:quantityConstraint"/>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0017]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0018]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0019]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0021]"/>
+                <Rule max="0" path="/data[at0001]/events[at0023]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0023]/data[at0003]"/>
+                <Rule max="0" path="/data[at0001]/events[at0022]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0022]/data[at0003]"/>
+            </Item>
+            <Item archetype_id="openEHR-EHR-OBSERVATION.age.v0" max="1" path="/items" xsi:type="tem:OBSERVATION">
+                <Rule min="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]">
+                    <constraint xsi:type="tem:durationConstraint">
+                        <maxMagnitude>P200Y</maxMagnitude>
+                        <minMagnitude>P0Y</minMagnitude>
+                        <includesMaximum>true</includesMaximum>
+                        <includesMinimum>true</includesMinimum>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0007]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]"/>
+            </Item>
+        </Content>
+        <Content archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" name="Spirometry test result list" path="/content" xsi:type="tem:SECTION">
+            <Item archetype_id="openEHR-EHR-OBSERVATION.spirometry_result-CatSalut-HC3.v3" max="1" path="/items" xsi:type="tem:OBSERVATION">
+                <Rule name="Basal test" path="/data[at0001]/events[at0002]"/>
+                <Rule max="1" name="FVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEV1" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEV0.5" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0052, 'FEV0.5']/items[at0044]"/>
+                <Rule clone="true" max="1" name="FEV3" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0052, 'FEV3']/items[at0044]"/>
+                <Rule clone="true" max="1" name="FEV6" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FIVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="1" name="PEFR" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF25-75%" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF75%" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0057, 'FEF75%']/items[at0122]"/>
+                <Rule clone="true" max="1" name="FEF50%" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF25%" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0057, 'FEF25%']/items[at0122]"/>
+                <Rule clone="true" max="1" name="FIF50%" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0156]"/>
+                <Rule max="1" name="FEV1/FVC ratio" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1, 'FEV1/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" name="FEV1/FEV6 ratio" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1, 'FEV1/FEV6 ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV1/VC ratio" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1, 'FEV1/VC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV0.5/FVC ratio" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1, 'FEV0.5/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV3/FVC ratio" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1, 'FEV3/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEF50%/FIF50% ratio" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0055.1, 'FEF50%/FIF50% ratio']/items[at0018]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0130]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0101]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/state[at0031]/items[at0115]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/state[at0031]/items[at0098]"/>
+                <Rule clone="true" name="Basal test - best result" path="/data[at0001]/events[at0002]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]"/>
+                <Rule max="1" name="FVC" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEV1" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEV0.5" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0052, 'FEV0.5']/items[at0044]"/>
+                <Rule clone="true" max="1" name="FEV3" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0052, 'FEV3']/items[at0044]"/>
+                <Rule clone="true" max="1" name="FEV6" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FIVC" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="1" name="PEFR" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF25-75%" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF75%" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0057, 'FEF75%']/items[at0122]"/>
+                <Rule clone="true" max="1" name="FEF50%" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF25%" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0057, 'FEF25%']/items[at0122]"/>
+                <Rule clone="true" max="1" name="FIF50%" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0156]"/>
+                <Rule max="1" name="FEV1/FVC ratio" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1, 'FEV1/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" name="FEV1/FEV6 ratio" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1, 'FEV1/FEV6 ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV1/VC ratio" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1, 'FEV1/VC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV0.5/FVC ratio" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1, 'FEV0.5/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV3/FVC ratio" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1, 'FEV3/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEF50%/FIF50% ratio" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1, 'FEF50%/FIF50% ratio']/items[at0018]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0130]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0101]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Basal test - best result']/state[at0031]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/state[at0031]/items[at0115]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/state[at0031]/items[at0098]"/>
+                <Rule clone="true" name="Post-bronchodilator test" path="/data[at0001]/events[at0002]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]"/>
+                <Rule max="1" name="FVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEV1" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEV0.5" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0052, 'FEV0.5']/items[at0044]"/>
+                <Rule clone="true" max="1" name="FEV3" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0052, 'FEV3']/items[at0044]"/>
+                <Rule clone="true" max="1" name="FEV6" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FIVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="1" name="PEFR" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF25-75%" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF75%" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0057, 'FEF75%']/items[at0122]"/>
+                <Rule clone="true" max="1" name="FEF50%" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF25%" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0057, 'FEF25%']/items[at0122]"/>
+                <Rule clone="true" max="1" name="FIF50%" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0156]"/>
+                <Rule max="1" name="FEV1/FVC ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1, 'FEV1/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" name="FEV1/FEV6 ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1, 'FEV1/FEV6 ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV1/VC ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1, 'FEV1/VC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV0.5/FVC ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1, 'FEV0.5/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV3/FVC ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1, 'FEV3/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEF50%/FIF50% ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1, 'FEF50%/FIF50% ratio']/items[at0018]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0130]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0101]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/state[at0031]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/state[at0031]/items[at0115]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/state[at0031]/items[at0098]"/>
+                <Rule clone="true" name="Post-bronchodilator test - best result" path="/data[at0001]/events[at0002]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]"/>
+                <Rule max="1" name="FVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEV1" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEV0.5" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0052, 'FEV0.5']/items[at0044]"/>
+                <Rule clone="true" max="1" name="FEV3" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0052, 'FEV3']/items[at0044]"/>
+                <Rule clone="true" max="1" name="FEV6" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0172</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FIVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0052]">
+                    <nameConstraint>
+                        <excludedValues>local::at0065</excludedValues>
+                        <excludedValues>local::at0064</excludedValues>
+                        <excludedValues>local::at0174</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                        <excludedValues>local::at0145</excludedValues>
+                        <excludedValues>local::at0070</excludedValues>
+                        <excludedValues>local::at0067</excludedValues>
+                        <excludedValues>local::at0146</excludedValues>
+                        <excludedValues>local::at0068</excludedValues>
+                        <excludedValues>local::at0069</excludedValues>
+                        <excludedValues>local::at0171</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0077</excludedValues>
+                        <excludedValues>local::at0078</excludedValues>
+                        <excludedValues>local::at0176</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="1" name="PEFR" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF25-75%" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF75%" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0057, 'FEF75%']/items[at0122]"/>
+                <Rule clone="true" max="1" name="FEF50%" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule clone="true" max="1" name="FEF25%" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0187</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0057, 'FEF25%']/items[at0122]"/>
+                <Rule clone="true" max="1" name="FIF50%" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0057]">
+                    <nameConstraint>
+                        <excludedValues>local::at0152</excludedValues>
+                        <excludedValues>local::at0205</excludedValues>
+                        <excludedValues>local::at0072</excludedValues>
+                        <excludedValues>local::at0073</excludedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0177</excludedValues>
+                        <excludedValues>local::at0178</excludedValues>
+                        <excludedValues>local::at0179</excludedValues>
+                        <excludedValues>local::at0186</excludedValues>
+                        <excludedValues>local::at0188</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0156]"/>
+                <Rule max="1" name="FEV1/FVC ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1, 'FEV1/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" name="FEV1/FEV6 ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1, 'FEV1/FEV6 ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV1/VC ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1, 'FEV1/VC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV0.5/FVC ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1, 'FEV0.5/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEV3/FVC ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.5</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1, 'FEV3/FVC ratio']/items[at0018]"/>
+                <Rule clone="true" max="1" name="FEF50%/FIF50% ratio" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1]">
+                    <nameConstraint>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0080</excludedValues>
+                        <excludedValues>local::at0189</excludedValues>
+                        <excludedValues>local::at0190</excludedValues>
+                        <excludedValues>local::at0.1</excludedValues>
+                        <excludedValues>local::at0.3</excludedValues>
+                        <excludedValues>local::at0.4</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1, 'FEF50%/FIF50% ratio']/items[at0018]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0130]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0101]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/state[at0031]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/state[at0031]/items[at0115]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/state[at0031]/items[at0098]"/>
+                <Rule max="0" path="/protocol[at0029]/items[at0196]"/>
+                <Rule max="0" path="/protocol[at0029]/items[at0199]"/>
+                <Rule max="0" path="/protocol[at0029]/items[at0192]"/>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SVTFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SVTFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SFVFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SFVFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SVTFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SFVFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SFVFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="Signals SFVFVC" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Graphic URL" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="Graphic URL" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0.2]" xsi:type="tem:CLUSTER">
+                    <Rule max="1" name="PEFT" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'PEFT']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>s</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'PEFT']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'PEFT']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="EOTV" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'EOTV']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>L</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'EOTV']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'EOTV']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="T0" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'T0']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>s</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'T0']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'T0']/items[at0024]"/>
+                    <Rule clone="true" name="BEV" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'BEV']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>L</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'BEV']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'BEV']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="FVCL" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'FVCL']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'FVCL']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="VTCL" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'VTCL']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'VTCL']/items[at0024]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0020]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0026]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0027]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0003.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>m/s</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>m/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>km/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0010.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SVTFVC" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SVTFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SFVFVC" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SFVFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SVTFVC" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SFVFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SFVFVC" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="Signals SFVFVC" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Graphic URL" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="Graphic URL" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0.2]" xsi:type="tem:CLUSTER">
+                    <Rule max="1" name="PEFT" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'PEFT']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>s</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'PEFT']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'PEFT']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="EOTV" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'EOTV']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>L</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'EOTV']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'EOTV']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="T0" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'T0']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>s</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'T0']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'T0']/items[at0024]"/>
+                    <Rule clone="true" name="BEV" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'BEV']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>L</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'BEV']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'BEV']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="FVCL" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'FVCL']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'FVCL']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="VTCL" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'VTCL']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'VTCL']/items[at0024]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0011]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0021]">
+                        <constraint xsi:type="tem:quantityConstraint"/>
+                    </Rule>
+                    <Rule max="0" path="/items[at0010]/items[at0026]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0027]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test - best result']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0003.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>m/s</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>m/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>km/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0010.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SVTFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SVTFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SFVFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SFVFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SVTFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SFVFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SFVFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="Signals SFVFVC" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Graphic URL" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="Graphic URL" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" max="1" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0.2]" xsi:type="tem:CLUSTER">
+                    <Rule max="1" name="PEFT" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'PEFT']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>s</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'PEFT']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'PEFT']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="EOTV" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'EOTV']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>L</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'EOTV']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'EOTV']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="T0" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'T0']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>s</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'T0']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'T0']/items[at0024]"/>
+                    <Rule clone="true" name="BEV" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule path="/items[at0002, 'BEV']/items[at0003]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <includedUnits>L</includedUnits>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'BEV']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'BEV']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="FVCL" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0008</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'FVCL']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'FVCL']/items[at0024]"/>
+                    <Rule clone="true" max="1" name="VTCL" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002, 'VTCL']/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002, 'VTCL']/items[at0024]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0020]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0026]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0027]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0003.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>m/s</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>m/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>km/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0010.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SVTFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SVTFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SFVFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SFVFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Graphic URL" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="Graphic URL" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" max="1" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0.2]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" name="VTCL" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002]/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002]/items[at0024]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0011]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0021]">
+                        <constraint xsi:type="tem:quantityConstraint"/>
+                    </Rule>
+                    <Rule max="0" path="/items[at0010]/items[at0026]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0027]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0003.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>m/s</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>m/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>km/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0010.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.device.v1" concept_name="Medical device" max="1" name="Spirometer" path="/protocol[at0029]/items[at0030]" xsi:type="tem:CLUSTER">
+                    <Rule name="Model name" path="/items[at0001]"/>
+                    <Rule name="Device type" path="/items[at0003]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0004]"/>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0020]"/>
+                    <Rule max="0" path="/items[at0022]"/>
+                    <Rule max="0" path="/items[at0023]"/>
+                    <Rule max="0" path="/items[at0006]"/>
+                    <Rule name="Software" path="/items[at0025]"/>
+                    <Rule max="0" path="/items[at0007]"/>
+                    <Rule max="0" path="/items[at0024]"/>
+                    <Rule max="0" path="/items[at0008]"/>
+                    <Items archetype_id="openEHR-EHR-CLUSTER.device_details.v0" max="1" path="/items[at0009]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0001]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Text</includedTypes>
+                                <includedTypes>Identifier</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0023]"/>
+                        <Rule max="0" path="/items[at0024]"/>
+                        <Rule max="0" path="/items[at0025]"/>
+                        <Rule max="0" path="/items[at0007]"/>
+                        <Rule max="0" path="/items[at0002]"/>
+                        <Rule max="0" path="/items[at0008]"/>
+                        <Rule max="0" path="/items[at0010]"/>
+                        <Rule max="0" path="/items[at0011]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Text</includedTypes>
+                                <includedTypes>Quantity</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0012]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Text</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0013]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Text</includedTypes>
+                                <includedTypes>Quantity</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0014]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Text</includedTypes>
+                                <includedTypes>Quantity</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0015]"/>
+                        <Rule max="0" path="/items[at0022]"/>
+                        <Rule name="Date and time of callibration" path="/items[at0017]"/>
+                        <Rule max="0" path="/items[at0016]"/>
+                        <Rule max="0" path="/items[at0019]"/>
+                    </Items>
+                    <Items archetype_id="openEHR-EHR-CLUSTER.device.v1" max="1" path="/items[at0018]" xsi:type="tem:CLUSTER">
+                        <Rule name="Transducer name" path="/items[at0001]"/>
+                        <Rule max="0" path="/items[at0003]"/>
+                        <Rule max="0" path="/items[at0002]"/>
+                        <Rule max="0" path="/items[at0021]"/>
+                        <Rule max="0" path="/items[at0004]"/>
+                        <Rule max="0" path="/items[at0005]"/>
+                        <Rule max="0" path="/items[at0020]"/>
+                        <Rule max="0" path="/items[at0022]"/>
+                        <Rule max="0" path="/items[at0023]"/>
+                        <Rule max="0" path="/items[at0006]"/>
+                        <Rule max="0" path="/items[at0025]"/>
+                        <Rule max="0" path="/items[at0007]"/>
+                        <Rule max="0" path="/items[at0024]"/>
+                        <Rule max="0" path="/items[at0008]"/>
+                    </Items>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.knowledge_base_reference.v1" max="1" path="/protocol[at0029]/items[at0185]" xsi:type="tem:CLUSTER">
+                    <Rule name="Reference table" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0006]"/>
+                    <Rule max="0" path="/items[at0008]"/>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0007]"/>
+                    <Rule max="0" path="/items[at0003]"/>
+                    <Rule max="0" path="/items[at0004]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" max="1" path="/protocol[at0029]/items[at0132]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule name="Number of maneuvers" path="/items[at0010]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0011]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0020]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0021]">
+                        <constraint xsi:type="tem:quantityConstraint"/>
+                    </Rule>
+                </Items>
+            </Item>
+            <Item archetype_id="openEHR-EHR-EVALUATION.clinical_synopsis.v1" concept_name="Clinical synopsis" max="1" name="Spirometry general comment" path="/items" xsi:type="tem:EVALUATION">
+                <Rule name="Comment" path="/data[at0001]/items[at0002]"/>
+            </Item>
+        </Content>
+        <Context>
+            <Items archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" max="1" path="/context/other_context[at0001]/items[at0006]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" max="1" path="/context/other_context[at0001]/items[at0006]" xsi:type="tem:CLUSTER"/>
+        </Context>
+        <Rule max="0" path="/context/other_context[at0001]/items[at0002]"/>
+        <Rule max="0" path="/context/other_context[at0001]/items[at0005]"/>
+    </definition>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.report-result.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">2A64B8463AA11FF22EA7977CDF0E9959</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">16AC7AFFA686A2550EAE2E1513BDFFFF</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">8B41A545D448137713B8815907732588</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-SECTION.adhoc.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">8FE80F3E80C594AAF99D3BA540A53D73</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.height.v2" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">C75BA8F0FF1D8D127E0E9469D06C9128</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.body_weight.v2" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">B7CBE264803846DAA95A01EEF598BA3B</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-EVALUATION.ethnicity.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">75F0FE57A0A92ECC8129254AAAE50E4F</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.tobacco_use.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">CB10AB9F57704A50401952AC53BA5E05</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.age.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">943EDAA1C6F2DFD7D1F732B6A512BA5D</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.spirometry_result-CatSalut-HC3.v3" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">C5157A7B22D66795EF9127F92E2A7E2F</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.media_file.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">E1C0201AED51855810B4D9FD7633573E</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">CAFD7D72DAA3CF30764D9399E91E02AE</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">B1B9ABC8FD21F1D6FA57BA1DD8FEE73F</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.device.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">D1349AAD9444365B34B1BAFDE9F0BD4A</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.device_details.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">A585C08AA295D79F2248D2E61472C89C</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.knowledge_base_reference.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">F575F2A1D95C3F61355D0B99753647AD</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-EVALUATION.clinical_synopsis.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">0A06AC36BF82029DCD53C8C128EE29DD</digest>
+    </integrity_checks>
+</template>
