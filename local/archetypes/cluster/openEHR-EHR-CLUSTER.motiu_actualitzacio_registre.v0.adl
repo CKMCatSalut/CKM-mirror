@@ -1,0 +1,150 @@
+﻿archetype (adl_version=1.4; uid=09499450-83bc-498d-bdbe-5c06b081e031)
+	openEHR-EHR-CLUSTER.motiu_actualitzacio_registre.v0
+
+concept
+	[at0000]	-- Record update reason
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Modelatge del coneixement clínic - Catsalut">
+		["organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["email"] = <"ckm.salut@gencat.cat">
+		["date"] = <"2024-09-19">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record relevant clinical reasons regarding the modification, deactivation, or reactivation of a health record.">
+			use = <"Use to record relevant clinical information about the reason for modifying, deleting, or reactivating a medical record.">
+			keywords = <"Update, modification, audit trail, log", ...>
+			misuse = <"Do not use to record non-clinical information related to the traceability of a modification, deactivation, or reactivation of a health record. Use the openEHR reference model for this purpose.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Para registrar motivos clínicos relevantes sobre el motivo de modificación, baja o reactivación de un registro sanitario.">
+			use = <"Utilizar para registrar información clínica relevante sobre el motivo de modificación, baja o reactivación de un registro sanitario.">
+			keywords = <"Actualitzación, modificación, registro auditoria, log", ...>
+			misuse = <"No utilizar para registrar información no clínica en relación con la trazabilidad de una modificación, baja o reactivación de un registro sanitario. Utilizar el modelo de referencia openEHR para este propósito.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Per a registrar motius clínics rellevants sobre el motiu de modificació, baixa o reactivació d'un registre sanitari.">
+			use = <"Utilitzar per a registrar informació clínica rellevant sobre el motiu de modificació, baixa o reactivació d'un registre sanitari.">
+			keywords = <"Actualització, modificació, registre auditoria", ...>
+			misuse = <"No utilitzar per a registrar informació no clínica en relació a la traçabilitat d'una modificació, baixa o reactivació d'un registre sanitari. Utilitzar el model de referencia openEHR per a aquest propòsit.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"2A0984E55C6DC58F573BF9914054CBA6">
+		["build_uid"] = <"d57c5238-4356-47ca-9659-7a29c3c5228d">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Record update reason
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Modification reason
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Inactivation reason
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Reactivation reason
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Record update reason">
+					description = <"Clinical reason for updating,  deactivating or reactivating the record.">
+				>
+				["at0004"] = <
+					text = <"Modification reason">
+					description = <"Clinical reason for modifying the record information.">
+				>
+				["at0005"] = <
+					text = <"Inactivation reason">
+					description = <"Reason for discarding the record information, with a sufficient level of clinical certainty to justify the invalidation.">
+				>
+				["at0006"] = <
+					text = <"Reactivation reason">
+					description = <"Reason for reactivating a previously deactivated record. This assessment will be conducted with a sufficient level of clinical certainty to determine if the initial claim can be considered valid or not.">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Motiu actualitzacio registre">
+					description = <"Motiu clínic per el qual s'ha editat el registre, ja sigui per actualitzar les dades, reactivar el registre o donar-lo de baixa.">
+				>
+				["at0004"] = <
+					text = <"Motiu de modificacio">
+					description = <"Motiu clínic per el qual s'ha modificat la informació del registre.">
+				>
+				["at0005"] = <
+					text = <"Motiu de baixa">
+					description = <"Motiu per el qual s'ha descartat la informació del registre, amb un nivell suficient de certesa clínica per a justificar la invalidació.">
+				>
+				["at0006"] = <
+					text = <"Motiu de reactivació">
+					description = <"Motiu per el qual s'ha reactivat un registre prèviament donat de baixa. Aquesta avaluació es farà amb un nivell suficient de certesa clínica per determinar si l'afirmació inicial pot ser considerada vàlida o no.">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Motivo actualitzación registro">
+					description = <"Motivo clínico por el cual se ha editado el registro, ya sea para actualizar los datos, reactivar el registro o darlo de baja.">
+				>
+				["at0004"] = <
+					text = <"Motivo de modificación">
+					description = <"Motivo clínico por el cual se ha modificado la información del registro.">
+				>
+				["at0005"] = <
+					text = <"Motivo de baja">
+					description = <"Motivo por el cual se ha descartado la información del registro, con un nivel suficiente de certeza clínica para justificar la invalidación.">
+				>
+				["at0006"] = <
+					text = <"Motivo de reactivación">
+					description = <"Motivo por el cual se ha reactivado un registro previamente dado de baja. Esta evaluación se hará con un nivel suficiente de certeza clínica para determinar si la afirmación inicial puede ser considerada válida o no.">
+				>
+			>
+		>
+	>

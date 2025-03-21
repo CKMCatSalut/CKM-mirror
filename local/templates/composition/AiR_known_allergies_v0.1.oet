@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
+    <id>1e5f68ba-7b97-46a2-89a1-420ef8f7b964</id>
+    <name>AiR_known_allergies_v0.1</name>
+    <description>
+        <original_author>
+            <item>
+                <key>date</key>
+                <value>2024-10-21</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>0.1.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value/>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>9426ccce695c914d367d886185826fe9</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>41914AB89EC39C22523B4461C349BB17</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
+        </other_details>
+    </description>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.adverse_reaction_list.v1" concept_name="Adverse reaction list" name="AiR_known_allergies_v0.1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-OBSERVATION.problem_screening.v1" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0034]"/>
+            <Rule name="Any known allergy?" path="/data[at0001]/events[at0002]/data[at0003]/items[at0028]">
+                <constraint xsi:type="tem:textConstraint">
+                    <includedValues>local_terms::473011001::Al·lèrgies (AM+ANM)</includedValues>
+                    <includedValues>local_terms::416098002::Al·lèrgia medicamentosa (AM)</includedValues>
+                    <includedValues>local_terms::161611007::Al·lèrgia no medicamentosa (ANM)</includedValues>
+                </constraint>
+            </Rule>
+            <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0043]"/>
+            <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0022]"/>
+        </Content>
+        <Content archetype_id="openEHR-EHR-SECTION.adverse_reaction_list.v0" max="1" path="/content" xsi:type="tem:SECTION">
+            <Item archetype_id="openEHR-EHR-EVALUATION.absence.v2" max="1" path="/items[at0003]" xsi:type="tem:EVALUATION">
+                <Rule path="/data[at0001]/items[at0002]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>local_terms::NPA::No s'ha preguntat al pacient per al·lèrgies (NPA)</includedValues>
+                        <includedValues>local_terms::NPAM::No s’ha preguntat al pacient per al·lèrgies Medicamentoses (NPAM)</includedValues>
+                        <includedValues>local_terms::NPANM::No s'ha preguntat al pacient per al·lèrgies no medicamentoses (NPANM)</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/items[at0005]"/>
+                <Rule max="0" path="/protocol[at0003]/items[at0004]"/>
+            </Item>
+            <Item archetype_id="openEHR-EHR-EVALUATION.exclusion_global.v1" max="1" path="/items[at0002]" xsi:type="tem:EVALUATION">
+                <Rule name="Global exclusion of adverse reactions" path="/data[at0001]/items[at0002]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>local_terms::716186003::Sense al·lèrgies conegudes (SAC)</includedValues>
+                        <includedValues>local_terms::409137002::Sense al·lèrgies medicamentoses conegudes (SAMC)</includedValues>
+                        <includedValues>local_terms::SANMC::Sense al·lèrgies NO medicamentoses conegudes (SANMC)</includedValues>
+                    </constraint>
+                    <nameConstraint>
+                        <excludedValues>local::at0003</excludedValues>
+                        <excludedValues>local::at0004</excludedValues>
+                        <excludedValues>local::at0005</excludedValues>
+                        <excludedValues>local::at0006</excludedValues>
+                    </nameConstraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/items[at0011]"/>
+            </Item>
+        </Content>
+        <Context>
+            <Items archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.motiu_actualitzacio_registre.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
+                <Rule max="0" path="/items[at0005]"/>
+                <Rule max="0" path="/items[at0006]"/>
+            </Items>
+        </Context>
+    </definition>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.adverse_reaction_list.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">41914AB89EC39C22523B4461C349BB17</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">52448CFEEC046154EB2EDA5265D61626</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">16AC7AFFA686A2550EAE2E1513BDFFFF</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.motiu_actualitzacio_registre.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">2A0984E55C6DC58F573BF9914054CBA6</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.problem_screening.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">D0FAB6715F1DF1D308A5529460DA77B4</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-SECTION.adverse_reaction_list.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">6900D18BA6F2C488398A4E20FFFF54AF</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-EVALUATION.absence.v2" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">7CD5D4B56F1AAC4BF3DFF1AB6120FCD0</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-EVALUATION.exclusion_global.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">94A7237B611A8FAB5C0F0DBEA236C3F9</digest>
+    </integrity_checks>
+</template>

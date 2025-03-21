@@ -1,0 +1,427 @@
+﻿archetype (adl_version=1.4; uid=d5dadb5c-f5d2-4a6b-94a0-2e6cb89a9b81)
+	openEHR-EHR-CLUSTER.adverse_reaction_additional_details.v0
+
+concept
+	[at0000]	-- Adverse reaction additional details
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <" Modelatge del coneixement clínic - Catsalut">
+		["organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["email"] = <"ckm.salut@gencat.cat">
+		["date"] = <"2024-09-19">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record all necessary supplementary information related to a drug-related adverse reaction that is captured for pharmacovigilance reasons.">
+			use = <"Use to record all necessary supplementary clinical information related to a drug-related adverse reaction that is required for pharmacovigilance.">
+			keywords = <"Pharmacovigilance, adverse reaction, additional details", ...>
+			misuse = <"The cluster is not intended for recording non-clinical information or documenting administrative and traceability details associated with pharmacovigilance notifications. It should be exclusively used for capturing clinical information directly related to adverse drug reactions, ensuring that the focus remains on relevant clinical data and not on general administrative processes.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Para registrar toda la información suplementaria necesaria relacionada con una reacción adversa medicamentosa que se captura por motivos de farmacovigilancia.">
+			use = <"Utilizar para registrar toda aquella información clínica suplementaria necesaria relacionada con una reacción adversa a medicamentos que es requerida para la farmacovigilancia.">
+			keywords = <"Farmacovigilancia, reacción adversa, detalles adicionales", ...>
+			misuse = <"El clúster no está destinado a registrar información no clínica ni a documentar detalles administrativos y de trazabilidad asociados con las notificaciones de farmacovigilancia. Debe usarse exclusivamente para capturar información clínica relacionada directamente con las reacciones adversas a medicamentos, asegurando que el enfoque se mantenga en datos clínicos relevantes y no en procesos administrativos.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Per a registrar tota la informació suplementària necessària relacionada amb una reacció adversa a medicaments que es captura per motius de farmacovigilància.">
+			use = <"Utilitzar per a registrar tota la informació clínica suplementària necessària relacionada amb una reacció adversa a medicaments que és requerida per a la farmacovigilància.">
+			keywords = <"Farmacovigilància, reacció adversa, detalls addicionals", ...>
+			misuse = <"El clúster no està destinat a registrar informació no clínica ni a documentar detalls administratius i de traçabilitat associats amb les notificacions de farmacovigilància. S’ha d’utilitzar exclusivament per capturar informació clínica relacionada directament amb les reaccions adverses a medicaments, assegurant que l’enfocament es mantingui en dades clíniques rellevants i no en processos administratius.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["references"] = <"Derivat de:">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"15691FED9C3CC7AD6ED1D9108E6878A2">
+		["build_uid"] = <"a0926bd2-03a8-468c-8cd5-aa6bedd7ca23">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Adverse reaction additional details
+		items cardinality matches {1..*; unordered} matches {
+			CLUSTER[at0001] occurrences matches {0..1} matches {    -- Attention required
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Has the adverse drug reaction required medical attention?
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0004,    -- Yes
+									at0005,    -- No
+									at0006]    -- Unknownn
+								}
+							}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Attention required
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0007] occurrences matches {0..1} matches {    -- Treatment required
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Has the adverse drug reaction required any treatment?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Treatment required
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0010] occurrences matches {0..1} matches {    -- Medical treatment details
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0011] occurrences matches {0..1} matches {    -- Prescription/vaccination indication
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0012] occurrences matches {0..1} matches {    -- Is the causative agent a vaccine?
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0013] occurrences matches {0..1} matches {    -- Medication plan
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0019] occurrences matches {0..1} matches {    -- Actions taken
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[at0014] occurrences matches {0..1} matches {    -- Patient death
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Date/time of death
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0016] occurrences matches {0..1} matches {    -- Autopsy
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0017] occurrences matches {0..1} matches {    -- Certainty - Additional details
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {    -- Observations
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0021] occurrences matches {0..*} matches {    -- Additional details
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Adverse reaction additional details">
+					description = <"This cluster should include supplementary clinical information about a drug-related adverse reaction that is required for pharmacovigilance notification.">
+				>
+				["at0001"] = <
+					text = <"Attention required">
+					description = <"Indicate whether the observed adverse drug reaction required any form of medical attention and specify the type of attention received.">
+				>
+				["at0002"] = <
+					text = <"Has the adverse drug reaction required medical attention?">
+					description = <"Indicate whether the observed adverse drug reaction required any form of medical attention.">
+				>
+				["at0003"] = <
+					text = <"Attention required">
+					description = <"Indicate the type of medical attention received.">
+				>
+				["at0004"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Unknownn">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Treatment required">
+					description = <"Indicate whether the observed adverse drug reaction required any form of treatmentand specify the type of treatment received.">
+				>
+				["at0008"] = <
+					text = <"Has the adverse drug reaction required any treatment?">
+					description = <"Indicate whether the observed adverse drug reaction required any form of treatment.">
+				>
+				["at0009"] = <
+					text = <"Treatment required">
+					description = <"Indicate the type of treatment received.">
+				>
+				["at0010"] = <
+					text = <"Medical treatment details">
+					description = <"This cluster should include complementary information about the pharmacological treatment associated with the adverse reaction and required for pharmacovigilance reporting.">
+				>
+				["at0011"] = <
+					text = <"Prescription/vaccination indication">
+					description = <"Provide detailed information regarding the specific reason for prescribing the medication or administering the vaccination.">
+				>
+				["at0012"] = <
+					text = <"Is the causative agent a vaccine?">
+					description = <"Indicate whether the adverse reaction was caused by a vaccine. Specify if the agent responsible for the adverse reaction is a vaccine.">
+				>
+				["at0013"] = <
+					text = <"Medication plan">
+					description = <"Provide a detailed description of the patient's medication plan in plain text format.">
+				>
+				["at0014"] = <
+					text = <"Patient death">
+					description = <"Indicate if the patient has deceased and provide relevant details regarding the death.">
+				>
+				["at0015"] = <
+					text = <"Date/time of death">
+					description = <"Provide the precise date and, if available, the exact time of the patient’s death.">
+				>
+				["at0016"] = <
+					text = <"Autopsy">
+					description = <"Indicate if an autopsy was performed.">
+				>
+				["at0017"] = <
+					text = <"Certainty - Additional details">
+					description = <"Provide additional details to support the certainty or causality assessment of the adverse reaction.">
+				>
+				["at0019"] = <
+					text = <"Actions taken">
+					description = <"Provide a detailed account of the actions taken in response to the adverse reaction.">
+				>
+				["at0020"] = <
+					text = <"Observations">
+					description = <"Provide any relevant observations related to the adverse reaction that can assist in the pharmacovigilance reporting process.">
+				>
+				["at0021"] = <
+					text = <"Additional details">
+					description = <"Provide any extra information that may be relevant to the pharmacovigilance report.">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Detalls addicionals reacció adversa">
+					description = <"Clúster per la inclusió d'informació clínica suplementària sobre una reacció adversa a medicaments que és necessària per a la notificació a farmacovigilància.">
+				>
+				["at0001"] = <
+					text = <"Atenció requerida">
+					description = <"Indiqueu si la reacció adversa observada va requerir algun tipus d'atenció mèdica i especifiqueu el tipus d'atenció rebuda.">
+				>
+				["at0002"] = <
+					text = <"La Reacció Adversa Medicamentosa ha requerit atenció mèdica?">
+					description = <"Indiqueu si la reacció adversa observada va requerir algun tipus d'atenció mèdica.">
+				>
+				["at0003"] = <
+					text = <"Atenció requerida">
+					description = <"Indiqueu el tipus d'atenció mèdica rebuda.">
+				>
+				["at0004"] = <
+					text = <"Sí">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Desconegut">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Tractament requerit">
+					description = <"Indiqueu si la reacció adversa observada va requerir algun tipus de tractament i especifiqueu el tipus de tractament rebut.">
+				>
+				["at0008"] = <
+					text = <"La Reacció Adversa Medicamentosa ha requerit tractament?">
+					description = <"Indiqueu si la reacció adversa observada va requerir algun tipus de tractament.">
+				>
+				["at0009"] = <
+					text = <"Tractament requerit">
+					description = <"Indiqueu el tipus de tractament rebut.">
+				>
+				["at0010"] = <
+					text = <"Detalls tractament farmacològic">
+					description = <"Aquest clúster ha d'incloure informació complementària sobre el tractament farmacològic associat amb la reacció adversa i requerida per a la notificació en farmacovigilància.">
+				>
+				["at0011"] = <
+					text = <"Motiu de prescripció/vacunació">
+					description = <"Proporcioneu informació detallada sobre la raó específica per prescriure el medicament o administrar la vacuna.">
+				>
+				["at0012"] = <
+					text = <"Agent causal és una vacuna?">
+					description = <"Indica si la reacció adversa va ser causada per una vacuna. Especifica si l'agent causal de la reacció adversa és una vacuna.">
+				>
+				["at0013"] = <
+					text = <"Pla de medicació">
+					description = <"Proporcioneu una descripció detallada del pla de medicació del pacient en format de text pla.">
+				>
+				["at0014"] = <
+					text = <"Mort del pacient">
+					description = <"Indiqueu si el pacient ha mort i proporcioneu detalls rellevants sobre la mort.">
+				>
+				["at0015"] = <
+					text = <"Data de la mort">
+					description = <"Proporcioneu la data precisa i, si està disponible, l'hora exacta de la mort del pacient.">
+				>
+				["at0016"] = <
+					text = <"Autòpsia?">
+					description = <"Indiqueu si es va realitzar una autòpsia.">
+				>
+				["at0017"] = <
+					text = <"Nivell de certesa - Detalls addicionals">
+					description = <"Proporcioneu informació addicional per a determinar la certesa o la causalitat de la reacció adversa.">
+				>
+				["at0019"] = <
+					text = <"Mesures preses">
+					description = <"Proporcioneu una descripció detallada de les accions preses en resposta a la reacció adversa.">
+				>
+				["at0020"] = <
+					text = <"Observacions">
+					description = <"Proporcioneu qualsevol observació rellevant relacionada amb la reacció adversa que pugui ajudar en el procés de notificació a farmacovigilància.">
+				>
+				["at0021"] = <
+					text = <"Detalls addicionals">
+					description = <"Proporcioneu qualsevol informació addicional que pugui ser rellevant per a la notificació de la reacció adversa a farmacovigilància.">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Detalles adicionales reacción adversa">
+					description = <"Este clúster debe incluir información clínica suplementaria sobre una reacción adversa a medicamentos que es necesaria para la notificación a farmacovigilancia.">
+				>
+				["at0001"] = <
+					text = <"Atención requerida">
+					description = <"Indique si la reacción adversa observada requirió algún tipo de atención médica y especifique el tipo de atención recibida.">
+				>
+				["at0002"] = <
+					text = <"¿La Reacción Adversa Medicamentosa ha requerido atención médica?">
+					description = <"Indique si la reacción adversa observada requirió algún tipo de atención médica.">
+				>
+				["at0003"] = <
+					text = <"Atención requerida">
+					description = <"Indique el tipo de atención médica recibida.">
+				>
+				["at0004"] = <
+					text = <"Sí">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Desconocido">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Tratamiento requerido">
+					description = <"Indique si la reacción adversa observada requirió algún tipo de tratamiento y especifique el tipo de tratamiento recibido.">
+				>
+				["at0008"] = <
+					text = <"¿La Reacción Adversa Medicamentosa ha requerido tratamiento?">
+					description = <"Indique si la reacción adversa observada requirió algún tipo de tratamiento.">
+				>
+				["at0009"] = <
+					text = <"Tratamiento requerido">
+					description = <"Indique el tipo de tratamiento recibido.">
+				>
+				["at0010"] = <
+					text = <"Tratamiento farmacológico">
+					description = <"Este clúster debe incluir información complementaria sobre el tratamiento farmacológico asociado con la reacción adversa y requerida para la notificación en farmacovigilancia.">
+				>
+				["at0011"] = <
+					text = <"Motivo de prescripción/vacunación">
+					description = <"Proporcione información detallada sobre la razón específica para prescribir el medicamento o administrar la vacunación.">
+				>
+				["at0012"] = <
+					text = <"¿Agent causal es una vacuna?">
+					description = <"Indica si la reacción adversa fue causada por una vacuna. Especifica si el agente causal de la reacción adversa es una vacuna.">
+				>
+				["at0013"] = <
+					text = <"Plan de medicación">
+					description = <"Proporcione una descripción detallada del plan de medicación del paciente en formato de texto plano.">
+				>
+				["at0014"] = <
+					text = <"Muerte del paciente">
+					description = <"Indique si el paciente ha fallecido y proporcione detalles relevantes sobre la muerte.">
+				>
+				["at0015"] = <
+					text = <"Fecha de la muerte">
+					description = <"Proporcione la fecha precisa y, si está disponible, la hora exacta del fallecimiento del paciente.">
+				>
+				["at0016"] = <
+					text = <"¿Autopsia?">
+					description = <"Indique si se realizó una autopsia.">
+				>
+				["at0017"] = <
+					text = <"Nivel de certeza - Detalles adicionales">
+					description = <"Proporcione información adicional para determinar la certeza o causalidad de la reacción adversa.">
+				>
+				["at0019"] = <
+					text = <"Medidas adoptadas">
+					description = <"Proporcione una descripción detallada de las acciones tomadas en respuesta a la reacción adversa.">
+				>
+				["at0020"] = <
+					text = <"Observaciones">
+					description = <"Proporcione cualquier observación relevante relacionada con la reacción adversa que pueda ayudar en el proceso de notificación a farmacovigilancia.">
+				>
+				["at0021"] = <
+					text = <"Detalles adicionales">
+					description = <"Proporcione cualquier información adicional que pueda ser relevante para la notificación de la reacción adversa a farmacovigilancia.">
+				>
+			>
+		>
+	>
