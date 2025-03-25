@@ -261,7 +261,7 @@
                 </Items>
             </Items>
         </Content>
-        <Content archetype_id="openEHR-EHR-OBSERVATION.story.v1" concept_name="Story/History" max="1" name="Malaltia actual" path="/content" xsi:type="tem:OBSERVATION">
+        <Content archetype_id="openEHR-EHR-OBSERVATION.story.v1" concept_name="Story/History" max="1" name="Malaltia whatever" path="/content" xsi:type="tem:OBSERVATION">
             <Rule name="Història" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]"/>
         </Content>
     </definition>
