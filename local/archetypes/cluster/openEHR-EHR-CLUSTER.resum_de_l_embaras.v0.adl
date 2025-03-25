@@ -1,0 +1,349 @@
+﻿archetype (adl_version=1.4; uid=1bb508b6-9898-48e3-a3e5-bb9d15d0de15)
+	openEHR-EHR-CLUSTER.resum_de_l_embaras.v0
+
+concept
+	[at0000]	-- Pregnancy summary
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-10">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"90F2EC201721A47EE4F8F515408AA396">
+		["build_uid"] = <"b7afd721-bfff-4de2-8715-10dfdc981560">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Pregnancy summary
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Cause of termination
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0005,    -- Birth
+							at0006,    -- caesarean section
+							at0007,    -- prematurity
+							at0008,    -- abortion
+							at0009,    -- fetal death
+							at0010,    -- Hydatidiform molar
+							at0011,    -- Ectopic pregnancy
+							at0014]    -- transfer
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Qualifier according to duration
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0015,    -- preterm
+							at0016,    -- Term
+							at0017,    -- long
+							at0018]    -- abortion
+						}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Length in weeks
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::128]>
+						list = <
+							["1"] = <
+								units = <"wk">
+								magnitude = <|0.0..52.0|>
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Date of end
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0019] occurrences matches {0..1} matches {    -- Date of termination
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Resum de l'embaràs">
+					description = <"Resum de l'embaràs">
+				>
+				["at0001"] = <
+					text = <"Causa de tancament">
+					description = <"Causa de tancament de l'embaràs">
+				>
+				["at0002"] = <
+					text = <"Qualificador segons durada">
+					description = <"Qualificador de l'embaràs segons durada">
+				>
+				["at0003"] = <
+					text = <"Durada en setmanes">
+					description = <"Durada de l'embaràs en setmanes">
+				>
+				["at0004"] = <
+					text = <"Data de fi">
+					description = <"Data de fi de l'embaràs">
+				>
+				["at0005"] = <
+					text = <"Part">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Cesària">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Prematuritat">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Avortament">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Mort fetal">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Mola hidatiforme">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Embaràs ectòpic">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Trasllat">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Preterm">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Term">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Perllong">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Avort">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Data de tancament">
+					description = <"Data de tancament de l'embaràs">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pregnancy summary">
+					description = <"Pregnancy summary">
+				>
+				["at0001"] = <
+					text = <"Cause of termination">
+					description = <"Cause of termination of pregnancy">
+				>
+				["at0002"] = <
+					text = <"Qualifier according to duration">
+					description = <"Qualifier of pregnancy according to duration">
+				>
+				["at0003"] = <
+					text = <"Length in weeks">
+					description = <"Length of pregnancy in weeks">
+				>
+				["at0004"] = <
+					text = <"Date of end">
+					description = <"Date of end of pregnancy">
+				>
+				["at0005"] = <
+					text = <"Birth">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"caesarean section">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"prematurity">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"abortion">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"fetal death">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Hydatidiform molar">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Ectopic pregnancy">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"transfer">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"preterm">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Term">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"long">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"abortion">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Date of termination">
+					description = <"Date of termination of pregnancy">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Resumen del embarazo">
+					description = <"Resumen del embarazo">
+				>
+				["at0001"] = <
+					text = <"Causa de cierre">
+					description = <"Causa de cierre del embarazo">
+				>
+				["at0002"] = <
+					text = <"Calificador según duración">
+					description = <"Calificador del embarazo según duración">
+				>
+				["at0003"] = <
+					text = <"Duración del embarazo">
+					description = <"Duración del embarazo en semanas">
+				>
+				["at0004"] = <
+					text = <"Fecha de fin">
+					description = <"Fecha de fin del embarazo">
+				>
+				["at0005"] = <
+					text = <"Parte">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Cesárea">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Prematuridad">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Aborto">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Muerte fetal">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Muela hidatiforme">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Embarazo ectópico">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Traslado">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Pretermo">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Termo">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Prolongo">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Aborto">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Fecha de cierre">
+					description = <"Fecha de cierre del embarazo">
+				>
+			>
+		>
+	>

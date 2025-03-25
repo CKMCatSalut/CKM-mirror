@@ -1,0 +1,407 @@
+﻿archetype (adl_version=1.4; uid=c9e929ad-0fc5-4456-acf0-b06ac3d359c4)
+	openEHR-EHR-CLUSTER.birth_summary.v0
+
+concept
+	[at0000]	-- Summary of birth
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-08">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"23672D65A0CB803A5B9536E1330431F5">
+		["build_uid"] = <"0e92d18b-ffd7-426a-bcc5-12389ca804f5">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Summary of birth
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0023] occurrences matches {0..1} matches {    -- ID Fetus Newborn
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Fetal situation fetus n
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0014,    -- longitudinal
+							at0015,    -- transverse
+							at0016]    -- Oblique
+						}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Fetal presentation fetus n
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0017,    -- cephalic
+							at0018,    -- Buttocks
+							at0019,    -- feet
+							at0020,    -- face
+							at0021,    -- frontal
+							at0022]    -- others
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..*} matches {    -- Type of birth fetus n
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0005,    -- eutocic
+							at0006,    -- forceps
+							at0007,    -- spatulas
+							at0008,    -- suction cup
+							at0009,    -- AMPN- Manual support for breech delivery
+							at0010,    -- VI+VE*- Internal version + large extraction
+							at0011,    -- VI
+							at0012,    -- GE
+							at0013]    -- Caesarea
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Summary of birth">
+					description = <"Summary of birth">
+				>
+				["at0002"] = <
+					text = <"Type of birth fetus n">
+					description = <"Type of birth">
+				>
+				["at0003"] = <
+					text = <"Fetal situation fetus n">
+					description = <"Fetal situation">
+				>
+				["at0004"] = <
+					text = <"Fetal presentation fetus n">
+					description = <"Fetal presentation">
+				>
+				["at0005"] = <
+					text = <"eutocic">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"forceps">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"spatulas">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"suction cup">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"AMPN- Manual support for breech delivery">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"VI+VE*- Internal version + large extraction">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"VI">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"GE">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Caesarea">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"longitudinal">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"transverse">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Oblique">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"cephalic">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Buttocks">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"feet">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"face">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"frontal">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"others">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"ID Fetus Newborn">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Resumen del parto">
+					description = <"Resumen del parto">
+				>
+				["at0002"] = <
+					text = <"Tipo de parto feto n">
+					description = <"Tipo de parte">
+				>
+				["at0003"] = <
+					text = <"Situación fetal feto n">
+					description = <"Situación fetal">
+				>
+				["at0004"] = <
+					text = <"Presentación fetal feto n">
+					description = <"Presentación fetal">
+				>
+				["at0005"] = <
+					text = <"Eutócico">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Fórceps">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Espátulas">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Ventosa">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"AMPN- Ayuda manual en el parto de nalgas">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"VI+VE*- Versión interna + gran extracción">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"VI">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"GE">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Cesa">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Longitudinal">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Transversa">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Oblicua">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Cefálica">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Nalgas">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Pies">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Cara">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Frontal">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Otros">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"ID fetus/neonato">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Resum del part">
+					description = <"Resum del part">
+				>
+				["at0002"] = <
+					text = <"Tipus de part fetus n">
+					description = <"Tipus de part">
+				>
+				["at0003"] = <
+					text = <"Situació fetal presentava el fetus n">
+					description = <"Situació fetal">
+				>
+				["at0004"] = <
+					text = <"Presentació fetal en el part fetus n">
+					description = <"Presentació fetal">
+				>
+				["at0005"] = <
+					text = <"Eutòcic">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Fòrceps">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Espàtules">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Ventosa">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"AMPN- Ajut manual al part de natges">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"VI+VE*- Versió interna + gran extracció">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"VI">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"GE">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Cesàrea">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Longitudinal">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Transversa">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Obliqua">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Cefàlica">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Natges">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Peus">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Cara">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Frontal">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Altres">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"ID fetus/nadó">
+					description = <"">
+				>
+			>
+		>
+	>

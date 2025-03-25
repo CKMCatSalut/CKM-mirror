@@ -1,0 +1,1952 @@
+﻿archetype (adl_version=1.4; uid=1e7c69ca-43ed-42ba-a6fc-c8c1c87022f7)
+	openEHR-EHR-CLUSTER.newborn_puerperium.v0
+
+concept
+	[at0000]	-- Newborn puerperium
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Clara Calleja Vega">
+		["organisation"] = <"CatSalut">
+		["email"] = <"ccalleja@catsalut.cat">
+		["date"] = <"2024-07-19">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"6B43FCA89A6D42A5F457535DD099FDD7">
+		["build_uid"] = <"4df902d2-86e3-4e88-b4bd-c4bfed1817cf">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Newborn puerperium
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0099] occurrences matches {0..1} matches {    -- ID fetus/newborn
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0100] occurrences matches {0..1} matches {    -- Status of fetus/infant
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0108,    -- active
+							at0109,    -- deleted
+							at0110]    -- inactive
+						}
+					}
+				}
+			}
+			ELEMENT[at0101] occurrences matches {0..1} matches {    -- Reason for deletion
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0106,    -- Patient error
+							at0107]    -- Registration error
+						}
+					}
+				}
+			}
+			ELEMENT[at0102] occurrences matches {0..1} matches {    -- Reason for deactivation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0104]    -- dead
+						}
+					}
+				}
+			}
+			ELEMENT[at0103] occurrences matches {0..1} matches {    -- Name and surname of the baby
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Weight at medical discharge
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::124]>
+						list = <
+							["1"] = <
+								units = <"g">
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Weight
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::124]>
+						list = <
+							["1"] = <
+								units = <"g">
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Height / Size
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::122]>
+						list = <
+							["1"] = <
+								units = <"cm">
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Head circumference
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::122]>
+						list = <
+							["1"] = <
+								units = <"cm">
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Skull examination
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0006,    -- normal
+							at0007,    -- overlap of sutures
+							at0008,    -- caput succedaneum
+							at0009,    -- cephalohematoma
+							at0010]    -- others
+						}
+					}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {    -- Ocular prophylaxis treatment
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0124,    -- *Si (ca)
+							at0125]    -- *No (ca)
+						}
+					}
+				}
+			}
+			ELEMENT[at0012] occurrences matches {0..1} matches {    -- Vitamin K prophylaxis treatment
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0013,    -- oral route
+							at0014,    -- intramuscular route
+							at0015]    -- not administered
+						}
+					}
+				}
+			}
+			ELEMENT[at0016] occurrences matches {0..1} matches {    -- Hearing screening test result - left ear
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0017,    -- normal
+							at0018,    -- abnormal
+							at0019]    -- not performed
+						}
+					}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {    -- Hearing screening test result - right ear
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0021,    -- normal
+							at0022,    -- abnormal
+							at0023]    -- not performed
+						}
+					}
+				}
+			}
+			ELEMENT[at0024] occurrences matches {0..1} matches {    -- Metabolopathy screening
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0025] occurrences matches {0..1} matches {    -- Hyperbilirrubinemia screening
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0026,    -- positive
+							at0027,    -- *Situació molt favorable que no requereix intervenció (ca)
+							at0028]    -- *Requereix atenció per part de l'equip de professionals (ca)
+						}
+					}
+				}
+			}
+			ELEMENT[at0029] occurrences matches {0..1} matches {    -- Transcutaneous bilirrubin
+				value matches {
+					C_DV_QUANTITY <
+						
+						list = <
+							["1"] = <
+								units = <"mg/dL">
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0030] occurrences matches {0..1} matches {    -- Congenital heart disease screening
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0031,    -- positive
+							at0032,    -- negative
+							at0033]    -- unknown
+						}
+					}
+				}
+			}
+			ELEMENT[at0034] occurrences matches {0..1} matches {    -- Skin coloration
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0035,    -- normocolored
+							at0036,    -- pale
+							at0037,    -- cyanotic
+							at0038,    -- jaundice
+							at0039,    -- rubicund
+							at0040]    -- others
+						}
+					}
+				}
+			}
+			ELEMENT[at0041] occurrences matches {0..1} matches {    -- Type of feeding
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0042,    -- breastfeeding
+							at0043,    -- mixed
+							at0044]    -- formula
+						}
+					}
+				}
+			}
+			ELEMENT[at0045] occurrences matches {0..1} matches {    -- Breastfeeding supplements
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0046,    -- no supplement
+							at0047,    -- water
+							at0048,    -- formula milk
+							at0049,    -- breast milk
+							at0050]    -- others
+						}
+					}
+				}
+			}
+			ELEMENT[at0051] occurrences matches {0..1} matches {    -- Umbilical cord examination
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0052,    -- no signs of infection
+							at0053,    -- with signs of infection
+							at0054]    -- fallen
+						}
+					}
+				}
+			}
+			ELEMENT[at0055] occurrences matches {0..1} matches {    -- Urination pattern
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0056,    -- normal
+							at0057]    -- altered
+						}
+					}
+				}
+			}
+			ELEMENT[at0058] occurrences matches {0..1} matches {    -- Deposition pattern
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0059,    -- meconium
+							at0060,    -- transition
+							at0061]    -- yellow
+						}
+					}
+				}
+			}
+			ELEMENT[at0062] occurrences matches {0..1} matches {    -- Mother-newborn bond
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0063,    -- secure emotional bond
+							at0064,    -- ambivalent
+							at0065]    -- no bond
+						}
+					}
+				}
+			}
+			ELEMENT[at0066] occurrences matches {0..1} matches {    -- Rh
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0067,    -- negative Rh
+							at0068]    -- positive Rh
+						}
+					}
+				}
+			}
+			ELEMENT[at0069] occurrences matches {0..1} matches {    -- Blood group
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0070,    -- A
+							at0071,    -- AB
+							at0072,    -- B
+							at0073]    -- O
+						}
+					}
+				}
+			}
+			ELEMENT[at0074] occurrences matches {0..1} matches {    -- Newborn destination
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0075,    -- home
+							at0076,    -- neonatology ward
+							at0077,    -- DGAIA
+							at0078,    -- adoption
+							at0079,    -- mortuary
+							at0080,    -- baby retention
+							at0081,    -- maternity ward
+							at0082]    -- others
+						}
+					}
+				}
+			}
+			ELEMENT[at0083] occurrences matches {0..1} matches {    -- Hours from hospital discharge
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0084,    -- <12h
+							at0085,    -- 12-24h
+							at0086,    -- 24-48h
+							at0087]    -- >48h
+						}
+					}
+				}
+			}
+			ELEMENT[at0088] occurrences matches {0..1} matches {    -- Type of puerperium visit
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0089,    -- PDOM - puerperium home visit
+							at0090,    -- CONS- face-to-face puerperium visit
+							at0091,    -- VTEL- telephonic puerperium visit
+							at0092]    -- VC- puerperium visit by video conference
+						}
+					}
+				}
+			}
+			ELEMENT[at0093] occurrences matches {0..1} matches {    -- Kramer scale
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0127,    -- *Zona 1   Cap i coll    (5,9 ± 0,3 mg/dl) (ca)
+							at0128,    -- *Zona 2   Fins melic   (8,9 ± 1,7 mg/dl) (ca)
+							at0129,    -- *Zona 3   Fins genolls  (11,8 ± 1,8 mg/dl) (ca)
+							at0130,    -- *Zona 4   Turmells  (15,0 ± 1,7 mg/dl) (ca)
+							at0131]    -- *Zona 5   planta peu/palma ma  (>15 mg/dl) (ca)
+						}
+					}
+				}
+			}
+			ELEMENT[at0096] occurrences matches {0..1} matches {    -- Tongue scale
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0132,    -- *1 - 0 a 5  F. Deteriorada (ca)
+							at0133,    -- *2 - 6 a 7  F. Limit (ca)
+							at0134]    -- *3 - >8  F. normal (ca)
+						}
+					}
+				}
+			}
+			ELEMENT[at0095] occurrences matches {0..1} matches {    -- TABBY scale (Tongue-tie and Breastfed Babies)
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0135,    -- *0-12 Sense límit (ca)
+							at0136]    -- *13-25 Amb limitació (ca)
+						}
+					}
+				}
+			}
+			CLUSTER[at0126] occurrences matches {0..1} matches {    -- Latch scale
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0094] occurrences matches {0..1} matches {    -- Latch scale score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0121] occurrences matches {0..1} matches {    -- Latch scale interpretation
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0027,    -- *Situació molt favorable que no requereix intervenció (ca)
+									at0028]    -- *Requereix atenció per part de l'equip de professionals (ca)
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Newborn puerperium">
+					description = <"Newborn puerperium">
+				>
+				["at0001"] = <
+					text = <"Weight at medical discharge">
+					description = <"Weight at medical discharge">
+				>
+				["at0002"] = <
+					text = <"Weight">
+					description = <"Weight">
+				>
+				["at0003"] = <
+					text = <"Height / Size">
+					description = <"Height / Size">
+				>
+				["at0004"] = <
+					text = <"Head circumference">
+					description = <"Head circumference">
+				>
+				["at0005"] = <
+					text = <"Skull examination">
+					description = <"Skull examination">
+				>
+				["at0006"] = <
+					text = <"normal">
+					description = <"normal">
+				>
+				["at0007"] = <
+					text = <"overlap of sutures">
+					description = <"overlap of sutures">
+				>
+				["at0008"] = <
+					text = <"caput succedaneum">
+					description = <"caput succedaneum">
+				>
+				["at0009"] = <
+					text = <"cephalohematoma">
+					description = <"cephalohematoma">
+				>
+				["at0010"] = <
+					text = <"others">
+					description = <"others">
+				>
+				["at0011"] = <
+					text = <"Ocular prophylaxis treatment">
+					description = <"Ocular prophylaxis treatment">
+				>
+				["at0012"] = <
+					text = <"Vitamin K prophylaxis treatment">
+					description = <"Vitamin K prophylaxis treatment">
+				>
+				["at0013"] = <
+					text = <"oral route">
+					description = <"oral route">
+				>
+				["at0014"] = <
+					text = <"intramuscular route">
+					description = <"intramuscular route">
+				>
+				["at0015"] = <
+					text = <"not administered">
+					description = <"not administered">
+				>
+				["at0016"] = <
+					text = <"Hearing screening test result - left ear">
+					description = <"Hearing screening test result - left ear">
+				>
+				["at0017"] = <
+					text = <"normal">
+					description = <"normal">
+				>
+				["at0018"] = <
+					text = <"abnormal">
+					description = <"abnormal">
+				>
+				["at0019"] = <
+					text = <"not performed">
+					description = <"not performed">
+				>
+				["at0020"] = <
+					text = <"Hearing screening test result - right ear">
+					description = <"Hearing screening test result - right ear">
+				>
+				["at0021"] = <
+					text = <"normal">
+					description = <"normal">
+				>
+				["at0022"] = <
+					text = <"abnormal">
+					description = <"abnormal">
+				>
+				["at0023"] = <
+					text = <"not performed">
+					description = <"not performed">
+				>
+				["at0024"] = <
+					text = <"Metabolopathy screening">
+					description = <"Metabolopathy screening">
+				>
+				["at0025"] = <
+					text = <"Hyperbilirrubinemia screening">
+					description = <"Hyperbilirrubinemia screening">
+				>
+				["at0026"] = <
+					text = <"positive">
+					description = <"positive">
+				>
+				["at0027"] = <
+					text = <"*Situació molt favorable que no requereix intervenció (ca)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Requereix atenció per part de l'equip de professionals (ca)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Transcutaneous bilirrubin">
+					description = <"Transcutaneous bilirrubin">
+				>
+				["at0030"] = <
+					text = <"Congenital heart disease screening">
+					description = <"Congenital heart disease screening">
+				>
+				["at0031"] = <
+					text = <"positive">
+					description = <"positive">
+				>
+				["at0032"] = <
+					text = <"negative">
+					description = <"negative">
+				>
+				["at0033"] = <
+					text = <"unknown">
+					description = <"unknown">
+				>
+				["at0034"] = <
+					text = <"Skin coloration">
+					description = <"Skin coloration">
+				>
+				["at0035"] = <
+					text = <"normocolored">
+					description = <"normocolored">
+				>
+				["at0036"] = <
+					text = <"pale">
+					description = <"pale">
+				>
+				["at0037"] = <
+					text = <"cyanotic">
+					description = <"cyanotic">
+				>
+				["at0038"] = <
+					text = <"jaundice">
+					description = <"jaundice">
+				>
+				["at0039"] = <
+					text = <"rubicund">
+					description = <"rubicund">
+				>
+				["at0040"] = <
+					text = <"others">
+					description = <"others">
+				>
+				["at0041"] = <
+					text = <"Type of feeding">
+					description = <"Type of feeding">
+				>
+				["at0042"] = <
+					text = <"breastfeeding">
+					description = <"breastfeeding">
+				>
+				["at0043"] = <
+					text = <"mixed">
+					description = <"mixed">
+				>
+				["at0044"] = <
+					text = <"formula">
+					description = <"formula">
+				>
+				["at0045"] = <
+					text = <"Breastfeeding supplements">
+					description = <"Breastfeeding supplements">
+				>
+				["at0046"] = <
+					text = <"no supplement">
+					description = <"no supplement">
+				>
+				["at0047"] = <
+					text = <"water">
+					description = <"water">
+				>
+				["at0048"] = <
+					text = <"formula milk">
+					description = <"formula milk">
+				>
+				["at0049"] = <
+					text = <"breast milk">
+					description = <"breast milk">
+				>
+				["at0050"] = <
+					text = <"others">
+					description = <"others">
+				>
+				["at0051"] = <
+					text = <"Umbilical cord examination">
+					description = <"Umbilical cord examination">
+				>
+				["at0052"] = <
+					text = <"no signs of infection">
+					description = <"no signs of infection">
+				>
+				["at0053"] = <
+					text = <"with signs of infection">
+					description = <"with signs of infection">
+				>
+				["at0054"] = <
+					text = <"fallen">
+					description = <"fallen">
+				>
+				["at0055"] = <
+					text = <"Urination pattern">
+					description = <"Urination pattern">
+				>
+				["at0056"] = <
+					text = <"normal">
+					description = <"normal">
+				>
+				["at0057"] = <
+					text = <"altered">
+					description = <"altered">
+				>
+				["at0058"] = <
+					text = <"Deposition pattern">
+					description = <"Deposition pattern">
+				>
+				["at0059"] = <
+					text = <"meconium">
+					description = <"meconium">
+				>
+				["at0060"] = <
+					text = <"transition">
+					description = <"transition">
+				>
+				["at0061"] = <
+					text = <"yellow">
+					description = <"yellow">
+				>
+				["at0062"] = <
+					text = <"Mother-newborn bond">
+					description = <"Mother-newborn bond">
+				>
+				["at0063"] = <
+					text = <"secure emotional bond">
+					description = <"secure emotional bond">
+				>
+				["at0064"] = <
+					text = <"ambivalent">
+					description = <"ambivalent">
+				>
+				["at0065"] = <
+					text = <"no bond">
+					description = <"no bond">
+				>
+				["at0066"] = <
+					text = <"Rh">
+					description = <"Rh">
+				>
+				["at0067"] = <
+					text = <"negative Rh">
+					description = <"negative Rh">
+				>
+				["at0068"] = <
+					text = <"positive Rh">
+					description = <"positive Rh">
+				>
+				["at0069"] = <
+					text = <"Blood group">
+					description = <"Blood group">
+				>
+				["at0070"] = <
+					text = <"A">
+					description = <"A">
+				>
+				["at0071"] = <
+					text = <"AB">
+					description = <"AB">
+				>
+				["at0072"] = <
+					text = <"B">
+					description = <"B">
+				>
+				["at0073"] = <
+					text = <"O">
+					description = <"O">
+				>
+				["at0074"] = <
+					text = <"Newborn destination">
+					description = <"Newborn destination">
+				>
+				["at0075"] = <
+					text = <"home">
+					description = <"home">
+				>
+				["at0076"] = <
+					text = <"neonatology ward">
+					description = <"neonatology ward">
+				>
+				["at0077"] = <
+					text = <"DGAIA">
+					description = <"DGAIA">
+				>
+				["at0078"] = <
+					text = <"adoption">
+					description = <"adoption">
+				>
+				["at0079"] = <
+					text = <"mortuary">
+					description = <"mortuary">
+				>
+				["at0080"] = <
+					text = <"baby retention">
+					description = <"baby retention">
+				>
+				["at0081"] = <
+					text = <"maternity ward">
+					description = <"maternity ward">
+				>
+				["at0082"] = <
+					text = <"others">
+					description = <"others">
+				>
+				["at0083"] = <
+					text = <"Hours from hospital discharge">
+					description = <"Hours from hospital discharge">
+				>
+				["at0084"] = <
+					text = <"<12h">
+					description = <"<12h">
+				>
+				["at0085"] = <
+					text = <"12-24h">
+					description = <"12-24h">
+				>
+				["at0086"] = <
+					text = <"24-48h">
+					description = <"24-48h">
+				>
+				["at0087"] = <
+					text = <">48h">
+					description = <">48h">
+				>
+				["at0088"] = <
+					text = <"Type of puerperium visit">
+					description = <"Type of puerperium visit">
+				>
+				["at0089"] = <
+					text = <"PDOM - puerperium home visit">
+					description = <"PDOM - puerperium home visit">
+				>
+				["at0090"] = <
+					text = <"CONS- face-to-face puerperium visit">
+					description = <"CONS- face-to-face puerperium visit">
+				>
+				["at0091"] = <
+					text = <"VTEL- telephonic puerperium visit">
+					description = <"VTEL- telephonic puerperium visit">
+				>
+				["at0092"] = <
+					text = <"VC- puerperium visit by video conference">
+					description = <"VC- puerperium visit by video conference">
+				>
+				["at0093"] = <
+					text = <"Kramer scale">
+					description = <"Kramer scale">
+				>
+				["at0094"] = <
+					text = <"Latch scale score">
+					description = <"Latch
+ scale">
+				>
+				["at0095"] = <
+					text = <"TABBY scale (Tongue-tie and Breastfed Babies)">
+					description = <"TABBY scale (Tongue-tie and Breastfed Babies)">
+				>
+				["at0096"] = <
+					text = <"Tongue scale">
+					description = <"Tongue scale">
+				>
+				["at0099"] = <
+					text = <"ID fetus/newborn">
+					description = <"ID fetus/newborn">
+				>
+				["at0100"] = <
+					text = <"Status of fetus/infant">
+					description = <"Status of fetus/infant">
+				>
+				["at0101"] = <
+					text = <"Reason for deletion">
+					description = <"Reason for deletion">
+				>
+				["at0102"] = <
+					text = <"Reason for deactivation">
+					description = <"Reason for deactivation">
+				>
+				["at0103"] = <
+					text = <"Name and surname of the baby">
+					description = <"Name and surname of the baby">
+				>
+				["at0104"] = <
+					text = <"dead">
+					description = <"dead">
+				>
+				["at0106"] = <
+					text = <"Patient error">
+					description = <"Patient error">
+				>
+				["at0107"] = <
+					text = <"Registration error">
+					description = <"Registration error">
+				>
+				["at0108"] = <
+					text = <"active">
+					description = <"active">
+				>
+				["at0109"] = <
+					text = <"deleted">
+					description = <"deleted">
+				>
+				["at0110"] = <
+					text = <"inactive">
+					description = <"inactive">
+				>
+				["at0121"] = <
+					text = <"Latch scale interpretation">
+					description = <"">
+				>
+				["at0124"] = <
+					text = <"*Si (ca)">
+					description = <"">
+				>
+				["at0125"] = <
+					text = <"*No (ca)">
+					description = <"">
+				>
+				["at0126"] = <
+					text = <"Latch scale">
+					description = <"">
+				>
+				["at0127"] = <
+					text = <"*Zona 1   Cap i coll    (5,9 ± 0,3 mg/dl) (ca)">
+					description = <"">
+				>
+				["at0128"] = <
+					text = <"*Zona 2   Fins melic   (8,9 ± 1,7 mg/dl) (ca)">
+					description = <"">
+				>
+				["at0129"] = <
+					text = <"*Zona 3   Fins genolls  (11,8 ± 1,8 mg/dl) (ca)">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"*Zona 4   Turmells  (15,0 ± 1,7 mg/dl) (ca)">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"*Zona 5   planta peu/palma ma  (>15 mg/dl) (ca)">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"*1 - 0 a 5  F. Deteriorada (ca)">
+					description = <"">
+				>
+				["at0133"] = <
+					text = <"*2 - 6 a 7  F. Limit (ca)">
+					description = <"">
+				>
+				["at0134"] = <
+					text = <"*3 - >8  F. normal (ca)">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"*0-12 Sense límit (ca)">
+					description = <"">
+				>
+				["at0136"] = <
+					text = <"*13-25 Amb limitació (ca)">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Puerperi del nadó">
+					description = <"Puerperi del nounat">
+				>
+				["at0001"] = <
+					text = <"Pes a l'alta">
+					description = <"Pes a l'alta">
+				>
+				["at0002"] = <
+					text = <"Pes">
+					description = <"Pes">
+				>
+				["at0003"] = <
+					text = <"Talla">
+					description = <"Talla">
+				>
+				["at0004"] = <
+					text = <"Perímetre cranial">
+					description = <"Perímetre cranial">
+				>
+				["at0005"] = <
+					text = <"Crani">
+					description = <"Crani">
+				>
+				["at0006"] = <
+					text = <"normal">
+					description = <"normal">
+				>
+				["at0007"] = <
+					text = <"encavalcament de sutures">
+					description = <"encavalcament de sutures">
+				>
+				["at0008"] = <
+					text = <"caput succedaneum">
+					description = <"caput succedaneum">
+				>
+				["at0009"] = <
+					text = <"cefalohematoma">
+					description = <"cefalohematoma">
+				>
+				["at0010"] = <
+					text = <"altres">
+					description = <"altres">
+				>
+				["at0011"] = <
+					text = <"Profilaxi ocular">
+					description = <"Profilaxi ocular">
+				>
+				["at0012"] = <
+					text = <"Vitamina K">
+					description = <"Vitamina K">
+				>
+				["at0013"] = <
+					text = <"VO">
+					description = <"VO">
+				>
+				["at0014"] = <
+					text = <"IM">
+					description = <"IM">
+				>
+				["at0015"] = <
+					text = <"no administrat">
+					description = <"no administrat">
+				>
+				["at0016"] = <
+					text = <"Cribratge auditiu D">
+					description = <"Cribratge auditiu D">
+				>
+				["at0017"] = <
+					text = <"Cribratge auditiu oïda D normal">
+					description = <"Cribratge auditiu oïda D normal">
+				>
+				["at0018"] = <
+					text = <"Cribratge auditiu oïda D anormal">
+					description = <"Cribratge auditiu oïda D anormal">
+				>
+				["at0019"] = <
+					text = <"Cribratge auditiu oïda D no realitzat">
+					description = <"Cribratge auditiu oïda D no realitzat">
+				>
+				["at0020"] = <
+					text = <"Cribratge auditiu E">
+					description = <"Cribratge auditiu E">
+				>
+				["at0021"] = <
+					text = <"Cribratge auditiu oïda E normal">
+					description = <"Cribratge auditiu oïda E normal">
+				>
+				["at0022"] = <
+					text = <"Cribratge auditiu oïda E anormal">
+					description = <"Cribratge auditiu oïda E anormal">
+				>
+				["at0023"] = <
+					text = <"Cribratge auditiu oïda E no realitzat">
+					description = <"Cribratge auditiu oïda E no realitzat">
+				>
+				["at0024"] = <
+					text = <"Cribratge metabolopaties">
+					description = <"Cribratge metabolopaties">
+				>
+				["at0025"] = <
+					text = <"Cribratge hiperbilirrubinèmia">
+					description = <"Cribratge de la hiperbilirrubinèmia">
+				>
+				["at0026"] = <
+					text = <"positiu">
+					description = <"positiu">
+				>
+				["at0027"] = <
+					text = <"Situació molt favorable que no requereix intervenció">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Requereix atenció per part de l'equip de professionals">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Bilirrubina transcutània">
+					description = <"Bilirrubina transcutània">
+				>
+				["at0030"] = <
+					text = <"Cri. cardiopatia congènita">
+					description = <"Cribratge de cardiopaties congènites">
+				>
+				["at0031"] = <
+					text = <"positiu">
+					description = <"positiu">
+				>
+				["at0032"] = <
+					text = <"negatiu">
+					description = <"negatiu">
+				>
+				["at0033"] = <
+					text = <"desconegut">
+					description = <"desconegut">
+				>
+				["at0034"] = <
+					text = <"Coloració de la pell">
+					description = <"Coloració de la pell">
+				>
+				["at0035"] = <
+					text = <"normocolorejat">
+					description = <"normocolorejat">
+				>
+				["at0036"] = <
+					text = <"pàl·lid">
+					description = <"pàl·lid">
+				>
+				["at0037"] = <
+					text = <"cianòtic">
+					description = <"cianòtic">
+				>
+				["at0038"] = <
+					text = <"ictèric">
+					description = <"ictèric">
+				>
+				["at0039"] = <
+					text = <"rubicund">
+					description = <"rubicund">
+				>
+				["at0040"] = <
+					text = <"altres">
+					description = <"altres">
+				>
+				["at0041"] = <
+					text = <"Tipus d'alimentació">
+					description = <"Tipus d'alimentació">
+				>
+				["at0042"] = <
+					text = <"lactància materna">
+					description = <"lactància materna">
+				>
+				["at0043"] = <
+					text = <"mixta">
+					description = <"mixta">
+				>
+				["at0044"] = <
+					text = <"fórmula">
+					description = <"fórmula">
+				>
+				["at0045"] = <
+					text = <"Suplements lactància">
+					description = <"Suplements lactància">
+				>
+				["at0046"] = <
+					text = <"cap suplement">
+					description = <"cap suplement">
+				>
+				["at0047"] = <
+					text = <"aigua">
+					description = <"aigua">
+				>
+				["at0048"] = <
+					text = <"llet de fórmula">
+					description = <"llet de fórmula">
+				>
+				["at0049"] = <
+					text = <"llet materna">
+					description = <"llet materna">
+				>
+				["at0050"] = <
+					text = <"altres">
+					description = <"altres">
+				>
+				["at0051"] = <
+					text = <"Aspecte del cordó umbilical">
+					description = <"Aspecte  del cordó umbilical">
+				>
+				["at0052"] = <
+					text = <"sense signes d'infecció">
+					description = <"sense signes d'infecció">
+				>
+				["at0053"] = <
+					text = <"amb signes d'infecció">
+					description = <"amb signes d'infecció">
+				>
+				["at0054"] = <
+					text = <"caigut">
+					description = <"caigut">
+				>
+				["at0055"] = <
+					text = <"Patró miccional">
+					description = <"Patró micció">
+				>
+				["at0056"] = <
+					text = <"normal">
+					description = <"normal">
+				>
+				["at0057"] = <
+					text = <"alterat">
+					description = <"alterat">
+				>
+				["at0058"] = <
+					text = <"Patró deposicional">
+					description = <"Patró de deposició">
+				>
+				["at0059"] = <
+					text = <"meconi">
+					description = <"meconi">
+				>
+				["at0060"] = <
+					text = <"transició">
+					description = <"transició">
+				>
+				["at0061"] = <
+					text = <"groc">
+					description = <"groc">
+				>
+				["at0062"] = <
+					text = <"Vincle mare-nadó">
+					description = <"Vincle mare-nounat">
+				>
+				["at0063"] = <
+					text = <"Vincle afectiu segur">
+					description = <"Vincle afectiu segur">
+				>
+				["at0064"] = <
+					text = <"Ambivalent">
+					description = <"Ambivalent">
+				>
+				["at0065"] = <
+					text = <"Sense vincle">
+					description = <"Sense vincle">
+				>
+				["at0066"] = <
+					text = <"Rh">
+					description = <"Rh">
+				>
+				["at0067"] = <
+					text = <"Rh negatiu">
+					description = <"Rh negatiu">
+				>
+				["at0068"] = <
+					text = <"Rh positiu">
+					description = <"Rh positiu">
+				>
+				["at0069"] = <
+					text = <"Grup sanguini">
+					description = <"Grup sanguini">
+				>
+				["at0070"] = <
+					text = <"A">
+					description = <"A">
+				>
+				["at0071"] = <
+					text = <"AB">
+					description = <"AB">
+				>
+				["at0072"] = <
+					text = <"B">
+					description = <"B">
+				>
+				["at0073"] = <
+					text = <"0">
+					description = <"0">
+				>
+				["at0074"] = <
+					text = <"Destí nadó">
+					description = <"Destí nounat">
+				>
+				["at0075"] = <
+					text = <"domicili">
+					description = <"domicili">
+				>
+				["at0076"] = <
+					text = <"neonatologia">
+					description = <"neonatologia">
+				>
+				["at0077"] = <
+					text = <"DGAIA">
+					description = <"DGAIA">
+				>
+				["at0078"] = <
+					text = <"adopció">
+					description = <"adopció">
+				>
+				["at0079"] = <
+					text = <"tanatori">
+					description = <"tanatori">
+				>
+				["at0080"] = <
+					text = <"retenció del nadó">
+					description = <"retenció del nadó">
+				>
+				["at0081"] = <
+					text = <"maternitat">
+					description = <"maternitat">
+				>
+				["at0082"] = <
+					text = <"altres">
+					description = <"altres">
+				>
+				["at0083"] = <
+					text = <"Hores d'alta hospitalària">
+					description = <"Hores d'alta hospitalària">
+				>
+				["at0084"] = <
+					text = <"<12h">
+					description = <"<12h">
+				>
+				["at0085"] = <
+					text = <"12-24h">
+					description = <"12-24h">
+				>
+				["at0086"] = <
+					text = <"24-48h">
+					description = <"24-48h">
+				>
+				["at0087"] = <
+					text = <">48h">
+					description = <">48h">
+				>
+				["at0088"] = <
+					text = <"Tipus de visita de puerperi">
+					description = <"Tipus de visita de puerperi">
+				>
+				["at0089"] = <
+					text = <"PDOM - visita de puerperi a domicili">
+					description = <"PDOM - visita de puerperi a domicili">
+				>
+				["at0090"] = <
+					text = <"CONS- Visita de puerperi a consulta">
+					description = <"CONS- Visita de puerperi a consulta">
+				>
+				["at0091"] = <
+					text = <"VTEL- Visita de puerperi telefònica">
+					description = <"VTEL- Visita de puerperi telefònica">
+				>
+				["at0092"] = <
+					text = <"VC- Visita de puerperi per videoconferència">
+					description = <"VC- Visita de puerperi per videoconferència">
+				>
+				["at0093"] = <
+					text = <"Escala Kramer">
+					description = <"Escala Kramer">
+				>
+				["at0094"] = <
+					text = <"Escala Latch puntuació">
+					description = <"Escala Latch">
+				>
+				["at0095"] = <
+					text = <"Escala Martinelli">
+					description = <"Escala llengüeta">
+				>
+				["at0096"] = <
+					text = <"Escala Tabby">
+					description = <"Escala TABBY">
+				>
+				["at0099"] = <
+					text = <"ID fetus/nadó">
+					description = <"ID fetus/nadó">
+				>
+				["at0100"] = <
+					text = <"Estat del fetus/nadó">
+					description = <"Estat del fetus/nadó">
+				>
+				["at0101"] = <
+					text = <"Motiu d'eliminació">
+					description = <"Motiu d'eliminació">
+				>
+				["at0102"] = <
+					text = <"Motiu d'inactivació">
+					description = <"Motiu d'inactivació">
+				>
+				["at0103"] = <
+					text = <"Nom i cognoms del nadó">
+					description = <"Nom i cognoms del nadó">
+				>
+				["at0104"] = <
+					text = <"Mort">
+					description = <"Mort">
+				>
+				["at0106"] = <
+					text = <"Error pacient">
+					description = <"Error pacient">
+				>
+				["at0107"] = <
+					text = <"Error registre">
+					description = <"Error registre">
+				>
+				["at0108"] = <
+					text = <"Actiu">
+					description = <"Actiu">
+				>
+				["at0109"] = <
+					text = <"Eliminat">
+					description = <"Eliminat">
+				>
+				["at0110"] = <
+					text = <"Inactiu">
+					description = <"Inactiu">
+				>
+				["at0121"] = <
+					text = <"Escala Latch interpretació">
+					description = <"">
+				>
+				["at0124"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0125"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0126"] = <
+					text = <"Escala Latch">
+					description = <"">
+				>
+				["at0127"] = <
+					text = <"Zona 1   Cap i coll    (5,9 ± 0,3 mg/dl)">
+					description = <"">
+				>
+				["at0128"] = <
+					text = <"Zona 2   Fins melic   (8,9 ± 1,7 mg/dl)">
+					description = <"">
+				>
+				["at0129"] = <
+					text = <"Zona 3   Fins genolls  (11,8 ± 1,8 mg/dl)">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"Zona 4   Turmells  (15,0 ± 1,7 mg/dl)">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"Zona 5   planta peu/palma ma  (>15 mg/dl)">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"1 - 0 a 5  F. Deteriorada">
+					description = <"">
+				>
+				["at0133"] = <
+					text = <"2 - 6 a 7  F. Limit">
+					description = <"">
+				>
+				["at0134"] = <
+					text = <"3 - >8  F. normal">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"0-12 Sense límit">
+					description = <"">
+				>
+				["at0136"] = <
+					text = <"13-25 Amb limitació">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Puerperio del recién nacido">
+					description = <"Puerperio del recién nacido">
+				>
+				["at0001"] = <
+					text = <"Peso al alta">
+					description = <"Peso al alta">
+				>
+				["at0002"] = <
+					text = <"Peso">
+					description = <"Peso">
+				>
+				["at0003"] = <
+					text = <"Talla">
+					description = <"Talla">
+				>
+				["at0004"] = <
+					text = <"Perímetro craneal">
+					description = <"Perímetro craneal">
+				>
+				["at0005"] = <
+					text = <"Cráneo">
+					description = <"Cráneo">
+				>
+				["at0006"] = <
+					text = <"normal">
+					description = <"normal">
+				>
+				["at0007"] = <
+					text = <"encabalgamiento de suturas">
+					description = <"encabalgamiento de suturas">
+				>
+				["at0008"] = <
+					text = <"caput succedaneum">
+					description = <"caput succedaneum">
+				>
+				["at0009"] = <
+					text = <"cefalohematoma">
+					description = <"cefalohematoma">
+				>
+				["at0010"] = <
+					text = <"otros">
+					description = <"otros">
+				>
+				["at0011"] = <
+					text = <"Profilaxis ocular">
+					description = <"Profilaxis ocular">
+				>
+				["at0012"] = <
+					text = <"Vitamina K">
+					description = <"Vitamina K">
+				>
+				["at0013"] = <
+					text = <"VO">
+					description = <"VO">
+				>
+				["at0014"] = <
+					text = <"IM">
+					description = <"IM">
+				>
+				["at0015"] = <
+					text = <"no administrado">
+					description = <"no administrado">
+				>
+				["at0016"] = <
+					text = <"Cribado auditivo D">
+					description = <"Cribado auditivo D">
+				>
+				["at0017"] = <
+					text = <"Cribado auditivo oído D normal">
+					description = <"Cribado auditivo oído D normal">
+				>
+				["at0018"] = <
+					text = <"Cribado auditivo oído D anormal">
+					description = <"Cribado auditivo oído D anormal">
+				>
+				["at0019"] = <
+					text = <"Cribado auditivo oído D no realizado">
+					description = <"Cribado auditivo oído D no realizado">
+				>
+				["at0020"] = <
+					text = <"Cribado auditivo I">
+					description = <"Cribado auditivo I">
+				>
+				["at0021"] = <
+					text = <"Cribado auditivo oído I normal">
+					description = <"Cribado auditivo oído I normal">
+				>
+				["at0022"] = <
+					text = <"Cribado auditivo oído I anormal">
+					description = <"Cribado auditivo oído I anormal">
+				>
+				["at0023"] = <
+					text = <"Cribado auditivo oído I no realizado">
+					description = <"Cribado auditivo oído I no realizado">
+				>
+				["at0024"] = <
+					text = <"Cribado metabolopatías">
+					description = <"Cribado metabolopatías">
+				>
+				["at0025"] = <
+					text = <"Cribado de la hiperbilirrubinemia">
+					description = <"Cribado de la hiperbilirrubinemia">
+				>
+				["at0026"] = <
+					text = <"positivo">
+					description = <"positivo">
+				>
+				["at0027"] = <
+					text = <"*Situació molt favorable que no requereix intervenció (ca)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Requereix atenció per part de l'equip de professionals (ca)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Bilirrubina transcutánea">
+					description = <"Bilirrubina transcutánea">
+				>
+				["at0030"] = <
+					text = <"Cri. cardiopatías congénitas">
+					description = <"Cribado de cardiopatías congénitas">
+				>
+				["at0031"] = <
+					text = <"positivo">
+					description = <"positivo">
+				>
+				["at0032"] = <
+					text = <"negativo">
+					description = <"negativo">
+				>
+				["at0033"] = <
+					text = <"desconocido">
+					description = <"desconocido">
+				>
+				["at0034"] = <
+					text = <"Coloración de la piel">
+					description = <"Coloración de la piel">
+				>
+				["at0035"] = <
+					text = <"normocoloreado">
+					description = <"normocoloreado">
+				>
+				["at0036"] = <
+					text = <"pálido">
+					description = <"pálido">
+				>
+				["at0037"] = <
+					text = <"cianótico">
+					description = <"cianótico">
+				>
+				["at0038"] = <
+					text = <"ictérico">
+					description = <"ictérico">
+				>
+				["at0039"] = <
+					text = <"rubicundo">
+					description = <"rubicundo">
+				>
+				["at0040"] = <
+					text = <"otros">
+					description = <"otros">
+				>
+				["at0041"] = <
+					text = <"Tipo de alimentación">
+					description = <"Tipo de alimentación">
+				>
+				["at0042"] = <
+					text = <"lactancia materna">
+					description = <"lactancia materna">
+				>
+				["at0043"] = <
+					text = <"mixta">
+					description = <"mixta">
+				>
+				["at0044"] = <
+					text = <"fórmula">
+					description = <"fórmula">
+				>
+				["at0045"] = <
+					text = <"Suplementos lactancia">
+					description = <"Suplementos lactancia">
+				>
+				["at0046"] = <
+					text = <"ningún suplemento">
+					description = <"ningún suplemento">
+				>
+				["at0047"] = <
+					text = <"agua">
+					description = <"agua">
+				>
+				["at0048"] = <
+					text = <"leche de fórmula">
+					description = <"leche de fórmula">
+				>
+				["at0049"] = <
+					text = <"leche materna">
+					description = <"leche materna">
+				>
+				["at0050"] = <
+					text = <"otros">
+					description = <"otros">
+				>
+				["at0051"] = <
+					text = <"Aspecto del cordón umbilical">
+					description = <"Aspecto del cordón umbilical">
+				>
+				["at0052"] = <
+					text = <"sin signos de infección">
+					description = <"sin signos de infección">
+				>
+				["at0053"] = <
+					text = <"con signos de infección">
+					description = <"con signos de infección">
+				>
+				["at0054"] = <
+					text = <"caído">
+					description = <"caído">
+				>
+				["at0055"] = <
+					text = <"Patrón micción">
+					description = <"Patrón micción">
+				>
+				["at0056"] = <
+					text = <"normal">
+					description = <"normal">
+				>
+				["at0057"] = <
+					text = <"alterado">
+					description = <"alterado">
+				>
+				["at0058"] = <
+					text = <"Patrón de deposición">
+					description = <"Patrón de deposición">
+				>
+				["at0059"] = <
+					text = <"meconio">
+					description = <"meconio">
+				>
+				["at0060"] = <
+					text = <"transición">
+					description = <"transición">
+				>
+				["at0061"] = <
+					text = <"amarillo">
+					description = <"amarillo">
+				>
+				["at0062"] = <
+					text = <"Vínculo madre-recién nacido">
+					description = <"Vínculo madre-recién nacido">
+				>
+				["at0063"] = <
+					text = <"vínculo afectivo seguro">
+					description = <"vínculo afectivo seguro">
+				>
+				["at0064"] = <
+					text = <"ambivalente">
+					description = <"ambivalente">
+				>
+				["at0065"] = <
+					text = <"ningún vínculo">
+					description = <"ningún vínculo">
+				>
+				["at0066"] = <
+					text = <"Rh">
+					description = <"Rh">
+				>
+				["at0067"] = <
+					text = <"Rh negativo">
+					description = <"Rh negativo">
+				>
+				["at0068"] = <
+					text = <"Rh positivo">
+					description = <"Rh positivo">
+				>
+				["at0069"] = <
+					text = <"Grupo sanguíneo">
+					description = <"Grupo sanguíneo">
+				>
+				["at0070"] = <
+					text = <"A">
+					description = <"A">
+				>
+				["at0071"] = <
+					text = <"AB">
+					description = <"AB">
+				>
+				["at0072"] = <
+					text = <"B">
+					description = <"B">
+				>
+				["at0073"] = <
+					text = <"O">
+					description = <"O">
+				>
+				["at0074"] = <
+					text = <"Destino recién nacido">
+					description = <"Destino recién nacido">
+				>
+				["at0075"] = <
+					text = <"domicilio">
+					description = <"domicilio">
+				>
+				["at0076"] = <
+					text = <"neonatología">
+					description = <"neonatología">
+				>
+				["at0077"] = <
+					text = <"DGAIA">
+					description = <"DGAIA">
+				>
+				["at0078"] = <
+					text = <"adopción">
+					description = <"adopción">
+				>
+				["at0079"] = <
+					text = <"tanatorio">
+					description = <"tanatorio">
+				>
+				["at0080"] = <
+					text = <"retención del bebé">
+					description = <"retención del bebé">
+				>
+				["at0081"] = <
+					text = <"maternidad">
+					description = <"maternidad">
+				>
+				["at0082"] = <
+					text = <"otros">
+					description = <"otros">
+				>
+				["at0083"] = <
+					text = <"Horas de alta hospitalaria">
+					description = <"Horas de alta hospitalaria">
+				>
+				["at0084"] = <
+					text = <"<12h">
+					description = <"<12h">
+				>
+				["at0085"] = <
+					text = <"12-24h">
+					description = <"12-24h">
+				>
+				["at0086"] = <
+					text = <"24-48h">
+					description = <"24-48h">
+				>
+				["at0087"] = <
+					text = <">48h">
+					description = <">48h">
+				>
+				["at0088"] = <
+					text = <"Tipo de visita de puerperio">
+					description = <"Tipo de visita de puerperio">
+				>
+				["at0089"] = <
+					text = <"PDOM - visita de puerperio a domicilio">
+					description = <"PDOM - visita de puerperio a domicilio">
+				>
+				["at0090"] = <
+					text = <"CONS- Visita de puerperio a consulta">
+					description = <"CONS- Visita de puerperio a consulta">
+				>
+				["at0091"] = <
+					text = <"VTEL- Visita de puerperio telefónica">
+					description = <"VTEL- Visita de puerperio telefónica">
+				>
+				["at0092"] = <
+					text = <"VC- Visita de puerperio por videoconferencia">
+					description = <"VC- Visita de puerperio por videoconferencia">
+				>
+				["at0093"] = <
+					text = <"Escala Kramer">
+					description = <"Escala Kramer">
+				>
+				["at0094"] = <
+					text = <"Escala Latch puntuación">
+					description = <"Escala Latch">
+				>
+				["at0095"] = <
+					text = <"Escala lengüeta">
+					description = <"Escala lengüeta">
+				>
+				["at0096"] = <
+					text = <"Escala TABBY">
+					description = <"Escala TABBY">
+				>
+				["at0099"] = <
+					text = <"ID fetus/neonato">
+					description = <"ID fetus/neonato">
+				>
+				["at0100"] = <
+					text = <"Estado del feto/bebé">
+					description = <"Estado del feto/bebé">
+				>
+				["at0101"] = <
+					text = <"Motivo de eliminación">
+					description = <"Motivo de eliminación">
+				>
+				["at0102"] = <
+					text = <"Motivo de inactivación">
+					description = <"Motivo de inactivación">
+				>
+				["at0103"] = <
+					text = <"Nombre y apellidos del bebé">
+					description = <"Nombre y apellidos del bebé">
+				>
+				["at0104"] = <
+					text = <"Muerte">
+					description = <"Muerte">
+				>
+				["at0106"] = <
+					text = <"Error paciente">
+					description = <"Error paciente">
+				>
+				["at0107"] = <
+					text = <"Error registro">
+					description = <"Error registro">
+				>
+				["at0108"] = <
+					text = <"Activo">
+					description = <"Activo">
+				>
+				["at0109"] = <
+					text = <"Eliminado">
+					description = <"Eliminado">
+				>
+				["at0110"] = <
+					text = <"Inactivo">
+					description = <"Inactivo">
+				>
+				["at0121"] = <
+					text = <"Escala Latch interpretación">
+					description = <"">
+				>
+				["at0124"] = <
+					text = <"*Si (ca)">
+					description = <"">
+				>
+				["at0125"] = <
+					text = <"*No (ca)">
+					description = <"">
+				>
+				["at0126"] = <
+					text = <"Escala Latch">
+					description = <"">
+				>
+				["at0127"] = <
+					text = <"*Zona 1   Cap i coll    (5,9 ± 0,3 mg/dl) (ca)">
+					description = <"">
+				>
+				["at0128"] = <
+					text = <"*Zona 2   Fins melic   (8,9 ± 1,7 mg/dl) (ca)">
+					description = <"">
+				>
+				["at0129"] = <
+					text = <"*Zona 3   Fins genolls  (11,8 ± 1,8 mg/dl) (ca)">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"*Zona 4   Turmells  (15,0 ± 1,7 mg/dl) (ca)">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"*Zona 5   planta peu/palma ma  (>15 mg/dl) (ca)">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"*1 - 0 a 5  F. Deteriorada (ca)">
+					description = <"">
+				>
+				["at0133"] = <
+					text = <"*2 - 6 a 7  F. Limit (ca)">
+					description = <"">
+				>
+				["at0134"] = <
+					text = <"*3 - >8  F. normal (ca)">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"*0-12 Sense límit (ca)">
+					description = <"">
+				>
+				["at0136"] = <
+					text = <"*13-25 Amb limitació (ca)">
+					description = <"">
+				>
+			>
+		>
+	>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>d793e8f8-11e5-4cf2-a767-a7b456dcde80</id>
+    <name>PO_Pregnancy_End_v0.10_FORMULARIS</name>
+    <description>
+        <original_author>
+            <item>
+                <key>date</key>
+                <value>2024-07-10</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>25.0.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value/>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>023cfe7d1c19b0d2e069747289f89653</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>6ef9e1249182645814310495df3985e6</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::ca</value>
+            </item>
+        </other_details>
+    </description>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.resum_de_l_embaras.v0]/items[at0004]">
+        <items>
+            <item>
+                <key>SNOMED_CT::2771000122100</key>
+                <value>Data de fi de l'embaràs</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.resum_de_l_embaras.v0]/items[at0019]">
+        <items>
+            <item>
+                <key>SNOMED_CT::2771000122100</key>
+                <value>Data de tancament de l'embaràs</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.resum_de_l_embaras.v0]/items[at0001]">
+        <items>
+            <item>
+                <key>SNOMED_CT::310506006</key>
+                <value>Causa de tancament de l'embaràs</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.resum_de_l_embaras.v0]/items[at0003]">
+        <items>
+            <item>
+                <key>SNOMED_CT::57036006</key>
+                <value>Durada de l'embaràs en setmanes</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.resum_de_l_embaras.v0]/items[at0002]">
+        <items>
+            <item>
+                <key>SNOMED_CT::366323009</key>
+                <value>Qualificador de l'embaràs segons durada</value>
+            </item>
+        </items>
+    </annotations>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.probs_base_composition.v0" concept_name="*PROBS_base_composition (en)" name="PO_Pregnancy_End" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-OBSERVATION.probs_base_observation.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Items archetype_id="openEHR-EHR-CLUSTER.resum_de_l_embaras.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0001]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::48782003::Part</includedValues>
+                        <includedValues>SNOMED_CT::200144004::Cesària</includedValues>
+                        <includedValues>SNOMED_CT::313178001::Prematuritat</includedValues>
+                        <includedValues>SNOMED_CT::17369002::Avortament</includedValues>
+                        <includedValues>SNOMED_CT::276507005::Mort fetal</includedValues>
+                        <includedValues>SNOMED_CT::416402001::Mola hidatiforme</includedValues>
+                        <includedValues>SNOMED_CT::34801009::Embaràs ectòpic</includedValues>
+                        <includedValues>SNOMED_CT::107724000::Trasllat</includedValues>
+                        <excludedValues>local::at0005</excludedValues>
+                        <excludedValues>local::at0006</excludedValues>
+                        <excludedValues>local::at0007</excludedValues>
+                        <excludedValues>local::at0008</excludedValues>
+                        <excludedValues>local::at0009</excludedValues>
+                        <excludedValues>local::at0010</excludedValues>
+                        <excludedValues>local::at0011</excludedValues>
+                        <excludedValues>local::at0014</excludedValues>
+                    <excludedValues>local::at0005</excludedValues><excludedValues>local::at0006</excludedValues><excludedValues>local::at0007</excludedValues><excludedValues>local::at0008</excludedValues><excludedValues>local::at0009</excludedValues><excludedValues>local::at0010</excludedValues><excludedValues>local::at0011</excludedValues><excludedValues>local::at0014</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0002]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>local_terms::10761241000119104::Preterme</includedValues>
+                        <includedValues>local_terms::87527008::A terme</includedValues>
+                        <includedValues>local_terms::22281000119101::Postterme</includedValues>
+                        <includedValues>local_terms::17369002::Avortament</includedValues>
+                        <excludedValues>local::at0015</excludedValues>
+                        <excludedValues>local::at0016</excludedValues>
+                        <excludedValues>local::at0017</excludedValues>
+                        <excludedValues>local::at0018</excludedValues>
+                    <excludedValues>local::at0015</excludedValues><excludedValues>local::at0016</excludedValues><excludedValues>local::at0017</excludedValues><excludedValues>local::at0018</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0003]">
+                    <constraint xsi:type="tem:quantityConstraint">
+                        <unitMagnitude>
+                            <unit>wk</unit>
+                            <maxMagnitude>52.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                    </constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.comment.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER"/>
+        </Content>
+        <Context>
+            <Items archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0005]/items[at0026]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.5" terminologyID="CATÀLEG EP ST"/>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0005]/items[at0013]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.6" terminologyID="CATÀLEG UP ST"/>
+                    </constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.admin_professional.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0012]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.health_thread.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
+                <Rule max="0" path="/items[at0001]"/>
+                <Rule max="0" path="/items[at0002]"/>
+                <Rule max="0" path="/items[at0004]"/>
+                <Rule max="0" path="/items[at0005]"/>
+                <Rule max="0" path="/items[at0006]"/>
+            </Items>
+        </Context>
+    </definition>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.probs_base_composition.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">41A4313C92D9588F78E99230CBA5D2E1</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">8B41A545D448137713B8815907732588</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_professional.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">7E183962DEDD78345CAC6C71C1441777</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.health_thread.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">724FB4896F4B5124B1BFC81E674968D2</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.probs_base_observation.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">3A61C6B4407BB598A82EA7F1C3C5528C</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.resum_de_l_embaras.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">90F2EC201721A47EE4F8F515408AA396</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.comment.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">1D42DC6E256B5D2862D699B58CF8039A</digest>
+    </integrity_checks>
+</template>

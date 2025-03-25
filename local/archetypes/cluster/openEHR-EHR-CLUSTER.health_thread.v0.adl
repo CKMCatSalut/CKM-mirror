@@ -1,0 +1,225 @@
+﻿archetype (adl_version=1.4; uid=450de0c1-a226-4458-ac5a-94765c63f1b9)
+	openEHR-EHR-CLUSTER.health_thread.v0
+
+concept
+	[at0000]	-- health_thread
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-08">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"724FB4896F4B5124B1BFC81E674968D2">
+		["build_uid"] = <"8a8b7d10-2c9f-4e42-ad47-136b72190612">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- health_thread
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Thread name
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Thread ID
+				value matches {
+					DV_IDENTIFIER matches {*}
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Start date
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- End Date
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Reason for the end of the process
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0007,    -- *automàtic (ca)
+							at0008]    -- *manual (ca)
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"health_thread">
+					description = <"Health thread">
+				>
+				["at0001"] = <
+					text = <"Thread name">
+					description = <"Thread name">
+				>
+				["at0002"] = <
+					text = <"Description">
+					description = <"Description">
+				>
+				["at0003"] = <
+					text = <"Thread ID">
+					description = <"Thread ID">
+				>
+				["at0004"] = <
+					text = <"Start date">
+					description = <"Start date">
+				>
+				["at0005"] = <
+					text = <"End Date">
+					description = <"End Date">
+				>
+				["at0006"] = <
+					text = <"Reason for the end of the process">
+					description = <"Reason for the end of the process">
+				>
+				["at0007"] = <
+					text = <"*automàtic (ca)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*manual (ca)">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"health_thread">
+					description = <"Proceso clínico">
+				>
+				["at0001"] = <
+					text = <"Nombre proceso">
+					description = <"Nombre proceso">
+				>
+				["at0002"] = <
+					text = <"Descripción">
+					description = <"Descripción">
+				>
+				["at0003"] = <
+					text = <"ID proceso">
+					description = <"ID proceso">
+				>
+				["at0004"] = <
+					text = <"Fecha de inicio">
+					description = <"Fecha de inicio">
+				>
+				["at0005"] = <
+					text = <"Fecha de finalización">
+					description = <"Fecha de finalización">
+				>
+				["at0006"] = <
+					text = <"Motivo de finalización del proceso">
+					description = <"Motivo de finalización del proceso">
+				>
+				["at0007"] = <
+					text = <"*automàtic (ca)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*manual (ca)">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Procés clínic">
+					description = <"Procés clínic">
+				>
+				["at0001"] = <
+					text = <"Nom procés">
+					description = <"Nom procés">
+				>
+				["at0002"] = <
+					text = <"Descripció">
+					description = <"Descripció">
+				>
+				["at0003"] = <
+					text = <"ID procés">
+					description = <"ID procés">
+				>
+				["at0004"] = <
+					text = <"Data d'inici">
+					description = <"Data d'inici">
+				>
+				["at0005"] = <
+					text = <"Data de final">
+					description = <"Data de final">
+				>
+				["at0006"] = <
+					text = <"Motiu de finalització del procés">
+					description = <"Motiu de finalització del procés">
+				>
+				["at0007"] = <
+					text = <"Automàtic">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Manual">
+					description = <"">
+				>
+			>
+		>
+	>

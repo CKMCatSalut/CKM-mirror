@@ -1,0 +1,726 @@
+﻿archetype (adl_version=1.4; uid=63809e0b-872a-4f45-bba1-b479aae1a997)
+	openEHR-EHR-CLUSTER.escales.v0
+
+concept
+	[at0000]	-- Scale
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-10">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"BD08CD4D602BC1CD11E9D0F051F4265B">
+		["build_uid"] = <"03d24f3f-ae59-45f5-9286-7aa4ee51682f">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Scale
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Visual pain scale
+				value matches {
+					DV_COUNT matches {
+						magnitude matches {|0..10|}
+					}
+				}
+			}
+			CLUSTER[at0014] occurrences matches {0..1} matches {    -- Fargeström test (short)
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Fargeström test (short) score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Fargeström test (short) interpretation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0015] occurrences matches {0..1} matches {    -- Test AUDIT C pregnancy
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0001] occurrences matches {0..1} matches {    -- Test AUDIT C pregnancy score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0016] occurrences matches {0..1} matches {    -- Test AUDIT C pregnancy interpretation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0018] occurrences matches {0..1} matches {    -- Complete AUDIT pregnancy test
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Complete AUDIT pregnancy test score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0019] occurrences matches {0..1} matches {    -- Complete AUDIT pregnancy test interpretation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0021] occurrences matches {0..1} matches {    -- Edimburg scale pregnancy
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Edimburg scale pregnancy score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0022] occurrences matches {0..1} matches {    -- Edimburg scale pregnancy interpretation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0023] occurrences matches {0..1} matches {    -- Screening Questionnaire for Intimate Partner Violence (PVS)
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0024] occurrences matches {0..1} matches {    -- Screening Questionnaire for Intimate Partner Violence (PVS) score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Screening Questionnaire for Intimate Partner Violence (PVS) interpretation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0025] occurrences matches {0..1} matches {    -- R.V.D
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- R.V.D score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0026] occurrences matches {0..1} matches {    -- R.V.D interpretation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0027] occurrences matches {0..1} matches {    -- Social support (OSLO)
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0028] occurrences matches {0..1} matches {    -- Social support (OSLO) score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Social support (OSLO) interpretation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0030] occurrences matches {0..1} matches {    -- Experience satisfaction scale
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0032] occurrences matches {0..1} matches {    -- Experience satisfaction scale score
+						value matches {
+							DV_COUNT matches {
+								magnitude matches {|1..175|}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[at0031] occurrences matches {0..1} matches {    -- Pelvic floor
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0033] occurrences matches {0..1} matches {    -- Pelvic floor score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0046] occurrences matches {0..1} matches {    -- Pelvic floor interpretation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0029] occurrences matches {0..1} matches {    -- LATCH scale
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0034] occurrences matches {0..1} matches {    -- LATCH scale score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- LATCH scale interpretation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0038] occurrences matches {0..1} matches {    -- Edimburg scale score
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0040] occurrences matches {0..1} matches {    -- Edimburg scale postpartum score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0039] occurrences matches {0..1} matches {    -- Edimburg scale postpartum interpretation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0041] occurrences matches {0..1} matches {    -- Whooley test
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0042] occurrences matches {0..1} matches {    -- Whooley test score
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0043] occurrences matches {0..1} matches {    -- Whooley test interpretation
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0044,    -- Negative
+									at0045]    -- Positive
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Escales">
+					description = <"Escales">
+				>
+				["at0001"] = <
+					text = <"AUDIT-C embaràs puntuació">
+					description = <"Puntuació total Test AUDIT C  gestació">
+				>
+				["at0002"] = <
+					text = <"AUDIT embaràs puntuació">
+					description = <"Test AUDIT complet gestació">
+				>
+				["at0003"] = <
+					text = <"Escala Edimburg embaràs puntuació">
+					description = <"Puntuació total Escala postpart d'Edimburg">
+				>
+				["at0004"] = <
+					text = <"Escala visual del dolor">
+					description = <"Escala visual del dolor">
+				>
+				["at0005"] = <
+					text = <"Test de Fagerström (curt) interpretació">
+					description = <"Test de Fargeström (breu)">
+				>
+				["at0007"] = <
+					text = <"Escala PVS interpretació">
+					description = <"Qüestionari de cribratge per detectar violència contra la parella (PVS)">
+				>
+				["at0008"] = <
+					text = <"Escala RVD puntuació">
+					description = <"RVD">
+				>
+				["at0009"] = <
+					text = <"Suport social (OSLO) interpretació">
+					description = <"Escala suport social OSLO">
+				>
+				["at0012"] = <
+					text = <"Escala LATCH interpretació">
+					description = <"Escala LATCH">
+				>
+				["at0013"] = <
+					text = <"Test de Fagerström (curt) puntuació">
+					description = <"Test de Fargeström (breu)">
+				>
+				["at0014"] = <
+					text = <"Test de Fagerström (curt)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"AUDIT-C embaràs">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"AUDIT-C embaràs interpretació">
+					description = <"Puntuació total Test AUDIT C  gestació">
+				>
+				["at0018"] = <
+					text = <"AUDIT embaràs">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"AUDIT embaràs interpretació">
+					description = <"Test AUDIT complet gestació">
+				>
+				["at0021"] = <
+					text = <"Escala Edimburg embaràs">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Escala Edimburg embaràs interpretació">
+					description = <"Puntuació total Escala postpart d'Edimburg">
+				>
+				["at0023"] = <
+					text = <"Escala PVS">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Escala PVS puntuació">
+					description = <"Qüestionari de cribratge per detectar violència contra la parella (PVS)">
+				>
+				["at0025"] = <
+					text = <"Escala RVD">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Escala RVD interpretació">
+					description = <"RVD">
+				>
+				["at0027"] = <
+					text = <"Suport social (OSLO)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Suport social (OSLO) puntuació">
+					description = <"Escala suport social OSLO">
+				>
+				["at0029"] = <
+					text = <"Escala LATCH">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Escala de satisfacció experiència">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Sol pelvià">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Escala de satisfacció experiència puntuació">
+					description = <"Escala de satisfacció experiència">
+				>
+				["at0033"] = <
+					text = <"Sol pelvià puntuació">
+					description = <"Sol pelvià">
+				>
+				["at0034"] = <
+					text = <"Escala LATCH puntuació">
+					description = <"Escala LATCH">
+				>
+				["at0038"] = <
+					text = <"Escala Edimburg postpart">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Escala Edimburg postpart interpretació">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Escala Edimburg postpart puntuació">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Test Whooley">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Test Whooley puntuació">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Test Whooley interpretació">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Negatiu">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Positiu">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Sol pelvià interpretació">
+					description = <"">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Scale">
+					description = <"Scale">
+				>
+				["at0001"] = <
+					text = <"Test AUDIT C pregnancy score">
+					description = <"*Total score Test AUDIT C pregnancy">
+				>
+				["at0002"] = <
+					text = <"Complete AUDIT pregnancy test score">
+					description = <"Complete AUDIT pregnancy test">
+				>
+				["at0003"] = <
+					text = <"Edimburg scale pregnancy score">
+					description = <"*Total score Edinburgh Postpartum Scale">
+				>
+				["at0004"] = <
+					text = <"Visual pain scale">
+					description = <"Visual pain scale">
+				>
+				["at0005"] = <
+					text = <"Fargeström test (short) interpretation">
+					description = <"Fargeström test (short)">
+				>
+				["at0007"] = <
+					text = <"Screening Questionnaire for Intimate Partner Violence (PVS) interpretation">
+					description = <"Screening Questionnaire for Intimate Partner Violence (PVS)">
+				>
+				["at0008"] = <
+					text = <"R.V.D score">
+					description = <"R.V.D">
+				>
+				["at0009"] = <
+					text = <"Social support (OSLO) interpretation">
+					description = <"OSLO social support scale">
+				>
+				["at0012"] = <
+					text = <"LATCH scale interpretation">
+					description = <"LATCH scale">
+				>
+				["at0013"] = <
+					text = <"Fargeström test (short) score">
+					description = <"Fargeström test (short)">
+				>
+				["at0014"] = <
+					text = <"Fargeström test (short)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Test AUDIT C pregnancy">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Test AUDIT C pregnancy interpretation">
+					description = <"*Total score Test AUDIT C pregnancy">
+				>
+				["at0018"] = <
+					text = <"Complete AUDIT pregnancy test">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Complete AUDIT pregnancy test interpretation">
+					description = <"Complete AUDIT pregnancy test">
+				>
+				["at0021"] = <
+					text = <"Edimburg scale pregnancy">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Edimburg scale pregnancy interpretation">
+					description = <"*Total score Edinburgh Postpartum Scale">
+				>
+				["at0023"] = <
+					text = <"Screening Questionnaire for Intimate Partner Violence (PVS)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Screening Questionnaire for Intimate Partner Violence (PVS) score">
+					description = <"Screening Questionnaire for Intimate Partner Violence (PVS)">
+				>
+				["at0025"] = <
+					text = <"R.V.D">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"R.V.D interpretation">
+					description = <"R.V.D">
+				>
+				["at0027"] = <
+					text = <"Social support (OSLO)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Social support (OSLO) score">
+					description = <"OSLO social support scale">
+				>
+				["at0029"] = <
+					text = <"LATCH scale">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Experience satisfaction scale">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Pelvic floor">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Experience satisfaction scale score">
+					description = <"Experience satisfaction scale">
+				>
+				["at0033"] = <
+					text = <"Pelvic floor score">
+					description = <"Pelvic floor">
+				>
+				["at0034"] = <
+					text = <"LATCH scale score">
+					description = <"LATCH scale">
+				>
+				["at0038"] = <
+					text = <"Edimburg scale score">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Edimburg scale postpartum interpretation">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Edimburg scale postpartum score">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Whooley test">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Whooley test score">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Whooley test interpretation">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Negative">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Positive">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Pelvic floor interpretation">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Escalas">
+					description = <"Escalas">
+				>
+				["at0001"] = <
+					text = <"Test AUDIT C embarazo puntuación">
+					description = <"*Puntuación total Test AUDIT C gestación">
+				>
+				["at0002"] = <
+					text = <"Test AUDIT completo embarazo puntuación">
+					description = <"Test AUDIT completo gestación">
+				>
+				["at0003"] = <
+					text = <"Escala Edimburgo embarazo puntuación">
+					description = <"*Puntuación total Escalera postparto de Edimburgo">
+				>
+				["at0004"] = <
+					text = <"Escala visual del dolor">
+					description = <"Escala visual del dolor">
+				>
+				["at0005"] = <
+					text = <"Test de Fargeström (corto) interpretación">
+					description = <"Test de Fargeström (breve)">
+				>
+				["at0007"] = <
+					text = <"Cuestionario de cribaje para detectar violencia contra la pareja (PVS) interpretación">
+					description = <"Cuestionario de cribado para detectar violencia contra la pareja (PVS)">
+				>
+				["at0008"] = <
+					text = <"RVD puntuación">
+					description = <"RVD">
+				>
+				["at0009"] = <
+					text = <"Soporte social (OSLO) interpretación">
+					description = <"Escala soporte social OSLO">
+				>
+				["at0012"] = <
+					text = <"Escala LATCH interpretación">
+					description = <"Escalera LATCH">
+				>
+				["at0013"] = <
+					text = <"Test de Fargeström (corto) puntuación">
+					description = <"Test de Fargeström (breve)">
+				>
+				["at0014"] = <
+					text = <"Test de Fargeström (corto)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Test AUDIT C embarazo">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Test AUDIT C embarazo interpretación">
+					description = <"*Puntuación total Test AUDIT C gestación">
+				>
+				["at0018"] = <
+					text = <"Test AUDIT completo embarazo">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Test AUDIT completo embarazo interpretación">
+					description = <"Test AUDIT completo gestación">
+				>
+				["at0021"] = <
+					text = <"Escala Edimburgo embarazo">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Escala Edimburgo embarazo interpretación">
+					description = <"*Puntuación total Escalera postparto de Edimburgo">
+				>
+				["at0023"] = <
+					text = <"Cuestionario de cribaje para detectar violencia contra la pareja (PVS)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Cuestionario de cribaje para detectar violencia contra la pareja (PVS) puntuación">
+					description = <"Cuestionario de cribado para detectar violencia contra la pareja (PVS)">
+				>
+				["at0025"] = <
+					text = <"RVD">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"RVD interpretación">
+					description = <"RVD">
+				>
+				["at0027"] = <
+					text = <"Soporte social (OSLO)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Soporte social (OSLO) puntuación">
+					description = <"Escala soporte social OSLO">
+				>
+				["at0029"] = <
+					text = <"Escala LATCH">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Escala de satisfacción experiencia">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Escala de suelo pélvico">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Escala de satisfacción experiencia puntuación">
+					description = <"Escala de satisfacción experiencia">
+				>
+				["at0033"] = <
+					text = <"Escala de suelo pélvico puntuación">
+					description = <"Sol pélvico">
+				>
+				["at0034"] = <
+					text = <"Escala LATCH puntuación">
+					description = <"Escalera LATCH">
+				>
+				["at0038"] = <
+					text = <"Escala Edimburgo postparto">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Escala Edimburgo postparto interpretación">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Escala Edimburgo postparto interpretación">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Test Whooley">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Test Whooley puntuación">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Test Whooley interpretación">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Negativo">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Positivo">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Escala de suelo pélvico interpretación">
+					description = <"">
+				>
+			>
+		>
+	>

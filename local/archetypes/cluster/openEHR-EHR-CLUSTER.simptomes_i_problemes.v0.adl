@@ -1,0 +1,392 @@
+﻿archetype (adl_version=1.4; uid=5568a84e-ca4a-44c4-a5e6-65026c78c9e6)
+	openEHR-EHR-CLUSTER.simptomes_i_problemes.v0
+
+concept
+	[at0000]	-- Symptoms and problems
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-09">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"D170B7E1885D481A73204A0DE2481CD8">
+		["build_uid"] = <"135bed34-85d9-430d-bd40-4c5b1979953c">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Symptoms and problems
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Uterine involution
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0007,    -- Yes
+							at0008,    -- No
+							at0009]    -- unknown
+						}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Lochia
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0010,    -- normal
+							at0011,    -- abundant
+							at0012]    -- altered : includes fetid, bloody, with clots, purulent
+						}
+					}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Physiological postpartum bleeding
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0013,    -- Yes
+							at0014,    -- No
+							at0015]    -- unknown
+						}
+					}
+				}
+			}
+			ELEMENT[at0017] occurrences matches {0..1} matches {    -- Urinary incontinence
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0023,    -- Yes
+							at0024,    -- No
+							at0025]    -- unknown
+						}
+					}
+				}
+			}
+			ELEMENT[at0019] occurrences matches {0..1} matches {    -- Fecal incontinence
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0020,    -- Yes
+							at0021,    -- No
+							at0022]    -- unknown
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Simptomes i problemes">
+					description = <"Simptomes i problemes">
+				>
+				["at0002"] = <
+					text = <"Involució uterina">
+					description = <"Involució uterina?">
+				>
+				["at0004"] = <
+					text = <"Loquis">
+					description = <"Loquis?">
+				>
+				["at0006"] = <
+					text = <"Sagnat postpart fisiològic">
+					description = <"Sagnat postpart fisiològic?">
+				>
+				["at0007"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Desconegut">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Normal">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"abundants">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"alterat : inclou fètides, hemàtiques, amb coàguls, purulents">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Desconegut">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Incontinència urinària">
+					description = <"Presenta incontinència urinària">
+				>
+				["at0019"] = <
+					text = <"Incontinència fecal">
+					description = <"Presenta incontinència fecal">
+				>
+				["at0020"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Desconegut">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Desconegut">
+					description = <"">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Symptoms and problems">
+					description = <"Symptoms and problems">
+				>
+				["at0002"] = <
+					text = <"Uterine involution">
+					description = <"Uterine involution?">
+				>
+				["at0004"] = <
+					text = <"Lochia">
+					description = <"Lochia?">
+				>
+				["at0006"] = <
+					text = <"Physiological postpartum bleeding">
+					description = <"Physiological postpartum bleeding?">
+				>
+				["at0007"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"unknown">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"normal">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"abundant">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"altered : includes fetid, bloody, with clots, purulent">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"unknown">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Urinary incontinence">
+					description = <"Has urinary incontinence">
+				>
+				["at0019"] = <
+					text = <"Fecal incontinence">
+					description = <"Has fecal incontinence">
+				>
+				["at0020"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"unknown">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"unknown">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Síntomas y problemas">
+					description = <"Sintomas y problemas">
+				>
+				["at0002"] = <
+					text = <"Involución uterina">
+					description = <"¿Involución uterina?">
+				>
+				["at0004"] = <
+					text = <"Loquios">
+					description = <"¿Loquis?">
+				>
+				["at0006"] = <
+					text = <"Sangrado posparto fisiológico">
+					description = <"¿Sangrado postparto fisiológico?">
+				>
+				["at0007"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Desconocido">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Normal">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"abundantes">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"alterado: incluye fétidas, hemáticas, con coágulos, purulentos">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Desconocido">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Incontinencia urinaria">
+					description = <"Presenta incontinencia urinaria">
+				>
+				["at0019"] = <
+					text = <"Incontinencia fecal">
+					description = <"Presenta incontinencia fecal">
+				>
+				["at0020"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Desconocido">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Desconocido">
+					description = <"">
+				>
+			>
+		>
+	>

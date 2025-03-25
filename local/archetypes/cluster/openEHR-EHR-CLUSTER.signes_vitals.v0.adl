@@ -1,0 +1,192 @@
+﻿archetype (adl_version=1.4; uid=22a3b92d-abeb-4eff-a46c-1dca9e85e827)
+	openEHR-EHR-CLUSTER.signes_vitals.v0
+
+concept
+	[at0000]	-- Vital signs
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-09">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"4744FECEBC4A95BEFDD1730D1A6BEFE0">
+		["build_uid"] = <"abfd5a28-bea3-4605-b0a3-dfc52798e597">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Vital signs
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Systolic blood pressure
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::125]>
+						list = <
+							["1"] = <
+								units = <"mm[Hg]">
+								magnitude = <|0.0..1000.0|>
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Diastolic blood pressure
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::125]>
+						list = <
+							["1"] = <
+								units = <"mm[Hg]">
+								magnitude = <|0.0..1000.0|>
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Heart rate
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::382]>
+						list = <
+							["1"] = <
+								units = <"/min">
+								magnitude = <|0.0..1000.0|>
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Temperature
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::127]>
+						list = <
+							["1"] = <
+								units = <"Cel">
+								magnitude = <|0.0..100.0|>
+							>
+						>
+					>
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Signes vitals">
+					description = <"Signes vitals">
+				>
+				["at0001"] = <
+					text = <"TAS">
+					description = <"Tensió arterial sistòlica">
+				>
+				["at0002"] = <
+					text = <"TAD">
+					description = <"Tensió arterial diastòlica">
+				>
+				["at0003"] = <
+					text = <"Freqüència cardíaca">
+					description = <"Freqüencia cardíaca">
+				>
+				["at0004"] = <
+					text = <"Temperatura">
+					description = <"Temperatura">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Vital signs">
+					description = <"Vital signs">
+				>
+				["at0001"] = <
+					text = <"Systolic blood pressure">
+					description = <"Systolic blood pressure">
+				>
+				["at0002"] = <
+					text = <"Diastolic blood pressure">
+					description = <"Diastolic blood pressure">
+				>
+				["at0003"] = <
+					text = <"Heart rate">
+					description = <"Heart rate">
+				>
+				["at0004"] = <
+					text = <"Temperature">
+					description = <"Temperature">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Signos vitales">
+					description = <"Signos vitales">
+				>
+				["at0001"] = <
+					text = <"Tensión arterial sistólica">
+					description = <"Tensión arterial sistólica">
+				>
+				["at0002"] = <
+					text = <"Tensión arterial diastólica">
+					description = <"Tensión arterial diastólica">
+				>
+				["at0003"] = <
+					text = <"Frecuencia cardíaca">
+					description = <"Frecuencia cardíaca">
+				>
+				["at0004"] = <
+					text = <"Temperatura">
+					description = <"Temperatura">
+				>
+			>
+		>
+	>

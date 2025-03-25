@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>bd1f882f-49cb-4326-be88-6fb911571c1f</id>
+    <name>PO_Care_of_newborn_and_fetus_1-n_during_childbirth_v0.12_FORMULARIS</name>
+    <description>
+        <original_author>
+            <item>
+                <key>date</key>
+                <value>2024-07-09</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>75.0.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value/>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>6ef9e1249182645814310495df3985e6</value>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>e7a75eb6429fc8742857047e8e414d55</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::ca</value>
+            </item>
+        </other_details>
+    </description>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0004]/items[at0012]">
+        <items>
+            <item>
+                <key>SNOMED_CT::l'actualització del PO_Pregnancy_onset_and mother_follow_up_v.0.3_FORMULARIS està pendent d'un codi SNOMED que ens han de facilitar. En quant el tinguem l'actualització serà immediata.</key>
+                <value>Sexe</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0024]">
+        <items>
+            <item>
+                <key>SNOMED_CT::386412000</key>
+                <value>Reanimació neonatal</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0006]/items[at0026]">
+        <items>
+            <item>
+                <key>SNOMED_CT::9456006</key>
+                <value>pH vena</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0006]/items[at0027]">
+        <items>
+            <item>
+                <key>SNOMED_CT::27051004</key>
+                <value>pH artèria</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0006]/items[at0030]">
+        <items>
+            <item>
+                <key>SNOMED_CT::238248005</key>
+                <value>Clampatge cordó</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0007]/items[at0032]">
+        <items>
+            <item>
+                <key>SNOMED_CT::76933008</key>
+                <value>Pell amb pell matern</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0007]/items[at0033]">
+        <items>
+            <item>
+                <key>SNOMED_CT::431868002</key>
+                <value>Inici lactància materna precoç</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0001]/items[at0010]">
+        <items>
+            <item>
+                <key>SNOMED_CT::52870002</key>
+                <value>Motiu ingrés</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0004]/items[at0015]">
+        <items>
+            <item>
+                <key>SNOMED_CT::169876006</key>
+                <value>Perímetre cefàlic</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0007]/items[at0034]">
+        <items>
+            <item>
+                <key>SNOMED_CT::870360005</key>
+                <value>Tractament profilaxi ocular</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0007]/items[at0035]">
+        <items>
+            <item>
+                <key>SNOMED_CT::438561000124102</key>
+                <value>Tractament profilaxi vitamina K</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0001]/items[at0008]">
+        <items>
+            <item>
+                <key>SNOMED_CT::8390008</key>
+                <value>Destí nadó</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0017]">
+        <items>
+            <item>
+                <key>SNOMED_CT::419620001</key>
+                <value>Moment de la defunció</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0004]/items[at0013]">
+        <items>
+            <item>
+                <key>SNOMED_CT::364589006</key>
+                <value>Pes al nèixer</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0022]">
+        <items>
+            <item>
+                <key>SNOMED_CT::169909004</key>
+                <value>Apgar als 5 minuts</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0023]">
+        <items>
+            <item>
+                <key>SNOMED_CT::169922007</key>
+                <value>Apgar 10 minuts</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0019]">
+        <items>
+            <item>
+                <key>SNOMED_CT::169895004</key>
+                <value>Apgar 1 min</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0016]">
+        <items>
+            <item>
+                <key>SNOMED_CT::169826009</key>
+                <value>Nascut viu</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0077]">
+        <items>
+            <item>
+                <key>SNOMED_CT::364584001</key>
+                <value>Estat del fetus/nadó</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0078]">
+        <items>
+            <item>
+                <key>SNOMED_CT::310410007</key>
+                <value>Motiu d'eliminació</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0079]">
+        <items>
+            <item>
+                <key>SNOMED_CT::310410007</key>
+                <value>Motiu d'inactivació</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0080]">
+        <items>
+            <item>
+                <key>SNOMED_CT::371484003</key>
+                <value>Nom del nadó</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0088]">
+        <items>
+            <item>
+                <key>SNOMED_CT::1181000122108</key>
+                <value>Primer cognom del nadó</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0089]">
+        <items>
+            <item>
+                <key>SNOMED_CT::1191000122106</key>
+                <value>Segon cognom del nadó</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0005]/items[at0090]">
+        <items>
+            <item>
+                <key>SNOMED_CT::1551000122105</key>
+                <value>CIP del nadó</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0006]/items[at0031]">
+        <items>
+            <item>
+                <key>SNOMED_CT::440091008</key>
+                <value>Donació sang de cordó</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0006]/items[at0029]">
+        <items>
+            <item>
+                <key>SNOMED_CT::115758001</key>
+                <value>Rh</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0006]/items[at0028]">
+        <items>
+            <item>
+                <key>SNOMED_CT::112143006</key>
+                <value>Grup sanguini</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0093]/items[at0095]">
+        <items>
+            <item>
+                <key>SNOMED_CT::364746005</key>
+                <value>Situació fetal presentava el fetus n</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.newborn.v0]/items[at0093]/items[at0097]">
+        <items>
+            <item>
+                <key>SNOMED_CT::289258004</key>
+                <value>Tipus de part fetus n</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.fetus_observations.v0]/items[at0001]">
+        <items>
+            <item>
+                <key>SNOMED_CT::703852005</key>
+                <value>Observacions part fetus</value>
+            </item>
+        </items>
+    </annotations>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.probs_base_composition.v0" concept_name="*PROBS_base_composition (en)" name="PO_Care_of_newborn_and_fetus_1-n_during_childbirth" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-OBSERVATION.probs_base_observation.v0" concept_name="*PROBS_base_observation (en)" max="1" name="Nadó/Fetus 1-n" path="/content" xsi:type="tem:OBSERVATION">
+            <Items archetype_id="openEHR-EHR-CLUSTER.id_fetus_baby.v0" max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.newborn.v0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0001]/items[at0008]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_2::306689006::Domicili</includedValues>
+                        <includedValues>SNOMED_CT_2::306132008::Neonatologia</includedValues>
+                        <includedValues>SNOMED_CT_2::309630000::DGAIA</includedValues>
+                        <includedValues>SNOMED_CT_2::105432008::Adopció</includedValues>
+                        <includedValues>SNOMED_CT_2::276506001::Mortuori</includedValues>
+                        <includedValues>SNOMED_CT_2::36850000::Retenció nadó</includedValues>
+                        <includedValues>SNOMED_CT_2::43068009::Maternitat</includedValues>
+                        <includedValues>SNOMED_CT_2::74964007::Altres</includedValues>
+                        <excludedValues>local::at0036</excludedValues>
+                        <excludedValues>local::at0037</excludedValues>
+                        <excludedValues>local::at0038</excludedValues>
+                        <excludedValues>local::at0039</excludedValues>
+                        <excludedValues>local::at0040</excludedValues>
+                        <excludedValues>local::at0041</excludedValues>
+                        <excludedValues>local::at0042</excludedValues>
+                        <excludedValues>local::at0043</excludedValues>
+                    <excludedValues>local::at0036</excludedValues><excludedValues>local::at0037</excludedValues><excludedValues>local::at0038</excludedValues><excludedValues>local::at0039</excludedValues><excludedValues>local::at0040</excludedValues><excludedValues>local::at0041</excludedValues><excludedValues>local::at0042</excludedValues><excludedValues>local::at0043</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0001]/items[at0010]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.6.90" terminologyID="Catàleg Medi vista ambulatòria"/>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0004]/items[at0012]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::248153007::Home</includedValues>
+                        <includedValues>SNOMED_CT::248152002::Dona</includedValues>
+                        <includedValues>SNOMED_CT::32570681000036100::Sexe indeterminat</includedValues>
+                        <includedValues>SNOMED_CT::184115007::Sexe del pacient - desconegut</includedValues>
+                        <excludedValues>local::at0044</excludedValues>
+                        <excludedValues>local::at0045</excludedValues>
+                        <excludedValues>local::at0046</excludedValues>
+                    <excludedValues>local::at0044</excludedValues><excludedValues>local::at0045</excludedValues><excludedValues>local::at0046</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0005]/items[at0016]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT::260385009::No</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0005]/items[at0017]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_1::237361005::Avantpart</includedValues>
+                        <includedValues>SNOMED_CT_1::237362003::Intrapart</includedValues>
+                        <includedValues>SNOMED_CT_1::276506001::Postpart</includedValues>
+                        <excludedValues>local::at0050</excludedValues>
+                        <excludedValues>local::at0051</excludedValues>
+                        <excludedValues>local::at0087</excludedValues>
+                    <excludedValues>local::at0050</excludedValues><excludedValues>local::at0051</excludedValues><excludedValues>local::at0087</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0005]/items[at0024]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::45169001::No</includedValues>
+                        <includedValues>SNOMED_CT::265766006::Superficial</includedValues>
+                        <includedValues>SNOMED_CT::89666000::Profunda</includedValues>
+                        <excludedValues>local::at0053</excludedValues>
+                        <excludedValues>local::at0054</excludedValues>
+                        <excludedValues>local::at0055</excludedValues>
+                    <excludedValues>local::at0053</excludedValues><excludedValues>local::at0054</excludedValues><excludedValues>local::at0055</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0005]/items[at0077]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::55561003::Actiu</includedValues>
+                        <includedValues>SNOMED_CT::245780008::Eliminat</includedValues>
+                        <includedValues>SNOMED_CT::73425007::Inactiu</includedValues>
+                        <excludedValues>local::at0081</excludedValues>
+                        <excludedValues>local::at0082</excludedValues>
+                        <excludedValues>local::at0083</excludedValues>
+                    <excludedValues>local::at0081</excludedValues><excludedValues>local::at0082</excludedValues><excludedValues>local::at0083</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0005]/items[at0078]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::1285125003::Error pacient</includedValues>
+                        <includedValues>SNOMED_CT::283878007::Error registre</includedValues>
+                        <excludedValues>local::at0084</excludedValues>
+                        <excludedValues>local::at0085</excludedValues>
+                    <excludedValues>local::at0084</excludedValues><excludedValues>local::at0085</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0005]/items[at0079]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::419620001::Mort</includedValues>
+                        <excludedValues>local::at0086</excludedValues>
+                    <excludedValues>local::at0086</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0006]/items[at0028]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::112144000::A</includedValues>
+                        <includedValues>SNOMED_CT::112149005::B</includedValues>
+                        <includedValues>SNOMED_CT::58460004::0</includedValues>
+                        <includedValues>SNOMED_CT::165743006::AB</includedValues>
+                        <excludedValues>local::at0057</excludedValues>
+                        <excludedValues>local::at0058</excludedValues>
+                        <excludedValues>local::at0059</excludedValues>
+                        <excludedValues>local::at0060</excludedValues>
+                    <excludedValues>local::at0057</excludedValues><excludedValues>local::at0058</excludedValues><excludedValues>local::at0059</excludedValues><excludedValues>local::at0060</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0006]/items[at0029]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::165746003::Positiu</includedValues>
+                        <includedValues>SNOMED_CT::165747007::Negatiu</includedValues>
+                        <excludedValues>local::at0061</excludedValues>
+                        <excludedValues>local::at0062</excludedValues>
+                    <excludedValues>local::at0061</excludedValues><excludedValues>local::at0062</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0006]/items[at0031]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_3::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_3::260385009::No</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0007]/items[at0032]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_4::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_4::260385009::No</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0007]/items[at0033]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_5::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_5::260385009::No</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0007]/items[at0034]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_6::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_6::260385009::No</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0007]/items[at0035]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::414955000::VO</includedValues>
+                        <includedValues>SNOMED_CT::414533004::IM</includedValues>
+                        <includedValues>SNOMED_CT::371900001::No administrada</includedValues>
+                        <excludedValues>local::at0074</excludedValues>
+                        <excludedValues>local::at0075</excludedValues>
+                        <excludedValues>local::at0076</excludedValues>
+                    <excludedValues>local::at0074</excludedValues><excludedValues>local::at0075</excludedValues><excludedValues>local::at0076</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0093]/items[at0095]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::249063009::Longitudinal</includedValues>
+                        <includedValues>SNOMED_CT::199362007::Transversa</includedValues>
+                        <includedValues>SNOMED_CT::63750008::Obliqua</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0093]/items[at0096]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::364606009::Cefàlica</includedValues>
+                        <includedValues>SNOMED_CT::6096002::Natges</includedValues>
+                        <includedValues>SNOMED_CT::49097002::Podàlica</includedValues>
+                        <includedValues>SNOMED_CT::21882006::Cara</includedValues>
+                        <includedValues>SNOMED_CT::54812001::Frontal</includedValues>
+                        <includedValues>SNOMED_CT::74964007::Altres</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0093]/items[at0097]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT::289259007::Eutòcic</includedValues>
+                        <includedValues>SNOMED_CT::200130005::Fòrceps</includedValues>
+                        <includedValues>SNOMED_CT::33021000122102::Espàtules</includedValues>
+                        <includedValues>SNOMED_CT::200138003::Ventosa</includedValues>
+                        <includedValues>SNOMED_CT::177158008::AMPN- ajut manual al part de natges</includedValues>
+                        <includedValues>SNOMED_CT::33807004::VI+GE*- Versió interna + gran extracció</includedValues>
+                        <includedValues>SNOMED_CT::200144004::Cesària</includedValues>
+                    </constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.comment.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.fetus_observations.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER"/>
+        </Content>
+        <Context>
+            <Items archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0005]/items[at0026]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.5" terminologyID="CATÀLEG EP ST"/>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0005]/items[at0013]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.6" terminologyID="CATÀLEG UP ST"/>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0005]/items[at0011]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12" terminologyID="CATÀLEG CENTRES ST"/>
+                    </constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.admin_professional.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.health_thread.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
+                <Rule max="0" path="/items[at0001]"/>
+                <Rule max="0" path="/items[at0002]"/>
+                <Rule max="0" path="/items[at0004]"/>
+                <Rule max="0" path="/items[at0005]"/>
+                <Rule max="0" path="/items[at0006]"/>
+            </Items>
+        </Context>
+    </definition>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.probs_base_composition.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">41A4313C92D9588F78E99230CBA5D2E1</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">8B41A545D448137713B8815907732588</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_professional.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">7E183962DEDD78345CAC6C71C1441777</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.health_thread.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">724FB4896F4B5124B1BFC81E674968D2</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.probs_base_observation.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">3A61C6B4407BB598A82EA7F1C3C5528C</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.id_fetus_baby.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">B107DAC18773461ED7D2C79B0A811DCB</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.newborn.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">08412020F244DB6F605A24961041689B</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.comment.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">1D42DC6E256B5D2862D699B58CF8039A</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.fetus_observations.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">B90AA8BB56B45CC1A9C2CC3AB989116C</digest>
+    </integrity_checks>
+</template>

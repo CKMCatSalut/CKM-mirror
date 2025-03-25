@@ -1,0 +1,146 @@
+﻿archetype (adl_version=1.4; uid=afd04e62-fed7-48d7-a381-fe05d130c8c3)
+	openEHR-EHR-CLUSTER.obstetric_process_closure.v0
+
+concept
+	[at0000]	-- Obstetric process closure
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Clara Calleja Vega">
+		["organisation"] = <"CatSalut">
+		["email"] = <"ccalleja@catsalut.cat">
+		["date"] = <"2024-07-18">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"35371F9FFBF96B0CFC07E245EFCB58E6">
+		["build_uid"] = <"d21c1242-5610-4857-af41-9a0bf4a543c1">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Obstetric process closure
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Data of the professional who closes the process
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Center
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Date and time
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Obstetric process closure">
+					description = <"Obstetric process closure">
+				>
+				["at0001"] = <
+					text = <"Data of the professional who closes the process">
+					description = <"Data of the professional who closes the process">
+				>
+				["at0002"] = <
+					text = <"Center">
+					description = <"Center">
+				>
+				["at0003"] = <
+					text = <"Date and time">
+					description = <"Date and time">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Tancament procés obstètric">
+					description = <"Tancament procés obstètric">
+				>
+				["at0001"] = <
+					text = <"Dades del professional que tanca el procés">
+					description = <"Dades del professional que tanca el procés">
+				>
+				["at0002"] = <
+					text = <"Centre">
+					description = <"Centre">
+				>
+				["at0003"] = <
+					text = <"Data i hora">
+					description = <"Data i hora">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Cierre del proceso obstétrico">
+					description = <"Cierre del proceso obstétrico">
+				>
+				["at0001"] = <
+					text = <"Datos del profesional que cierra el proceso">
+					description = <"Datos del profesional que cierra el proceso">
+				>
+				["at0002"] = <
+					text = <"Centro">
+					description = <"Centro">
+				>
+				["at0003"] = <
+					text = <"Fecha y hora">
+					description = <"Fecha y hora">
+				>
+			>
+		>
+	>

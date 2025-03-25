@@ -1,0 +1,126 @@
+﻿archetype (adl_version=1.4; uid=77095aa8-956c-4d12-87e8-7934ec843973)
+	openEHR-EHR-CLUSTER.altres_escales.v0
+
+concept
+	[at0000]	-- Other scales
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-10">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"A7F22DA29A8E9A060FE4657E28803D1C">
+		["build_uid"] = <"1575bf45-2904-4fe3-9961-a6b38ea8a4b5">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Other scales
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Name of the scale
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Value
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Altres escales">
+					description = <"Altres escales">
+				>
+				["at0001"] = <
+					text = <"Nom de l'escala">
+					description = <"Nom de l'escala">
+				>
+				["at0002"] = <
+					text = <"Valor">
+					description = <"Valor">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Other scales">
+					description = <"Other scales">
+				>
+				["at0001"] = <
+					text = <"Name of the scale">
+					description = <"Name of the scale">
+				>
+				["at0002"] = <
+					text = <"Value">
+					description = <"Value">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Otras escaleras">
+					description = <"Otras escaleras">
+				>
+				["at0001"] = <
+					text = <"Nombre de la escalera">
+					description = <"Nombre de la escalera">
+				>
+				["at0002"] = <
+					text = <"Valor">
+					description = <"Valor">
+				>
+			>
+		>
+	>

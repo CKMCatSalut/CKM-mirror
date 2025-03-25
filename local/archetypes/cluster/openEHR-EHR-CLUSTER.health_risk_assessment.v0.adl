@@ -1,0 +1,259 @@
+﻿archetype (adl_version=1.4; uid=a3dd0fa2-5c4b-462e-b1a7-46517f551050)
+	openEHR-EHR-CLUSTER.health_risk_assessment.v0
+
+concept
+	[at0000]	-- Health risk assessment
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-09">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"AF1F1CA6973FA4BD2F13300D2D2221DD">
+		["build_uid"] = <"01a1df08-7ec7-4ae8-b7cb-7c7e4c473e69">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Health risk assessment
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Micturition pattern
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0006,    -- Present
+							at0007,    -- Indeterminate
+							at0008]    -- Absent
+						}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Depositional pattern
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0012,    -- Present
+							at0013,    -- Indeterminate
+							at0014]    -- Absent
+						}
+					}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Fumadora actualment
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0010,    -- Si
+							at0011]    -- No
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Health risk assessment">
+					description = <"Health risk assessment">
+				>
+				["at0003"] = <
+					text = <"Micturition pattern">
+					description = <"Micturition pattern">
+				>
+				["at0004"] = <
+					text = <"Depositional pattern">
+					description = <"Depositional pattern">
+				>
+				["at0006"] = <
+					text = <"Present">
+					description = <"The risk factor for this person has been identified.">
+				>
+				["at0007"] = <
+					text = <"Indeterminate">
+					description = <"It is not possible to determine whether the risk factor is present or absent.">
+				>
+				["at0008"] = <
+					text = <"Absent">
+					description = <"No risk factor has been identified for this person.">
+				>
+				["at0009"] = <
+					text = <"Fumadora actualment">
+					description = <"Currently smoker">
+				>
+				["at0010"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Present">
+					description = <"The risk factor for this person has been identified.">
+				>
+				["at0013"] = <
+					text = <"Indeterminate">
+					description = <"It is not possible to determine whether the risk factor is present or absent.">
+				>
+				["at0014"] = <
+					text = <"Absent">
+					description = <"No risk factor has been identified for this person.">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Evaluación de riesgos para la salud">
+					description = <"Evaluación de riesgos para la salud">
+				>
+				["at0003"] = <
+					text = <"Patrón miccional">
+					description = <"Patrón miccional">
+				>
+				["at0004"] = <
+					text = <"Patrón deposicional">
+					description = <"Patrón deposicional">
+				>
+				["at0006"] = <
+					text = <"Presente">
+					description = <"Se ha identificado el factor de riesgo para esa persona.">
+				>
+				["at0007"] = <
+					text = <"Indeterminado">
+					description = <"No es posible determinar si el factor de riesgo está presente o ausente.">
+				>
+				["at0008"] = <
+					text = <"Ausente">
+					description = <"No se ha identificado el factor de riesgo para esa persona.">
+				>
+				["at0009"] = <
+					text = <"Fumadora actualmente">
+					description = <"Fumadora actualmente">
+				>
+				["at0010"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Presente">
+					description = <"Se ha identificado el factor de riesgo para esa persona.">
+				>
+				["at0013"] = <
+					text = <"Indeterminado">
+					description = <"No es posible determinar si el factor de riesgo está presente o ausente.">
+				>
+				["at0014"] = <
+					text = <"Ausente">
+					description = <"No se ha identificado el factor de riesgo para esa persona.">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Avaluació de riscos per a la salut">
+					description = <"Avaluació de riscos per a la salut">
+				>
+				["at0003"] = <
+					text = <"Patró miccional">
+					description = <"Patró miccional">
+				>
+				["at0004"] = <
+					text = <"Patró deposicional">
+					description = <"Patró deposicional">
+				>
+				["at0006"] = <
+					text = <"Present">
+					description = <"S'ha identificat el factor de risc per a aquesta persona.">
+				>
+				["at0007"] = <
+					text = <"Indeterminat">
+					description = <"No és possible determinar si el factor de risc està present o absent.">
+				>
+				["at0008"] = <
+					text = <"Absent">
+					description = <"No s'ha identificat el factor de risc per a aquesta persona.">
+				>
+				["at0009"] = <
+					text = <"Fumadora actualment">
+					description = <"Fumadora actualment">
+				>
+				["at0010"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Present">
+					description = <"S'ha identificat el factor de risc per a aquesta persona.">
+				>
+				["at0013"] = <
+					text = <"Indeterminat">
+					description = <"No és possible determinar si el factor de risc està present o absent.">
+				>
+				["at0014"] = <
+					text = <"Absent">
+					description = <"No s'ha identificat el factor de risc per a aquesta persona.">
+				>
+			>
+		>
+	>

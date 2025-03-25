@@ -1,0 +1,912 @@
+﻿archetype (adl_version=1.4; uid=f358a6b7-d24a-411c-a7b7-1f8c943f433f)
+	openEHR-EHR-CLUSTER.assist_test.v0
+
+concept
+	[at0000]	-- ASSIST test
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Clara Calleja Vega">
+		["organisation"] = <"CatSalut">
+		["email"] = <"ccalleja@catsalut.cat">
+		["date"] = <"2024-07-16">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"D0EDE531EB5927AE10A24B3A16F4F542">
+		["build_uid"] = <"633fe1b1-13e2-4f3a-9c27-9a8fcbd79850">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- ASSIST test
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0051] occurrences matches {0..1} matches {    -- ASSIST total
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0052,    -- *Normal (ca)
+							at0053]    -- *Alterat (ca)
+						}
+					}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Tobacco score
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {    -- Tobacco interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0012,    -- No intervention required
+							at0013,    -- Brief intervention required
+							at0014]    -- More intensive treatment is required
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Alcohol score
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0015] occurrences matches {0..1} matches {    -- Alcohol interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0016,    -- No intervention required
+							at0017,    -- Brief intervention required
+							at0018]    -- More intensive treatment is required
+						}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Cannabis score
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0019] occurrences matches {0..1} matches {    -- Cannabis interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0020,    -- No intervention required
+							at0021,    -- Brief intervention required
+							at0022]    -- More intensive treatment is required
+						}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Cocaine score
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0023] occurrences matches {0..1} matches {    -- Cocaine interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0024,    -- No intervention required
+							at0025,    -- Brief intervention required
+							at0026]    -- More intensive treatment is required
+						}
+					}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- ATS score
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0027] occurrences matches {0..1} matches {    -- ATS interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0028,    -- No intervention required
+							at0029,    -- Brief intervention required
+							at0030]    -- More intensive treatment is required
+						}
+					}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Inhalants score
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0031] occurrences matches {0..1} matches {    -- Inhalants interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0032,    -- No intervention required
+							at0033,    -- Brief intervention required
+							at0034]    -- More intensive treatment is required
+						}
+					}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Sedative score
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0035] occurrences matches {0..1} matches {    -- Sedative interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0036,    -- No intervention required
+							at0037,    -- Brief intervention required
+							at0038]    -- More intensive treatment is required
+						}
+					}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Hallucinogens score
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0039] occurrences matches {0..1} matches {    -- Hallucinogens interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0040,    -- No intervention required
+							at0041,    -- Brief intervention required
+							at0042]    -- More intensive treatment is required
+						}
+					}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Opioids score
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0043] occurrences matches {0..1} matches {    -- Opioids interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0048,    -- No intervention required
+							at0049,    -- Brief intervention required
+							at0050]    -- More intensive treatment is required
+						}
+					}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Other drugs score
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0044] occurrences matches {0..1} matches {    -- Other drugs interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0045,    -- No intervention required
+							at0046,    -- Brief intervention required
+							at0047]    -- More intensive treatment is required
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"ASSIST test">
+					description = <"ASSIST test">
+				>
+				["at0001"] = <
+					text = <"Tobacco score">
+					description = <"Tobacco score">
+				>
+				["at0002"] = <
+					text = <"Alcohol score">
+					description = <"Alcohol score">
+				>
+				["at0003"] = <
+					text = <"Cannabis score">
+					description = <"Cannabis score">
+				>
+				["at0004"] = <
+					text = <"Cocaine score">
+					description = <"Cocaine score">
+				>
+				["at0005"] = <
+					text = <"ATS score">
+					description = <"ATS score">
+				>
+				["at0006"] = <
+					text = <"Inhalants score">
+					description = <"Inhalants score">
+				>
+				["at0007"] = <
+					text = <"Sedative score">
+					description = <"Sedative score">
+				>
+				["at0008"] = <
+					text = <"Hallucinogens score">
+					description = <"Hallucinogens score">
+				>
+				["at0009"] = <
+					text = <"Opioids score">
+					description = <"Opioids score">
+				>
+				["at0010"] = <
+					text = <"Other drugs score">
+					description = <"Other drugs score">
+				>
+				["at0011"] = <
+					text = <"Tobacco interpretation">
+					description = <"Tobacco interpretation">
+				>
+				["at0012"] = <
+					text = <"No intervention required">
+					description = <"No intervention required">
+				>
+				["at0013"] = <
+					text = <"Brief intervention required">
+					description = <"Brief intervention required">
+				>
+				["at0014"] = <
+					text = <"More intensive treatment is required">
+					description = <"More intensive treatment is required">
+				>
+				["at0015"] = <
+					text = <"Alcohol interpretation">
+					description = <"Alcohol interpretation">
+				>
+				["at0016"] = <
+					text = <"No intervention required">
+					description = <"No intervention required">
+				>
+				["at0017"] = <
+					text = <"Brief intervention required">
+					description = <"Brief intervention required">
+				>
+				["at0018"] = <
+					text = <"More intensive treatment is required">
+					description = <"More intensive treatment is required">
+				>
+				["at0019"] = <
+					text = <"Cannabis interpretation">
+					description = <"Cannabis interpretation">
+				>
+				["at0020"] = <
+					text = <"No intervention required">
+					description = <"No intervention required">
+				>
+				["at0021"] = <
+					text = <"Brief intervention required">
+					description = <"Brief intervention required">
+				>
+				["at0022"] = <
+					text = <"More intensive treatment is required">
+					description = <"More intensive treatment is required">
+				>
+				["at0023"] = <
+					text = <"Cocaine interpretation">
+					description = <"Cocaine interpretation">
+				>
+				["at0024"] = <
+					text = <"No intervention required">
+					description = <"No intervention required">
+				>
+				["at0025"] = <
+					text = <"Brief intervention required">
+					description = <"Brief intervention required">
+				>
+				["at0026"] = <
+					text = <"More intensive treatment is required">
+					description = <"More intensive treatment is required">
+				>
+				["at0027"] = <
+					text = <"ATS interpretation">
+					description = <"ATS interpretation">
+				>
+				["at0028"] = <
+					text = <"No intervention required">
+					description = <"No intervention required">
+				>
+				["at0029"] = <
+					text = <"Brief intervention required">
+					description = <"Brief intervention required">
+				>
+				["at0030"] = <
+					text = <"More intensive treatment is required">
+					description = <"More intensive treatment is required">
+				>
+				["at0031"] = <
+					text = <"Inhalants interpretation">
+					description = <"Inhalants interpretation">
+				>
+				["at0032"] = <
+					text = <"No intervention required">
+					description = <"No intervention required">
+				>
+				["at0033"] = <
+					text = <"Brief intervention required">
+					description = <"Brief intervention required">
+				>
+				["at0034"] = <
+					text = <"More intensive treatment is required">
+					description = <"More intensive treatment is required">
+				>
+				["at0035"] = <
+					text = <"Sedative interpretation">
+					description = <"Sedative interpretation">
+				>
+				["at0036"] = <
+					text = <"No intervention required">
+					description = <"No intervention required">
+				>
+				["at0037"] = <
+					text = <"Brief intervention required">
+					description = <"Brief intervention required">
+				>
+				["at0038"] = <
+					text = <"More intensive treatment is required">
+					description = <"More intensive treatment is required">
+				>
+				["at0039"] = <
+					text = <"Hallucinogens interpretation">
+					description = <"Hallucinogens interpretation">
+				>
+				["at0040"] = <
+					text = <"No intervention required">
+					description = <"No intervention required">
+				>
+				["at0041"] = <
+					text = <"Brief intervention required">
+					description = <"Brief intervention required">
+				>
+				["at0042"] = <
+					text = <"More intensive treatment is required">
+					description = <"More intensive treatment is required">
+				>
+				["at0043"] = <
+					text = <"Opioids interpretation">
+					description = <"Opioids interpretation">
+				>
+				["at0044"] = <
+					text = <"Other drugs interpretation">
+					description = <"Other drugs interpretation">
+				>
+				["at0045"] = <
+					text = <"No intervention required">
+					description = <"No intervention required">
+				>
+				["at0046"] = <
+					text = <"Brief intervention required">
+					description = <"Brief intervention required">
+				>
+				["at0047"] = <
+					text = <"More intensive treatment is required">
+					description = <"More intensive treatment is required">
+				>
+				["at0048"] = <
+					text = <"No intervention required">
+					description = <"No intervention required">
+				>
+				["at0049"] = <
+					text = <"Brief intervention required">
+					description = <"Brief intervention required">
+				>
+				["at0050"] = <
+					text = <"More intensive treatment is required">
+					description = <"More intensive treatment is required">
+				>
+				["at0051"] = <
+					text = <"ASSIST total">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*Normal (ca)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*Alterat (ca)">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Test ASSIST">
+					description = <"Test ASSIST">
+				>
+				["at0001"] = <
+					text = <"Tabac puntuació">
+					description = <"Tabac puntuació">
+				>
+				["at0002"] = <
+					text = <"Alcohol puntuació">
+					description = <"Alcohol puntuació">
+				>
+				["at0003"] = <
+					text = <"Cannabis puntuació">
+					description = <"Cannabis puntuació">
+				>
+				["at0004"] = <
+					text = <"Cocaïna puntuació">
+					description = <"Cocaïna puntuació">
+				>
+				["at0005"] = <
+					text = <"ATS puntuació">
+					description = <"ATS puntuació">
+				>
+				["at0006"] = <
+					text = <"Inhalants puntuació">
+					description = <"Inhalants puntuació">
+				>
+				["at0007"] = <
+					text = <"Sedants puntuació">
+					description = <"Sedants puntuació">
+				>
+				["at0008"] = <
+					text = <"Al·lucinògens puntuació">
+					description = <"Al·lucinògens puntuació">
+				>
+				["at0009"] = <
+					text = <"Opioides puntuació">
+					description = <"Opioides puntuació">
+				>
+				["at0010"] = <
+					text = <"Altres drogues puntuació">
+					description = <"Altres drogues puntuació">
+				>
+				["at0011"] = <
+					text = <"Tabac interpretació">
+					description = <"Tabac interpretació">
+				>
+				["at0012"] = <
+					text = <"No cal intervenció">
+					description = <"No cal intervenció">
+				>
+				["at0013"] = <
+					text = <"Cal intervenció breu">
+					description = <"Cal intervenció breu">
+				>
+				["at0014"] = <
+					text = <"Cal un tractament més intensiu">
+					description = <"Cal un tractament més intensiu">
+				>
+				["at0015"] = <
+					text = <"Alcohol interpretació">
+					description = <"Alcohol interpretació">
+				>
+				["at0016"] = <
+					text = <"No cal intervenció">
+					description = <"No cal intervenció">
+				>
+				["at0017"] = <
+					text = <"Cal intervenció breu">
+					description = <"Cal intervenció breu">
+				>
+				["at0018"] = <
+					text = <"Cal un tractament més intensiu">
+					description = <"Cal un tractament més intensiu">
+				>
+				["at0019"] = <
+					text = <"Cannabis interpretació">
+					description = <"Cannabis interpretació">
+				>
+				["at0020"] = <
+					text = <"No cal intervenció">
+					description = <"No cal intervenció">
+				>
+				["at0021"] = <
+					text = <"Cal intervenció breu">
+					description = <"Cal intervenció breu">
+				>
+				["at0022"] = <
+					text = <"Cal un tractament més intensiu">
+					description = <"Cal un tractament més intensiu">
+				>
+				["at0023"] = <
+					text = <"Cocaïna interpretació">
+					description = <"Cocaïna interpretació">
+				>
+				["at0024"] = <
+					text = <"No cal intervenció">
+					description = <"No cal intervenció">
+				>
+				["at0025"] = <
+					text = <"Cal intervenció breu">
+					description = <"Cal intervenció breu">
+				>
+				["at0026"] = <
+					text = <"Cal un tractament més intensiu">
+					description = <"Cal un tractament més intensiu">
+				>
+				["at0027"] = <
+					text = <"ATS interpretació">
+					description = <"ATS interpretació">
+				>
+				["at0028"] = <
+					text = <"No cal intervenció">
+					description = <"No cal intervenció">
+				>
+				["at0029"] = <
+					text = <"Cal intervenció breu">
+					description = <"Cal intervenció breu">
+				>
+				["at0030"] = <
+					text = <"Cal un tractament més intensiu">
+					description = <"Cal un tractament més intensiu">
+				>
+				["at0031"] = <
+					text = <"Inhalants interpretació">
+					description = <"Inhalants interpretació">
+				>
+				["at0032"] = <
+					text = <"No cal intervenció">
+					description = <"No cal intervenció">
+				>
+				["at0033"] = <
+					text = <"Cal intervenció breu">
+					description = <"Cal intervenció breu">
+				>
+				["at0034"] = <
+					text = <"Cal un tractament més intensiu">
+					description = <"Cal un tractament més intensiu">
+				>
+				["at0035"] = <
+					text = <"Sedants interpretació">
+					description = <"Sedants interpretació">
+				>
+				["at0036"] = <
+					text = <"No cal intervenció">
+					description = <"No cal intervenció">
+				>
+				["at0037"] = <
+					text = <"Cal intervenció breu">
+					description = <"Cal intervenció breu">
+				>
+				["at0038"] = <
+					text = <"Cal un tractament més intensiu">
+					description = <"Cal un tractament més intensiu">
+				>
+				["at0039"] = <
+					text = <"Al·lucinògens interpretació">
+					description = <"Al·lucinògens interpretació">
+				>
+				["at0040"] = <
+					text = <"No cal intervenció">
+					description = <"No cal intervenció">
+				>
+				["at0041"] = <
+					text = <"Cal intervenció breu">
+					description = <"Cal intervenció breu">
+				>
+				["at0042"] = <
+					text = <"Cal un tractament més intensiu">
+					description = <"Cal un tractament més intensiu">
+				>
+				["at0043"] = <
+					text = <"Opioides interpretació">
+					description = <"Opioides interpretació">
+				>
+				["at0044"] = <
+					text = <"Altres drogues interpretació">
+					description = <"Altres drogues interpretació">
+				>
+				["at0045"] = <
+					text = <"No cal intervenció">
+					description = <"No cal intervenció">
+				>
+				["at0046"] = <
+					text = <"Cal intervenció breu">
+					description = <"Cal intervenció breu">
+				>
+				["at0047"] = <
+					text = <"Cal un tractament més intensiu">
+					description = <"Cal un tractament més intensiu">
+				>
+				["at0048"] = <
+					text = <"No cal intervenció">
+					description = <"No cal intervenció">
+				>
+				["at0049"] = <
+					text = <"Cal intervenció breu">
+					description = <"Cal intervenció breu">
+				>
+				["at0050"] = <
+					text = <"Cal un tractament més intensiu">
+					description = <"Cal un tractament més intensiu">
+				>
+				["at0051"] = <
+					text = <"ASSIST total">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Normal">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Alterat">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Test ASSIST">
+					description = <"Test ASSIST">
+				>
+				["at0001"] = <
+					text = <"Tabaco puntuación">
+					description = <"Tabaco puntuación">
+				>
+				["at0002"] = <
+					text = <"Alcohol puntuación">
+					description = <"Alcohol puntuación">
+				>
+				["at0003"] = <
+					text = <"Cannabis puntuación">
+					description = <"Cannabis puntuación">
+				>
+				["at0004"] = <
+					text = <"Cocaína puntuación">
+					description = <"Cocaína puntuación">
+				>
+				["at0005"] = <
+					text = <"ATS puntuación">
+					description = <"ATS puntuación">
+				>
+				["at0006"] = <
+					text = <"Inhalantes puntuación">
+					description = <"Inhalantes puntuación">
+				>
+				["at0007"] = <
+					text = <"Sedantes puntuación">
+					description = <"Sedantes puntuación">
+				>
+				["at0008"] = <
+					text = <"Alucinógenos puntuación">
+					description = <"Alucinógenos puntuación">
+				>
+				["at0009"] = <
+					text = <"Opioides puntuación">
+					description = <"Opioides puntuación">
+				>
+				["at0010"] = <
+					text = <"Otras drogas puntuación">
+					description = <"Otras drogas puntuación">
+				>
+				["at0011"] = <
+					text = <"Tabaco interpretación">
+					description = <"Tabaco interpretación">
+				>
+				["at0012"] = <
+					text = <"No es necesaria intervención">
+					description = <"No es necesaria intervención">
+				>
+				["at0013"] = <
+					text = <"Es necesaria intervención breve">
+					description = <"Es necesaria intervención breve">
+				>
+				["at0014"] = <
+					text = <"Es necesario un tratamiento más intensivo">
+					description = <"Es necesario un tratamiento más intensivo">
+				>
+				["at0015"] = <
+					text = <"Alcohol interpretación">
+					description = <"Alcohol interpretación">
+				>
+				["at0016"] = <
+					text = <"No es necesaria intervención">
+					description = <"No es necesaria intervención">
+				>
+				["at0017"] = <
+					text = <"Es necesaria intervención breve">
+					description = <"Es necesaria intervención breve">
+				>
+				["at0018"] = <
+					text = <"Es necesario un tratamiento más intensivo">
+					description = <"Es necesario un tratamiento más intensivo">
+				>
+				["at0019"] = <
+					text = <"Cannabis interpretación">
+					description = <"Cannabis interpretación">
+				>
+				["at0020"] = <
+					text = <"No es necesaria intervención">
+					description = <"No es necesaria intervención">
+				>
+				["at0021"] = <
+					text = <"Es necesaria intervención breve">
+					description = <"Es necesaria intervención breve">
+				>
+				["at0022"] = <
+					text = <"Es necesario un tratamiento más intensivo">
+					description = <"Es necesario un tratamiento más intensivo">
+				>
+				["at0023"] = <
+					text = <"Cocaína interpretación">
+					description = <"Cocaína interpretación">
+				>
+				["at0024"] = <
+					text = <"No es necesaria intervención">
+					description = <"No es necesaria intervención">
+				>
+				["at0025"] = <
+					text = <"Es necesaria intervención breve">
+					description = <"Es necesaria intervención breve">
+				>
+				["at0026"] = <
+					text = <"Es necesario un tratamiento más intensivo">
+					description = <"Es necesario un tratamiento más intensivo">
+				>
+				["at0027"] = <
+					text = <"ATS interpretación">
+					description = <"ATS interpretación">
+				>
+				["at0028"] = <
+					text = <"No es necesaria intervención">
+					description = <"No es necesaria intervención">
+				>
+				["at0029"] = <
+					text = <"Es necesaria intervención breve">
+					description = <"Es necesaria intervención breve">
+				>
+				["at0030"] = <
+					text = <"Es necesario un tratamiento más intensivo">
+					description = <"Es necesario un tratamiento más intensivo">
+				>
+				["at0031"] = <
+					text = <"Inhalantes interpretación">
+					description = <"Inhalantes interpretación">
+				>
+				["at0032"] = <
+					text = <"No es necesaria intervención">
+					description = <"No es necesaria intervención">
+				>
+				["at0033"] = <
+					text = <"Es necesaria intervención breve">
+					description = <"Es necesaria intervención breve">
+				>
+				["at0034"] = <
+					text = <"Es necesario un tratamiento más intensivo">
+					description = <"Es necesario un tratamiento más intensivo">
+				>
+				["at0035"] = <
+					text = <"Sedantes interpretación">
+					description = <"Sedantes interpretación">
+				>
+				["at0036"] = <
+					text = <"No es necesaria intervención">
+					description = <"No es necesaria intervención">
+				>
+				["at0037"] = <
+					text = <"Es necesaria intervención breve">
+					description = <"Es necesaria intervención breve">
+				>
+				["at0038"] = <
+					text = <"Es necesario un tratamiento más intensivo">
+					description = <"Es necesario un tratamiento más intensivo">
+				>
+				["at0039"] = <
+					text = <"Alucinógenos interpretación">
+					description = <"Alucinógenos interpretación">
+				>
+				["at0040"] = <
+					text = <"No es necesaria intervención">
+					description = <"No es necesaria intervención">
+				>
+				["at0041"] = <
+					text = <"Es necesaria intervención breve">
+					description = <"Es necesaria intervención breve">
+				>
+				["at0042"] = <
+					text = <"Es necesario un tratamiento más intensivo">
+					description = <"Es necesario un tratamiento más intensivo">
+				>
+				["at0043"] = <
+					text = <"Opioides interpretación">
+					description = <"Opioides interpretación">
+				>
+				["at0044"] = <
+					text = <"Otras drogas interpretación">
+					description = <"Otras drogas interpretación">
+				>
+				["at0045"] = <
+					text = <"No es necesaria intervención">
+					description = <"No es necesaria intervención">
+				>
+				["at0046"] = <
+					text = <"Es necesaria intervención breve">
+					description = <"Es necesaria intervención breve">
+				>
+				["at0047"] = <
+					text = <"Es necesario un tratamiento más intensivo">
+					description = <"Es necesario un tratamiento más intensivo">
+				>
+				["at0048"] = <
+					text = <"No es necesaria intervención">
+					description = <"No es necesaria intervención">
+				>
+				["at0049"] = <
+					text = <"Es necesaria intervención breve">
+					description = <"Es necesaria intervención breve">
+				>
+				["at0050"] = <
+					text = <"Es necesario un tratamiento más intensivo">
+					description = <"Es necesario un tratamiento más intensivo">
+				>
+				["at0051"] = <
+					text = <"ASSIST total">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*Normal (ca)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*Alterat (ca)">
+					description = <"">
+				>
+			>
+		>
+	>

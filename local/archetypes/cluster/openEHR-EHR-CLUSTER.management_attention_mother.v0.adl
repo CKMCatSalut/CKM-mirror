@@ -1,0 +1,1014 @@
+﻿archetype (adl_version=1.4; uid=de9b95ef-f4e2-4f3b-b5c5-208dc7e0447b)
+	openEHR-EHR-CLUSTER.management_attention_mother.v0
+
+concept
+	[at0000]	-- Patient management
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-16">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"F7F7A0219B7AE3EAC79D2F4911CD4B21">
+		["build_uid"] = <"2137491d-4e50-4374-89bf-f18c8d0c6354">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Patient management
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Delivery
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0009,    -- directed
+							at0010,    -- spontaneous
+							at0011,    -- manual
+							at0012]    -- surgical
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Position during delivery
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0013,    -- 4 staples
+							at0014,    -- squat
+							at0015,    -- lateral
+							at0016,    -- sitting
+							at0017,    -- vertical
+							at0018,    -- lying down
+							at0019]    -- others
+						}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Indication of tocosurgery
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0020,    -- Expulsive abbreviation
+							at0021,    -- Rotational dystocia
+							at0022,    -- SPBF-Suspected loss of fetal well-being
+							at0023,    -- Elective caesarean section
+							at0024,    -- Induction failed
+							at0025,    -- Part parked
+							at0026,    -- DPF-fetus-pelvis disproportion
+							at0027,    -- Maternal
+							at0028,    -- Not an instrument
+							at0029,    -- Iterative caesarean section
+							at0030]    -- others
+						}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Reason for elective caesarean section
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0031,    -- iterative caesarean section
+							at0032,    -- non-cephalic presentation
+							at0033,    -- CIR - intrauterine growth retardation
+							at0034,    -- suspected macrosoma
+							at0035,    -- maternal pathology
+							at0036,    -- Placenta previa
+							at0037,    -- multiple gestation
+							at0038,    -- give up vaginal delivery
+							at0039]    -- others
+						}
+					}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Reason for intrapartum caesarean section
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0040,    -- DPF - disproportion Fetos - pelvis
+							at0041,    -- SPBF - suspected loss of fetal well-being
+							at0042,    -- induction failure
+							at0043,    -- instrumentation failed
+							at0044,    -- dystocia of the 2nd period of labor
+							at0045]    -- others
+						}
+					}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..*} matches {    -- Review birth canal
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0046,    -- integral
+							at0047,    -- episiotomy
+							at0048,    -- perineal strip I
+							at0049,    -- perineal strip II
+							at0050,    -- perineal strip IIIA
+							at0051,    -- perineal strip IIIB
+							at0052,    -- perineal strip IV
+							at0053,    -- vaginal strip
+							at0054,    -- cervical strip
+							at0055,    -- urethral strip
+							at0056,    -- bladder strip
+							at0057,    -- uterine rupture
+							at0058,    -- scar dehiscence
+							at0059]    -- Vaginal hematomas
+						}
+					}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Start of labor
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0060,    -- spontaneous
+							at0061,    -- induced
+							at0062,    -- elective cesarean
+							at0063]    -- urgent cessarea
+						}
+					}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Water birth
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0064,    -- Yes
+							at0065,    -- No
+							at0066]    -- unknown
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Gestió de la pacient">
+					description = <"Gestió de la pacient">
+				>
+				["at0001"] = <
+					text = <"Deslliurament">
+					description = <"Deslliurament">
+				>
+				["at0002"] = <
+					text = <"Posició durant l'expulsiu">
+					description = <"Posició durant l'expulsiu">
+				>
+				["at0003"] = <
+					text = <"Indicació de la tocoquirúrgica">
+					description = <"Indicació de la tocoquirúrgica">
+				>
+				["at0004"] = <
+					text = <"Motiu de cesària electiva">
+					description = <"Motiu de cesària electiva">
+				>
+				["at0005"] = <
+					text = <"Motiu de cesària intrapart">
+					description = <"Motiu de cesària intrapart">
+				>
+				["at0006"] = <
+					text = <"Revisió canal de part">
+					description = <"Revisió canal de part">
+				>
+				["at0007"] = <
+					text = <"Inici del part">
+					description = <"Inici del part">
+				>
+				["at0008"] = <
+					text = <"Part a l'aigua">
+					description = <"Part en l'aigua">
+				>
+				["at0009"] = <
+					text = <"dirigit">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"espontani">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"manual">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"quirúrgic">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"4 grapes">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"gatzoneta">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"lateral">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"asseguda">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"vertical">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"decubit">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"altres">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Abreujament expulsiu">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Distòcia rotació">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"SPBF-Sospita pèrdua benestar fetal">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Cesària electiva">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Inducció fallida">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Part estacionat">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"DPF-desproporció fetus-pelvis">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Materna">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"No instrument">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Cesària iterativa">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Altres">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"cesarea iterativa">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"presentació no cefàlica">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"CIR - retard creixement intrauterí">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"sospita de macrosoma">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"patologia materna">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Placenta previa">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"gestació múltiple">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"renuncia part vaginal">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"altres">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"DPF - desproporció Fetos - pelvis">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"SPBF - sospita de pèrdua benestar fetal">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"fracàs d' inducció">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"instrumentació fallida">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"distocia de 2 periode del part">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"altres">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Íntegre">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"episiotomia">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"estrip perineal I">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"estrip perineal II">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"estrip perineal IIIA">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"estrip perineal IIIB">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"estrip perineal IV">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"estrip vaginal">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"estrip cervical">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"estrip uretral">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"estrip vesical">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"ruptura uterina">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"deshicència cicatriu">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Hematomes vaginals">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"espontani">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"induït">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"cessàrea electiva">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"cessàrea urgent">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"Desconegut">
+					description = <"">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Patient management">
+					description = <"Patient management">
+				>
+				["at0001"] = <
+					text = <"Delivery">
+					description = <"Delivery">
+				>
+				["at0002"] = <
+					text = <"Position during delivery">
+					description = <"Position during delivery">
+				>
+				["at0003"] = <
+					text = <"Indication of tocosurgery">
+					description = <"Indication of tocosurgery">
+				>
+				["at0004"] = <
+					text = <"Reason for elective caesarean section">
+					description = <"Reason for elective caesarean section">
+				>
+				["at0005"] = <
+					text = <"Reason for intrapartum caesarean section">
+					description = <"Reason for intrapartum caesarean section">
+				>
+				["at0006"] = <
+					text = <"Review birth canal">
+					description = <"Review birth canal">
+				>
+				["at0007"] = <
+					text = <"Start of labor">
+					description = <"Start of labor">
+				>
+				["at0008"] = <
+					text = <"Water birth">
+					description = <"Water birth">
+				>
+				["at0009"] = <
+					text = <"directed">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"spontaneous">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"manual">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"surgical">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"4 staples">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"squat">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"lateral">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"sitting">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"vertical">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"lying down">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"others">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Expulsive abbreviation">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Rotational dystocia">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"SPBF-Suspected loss of fetal well-being">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Elective caesarean section">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Induction failed">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Part parked">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"DPF-fetus-pelvis disproportion">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Maternal">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Not an instrument">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Iterative caesarean section">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"others">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"iterative caesarean section">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"non-cephalic presentation">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"CIR - intrauterine growth retardation">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"suspected macrosoma">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"maternal pathology">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Placenta previa">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"multiple gestation">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"give up vaginal delivery">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"others">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"DPF - disproportion Fetos - pelvis">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"SPBF - suspected loss of fetal well-being">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"induction failure">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"instrumentation failed">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"dystocia of the 2nd period of labor">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"others">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"integral">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"episiotomy">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"perineal strip I">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"perineal strip II">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"perineal strip IIIA">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"perineal strip IIIB">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"perineal strip IV">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"vaginal strip">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"cervical strip">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"urethral strip">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"bladder strip">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"uterine rupture">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"scar dehiscence">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Vaginal hematomas">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"spontaneous">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"induced">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"elective cesarean">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"urgent cessarea">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"unknown">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Gestión de la paciente">
+					description = <"Gestión de la paciente">
+				>
+				["at0001"] = <
+					text = <"Alumbramiento">
+					description = <"Alumbramiento">
+				>
+				["at0002"] = <
+					text = <"Posición durante el expulsivo">
+					description = <"Posición durante el expulsivo">
+				>
+				["at0003"] = <
+					text = <"Indicación de la tocoquirúrgica">
+					description = <"Indicación de la tocoquirúrgica">
+				>
+				["at0004"] = <
+					text = <"Motivo de cesárea electiva">
+					description = <"Motivo de cesárea electiva">
+				>
+				["at0005"] = <
+					text = <"Motivo de cesárea intraparto">
+					description = <"Motivo de cesárea intraparto">
+				>
+				["at0006"] = <
+					text = <"Revisión canal de parto">
+					description = <"Revisión canal de parto">
+				>
+				["at0007"] = <
+					text = <"Inicio del parto">
+					description = <"Inicio del parto">
+				>
+				["at0008"] = <
+					text = <"Parte en el agua">
+					description = <"Parte en el agua">
+				>
+				["at0009"] = <
+					text = <"dirigido">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"espontáneo">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"manual">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"quirúrgico">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"4 grapas">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"cuclillas">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"lateral">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"sentada">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"vertical">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"decubido">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"otros">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Abreviación expulsiva">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Distocia rotación">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"SPBF-Sospecha pérdida bienestar fetal">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Cesárea electiva">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Inducción fallida">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Parte estacionado">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"DPF-desproporción fetos-pelvis">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Materna">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"No instrumento">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Cesárea iterativa">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Otros">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"cesarea iterativa">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"presentación no cefálica">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"CIR - retraso crecimiento intrauterino">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"sospecha de macrosoma">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"patología materna">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Placenta previa">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"gestación múltiple">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"renuncia parte vaginal">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"otros">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"DPF - desproporción Fetos - pelvis">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"SPBF - sospecha de pérdida bienestar fetal">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"fracaso de inducción">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"instrumentación quiebra">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"distocia de 2 periodo del parto">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"otros">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Íntegro">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"episiotomía">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"desgarro perineal I">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"desgarro perineal II">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"desgarro perineal IIIA">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"desgarro perineal IIIB">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"desgarro perineal IV">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"desgarro vaginal">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"desgarro cervical">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"desgarro uretral">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"desgarro vesical">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"ruptura uterina">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"deshicencia cicatriz">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Hematomas vaginales">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"espontáneo">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"inducido">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"cesárea electiva">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"cesárea urgente">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"Desconocido">
+					description = <"">
+				>
+			>
+		>
+	>

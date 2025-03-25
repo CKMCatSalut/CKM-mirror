@@ -1,0 +1,534 @@
+﻿archetype (adl_version=1.4; uid=50e7b122-aceb-4562-a458-3f5f8d2120eb)
+	openEHR-EHR-CLUSTER.physical_examination_findings.v0
+
+concept
+	[at0000]	-- Results of the physical examination
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-09">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"2E4DA7BAE0DAB45DBCAFDC67BD142556">
+		["build_uid"] = <"6352060d-e21e-4290-a12c-4f25c4396087">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Results of the physical examination
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..*} matches {    -- Perineal state
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0010,    -- integral
+							at0011,    -- episiotomy
+							at0012,    -- abscess
+							at0013,    -- dehiscence
+							at0014,    -- edema
+							at0015,    -- torn
+							at0016,    -- superficial hematoma
+							at0017,    -- deep hematoma
+							at0018,    -- hemorrhoid
+							at0019,    -- maceration
+							at0020,    -- pain
+							at0021]    -- correct evolution
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..*} matches {    -- Assessment of the breasts
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0022,    -- normal
+							at0023,    -- Ingestion
+							at0024,    -- Clivelles
+							at0025,    -- Flat-inverted nipple
+							at0026,    -- Change in nipple color
+							at0027,    -- Obstructed duct
+							at0028,    -- milk pearl
+							at0029,    -- Breast hypoplasia
+							at0030]    -- Signs of mastitis
+						}
+					}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- State surgical wound
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0031,    -- normal
+							at0032,    -- dehiscence
+							at0033,    -- infected
+							at0034,    -- Hematoma
+							at0035]    -- others
+						}
+					}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Uterine height
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::122]>
+						list = <
+							["1"] = <
+								units = <"cm">
+							>
+						>
+					>
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Results of the physical examination">
+					description = <"Results of the physical examination">
+				>
+				["at0001"] = <
+					text = <"Perineal state">
+					description = <"Perineal state">
+				>
+				["at0002"] = <
+					text = <"Description">
+					description = <"Description">
+				>
+				["at0005"] = <
+					text = <"Assessment of the breasts">
+					description = <"Assessment of the breasts">
+				>
+				["at0007"] = <
+					text = <"State surgical wound">
+					description = <"State of the caesarean wound">
+				>
+				["at0009"] = <
+					text = <"Uterine height">
+					description = <"Uterine height">
+				>
+				["at0010"] = <
+					text = <"integral">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"episiotomy">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"abscess">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"dehiscence">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"edema">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"torn">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"superficial hematoma">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"deep hematoma">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"hemorrhoid">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"maceration">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"pain">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"correct evolution">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"normal">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Ingestion">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Clivelles">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Flat-inverted nipple">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Change in nipple color">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Obstructed duct">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"milk pearl">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Breast hypoplasia">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Signs of mastitis">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"normal">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"dehiscence">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"infected">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Hematoma">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"others">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Resultados del examen físico">
+					description = <"Resultados del examen físico">
+				>
+				["at0001"] = <
+					text = <"Estado periné">
+					description = <"Estado periné">
+				>
+				["at0002"] = <
+					text = <"Descripción">
+					description = <"Descripción">
+				>
+				["at0005"] = <
+					text = <"Valoración de los senos">
+					description = <"Valoración de los senos">
+				>
+				["at0007"] = <
+					text = <"Estado herida quirúrgica">
+					description = <"Estado de la herida cesárea">
+				>
+				["at0009"] = <
+					text = <"Altura uterina">
+					description = <"Altura uterina">
+				>
+				["at0010"] = <
+					text = <"Íntegro">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"episiotomía">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"absceso">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"dehiscencia">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"edema">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"rasgado">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"hematoma superficial">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"hematoma profundo">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"hemorroide">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"maceración">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"dolor">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"correcta evolución">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Normal">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Ingurgitación">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Clivillas">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Pezón plano-invertido">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Alteración color pezón">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Conducto obstruido">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Perla de leche">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Hipoplasia mamaria">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Signos de mastitis">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Normal">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Dehiscencia">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Infectada">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Hematoma">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Otros">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Resultats de l'examen físic">
+					description = <"Resultats de l'examen físic">
+				>
+				["at0001"] = <
+					text = <"Estat perineu">
+					description = <"Estat perineu">
+				>
+				["at0002"] = <
+					text = <"Descripció">
+					description = <"Descripció">
+				>
+				["at0005"] = <
+					text = <"Valoració dels pits">
+					description = <"Valoració dels pits">
+				>
+				["at0007"] = <
+					text = <"Estat ferida quirúrgica">
+					description = <"Estat de la ferida cesària">
+				>
+				["at0009"] = <
+					text = <"Alçada uterina">
+					description = <"Alçada uterina">
+				>
+				["at0010"] = <
+					text = <"Íntegre">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"episiotomia">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"abscés">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"dehiscència">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"edema">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"esquinçat">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"hematoma superficial">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"hematoma profund">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"hemorroide">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"maceració">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"dolor">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"correcte evolució">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Normal">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Ingurgitació">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Clivelles">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Mugró pla-invertit">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Alteració color mugró">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Conducte obstruït">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Perla de llet">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Hipoplàsia mamària">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Signes de mastitis">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Normal">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Dehiscència">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Infectada">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Hematoma">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Altres">
+					description = <"">
+				>
+			>
+		>
+	>

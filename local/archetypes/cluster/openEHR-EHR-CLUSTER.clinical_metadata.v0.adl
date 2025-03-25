@@ -1,0 +1,186 @@
+﻿archetype (adl_version=1.4; uid=6ad7d33f-40fb-4796-ad66-a48805669ae5)
+	openEHR-EHR-CLUSTER.clinical_metadata.v0
+
+concept
+	[at0000]	-- Clinical metadata
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Atomica Informatics">
+		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2023-11-03">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record information to support linkage to other parts of the health record or external guidelines.
+">
+			use = <"Use to record information to support linkage to other parts of the health record or external guidelines. Use cases include, but are not limited to:
+- a link to a health thread;
+- to indicate that the data has been recorded as part of a care plan; or 
+- to indicate that the data capture has been triggered in response to a clinical guideline recommendation.
+
+The archetype has been designed so that it can be nested within the 'Extension' SLOT in any COMPOSITION- or ENTRY-level archetype, as necessary. Occurrences for each data element has been set to 0..* to allow for multiple linkages of the same type, if necessary.">
+			misuse = <"Not to be used to record the definition of a 'Health thread'. Use the ADMIN_ENTRY.health_thread archetype for this purpose.">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"6E71196A2D5A9B8661E29EDA62975581">
+		["build_uid"] = <"4d3b3c90-b848-4161-baf3-3a1f1b29c55f">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Clinical metadata
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..*} matches {    -- Thread ID
+				value matches {
+					DV_TEXT matches {*}
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..*} matches {    -- Care plan ID
+				value matches {
+					DV_TEXT matches {*}
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..*} matches {    -- Care pathway ID
+				value matches {
+					DV_TEXT matches {*}
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..*} matches {    -- Protocol ID
+				value matches {
+					DV_TEXT matches {*}
+					DV_IDENTIFIER matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Clinical metadata">
+					description = <"Information to support linkage to other parts of the health record or external guidelines.">
+				>
+				["at0001"] = <
+					text = <"Thread ID">
+					description = <"The identifier of a relevant health thread.">
+					comment = <"The 'Thread ID' will provide a linkage to a defined 'Health thread'.">
+				>
+				["at0002"] = <
+					text = <"Care plan ID">
+					description = <"The identifier of a the related care plan.">
+					comment = <"The 'Care plan ID' can provide a linkage to a specific, existing Care plan.">
+				>
+				["at0003"] = <
+					text = <"Care pathway ID">
+					description = <"The identifier of a the related care pathway or patient journey.">
+					comment = <"The 'Care pathway ID' can provide a linkage to a specific, existing 'Care pathway' or 'Patient journey'.">
+				>
+				["at0004"] = <
+					text = <"Protocol ID">
+					description = <"The identifier of a the related clinical guideline or clinical protocol.">
+					comment = <"The 'Protocol ID' can provide a linkage to a specific, treatment guideline or protocol.">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Metadades clíniques">
+					description = <"Informació per donar suport a l'enllaç amb altres parts de la història clínica o directrius externes.">
+				>
+				["at0001"] = <
+					text = <"ID Procés">
+					description = <"L'identificador d'un procés de salut rellevant.">
+					comment = <"L'\"ID procés\" proporcionarà un enllaç a un \"procés de salut\" definit.">
+				>
+				["at0002"] = <
+					text = <"ID pla de cures associat">
+					description = <"L'identificador d'un pla de cures associat.">
+					comment = <"L'\"ID del pla de cures associat\" pot proporcionar un enllaç a un pla de cures específic existent.">
+				>
+				["at0003"] = <
+					text = <"ID procés assistencial associat">
+					description = <"L'identificador d'un procés assistencial relacionat o recorregut del pacient.">
+					comment = <"L'\"identificador d'un procés assistencial\" pot proporcionar un enllaç a un \"procés assistencial\" o un \"recorregut assistencial\" específic existent.">
+				>
+				["at0004"] = <
+					text = <"ID Protocol">
+					description = <"L'identificador d'una guia clínica o protocol clínic relacionat.">
+					comment = <"L'\"ID protocol\" pot proporcionar un enllaç a una guia o protocol de tractament específic.">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Metadatos clínicos">
+					description = <"Información para dar soporte al enlace con otras partes de la historia clínica o directrices externas.">
+				>
+				["at0001"] = <
+					text = <"ID proceso">
+					description = <"El identificador de un proceso de salud relevante.">
+					comment = <"El \"ID proceso\" proporcionará un enlace a un \"proceso de salud\" definido.">
+				>
+				["at0002"] = <
+					text = <"ID plan de cuidados asociado">
+					description = <"El identificador de un plan de cuidados asociado.">
+					comment = <"El \"ID del plan de cuidados asociado\" puede proporcionar un enlace a un plan de cuidados específico existente.">
+				>
+				["at0003"] = <
+					text = <"ID proceso asistencial asociado">
+					description = <"El identificador de un proceso asistencial relacionado o recorrido del paciente.">
+					comment = <"El \"identificador de un proceso asistencial\" puede proporcionar un enlace a un \"proceso asistencial\" o un \"recorrido asistencial\" específico existente.">
+				>
+				["at0004"] = <
+					text = <"ID protocolo">
+					description = <"El identificador de una guía clínica o protocolo clínico relacionado.">
+					comment = <"El \"ID protocolo\" puede proporcionar un enlace a una guía o protocolo de tratamiento específico.">
+				>
+			>
+		>
+	>

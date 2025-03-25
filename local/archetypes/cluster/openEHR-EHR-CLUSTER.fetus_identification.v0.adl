@@ -1,0 +1,383 @@
+﻿archetype (adl_version=1.4; uid=fc4bb32c-b178-4315-b8a7-a3870e5be74c)
+	openEHR-EHR-CLUSTER.fetus_identification.v0
+
+concept
+	[at0000]	-- Fetus_identification
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-09">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"2AE26707C196DD8435F08438DEECFD66">
+		["build_uid"] = <"feffd3ca-7bfc-425d-b633-6e422be804c3">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Fetus_identification
+		items cardinality matches {1..*; unordered} matches {
+			CLUSTER[at0001] occurrences matches {0..1} matches {    -- Fetus/newborn metadata
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Fetus/newborn ID
+						value matches {
+							DV_IDENTIFIER matches {*}
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0004] occurrences matches {0..1} matches {    -- Patient record status
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Fetus/newborn status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0018,    -- Active
+									at0019,    -- Removed
+									at0020]    -- Inactive
+								}
+							}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Reason for removal
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0016,    -- Patient error
+									at0017]    -- Registration error
+								}
+							}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Reason for inactivation
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::at0015]    -- Death
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[at0007] occurrences matches {0..1} matches {    -- Structured name of a person
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Given name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- First surname
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Second surname
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0021] occurrences matches {0..1} matches {    -- CIP Baby
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0022] occurrences matches {0..1} matches {    -- MPI Baby
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Fetus_identification">
+					description = <"Fetus_identification">
+				>
+				["at0001"] = <
+					text = <"Fetus/newborn metadata">
+					description = <"Fetus/newborn metadata">
+				>
+				["at0004"] = <
+					text = <"Patient record status">
+					description = <"Patient record status">
+				>
+				["at0007"] = <
+					text = <"Structured name of a person">
+					description = <"Structured name of a person">
+				>
+				["at0008"] = <
+					text = <"Fetus/newborn ID">
+					description = <"Fetus/newborn ID">
+				>
+				["at0009"] = <
+					text = <"Fetus/newborn status">
+					description = <"Fetus/newborn status">
+				>
+				["at0010"] = <
+					text = <"Reason for removal">
+					description = <"Reason for removal">
+				>
+				["at0011"] = <
+					text = <"Reason for inactivation">
+					description = <"Reason for inactivation">
+				>
+				["at0012"] = <
+					text = <"Given name">
+					description = <"Given name">
+				>
+				["at0013"] = <
+					text = <"First surname">
+					description = <"First surname">
+				>
+				["at0014"] = <
+					text = <"Second surname">
+					description = <"Second surname">
+				>
+				["at0015"] = <
+					text = <"Death">
+					description = <"The fetus/baby has died.">
+				>
+				["at0016"] = <
+					text = <"Patient error">
+					description = <"The fetus/infant has been recorded in the wrong mother's medical record.">
+				>
+				["at0017"] = <
+					text = <"Registration error">
+					description = <"The fetus/infant has been mistakenly recorded in the correct maternal medical record.">
+				>
+				["at0018"] = <
+					text = <"Active">
+					description = <"Fetus/baby registration is active.">
+				>
+				["at0019"] = <
+					text = <"Removed">
+					description = <"The fetus/infant record has been deleted.">
+				>
+				["at0020"] = <
+					text = <"Inactive">
+					description = <"The fetus/baby registration is inactive.">
+				>
+				["at0021"] = <
+					text = <"CIP Baby">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"MPI Baby">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Identificación feto/neonato">
+					description = <"Identificación feto/neonato">
+				>
+				["at0001"] = <
+					text = <"Metadatos clínicos">
+					description = <"Metadatos clínicos">
+				>
+				["at0004"] = <
+					text = <"Estado del registro del paciente">
+					description = <"Estado del registro del paciente">
+				>
+				["at0007"] = <
+					text = <"Nombre estructurado de la persona">
+					description = <"Nombre estructurado de la persona">
+				>
+				["at0008"] = <
+					text = <"ID feto/neonato">
+					description = <"ID feto/neonato">
+				>
+				["at0009"] = <
+					text = <"Estado del feto/neonato">
+					description = <"Estado del feto/neonato">
+				>
+				["at0010"] = <
+					text = <"Motivo de eliminación">
+					description = <"Motivo de eliminación">
+				>
+				["at0011"] = <
+					text = <"Motivo de inactivación">
+					description = <"Motivo de inactivación">
+				>
+				["at0012"] = <
+					text = <"Nombre de pila">
+					description = <"Nombre de pila">
+				>
+				["at0013"] = <
+					text = <"Primer apellido">
+					description = <"Primer apellido">
+				>
+				["at0014"] = <
+					text = <"Segundo apellido">
+					description = <"Segundo apellido">
+				>
+				["at0015"] = <
+					text = <"Muerte">
+					description = <"El feto/neonato ha muerto.">
+				>
+				["at0016"] = <
+					text = <"Error paciente">
+					description = <"El feto/neonato ha sido registrado en una historia clínica de la madre incorrecta.">
+				>
+				["at0017"] = <
+					text = <"Error registro">
+					description = <"El feto/neonato ha sido registrado por error en la historia clínica materna correcta.">
+				>
+				["at0018"] = <
+					text = <"Activo">
+					description = <"El registro del feto/neonato está activo.">
+				>
+				["at0019"] = <
+					text = <"Eliminado">
+					description = <"El registro del feto/neonato ha sido eliminado.">
+				>
+				["at0020"] = <
+					text = <"Inactivo">
+					description = <"El registro del feto/neonato está inactivo.">
+				>
+				["at0021"] = <
+					text = <"CIP Bebé">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"MPI Bebé">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Identificació fetus/nadó">
+					description = <"Identificació fetus/nadó">
+				>
+				["at0001"] = <
+					text = <"Metadades clíniques">
+					description = <"Metadades clíniques">
+				>
+				["at0004"] = <
+					text = <"Estat del registre del pacient">
+					description = <"Estat del registre del pacient">
+				>
+				["at0007"] = <
+					text = <"Nom estructurat de la persona">
+					description = <"Nom estructurat de la persona">
+				>
+				["at0008"] = <
+					text = <"ID fetus/nadó">
+					description = <"ID fetus/nadó">
+				>
+				["at0009"] = <
+					text = <"Estat del fetus/nadó">
+					description = <"Estat del fetus/nadó">
+				>
+				["at0010"] = <
+					text = <"Motiu d'eliminació">
+					description = <"Motiu d'eliminació">
+				>
+				["at0011"] = <
+					text = <"Motiu d'inactivació">
+					description = <"Motiu d'inactivació">
+				>
+				["at0012"] = <
+					text = <"Nom del nadó">
+					description = <"Nom de pila">
+				>
+				["at0013"] = <
+					text = <"Primer cognom del nadó">
+					description = <"Primer cognom">
+				>
+				["at0014"] = <
+					text = <"Segon cognom del nadó">
+					description = <"Segon cognom">
+				>
+				["at0015"] = <
+					text = <"Mort">
+					description = <"El fetus/nadó ha mort.">
+				>
+				["at0016"] = <
+					text = <"Error pacient">
+					description = <"El fetus/nadó ha estat registrat en una història clínica de la mare incorrecta.">
+				>
+				["at0017"] = <
+					text = <"Error registre">
+					description = <"El fetus/nadó ha estat registrat per error en la història clínica materna correcta.">
+				>
+				["at0018"] = <
+					text = <"Actiu">
+					description = <"El registre del fetus/nadó està actiu.">
+				>
+				["at0019"] = <
+					text = <"Eliminat">
+					description = <"El registre del fetus/nadó ha estat eliminat.">
+				>
+				["at0020"] = <
+					text = <"Inactiu">
+					description = <"El registre del fetus/nadó està inactiu.">
+				>
+				["at0021"] = <
+					text = <"CIP nadó">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"MPI ID nadó">
+					description = <"">
+				>
+			>
+		>
+	>

@@ -1,0 +1,229 @@
+﻿archetype (adl_version=1.4; uid=1ed7911a-0599-48ef-bd53-d2c4cc1e6fed)
+	openEHR-EHR-CLUSTER.medication_attention_mother.v0
+
+concept
+	[at0000]	-- Medication
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-16">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"1A751C41BE84B9C0E47FEEF1825357CF">
+		["build_uid"] = <"0000c36d-4aee-4334-b8cf-daf58aa51b6c">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Medication
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Prophylaxis
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0022,    -- Yes
+							at0023]    -- No
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..*} matches {    -- Analgesic treatment during childbirth
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Reason antibiotic prophylaxis
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- SGB- Group B Streptococcus agalactiae
+							at0005,    -- intrapartum fever
+							at0006,    -- elongated amniorrhexis
+							at0007]    -- others
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Medicació">
+					description = <"Medicació">
+				>
+				["at0001"] = <
+					text = <"Profilaxi ATB">
+					description = <"Profilaxis ATB">
+				>
+				["at0002"] = <
+					text = <"Tractament analgèsic durant el part">
+					description = <"Tractament analgèsic durant el part">
+				>
+				["at0003"] = <
+					text = <"Motiu profilaxi ATB">
+					description = <"Motiu profilaxis ATB">
+				>
+				["at0004"] = <
+					text = <"SGB- Streptococcus agalactiae del grup B">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"febre intrapart">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"amniorrexis perllonagada">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"altres">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"No">
+					description = <"">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Medication">
+					description = <"Medication">
+				>
+				["at0001"] = <
+					text = <"Prophylaxis">
+					description = <"ATB prophylaxis">
+				>
+				["at0002"] = <
+					text = <"Analgesic treatment during childbirth">
+					description = <"Analgesic treatment during childbirth">
+				>
+				["at0003"] = <
+					text = <"Reason antibiotic prophylaxis">
+					description = <"Reason ATB prophylaxis">
+				>
+				["at0004"] = <
+					text = <"SGB- Group B Streptococcus agalactiae">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"intrapartum fever">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"elongated amniorrhexis">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"others">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"No">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Medicación">
+					description = <"Medicación">
+				>
+				["at0001"] = <
+					text = <"Profilaxis">
+					description = <"Profilaxis ATB">
+				>
+				["at0002"] = <
+					text = <"Tratamiento analgésico durante el parto">
+					description = <"Tratamiento analgésico durante el parto">
+				>
+				["at0003"] = <
+					text = <"Motivo profilaxis ATB">
+					description = <"Motivo profilaxis ATB">
+				>
+				["at0004"] = <
+					text = <"SGB- Streptococcus agalactiae del grupo B">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"fiebre intrapart">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"amniorexis prolongada">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"otros">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"No">
+					description = <"">
+				>
+			>
+		>
+	>

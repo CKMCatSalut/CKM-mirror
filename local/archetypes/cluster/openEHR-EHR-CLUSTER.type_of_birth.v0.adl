@@ -1,0 +1,69 @@
+﻿archetype (adl_version=1.4; uid=7ab14f07-efc2-42b5-8c9d-256fc633c049)
+	openEHR-EHR-CLUSTER.type_of_birth.v0
+
+concept
+	[at0000]	-- Additional details of the labour
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2023-09-27">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"37E41F6CDC65CD7676740B13EEBD9B9B">
+		["build_uid"] = <"d207a64e-6465-4244-8df6-d78bb98c0ab2">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Additional details of the labour
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0011] occurrences matches {0..1} matches {    -- Position
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0012] occurrences matches {0..1} matches {    -- Presenting part
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Additional details of the labour">
+					description = <"Type of birth">
+				>
+				["at0011"] = <
+					text = <"Position">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Presenting part">
+					description = <"">
+				>
+			>
+		>
+	>

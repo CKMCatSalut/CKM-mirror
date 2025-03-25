@@ -1,0 +1,146 @@
+﻿archetype (adl_version=1.4; uid=a696ae0d-fd02-4fae-b967-ea9631e86574)
+	openEHR-EHR-ADMIN_ENTRY.health_thread.v0
+
+concept
+	[at0000]	-- Health thread
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Atomica Informatics">
+		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2023-11-03">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To define a health thread within the health record.">
+			use = <"Use to define a health thread within the health record.
+
+The intention of this archetype is to support virtual grouping of items in the health record that have a common theme or purpose. For example:
+- all items related to a 'simple' condition - this archetype can be used to connect to all items related to a single problem, diagnosis or pregnancy, including history, examination findings, test results and clinical management. For example: renal disease, retinopathy management or treatment of a neuropathic foot ulcer.
+- all items related to a 'compound' condition - this can be used to connect to all items related to an overarching problem or diagnosis. For example: connecting multiple aspects 
+ of advanced diabetes management plus the ability to connect to related 'subthreads' about renal disease, retinopathy management or treatment of a neuropathic foot ulcer caused by diabetes.
+
+In implementations, it is anticipated this archetype will be nested within the context of appropriate persistent or episodic COMPOSITION archetypes to define each health thread. For example: COMPOSITION.pregnancy_overview to define each pregnancy or COMPOSITION.health_threads for persistent conditions.">
+			keywords = <"pregnancy, condition, diagnosis", ...>
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"767D024DFC93006ADDF70E2391EFE7C8">
+		["build_uid"] = <"99f13d8e-0a16-4d7f-8ef4-0da01d2f24cd">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Health thread
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Thread name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Thread ID
+						value matches {
+							DV_TEXT matches {*}
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..*} matches {    -- Subthread ID
+						value matches {
+							DV_TEXT matches {*}
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Start date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- End date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Reason for the end of the process
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Health thread">
+					description = <"Defined association between healthcare matters, as per CONTSYS specifications.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Thread name">
+					description = <"Identification of the thread, by name.">
+				>
+				["at0003"] = <
+					text = <"Description">
+					description = <"Narrative description about the scope and purpose of the health thread.">
+				>
+				["at0004"] = <
+					text = <"Thread ID">
+					description = <"Unique identifier for the thread.">
+					comment = <"This identifier will be carried in related COMPOSITION and ENTRY archetypes to support the virtual grouping.">
+				>
+				["at0005"] = <
+					text = <"Comment">
+					description = <"Narrative description about the health thread, not captured in other data fields.">
+				>
+				["at0006"] = <
+					text = <"Subthread ID">
+					description = <"Unique identifier of related threads that group health information that is a subgroup for this thread.">
+					comment = <"This identifier will be defined in another instance of the ADMIN_ENTRY.health_thread.">
+				>
+				["at0007"] = <
+					text = <"Start date">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"End date">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Reason for the end of the process">
+					description = <"">
+				>
+			>
+		>
+	>

@@ -1,0 +1,1316 @@
+﻿archetype (adl_version=1.4; uid=ae33eceb-083d-4504-9c35-a452dca82dd0)
+	openEHR-EHR-CLUSTER.newborn.v0
+
+concept
+	[at0000]	-- Newborn and fetus
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-09">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"08412020F244DB6F605A24961041689B">
+		["build_uid"] = <"4d10e09f-1b89-4d51-a9df-8668201285e6">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Newborn and fetus
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0091] occurrences matches {0..1} matches {    -- ID fetus newborn
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			CLUSTER[at0001] occurrences matches {0..1} matches {    -- Institution
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- destiny newborn
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0036,    -- Home address
+									at0037,    -- neonatology
+									at0038,    -- DGAIA
+									at0039,    -- adoption
+									at0040,    -- mortuary
+									at0041,    -- newborn retention
+									at0042,    -- maternity
+									at0043]    -- others
+								}
+							}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Entry reason
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0002] occurrences matches {0..1} matches {    -- Summary of pregnancy
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Date and time of birth
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0004] occurrences matches {0..1} matches {    -- Biological and anthropometric variables
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- sex
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0044,    -- female
+									at0045,    -- male
+									at0046]    -- Undetermined
+								}
+							}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Birth weight
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::124]>
+								list = <
+									["1"] = <
+										units = <"g">
+										magnitude = <|0.0..1000000.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Size
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"cm">
+										magnitude = <|0.0..1000.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Cephalic perimeter
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"cm">
+										magnitude = <|0.0..300.0|>
+									>
+								>
+							>
+						}
+					}
+				}
+			}
+			CLUSTER[at0005] occurrences matches {0..1} matches {    -- newborn status
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0016] occurrences matches {0..1} matches {    -- Born alive?
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0017] occurrences matches {0..1} matches {    -- Perinatal death context
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0050,    -- Front part
+									at0051,    -- intra part
+									at0087]    -- *Postpart (ca)
+								}
+							}
+						}
+					}
+					ELEMENT[at0019] occurrences matches {0..1} matches {    -- Apgar 1 minute total
+						value matches {
+							DV_COUNT matches {
+								magnitude matches {|0..10|}
+							}
+						}
+					}
+					ELEMENT[at0022] occurrences matches {0..1} matches {    -- Apgar 5 minutes total
+						value matches {
+							DV_COUNT matches {
+								magnitude matches {|0..10|}
+							}
+						}
+					}
+					ELEMENT[at0023] occurrences matches {0..1} matches {    -- Apgar 10 minutes total
+						value matches {
+							DV_COUNT matches {
+								magnitude matches {|0..10|}
+							}
+						}
+					}
+					ELEMENT[at0024] occurrences matches {0..*} matches {    -- Neonatal resuscitation
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0053,    -- No
+									at0054,    -- superficial
+									at0055]    -- deep
+								}
+							}
+						}
+					}
+					ELEMENT[at0077] occurrences matches {0..1} matches {    -- Status of fetus/infant
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0081,    -- active
+									at0082,    -- deleted
+									at0083]    -- inactive
+								}
+							}
+						}
+					}
+					ELEMENT[at0078] occurrences matches {0..1} matches {    -- Reason for deletion
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0084,    -- Patient error
+									at0085]    -- Registration error
+								}
+							}
+						}
+					}
+					ELEMENT[at0079] occurrences matches {0..1} matches {    -- Reason for deactivation
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::at0086]    -- dead
+								}
+							}
+						}
+					}
+					ELEMENT[at0080] occurrences matches {0..1} matches {    -- Name of the baby
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0088] occurrences matches {0..1} matches {    -- First surname of the baby
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0089] occurrences matches {0..1} matches {    -- Second surname of the baby
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0006] occurrences matches {0..1} matches {    -- Blood and umbilical cord variables
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0026] occurrences matches {0..1} matches {    -- vein pH
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::119]>
+								list = <
+									["1"] = <
+										units = <"[pH]">
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0027] occurrences matches {0..1} matches {    -- arterial pH
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::119]>
+								list = <
+									["1"] = <
+										units = <"[pH]">
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0028] occurrences matches {0..1} matches {    -- ABO group
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0057,    -- O
+									at0058,    -- A
+									at0059,    -- B
+									at0060]    -- AB
+								}
+							}
+						}
+					}
+					ELEMENT[at0029] occurrences matches {0..1} matches {    -- Rh
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0061,    -- positive
+									at0062]    -- negative
+								}
+							}
+						}
+					}
+					ELEMENT[at0030] occurrences matches {0..1} matches {    -- Cord clamping
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0063,    -- <1 minute
+									at0064,    -- >1-5 minutes
+									at0065]    -- Stop beating
+								}
+							}
+						}
+					}
+					ELEMENT[at0031] occurrences matches {0..1} matches {    -- Cord blood donation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0007] occurrences matches {0..1} matches {    -- First care of the newborn
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0032] occurrences matches {0..1} matches {    -- Skin with mother's skin
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0033] occurrences matches {0..1} matches {    -- Start breastfeeding early
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0034] occurrences matches {0..1} matches {    -- Ocular prophylaxis treatment
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Via vitamin K prophylaxis administration
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0074,    -- VO
+									at0075,    -- IM
+									at0076]    -- Not administered
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[at0093] occurrences matches {0..1} matches {    -- Fetus
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0095] occurrences matches {0..1} matches {    -- Fetal situation at labour
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0096] occurrences matches {0..1} matches {    -- Fetal presentation at labour
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0097] occurrences matches {0..1} matches {    -- Type of labour
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Newborn and fetus">
+					description = <"Newborn">
+				>
+				["at0001"] = <
+					text = <"Institution">
+					description = <"Institution">
+				>
+				["at0002"] = <
+					text = <"Summary of pregnancy">
+					description = <"Summary of pregnancy">
+				>
+				["at0004"] = <
+					text = <"Biological and anthropometric variables">
+					description = <"Biological and anthropometric variables">
+				>
+				["at0005"] = <
+					text = <"newborn status">
+					description = <"newborn status">
+				>
+				["at0006"] = <
+					text = <"Blood and umbilical cord variables">
+					description = <"Blood and umbilical cord variables">
+				>
+				["at0007"] = <
+					text = <"First care of the newborn">
+					description = <"First care of the newborn">
+				>
+				["at0008"] = <
+					text = <"destiny newborn">
+					description = <"destiny newborn">
+				>
+				["at0010"] = <
+					text = <"Entry reason">
+					description = <"Entry reason">
+				>
+				["at0011"] = <
+					text = <"Date and time of birth">
+					description = <"Date and time of birth">
+				>
+				["at0012"] = <
+					text = <"sex">
+					description = <"sex">
+				>
+				["at0013"] = <
+					text = <"Birth weight">
+					description = <"Birth weight">
+				>
+				["at0014"] = <
+					text = <"Size">
+					description = <"Size">
+				>
+				["at0015"] = <
+					text = <"Cephalic perimeter">
+					description = <"Cephalic perimeter">
+				>
+				["at0016"] = <
+					text = <"Born alive?">
+					description = <"Born alive?">
+				>
+				["at0017"] = <
+					text = <"Perinatal death context">
+					description = <"Perinatal death context">
+				>
+				["at0019"] = <
+					text = <"Apgar 1 minute total">
+					description = <"Apgar 1 minute total">
+					comment = <"If the total is to be calculated, it is necessary for all 5 component values to be recorded.">
+				>
+				["at0022"] = <
+					text = <"Apgar 5 minutes total">
+					description = <"Apgar 5 minutes total">
+					comment = <"If the total is to be calculated, it is necessary for all 5 component values to be recorded.">
+				>
+				["at0023"] = <
+					text = <"Apgar 10 minutes total">
+					description = <"Apgar 10 minutes total">
+					comment = <"If the total is to be calculated, it is necessary for all 5 component values to be recorded.">
+				>
+				["at0024"] = <
+					text = <"Neonatal resuscitation">
+					description = <"Neonatal resuscitation">
+				>
+				["at0026"] = <
+					text = <"vein pH">
+					description = <"vein pH">
+				>
+				["at0027"] = <
+					text = <"arterial pH">
+					description = <"arterial pH">
+				>
+				["at0028"] = <
+					text = <"ABO group">
+					description = <"ABO group">
+				>
+				["at0029"] = <
+					text = <"Rh">
+					description = <"Rh">
+				>
+				["at0030"] = <
+					text = <"Cord clamping">
+					description = <"Cord clamping">
+				>
+				["at0031"] = <
+					text = <"Cord blood donation">
+					description = <"Cord blood donation">
+				>
+				["at0032"] = <
+					text = <"Skin with mother's skin">
+					description = <"Skin with mother's skin">
+				>
+				["at0033"] = <
+					text = <"Start breastfeeding early">
+					description = <"Start breastfeeding early">
+				>
+				["at0034"] = <
+					text = <"Ocular prophylaxis treatment">
+					description = <"Ocular prophylaxis treatment">
+				>
+				["at0035"] = <
+					text = <"Via vitamin K prophylaxis administration">
+					description = <"Via vitamin K prophylaxis administration">
+				>
+				["at0036"] = <
+					text = <"Home address">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"neonatology">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"DGAIA">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"adoption">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"mortuary">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"newborn retention">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"maternity">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"others">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"female">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"male">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Undetermined">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Front part">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"intra part">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"superficial">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"deep">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"O">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"A">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"B">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"AB">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"positive">
+					description = <"Rh(D) antigen is detected">
+				>
+				["at0062"] = <
+					text = <"negative">
+					description = <"Rh(D) antigen is not detected.">
+				>
+				["at0063"] = <
+					text = <"<1 minute">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <">1-5 minutes">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Stop beating">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"VO">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"IM">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Not administered">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Status of fetus/infant">
+					description = <"Status of fetus/infant">
+				>
+				["at0078"] = <
+					text = <"Reason for deletion">
+					description = <"Reason for deletion">
+				>
+				["at0079"] = <
+					text = <"Reason for deactivation">
+					description = <"Reason for deactivation">
+				>
+				["at0080"] = <
+					text = <"Name of the baby">
+					description = <"Name and surname of the baby">
+				>
+				["at0081"] = <
+					text = <"active">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"deleted">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"inactive">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Patient error">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Registration error">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"dead">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"*Postpart (ca)">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"First surname of the baby">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Second surname of the baby">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"ID fetus newborn">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Fetus">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Fetal situation at labour">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Fetal presentation at labour">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Type of labour">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Feto y neaonato">
+					description = <"Neonato">
+				>
+				["at0001"] = <
+					text = <"Institución">
+					description = <"Institución">
+				>
+				["at0002"] = <
+					text = <"Resumen de embarazo">
+					description = <"Resumen de embarazo">
+				>
+				["at0004"] = <
+					text = <"Variables biológicas y antropométricas">
+					description = <"Variables biológicas y antropométricas">
+				>
+				["at0005"] = <
+					text = <"Estado del neonato">
+					description = <"Estado del neonato">
+				>
+				["at0006"] = <
+					text = <"Variables de la sangre y el cordón umbilical">
+					description = <"Variables de la sangre y el cordón umbilical">
+				>
+				["at0007"] = <
+					text = <"Primeros cuidados del neonato">
+					description = <"Primeros cuidados del neonato">
+				>
+				["at0008"] = <
+					text = <"Destino neonato">
+					description = <"Destino neonato">
+				>
+				["at0010"] = <
+					text = <"Motivo ingreso">
+					description = <"Motivo ingreso">
+				>
+				["at0011"] = <
+					text = <"Fecha y hora de nacimiento">
+					description = <"Fecha y hora de nacimiento">
+				>
+				["at0012"] = <
+					text = <"Sexo">
+					description = <"Sexo">
+				>
+				["at0013"] = <
+					text = <"Peso al nacer">
+					description = <"Peso al nacer">
+				>
+				["at0014"] = <
+					text = <"Talla">
+					description = <"Talla">
+				>
+				["at0015"] = <
+					text = <"Perímetro cefálico">
+					description = <"Perímetro cefálico">
+				>
+				["at0016"] = <
+					text = <"¿Nacido vivo?">
+					description = <"¿Nacido vivo?">
+				>
+				["at0017"] = <
+					text = <"Contexto muerto perinatal">
+					description = <"Contexto muerto perinatal">
+				>
+				["at0019"] = <
+					text = <"Apgar 1 minuto total">
+					description = <"Apgar 1 minuto total">
+					comment = <"Si se debe calcular el total, es necesario registrar los valores de los 5 componentes.">
+				>
+				["at0022"] = <
+					text = <"Apgar 5 minutos total">
+					description = <"Apgar 5 minutos total">
+					comment = <"Si se debe calcular el total, es necesario registrar los valores de los 5 componentes.">
+				>
+				["at0023"] = <
+					text = <"Apgar 10 minuto total">
+					description = <"Apgar 10 minuto total">
+					comment = <"Si se debe calcular el total, es necesario registrar los valores de los 5 componentes.">
+				>
+				["at0024"] = <
+					text = <"Reanimación neonatal">
+					description = <"Reanimación neonatal">
+				>
+				["at0026"] = <
+					text = <"pH vena">
+					description = <"pH vena">
+				>
+				["at0027"] = <
+					text = <"pH arteria">
+					description = <"pH arteria">
+				>
+				["at0028"] = <
+					text = <"Grupo ABO">
+					description = <"Grupo ABO">
+				>
+				["at0029"] = <
+					text = <"Rh">
+					description = <"Rh">
+				>
+				["at0030"] = <
+					text = <"Clampaje cordón">
+					description = <"Clampaje cordón">
+				>
+				["at0031"] = <
+					text = <"Donación sangre de cordón">
+					description = <"Donación sangre de cordón">
+				>
+				["at0032"] = <
+					text = <"Piel con piel materno">
+					description = <"Piel con piel materno">
+				>
+				["at0033"] = <
+					text = <"Inicio lactancia materna precoz">
+					description = <"Inicio lactancia materna precoz">
+				>
+				["at0034"] = <
+					text = <"Tratamiento profilaxis ocular">
+					description = <"Tratamiento profilaxis ocular">
+				>
+				["at0035"] = <
+					text = <"Vía administración profilaxis vitamina K">
+					description = <"Vía administración profilaxis vitamina K">
+				>
+				["at0036"] = <
+					text = <"Domicilio">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Neonatología">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"DGAIA">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Adopción">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Mortuorio">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Retención bebé">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Maternidad">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Otros">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Femenino">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Masculino">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Indeterminado">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Anteparto">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Intraparto">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Superficial">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Profunda">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"O">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"A">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"B">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"AB">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Positivo">
+					description = <"Se detecta el antígeno Rh(D)">
+				>
+				["at0062"] = <
+					text = <"Negativo">
+					description = <"No se detecta el antígeno Rh(D).">
+				>
+				["at0063"] = <
+					text = <"<1 minuto">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <">1-5 minutos">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Deja de latir">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"VO">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"IM">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"No administrada">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Estado del feto/bebé">
+					description = <"Estado del feto/bebé">
+				>
+				["at0078"] = <
+					text = <"Motivo de eliminación">
+					description = <"Motivo de eliminación">
+				>
+				["at0079"] = <
+					text = <"Motivo de inactivación">
+					description = <"Motivo de inactivación">
+				>
+				["at0080"] = <
+					text = <"Nombre del bebé">
+					description = <"Nombre y apellidos del bebé">
+				>
+				["at0081"] = <
+					text = <"Activo">
+					description = <"Activo">
+				>
+				["at0082"] = <
+					text = <"Eliminado">
+					description = <"Eliminado">
+				>
+				["at0083"] = <
+					text = <"Inactivo">
+					description = <"Inactivo">
+				>
+				["at0084"] = <
+					text = <"Error paciente">
+					description = <"Error paciente">
+				>
+				["at0085"] = <
+					text = <"Error registro">
+					description = <"Error registro">
+				>
+				["at0086"] = <
+					text = <"Muerte">
+					description = <"Muerte">
+				>
+				["at0087"] = <
+					text = <"*Postpart (ca)">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"Primer apellido del bebé">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Segundo apellido del bebé">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"ID fetus/neonato">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Feto">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Situación fetal en el parto">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Presentación fetal en el parto">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Tipo de parto">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Fetus i nadó">
+					description = <"Nadó">
+				>
+				["at0001"] = <
+					text = <"Institució">
+					description = <"Institució">
+				>
+				["at0002"] = <
+					text = <"Resum d'embaràs">
+					description = <"Resum d'embaràs">
+				>
+				["at0004"] = <
+					text = <"Variables biològiques i antropomètriques">
+					description = <"Variables biològiques i antropomètriques">
+				>
+				["at0005"] = <
+					text = <"Estat del nadó">
+					description = <"Estat del nadó">
+				>
+				["at0006"] = <
+					text = <"Variables de la sang i el cordó umbilical">
+					description = <"Variables de la sang i el cordó umbilical">
+				>
+				["at0007"] = <
+					text = <"Primeres cures del nadó">
+					description = <"Primeres cures del nadó">
+				>
+				["at0008"] = <
+					text = <"Destí nadó">
+					description = <"Destí nadó">
+				>
+				["at0010"] = <
+					text = <"Motiu ingrés">
+					description = <"Diagnòstic d'ingrés">
+				>
+				["at0011"] = <
+					text = <"Data i hora de naixement">
+					description = <"Data i hora de naixement">
+				>
+				["at0012"] = <
+					text = <"Sexe">
+					description = <"Sexe biològic">
+				>
+				["at0013"] = <
+					text = <"Pes al nèixer (gr)">
+					description = <"Pes al nèixer">
+				>
+				["at0014"] = <
+					text = <"Talla">
+					description = <"Talla al naixement">
+				>
+				["at0015"] = <
+					text = <"Perímetre cefàlic">
+					description = <"Perímetre cefàlic al naixement">
+				>
+				["at0016"] = <
+					text = <"Nascut viu">
+					description = <"Un sol nascut viu">
+				>
+				["at0017"] = <
+					text = <"Moment de la defunció">
+					description = <"Context mort perinatal">
+				>
+				["at0019"] = <
+					text = <"Apgar 1 min">
+					description = <"Apgar 1 minut total">
+					comment = <"Si s'ha de calcular el total, cal registrar els valors dels 5 components.">
+				>
+				["at0022"] = <
+					text = <"Apgar 5 min">
+					description = <"Apgar 5 minuts total">
+					comment = <"Si s'ha de calcular el total, cal registrar els valors dels 5 components.">
+				>
+				["at0023"] = <
+					text = <"Apgar 10 min">
+					description = <"Apgar 10 minuto total">
+					comment = <"Si s'ha de calcular el total, cal registrar els valors dels 5 components.">
+				>
+				["at0024"] = <
+					text = <"Reanimació neonatal">
+					description = <"Reanimació neonatal">
+				>
+				["at0026"] = <
+					text = <"pH vena">
+					description = <"Medició pH venós">
+				>
+				["at0027"] = <
+					text = <"pH artèria">
+					description = <"Medició pH arterial">
+				>
+				["at0028"] = <
+					text = <"Grup sanguini">
+					description = <"Grup ABO">
+				>
+				["at0029"] = <
+					text = <"Rh">
+					description = <"Rh">
+				>
+				["at0030"] = <
+					text = <"Clampatge cordó">
+					description = <"Pinçament del cordó umbilical">
+				>
+				["at0031"] = <
+					text = <"Donació sang de cordó">
+					description = <"Troballa relacionada amb la donació de sang, òrgans o teixits">
+				>
+				["at0032"] = <
+					text = <"Pell amb pell matern">
+					description = <"Contacte físic">
+				>
+				["at0033"] = <
+					text = <"Inici lactància materna precoç">
+					description = <"Inici lactància materna precoç">
+				>
+				["at0034"] = <
+					text = <"Profilaxi ocular">
+					description = <"Tractament profilaxi ocular">
+				>
+				["at0035"] = <
+					text = <"Profilaxi Vitamina K">
+					description = <"Via administració profilaxi vitamina K">
+				>
+				["at0036"] = <
+					text = <"Domicili">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Neonatologia">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"DGAIA">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Adopció">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Mortuori">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Retenció nadó">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Maternitat">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Altres">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Femení">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Masculí">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Indeterminat">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Avantpart">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Intrapart">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Superficial">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Profunda">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"0">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"A">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"B">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"AB">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Positiu">
+					description = <"Es detecta l'antigen Rh(D)">
+				>
+				["at0062"] = <
+					text = <"Negatiu">
+					description = <"No es detecta l'antigen Rh(D).">
+				>
+				["at0063"] = <
+					text = <"<1 minut">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <">1-5 minuts">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Deixa de bategar">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"VO">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"IM">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"No administrada">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Estat del fetus/nadó">
+					description = <"Estat del fetus/nadó">
+				>
+				["at0078"] = <
+					text = <"Motiu d'eliminació">
+					description = <"Motiu d'eliminació">
+				>
+				["at0079"] = <
+					text = <"Motiu d'inactivació">
+					description = <"Motiu d'inactivació">
+				>
+				["at0080"] = <
+					text = <"Nom nadó">
+					description = <"Nom i cognoms del nadó">
+				>
+				["at0081"] = <
+					text = <"Actiu">
+					description = <"Actiu">
+				>
+				["at0082"] = <
+					text = <"Eliminat">
+					description = <"Eliminat">
+				>
+				["at0083"] = <
+					text = <"Inactiu">
+					description = <"Inactiu">
+				>
+				["at0084"] = <
+					text = <"Error pacient">
+					description = <"Error pacient">
+				>
+				["at0085"] = <
+					text = <"Error registre">
+					description = <"Error registre">
+				>
+				["at0086"] = <
+					text = <"Mort">
+					description = <"Mort">
+				>
+				["at0087"] = <
+					text = <"Postpart">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"Primer cognom nadó">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Segon cognom nadó">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"ID fetus/nadó">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Fetus">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Situació fetal al part">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Presentació fetal al part">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Tipus de part">
+					description = <"">
+				>
+			>
+		>
+	>

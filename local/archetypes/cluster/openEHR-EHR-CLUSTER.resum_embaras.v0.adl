@@ -1,0 +1,152 @@
+﻿archetype (adl_version=1.4; uid=f07b2e5a-a0db-4630-9338-02248ade3828)
+	openEHR-EHR-CLUSTER.resum_embaras.v0
+
+concept
+	[at0000]	-- Pregnancy summary
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-09">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"CB934EC23778ADEF160147708F100C72">
+		["build_uid"] = <"05b37868-80fa-408f-bd6f-c0b208e0c54e">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] occurrences matches {1..*} matches {    -- Pregnancy summary
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Mother-newborn bond
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0003,    -- Secure emotional bond
+							at0004,    -- Ambivalent
+							at0005]    -- No bond
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Resum embaràs">
+					description = <"Resum embaràs">
+				>
+				["at0002"] = <
+					text = <"Vincle mare-nadó">
+					description = <"Vincle nadó/mare">
+				>
+				["at0003"] = <
+					text = <"Vincle afectiu segur">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Ambivalent">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Sense vincle">
+					description = <"">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pregnancy summary">
+					description = <"Pregnancy summary">
+				>
+				["at0002"] = <
+					text = <"Mother-newborn bond">
+					description = <"Newborn/mother bond">
+				>
+				["at0003"] = <
+					text = <"Secure emotional bond">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Ambivalent">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"No bond">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Resumen embarazo">
+					description = <"Resumen embarazo">
+				>
+				["at0002"] = <
+					text = <"Vínculo madre-neonato">
+					description = <"Vínculo neonato/madre">
+				>
+				["at0003"] = <
+					text = <"Vínculo afectivo seguro">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Ambivalente">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"No vínculo">
+					description = <"">
+				>
+			>
+		>
+	>

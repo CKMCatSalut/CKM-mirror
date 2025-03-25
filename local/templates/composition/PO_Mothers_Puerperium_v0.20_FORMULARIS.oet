@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>a989f371-ab8a-474f-982f-6a1a07e74e1e</id>
+    <name>PO_Mothers_Puerperium_v0.20_FORMULARIS</name>
+    <description>
+        <original_author>
+            <item>
+                <key>date</key>
+                <value>2024-07-09</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>63.0.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value/>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>6ef9e1249182645814310495df3985e6</value>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>fe1043d1d26d95caa5311f176fc37690</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::ca</value>
+            </item>
+        </other_details>
+    </description>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.administrative_data_of_the_visit.v0]/items[at0001]/items[at0004]">
+        <items>
+            <item>
+                <key>SNOMED_CT::309039003</key>
+                <value>Hores d'alta hospitalària</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.administrative_data_of_the_visit.v0]/items[at0001]/items[at0003]">
+        <items>
+            <item>
+                <key>SNOMED_CT::308335008</key>
+                <value>Tipus de visita</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.administrative_data_of_the_visit.v0]/items[at0002]/items[at0006]">
+        <items>
+            <item>
+                <key>SNOMED_CT::491000122104</key>
+                <value>Barrera idiomàtica</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.physical_examination_findings.v0]/items[at0009]">
+        <items>
+            <item>
+                <key>SNOMED_CT::364253002</key>
+                <value>Alçada uterina</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.physical_examination_findings.v0]/items[at0001]">
+        <items>
+            <item>
+                <key>SNOMED_CT::124734007</key>
+                <value>Estat perineu</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.physical_examination_findings.v0]/items[at0007]">
+        <items>
+            <item>
+                <key>SNOMED_CT::386234001</key>
+                <value>Estat de la ferida cesària</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.physical_examination_findings.v0]/items[at0005]">
+        <items>
+            <item>
+                <key>SNOMED_CT::110513008</key>
+                <value>Valoració dels pits</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.health_risk_assessment.v0]/items[at0003]">
+        <items>
+            <item>
+                <key>SNOMED_CT::364197005</key>
+                <value>Patró miccional</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.health_risk_assessment.v0]/items[at0004]">
+        <items>
+            <item>
+                <key>SNOMED_CT::300373008</key>
+                <value>Patró deposicional</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.health_risk_assessment.v0]/items[at0009]">
+        <items>
+            <item>
+                <key>SNOMED_CT::77176002</key>
+                <value>Fumadora actualment</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.simptomes_i_problemes.v0]/items[at0006]">
+        <items>
+            <item>
+                <key>SNOMED_CT::47821001</key>
+                <value>Sagnat postpart fisiològic</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.simptomes_i_problemes.v0]/items[at0004]">
+        <items>
+            <item>
+                <key>SNOMED_CT::249211006</key>
+                <value>Loquis</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.simptomes_i_problemes.v0]/items[at0002]">
+        <items>
+            <item>
+                <key>SNOMED_CT::289750007</key>
+                <value>Involució uterina</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.simptomes_i_problemes.v0]/items[at0017]">
+        <items>
+            <item>
+                <key>SNOMED_CT::165232002</key>
+                <value>Presenta incontinència urinària</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.simptomes_i_problemes.v0]/items[at0019]">
+        <items>
+            <item>
+                <key>SNOMED_CT::72042002</key>
+                <value>Presenta incontinència fecal</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.salut_sexual.v0]/items[at0001]">
+        <items>
+            <item>
+                <key>SNOMED_CT::363902004</key>
+                <value>Relacions sexuals</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.salut_sexual.v0]/items[at0003]">
+        <items>
+            <item>
+                <key>SNOMED_CT::243816001</key>
+                <value>Mètodes contraceptius</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.signes_vitals.v0]/items[at0004]">
+        <items>
+            <item>
+                <key>SNOMED_CT::386725007</key>
+                <value>Temperatura</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.signes_vitals.v0]/items[at0001]">
+        <items>
+            <item>
+                <key>SNOMED_CT::72313002</key>
+                <value>Tensió arterial sistòlica</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.signes_vitals.v0]/items[at0002]">
+        <items>
+            <item>
+                <key>SNOMED_CT::271650006</key>
+                <value>Tensió arterial diastòlica</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.signes_vitals.v0]/items[at0003]">
+        <items>
+            <item>
+                <key>SNOMED_CT::364075005</key>
+                <value>Freqüencia cardíaca</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mediction_periperium_mother.v0]/items[at0018]">
+        <items>
+            <item>
+                <key>SNOMED_CT::413555000</key>
+                <value>Profilaxi antibiòtica</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mediction_periperium_mother.v0]/items[at0010]">
+        <items>
+            <item>
+                <key>SNOMED_CT::439993001</key>
+                <value>Profilaxi TVP</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mediction_periperium_mother.v0]/items[at0026]">
+        <items>
+            <item>
+                <key>SNOMED_CT::33389009</key>
+                <value>Transfusió sanguínia</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mediction_periperium_mother.v0]/items[at0006]">
+        <items>
+            <item>
+                <key>SNOMED_CT::308415008</key>
+                <value>Immunització rubèola</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.escales.v0]/items[at0004]">
+        <items>
+            <item>
+                <key>SNOMED_CT::273904000</key>
+                <value>Escala visual del dolor</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.escales.v0]/items[at0005]">
+        <items>
+            <item>
+                <key>SNOMED_CT::341501000135106</key>
+                <value>Test de Fargeström (breu)</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.escales.v0]/items[at0014]">
+        <items>
+            <item>
+                <key>SNOMED_CT::341501000135106</key>
+                <value>Test de Fargeström (breu)</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.escales.v0]/items[at0015]">
+        <items>
+            <item>
+                <key>SNOMED_CT::341171000135107</key>
+                <value>Test AUDIT C embaràs</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.escales.v0]/items[at0018]">
+        <items>
+            <item>
+                <key>SNOMED_CT::340961000135105</key>
+                <value>Test AUDIT complet embaràs</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.escales.v0]/items[at0021]">
+        <items>
+            <item>
+                <key>SNOMED_CT::273441006</key>
+                <value>Escala Edimburg postpart</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.escales.v0]/items[at0023]">
+        <items>
+            <item>
+                <key>SNOMED_CT::342831000135108</key>
+                <value>Qüestionari de cribratge per detectar violència contra la parella (PVS)</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.escales.v0]/items[at0025]">
+        <items>
+            <item>
+                <key>SNOMED_CT::228271000135104</key>
+                <value>RVD</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.escales.v0]/items[at0027]">
+        <items>
+            <item>
+                <key>SNOMED_CT::342901000135105</key>
+                <value>Escala suport  social OSLO</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.assist_test.v0]">
+        <items>
+            <item>
+                <key>SNOMED_CT::345191000135109</key>
+                <value>Test ASSIST</value>
+            </item>
+        </items>
+    </annotations>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.probs_base_composition.v0" concept_name="*PROBS_base_composition (en)" name="PO_Mothers_Puerperium" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-OBSERVATION.probs_base_observation.v0" concept_name="*PROBS_base_observation (en)" max="1" name="Puerperi Mare" path="/content" xsi:type="tem:OBSERVATION">
+            <Items archetype_id="openEHR-EHR-CLUSTER.administrative_data_of_the_visit.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0001]/items[at0003]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.50.49" terminologyID="Catàleg Medi visita ambulatòria"/>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0002]/items[at0006]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_1::260385009::No</includedValues>
+                        <includedValues>SNOMED_CT_1::373066001::Si</includedValues>
+                        <excludedValues>local::at0007</excludedValues>
+                        <excludedValues>local::at0008</excludedValues>
+                    <excludedValues>local::at0007</excludedValues><excludedValues>local::at0008</excludedValues></constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.physical_examination_findings.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0001]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_2::11163003::Íntegre</includedValues>
+                        <includedValues>SNOMED_CT_2::85548006::Episiotomia</includedValues>
+                        <includedValues>SNOMED_CT_2::35708002::Abscés</includedValues>
+                        <includedValues>SNOMED_CT_2::314948003::Dehiscència</includedValues>
+                        <includedValues>SNOMED_CT_2::79654002::Edema</includedValues>
+                        <includedValues>SNOMED_CT_2::283380005::Esquinçat</includedValues>
+                        <includedValues>SNOMED_CT_2::206413008::Hematoma superficial</includedValues>
+                        <includedValues>SNOMED_CT_2::262559001::Hematoma profund</includedValues>
+                        <includedValues>SNOMED_CT_2::200249004::Hemorroide</includedValues>
+                        <includedValues>SNOMED_CT_2::201328008::Maceració</includedValues>
+                        <includedValues>SNOMED_CT_2::225565007::Dolor</includedValues>
+                        <includedValues>SNOMED_CT_2::20572008::Correcta evolució</includedValues>
+                        <excludedValues>local::at0010</excludedValues>
+                        <excludedValues>local::at0011</excludedValues>
+                        <excludedValues>local::at0012</excludedValues>
+                        <excludedValues>local::at0013</excludedValues>
+                        <excludedValues>local::at0014</excludedValues>
+                        <excludedValues>local::at0015</excludedValues>
+                        <excludedValues>local::at0016</excludedValues>
+                        <excludedValues>local::at0017</excludedValues>
+                        <excludedValues>local::at0018</excludedValues>
+                        <excludedValues>local::at0019</excludedValues>
+                        <excludedValues>local::at0020</excludedValues>
+                        <excludedValues>local::at0021</excludedValues>
+                    <excludedValues>local::at0010</excludedValues><excludedValues>local::at0011</excludedValues><excludedValues>local::at0012</excludedValues><excludedValues>local::at0013</excludedValues><excludedValues>local::at0014</excludedValues><excludedValues>local::at0015</excludedValues><excludedValues>local::at0016</excludedValues><excludedValues>local::at0017</excludedValues><excludedValues>local::at0018</excludedValues><excludedValues>local::at0019</excludedValues><excludedValues>local::at0020</excludedValues><excludedValues>local::at0021</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0005]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_3::17621005::Normal</includedValues>
+                        <includedValues>SNOMED_CT_3::200416006::Ingurgitació</includedValues>
+                        <includedValues>SNOMED_CT_3::10836241000119100::Clivelles</includedValues>
+                        <includedValues>SNOMED_CT_3::82231009::Mugró pla-invertit</includedValues>
+                        <includedValues>SNOMED_CT_3::290094001::Alteració color mugró</includedValues>
+                        <includedValues>SNOMED_CT_3::22528004::Conducte obstruït</includedValues>
+                        <includedValues>SNOMED_CT_3::248834000::Perla de llet</includedValues>
+                        <includedValues>SNOMED_CT_3::8915006::Hipoplàsia mamària</includedValues>
+                        <includedValues>SNOMED_CT_3::266579006::Signes de mastitis</includedValues>
+                        <excludedValues>local::at0022</excludedValues>
+                        <excludedValues>local::at0023</excludedValues>
+                        <excludedValues>local::at0024</excludedValues>
+                        <excludedValues>local::at0025</excludedValues>
+                        <excludedValues>local::at0026</excludedValues>
+                        <excludedValues>local::at0027</excludedValues>
+                        <excludedValues>local::at0028</excludedValues>
+                        <excludedValues>local::at0029</excludedValues>
+                        <excludedValues>local::at0030</excludedValues>
+                    <excludedValues>local::at0022</excludedValues><excludedValues>local::at0023</excludedValues><excludedValues>local::at0024</excludedValues><excludedValues>local::at0025</excludedValues><excludedValues>local::at0026</excludedValues><excludedValues>local::at0027</excludedValues><excludedValues>local::at0028</excludedValues><excludedValues>local::at0029</excludedValues><excludedValues>local::at0030</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0007]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_4::17621005::Normal</includedValues>
+                        <includedValues>SNOMED_CT_4::396544001::Dehiscència</includedValues>
+                        <includedValues>SNOMED_CT_4::39341000119109::Infectada</includedValues>
+                        <includedValues>SNOMED_CT_4::788728009::Hematoma</includedValues>
+                        <includedValues>SNOMED_CT_4::74964007::Altres</includedValues>
+                        <excludedValues>local::at0031</excludedValues>
+                        <excludedValues>local::at0032</excludedValues>
+                        <excludedValues>local::at0033</excludedValues>
+                        <excludedValues>local::at0034</excludedValues>
+                        <excludedValues>local::at0035</excludedValues>
+                    <excludedValues>local::at0031</excludedValues><excludedValues>local::at0032</excludedValues><excludedValues>local::at0033</excludedValues><excludedValues>local::at0034</excludedValues><excludedValues>local::at0035</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0009]">
+                    </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.health_risk_assessment.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0003]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_5::17621005::Normal</includedValues>
+                        <includedValues>SNOMED_CT_5::18307000::Alterat</includedValues>
+                        <excludedValues>local::at0006</excludedValues>
+                        <excludedValues>local::at0007</excludedValues>
+                        <excludedValues>local::at0008</excludedValues>
+                    <excludedValues>local::at0006</excludedValues><excludedValues>local::at0007</excludedValues><excludedValues>local::at0008</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0004]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_6::17621005::Normal</includedValues>
+                        <includedValues>SNOMED_CT_6::18307000::Alterat</includedValues>
+                        <excludedValues>local::at0012</excludedValues>
+                        <excludedValues>local::at0013</excludedValues>
+                        <excludedValues>local::at0014</excludedValues>
+                    <excludedValues>local::at0012</excludedValues><excludedValues>local::at0013</excludedValues><excludedValues>local::at0014</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0009]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_7::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_7::260385009::No</includedValues>
+                        <excludedValues>local::at0010</excludedValues>
+                        <excludedValues>local::at0011</excludedValues>
+                    <excludedValues>local::at0010</excludedValues><excludedValues>local::at0011</excludedValues></constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.simptomes_i_problemes.v0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0002]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_8::289753009::Normal</includedValues>
+                        <includedValues>SNOMED_CT_8::289752004::Alterat</includedValues>
+                        <excludedValues>local::at0007</excludedValues>
+                        <excludedValues>local::at0008</excludedValues>
+                        <excludedValues>local::at0009</excludedValues>
+                    <excludedValues>local::at0007</excludedValues><excludedValues>local::at0008</excludedValues><excludedValues>local::at0009</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0004]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_9::289585005::Normal</includedValues>
+                        <includedValues>SNOMED_CT_9::289580000::Abundants</includedValues>
+                        <includedValues>SNOMED_CT_9::289586006::Alterat: inclou fètids, hemàtics, amb coàguls, purulents</includedValues>
+                        <excludedValues>local::at0010</excludedValues>
+                        <excludedValues>local::at0011</excludedValues>
+                        <excludedValues>local::at0012</excludedValues>
+                    <excludedValues>local::at0010</excludedValues><excludedValues>local::at0011</excludedValues><excludedValues>local::at0012</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0006]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_10::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_10::260385009::No</includedValues>
+                        <excludedValues>local::at0013</excludedValues>
+                        <excludedValues>local::at0014</excludedValues>
+                        <excludedValues>local::at0015</excludedValues>
+                    <excludedValues>local::at0013</excludedValues><excludedValues>local::at0014</excludedValues><excludedValues>local::at0015</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0017]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_11::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_11::260385009::No</includedValues>
+                        <excludedValues>local::at0023</excludedValues>
+                        <excludedValues>local::at0024</excludedValues>
+                        <excludedValues>local::at0025</excludedValues>
+                    <excludedValues>local::at0023</excludedValues><excludedValues>local::at0024</excludedValues><excludedValues>local::at0025</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0019]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_12::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_12::260385009::No</includedValues>
+                        <excludedValues>local::at0020</excludedValues>
+                        <excludedValues>local::at0021</excludedValues>
+                        <excludedValues>local::at0022</excludedValues>
+                    <excludedValues>local::at0020</excludedValues><excludedValues>local::at0021</excludedValues><excludedValues>local::at0022</excludedValues></constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.salut_sexual.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0001]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_13::162171002::Actualment no manté relacions sexuals</includedValues>
+                        <includedValues>SNOMED_CT_13::228453005::Actualment manté relacions sexuals</includedValues>
+                        <includedValues>SNOMED_CT_13::309842008::Mai ha mantingut relacions sexuals</includedValues>
+                        <excludedValues>local::at0023</excludedValues>
+                        <excludedValues>local::at0024</excludedValues>
+                        <excludedValues>local::at0025</excludedValues>
+                    <excludedValues>local::at0023</excludedValues><excludedValues>local::at0024</excludedValues><excludedValues>local::at0025</excludedValues></constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.resum_embaras.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.signes_vitals.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0001]">
+                    <constraint xsi:type="tem:quantityConstraint">
+                        <unitMagnitude>
+                            <unit>mm[Hg]</unit>
+                            <maxMagnitude>1000.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0002]">
+                    <constraint xsi:type="tem:quantityConstraint">
+                        <unitMagnitude>
+                            <unit>mm[Hg]</unit>
+                            <maxMagnitude>1000.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0003]">
+                    <constraint xsi:type="tem:quantityConstraint">
+                        <unitMagnitude>
+                            <unit>/min</unit>
+                            <maxMagnitude>1000.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0004]">
+                    <constraint xsi:type="tem:quantityConstraint">
+                        <unitMagnitude>
+                            <unit>Cel</unit>
+                            <maxMagnitude>100.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                    </constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.mediction_periperium_mother.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0006]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_14::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_14::260385009::No</includedValues>
+                        <excludedValues>local::at0007</excludedValues>
+                        <excludedValues>local::at0008</excludedValues>
+                        <excludedValues>local::at0009</excludedValues>
+                    <excludedValues>local::at0007</excludedValues><excludedValues>local::at0008</excludedValues><excludedValues>local::at0009</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0018]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_15::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_15::260385009::No</includedValues>
+                        <excludedValues>local::at0019</excludedValues>
+                        <excludedValues>local::at0020</excludedValues>
+                        <excludedValues>local::at0021</excludedValues>
+                    <excludedValues>local::at0019</excludedValues><excludedValues>local::at0020</excludedValues><excludedValues>local::at0021</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0010]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_18::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_18::260385009::No</includedValues>
+                        <excludedValues>local::at0011</excludedValues>
+                        <excludedValues>local::at0012</excludedValues>
+                    <excludedValues>local::at0011</excludedValues><excludedValues>local::at0012</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0022]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_16::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_16::260385009::No</includedValues>
+                        <excludedValues>local::at0023</excludedValues>
+                        <excludedValues>local::at0024</excludedValues>
+                        <excludedValues>local::at0025</excludedValues>
+                    <excludedValues>local::at0023</excludedValues><excludedValues>local::at0024</excludedValues><excludedValues>local::at0025</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0026]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_17::373066001::Si</includedValues>
+                        <includedValues>SNOMED_CT_17::260385009::No</includedValues>
+                        <excludedValues>local::at0027</excludedValues>
+                        <excludedValues>local::at0028</excludedValues>
+                        <excludedValues>local::at0029</excludedValues>
+                    <excludedValues>local::at0027</excludedValues><excludedValues>local::at0028</excludedValues><excludedValues>local::at0029</excludedValues></constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.escales.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0004]">
+                    <constraint xsi:type="tem:countConstraint">
+                        <maxMagnitude>10</maxMagnitude>
+                        <minMagnitude>0</minMagnitude>
+                        <includesMaximum>true</includesMaximum>
+                        <includesMinimum>true</includesMinimum>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0014]/items[at0005]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18123::at0003::Dependència baixa</includedValues>
+                        <includedValues>FORMULARIS_HES_18123::at0004::Dependència moderada</includedValues>
+                        <includedValues>FORMULARIS_HES_18123::at0005::Dependència alta</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0015]/items[at0016]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18116::at0003::No consum / Consell per no consum</includedValues>
+                        <includedValues>FORMULARIS_HES_18116::at0004::Consum / Coordinació i derivació</includedValues>
+                        <includedValues>FORMULARIS_HES_18116::at0005::Consum de risc, complimentar l'AUDIT complet / Coordinació i derivació</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0018]/items[at0019]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_15830::at0009::No consum alcohol</includedValues>
+                        <includedValues>FORMULARIS_HES_15830::at0010::Consum alcohol</includedValues>
+                        <includedValues>FORMULARIS_HES_15830::at0011::Consum alcohol de risc</includedValues>
+                        <includedValues>FORMULARIS_HES_15830::at0012::Consum alcohol perjudicial</includedValues>
+                        <includedValues>FORMULARIS_HES_15830::at0013::Possible dependència de l'alcohol</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/items[at0021]"/>
+                <Rule path="/items[at0023]/items[at0007]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18201::at0003::Cribratge positiu</includedValues>
+                        <includedValues>FORMULARIS_HES_18201::at0004::Cribratge negatiu</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0025]/items[at0026]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_7819::at0002::Risc baix</includedValues>
+                        <includedValues>FORMULARIS_HES_7819::at0003::Risc mitjà</includedValues>
+                        <includedValues>FORMULARIS_HES_7819::at0004::Risc alt</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0027]/items[at0028]">
+                    <constraint xsi:type="tem:countConstraint">
+                        <maxMagnitude>14</maxMagnitude>
+                        <minMagnitude>3</minMagnitude>
+                        <includesMaximum>true</includesMaximum>
+                        <includesMinimum>true</includesMinimum>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0027]/items[at0009]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_8185::at0003::Suport social baix</includedValues>
+                        <includedValues>FORMULARIS_HES_8185::at0004::Suport social mitjà</includedValues>
+                        <includedValues>FORMULARIS_HES_8185::at0005::Suport social alt</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0030]/items[at0032]">
+                    <constraint xsi:type="tem:countConstraint">
+                        <maxMagnitude>175</maxMagnitude>
+                        <minMagnitude>1</minMagnitude>
+                        <includesMaximum>true</includesMaximum>
+                        <includesMinimum>true</includesMinimum>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0031]/items[at0046]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>Formulari "Exploració del sòl pelvià" - ID 21945::0::Cap alteració present</includedValues>
+                        <includedValues>Formulari "Exploració del sòl pelvià" - ID 21945::1::Alterada</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0029]/items[at0012]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_8191::at0027::Situació molt favorable que no requereix intervenció</includedValues>
+                        <includedValues>FORMULARIS_HES_8191::at0028::Requereix atenció per part de l'equip de professionals</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0038]/items[at0039]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_16667::at0003::Normal</includedValues>
+                        <includedValues>FORMULARIS_HES_16667::at0004::Repetir als 15 dies</includedValues>
+                        <includedValues>FORMULARIS_HES_16667::at0005::Derivació per avaluació i diagnòstic clínic</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/items[at0041]"/>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.assist_test.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0011]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18419::at0002::No cal intervenció</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0003::Cal intervenció breu</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0004::Cal un tractament més intensiu</includedValues>
+                        <excludedValues>local::at0012</excludedValues>
+                        <excludedValues>local::at0013</excludedValues>
+                        <excludedValues>local::at0014</excludedValues>
+                    <excludedValues>local::at0012</excludedValues><excludedValues>local::at0013</excludedValues><excludedValues>local::at0014</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0015]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18419::at0015::No cal intervenció</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0016::Cal intervenció breu</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0017::Cal un tractament més intensiu</includedValues>
+                        <excludedValues>local::at0016</excludedValues>
+                        <excludedValues>local::at0017</excludedValues>
+                        <excludedValues>local::at0018</excludedValues>
+                    <excludedValues>local::at0016</excludedValues><excludedValues>local::at0017</excludedValues><excludedValues>local::at0018</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0019]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18419::at0023::No cal intervenció</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0024::Cal intervenció breu</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0025::Cal un tractament més intensiu</includedValues>
+                        <excludedValues>local::at0020</excludedValues>
+                        <excludedValues>local::at0021</excludedValues>
+                        <excludedValues>local::at0022</excludedValues>
+                    <excludedValues>local::at0020</excludedValues><excludedValues>local::at0021</excludedValues><excludedValues>local::at0022</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0023]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18419::at0031::No cal intervenció</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0032::Cal intervenció breu</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0033::Cal un tractament més intensiu</includedValues>
+                        <excludedValues>local::at0024</excludedValues>
+                        <excludedValues>local::at0025</excludedValues>
+                        <excludedValues>local::at0026</excludedValues>
+                    <excludedValues>local::at0024</excludedValues><excludedValues>local::at0025</excludedValues><excludedValues>local::at0026</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0027]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18419::at0086::No cal intervenció</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0087::Cal intervenció breu</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0088::Cal un tractament més intensiu</includedValues>
+                        <excludedValues>local::at0028</excludedValues>
+                        <excludedValues>local::at0029</excludedValues>
+                        <excludedValues>local::at0030</excludedValues>
+                    <excludedValues>local::at0028</excludedValues><excludedValues>local::at0029</excludedValues><excludedValues>local::at0030</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0031]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18419::at0047::No cal intervenció</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0048::Cal intervenció breu</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0049::Cal un tractament més intensiu</includedValues>
+                        <excludedValues>local::at0032</excludedValues>
+                        <excludedValues>local::at0033</excludedValues>
+                        <excludedValues>local::at0034</excludedValues>
+                    <excludedValues>local::at0032</excludedValues><excludedValues>local::at0033</excludedValues><excludedValues>local::at0034</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0035]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18419::at0055::No cal intervenció</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0056::Cal intervenció breu</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0057::Cal un tractament més intensiu</includedValues>
+                        <excludedValues>local::at0036</excludedValues>
+                        <excludedValues>local::at0037</excludedValues>
+                        <excludedValues>local::at0038</excludedValues>
+                    <excludedValues>local::at0036</excludedValues><excludedValues>local::at0037</excludedValues><excludedValues>local::at0038</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0039]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18419::at0063::No cal intervenció</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0064::Cal intervenció breu</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0065::Cal un tractament més intensiu</includedValues>
+                        <excludedValues>local::at0040</excludedValues>
+                        <excludedValues>local::at0041</excludedValues>
+                        <excludedValues>local::at0042</excludedValues>
+                    <excludedValues>local::at0040</excludedValues><excludedValues>local::at0041</excludedValues><excludedValues>local::at0042</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0043]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18419::at0071::No cal intervenció</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0072::Cal intervenció breu</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0073::Cal un tractament més intensiu</includedValues>
+                        <excludedValues>local::at0048</excludedValues>
+                        <excludedValues>local::at0049</excludedValues>
+                        <excludedValues>local::at0050</excludedValues>
+                    <excludedValues>local::at0048</excludedValues><excludedValues>local::at0049</excludedValues><excludedValues>local::at0050</excludedValues></constraint>
+                </Rule>
+                <Rule path="/items[at0044]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>FORMULARIS_HES_18419::at0079::No cal intervenció</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0080::Cal intervenció breu</includedValues>
+                        <includedValues>FORMULARIS_HES_18419::at0081::Cal un tractament més intensiu</includedValues>
+                        <excludedValues>local::at0045</excludedValues>
+                        <excludedValues>local::at0046</excludedValues>
+                        <excludedValues>local::at0047</excludedValues>
+                    <excludedValues>local::at0045</excludedValues><excludedValues>local::at0046</excludedValues><excludedValues>local::at0047</excludedValues></constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.altres_escales.v0" max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.educational_activities_mother_puerperium.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.comment.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER"/>
+        </Content>
+        <Context>
+            <Items archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0005]/items[at0026]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.5" terminologyID="CATÀLEG EP ST"/>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0005]/items[at0013]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.6" terminologyID="CATÀLEG UP ST"/>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0005]/items[at0011]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12" terminologyID="CATÀLEG CENTRES ST"/>
+                    </constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.admin_professional.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.health_thread.v0" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
+                <Rule max="0" path="/items[at0001]"/>
+                <Rule max="0" path="/items[at0002]"/>
+                <Rule max="0" path="/items[at0004]"/>
+                <Rule max="0" path="/items[at0005]"/>
+                <Rule max="0" path="/items[at0006]"/>
+            </Items>
+        </Context>
+    </definition>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.probs_base_composition.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">41A4313C92D9588F78E99230CBA5D2E1</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">8B41A545D448137713B8815907732588</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_professional.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">7E183962DEDD78345CAC6C71C1441777</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.health_thread.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">724FB4896F4B5124B1BFC81E674968D2</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.probs_base_observation.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">3A61C6B4407BB598A82EA7F1C3C5528C</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.administrative_data_of_the_visit.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">BB4C172C7A4954B515DD965469AA6F0D</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.physical_examination_findings.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">2E4DA7BAE0DAB45DBCAFDC67BD142556</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.health_risk_assessment.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">AF1F1CA6973FA4BD2F13300D2D2221DD</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.simptomes_i_problemes.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">D170B7E1885D481A73204A0DE2481CD8</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.salut_sexual.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">898B6910420DA530A068E478285CCFA1</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.resum_embaras.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">CB934EC23778ADEF160147708F100C72</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.signes_vitals.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">4744FECEBC4A95BEFDD1730D1A6BEFE0</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.mediction_periperium_mother.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">A03B00C38E0AC6819906FC2AD3B10566</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.escales.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">BD08CD4D602BC1CD11E9D0F051F4265B</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.assist_test.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">D0EDE531EB5927AE10A24B3A16F4F542</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.altres_escales.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">A7F22DA29A8E9A060FE4657E28803D1C</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.educational_activities_mother_puerperium.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">045CFC2B97AC822550A4ECDB1814B3B0</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.comment.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">1D42DC6E256B5D2862D699B58CF8039A</digest>
+    </integrity_checks>
+</template>

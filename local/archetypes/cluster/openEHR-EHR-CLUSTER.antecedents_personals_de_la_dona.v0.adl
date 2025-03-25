@@ -1,0 +1,933 @@
+﻿archetype (adl_version=1.4; uid=b9199dc9-c253-4092-90fa-5d11e218d875)
+	openEHR-EHR-CLUSTER.antecedents_personals_de_la_dona.v0
+
+concept
+	[at0000]	-- Personal background of the woman
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-09-30">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"AE1C98419C28533B6C017AAD9374723C">
+		["build_uid"] = <"951e475a-0bec-48c0-8ab5-0d80069d0a7c">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Personal background of the woman
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Food type
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0008,    -- omnivorous
+							at0009,    -- ovolactovegetarian
+							at0010]    -- vegan
+						}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..*} matches {    -- First degree family history
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0011,    -- NO
+							at0012,    -- Congenital defects and hereditary diseases
+							at0013,    -- Endocrinopathies
+							at0014,    -- Cardiovascular pathology
+							at0015,    -- Hypertension and nephropathies
+							at0016,    -- Pulmonary pathology
+							at0017,    -- Hematological and autoimmune diseases
+							at0018,    -- neoplasms
+							at0019,    -- Multiple pregnancy
+							at0020,    -- Infectious diseases
+							at0021,    -- Mental pathology in first degree relatives
+							at0022,    -- suicides
+							at0023,    -- postpartum depression
+							at0024,    -- puerperal psychosis
+							at0060,    -- *Depressió postpart (ca)
+							at0061,    -- *Psicosi puerperal (ca)
+							at0062]    -- *Altres (ca)
+						}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..*} matches {    -- Gynecological antecedents
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0025,    -- no
+							at0026,    -- Uterine malformations
+							at0027,    -- fibroids
+							at0028,    -- conization
+							at0029,    -- previous uterine surgeries
+							at0030,    -- female genital mutilation
+							at0031]    -- breast surgery
+						}
+					}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..*} matches {    -- Obstetric antecedents
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0032,    -- no
+							at0033,    -- History of intrauterine growth retardation and low birth weight babies
+							at0034,    -- Dystoic parts
+							at0035,    -- Previous uterine surgery
+							at0036,    -- Previous caesarean section
+							at0037,    -- Previous sterility
+							at0038,    -- History of placental pathology
+							at0039,    -- History of obstetric pathology in previous pregnancies
+							at0040,    -- Personal history of mental illness
+							at0041,    -- Hereditary family history
+							at0042,    -- History of abortions
+							at0043,    -- History of uterine cervical incompetence
+							at0044,    -- Previous chromosomal abnormality
+							at0045,    -- Previous ectopic pregnancy
+							at0046,    -- Previous gestational trophoblastic disease
+							at0047,    -- Previous preterm birth
+							at0048,    -- Previous perinatal death
+							at0049,    -- postpartum depression
+							at0050]    -- Puerperal psychosis
+						}
+					}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Gestational results
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0051,    -- term
+							at0052,    -- preterm
+							at0053,    -- abortion
+							at0054,    -- Fetal death
+							at0055,    -- cool
+							at0056]    -- Ectopic pregnancy
+						}
+					}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Type of previous birth
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0057,    -- eutocic
+							at0058,    -- instrumented
+							at0059]    -- Caesarea
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Antecedents personals de la dona">
+					description = <"Antecedents personals de la dona">
+				>
+				["at0001"] = <
+					text = <"Tipus alimentació">
+					description = <"Tipus alimentació ">
+				>
+				["at0003"] = <
+					text = <"AF de 1r grau dona">
+					description = <"Antecedents familiars de primer grau">
+				>
+				["at0004"] = <
+					text = <"Antecedents ginecològics">
+					description = <"Antecedents ginecològics">
+				>
+				["at0005"] = <
+					text = <"Antecedents obstètrics">
+					description = <"Antecedents obstètrics">
+				>
+				["at0006"] = <
+					text = <"Resultats gestacionals">
+					description = <"Resultats gestacionals">
+				>
+				["at0007"] = <
+					text = <"Tipus de part anterior">
+					description = <"Tipus de part anterior">
+				>
+				["at0008"] = <
+					text = <"Omnívora">
+					description = <"36823005">
+				>
+				["at0009"] = <
+					text = <"Ovolactovegetariana">
+					description = <"281014009">
+				>
+				["at0010"] = <
+					text = <"Vegana">
+					description = <"138045004">
+				>
+				["at0011"] = <
+					text = <"No">
+					description = <"47009004">
+				>
+				["at0012"] = <
+					text = <"Defectes congènits i malalties hereditàries">
+					description = <"138701000119105">
+				>
+				["at0013"] = <
+					text = <"Endocrinopaties">
+					description = <"160301004">
+				>
+				["at0014"] = <
+					text = <"Patologia cardiovascular">
+					description = <"266894000">
+				>
+				["at0015"] = <
+					text = <"Hipertensió">
+					description = <"160357008">
+				>
+				["at0016"] = <
+					text = <"Nefropaties">
+					description = <"289916006">
+				>
+				["at0017"] = <
+					text = <"Patologia pulmonar">
+					description = <"266898002">
+				>
+				["at0018"] = <
+					text = <"Malalties hematològiques">
+					description = <"160316001">
+				>
+				["at0019"] = <
+					text = <"Malalties autoimmunitàries">
+					description = <"300933005">
+				>
+				["at0020"] = <
+					text = <"Neoplàsies">
+					description = <"266883004">
+				>
+				["at0021"] = <
+					text = <"Embaràs múltiple">
+					description = <"266906006">
+				>
+				["at0022"] = <
+					text = <"Malalties infeccioses">
+					description = <"160279000">
+				>
+				["at0023"] = <
+					text = <"Patologia mental en familiars de primer grau">
+					description = <"160324006">
+				>
+				["at0024"] = <
+					text = <"Suïcidi">
+					description = <"160333008">
+				>
+				["at0025"] = <
+					text = <"No">
+					description = <"14732006">
+				>
+				["at0026"] = <
+					text = <"Malformacions uterines">
+					description = <"37849005">
+				>
+				["at0027"] = <
+					text = <"Miomes">
+					description = <"95315005">
+				>
+				["at0028"] = <
+					text = <"Conització">
+					description = <"108941000119102">
+				>
+				["at0029"] = <
+					text = <"Cirurgies uterines prèvies">
+					description = <"1156095009">
+				>
+				["at0030"] = <
+					text = <"Mutilació genital femenina">
+					description = <"715477006">
+				>
+				["at0031"] = <
+					text = <"Cirurgia mama">
+					description = <"71661000210109">
+				>
+				["at0032"] = <
+					text = <"No">
+					description = <"14732006">
+				>
+				["at0033"] = <
+					text = <"Antecedents de retard de creixement intrauterí i de nadons de pes baix">
+					description = <"77931000119108">
+				>
+				["at0034"] = <
+					text = <"Parts distòcics">
+					description = <"816150000">
+				>
+				["at0035"] = <
+					text = <"Cirurgia uterina prèvia">
+					description = <"1156095009">
+				>
+				["at0036"] = <
+					text = <"Cesària prèvia">
+					description = <"161805006">
+				>
+				["at0037"] = <
+					text = <"Esterilitat prèvia">
+					description = <"15296000">
+				>
+				["at0038"] = <
+					text = <"Antecedents de patologia placentària">
+					description = <"125586008">
+				>
+				["at0039"] = <
+					text = <"Antecedents de patologia obstètrica en gestacions anteriors">
+					description = <"ASE0001">
+				>
+				["at0040"] = <
+					text = <"Antecedents personals de patologia mental">
+					description = <"ASE0002">
+				>
+				["at0041"] = <
+					text = <"Antecedents familiars hereditaris">
+					description = <"ASE0003">
+				>
+				["at0042"] = <
+					text = <"Antecedents d’avortaments">
+					description = <"713651007">
+				>
+				["at0043"] = <
+					text = <"Antecedents d’incompetència cervical uterina">
+					description = <"17382005">
+				>
+				["at0044"] = <
+					text = <"Anomalia cromosòmica prèvia">
+					description = <"409709004">
+				>
+				["at0045"] = <
+					text = <"Embaràs ectòpic previ">
+					description = <"161763005">
+				>
+				["at0046"] = <
+					text = <"Malaltia trofoblàstica gestacional prèvia">
+					description = <"16216821000119100">
+				>
+				["at0047"] = <
+					text = <"Part prematur previ">
+					description = <"161765003">
+				>
+				["at0048"] = <
+					text = <"Mort perinatal prèvia">
+					description = <"1290143004">
+				>
+				["at0049"] = <
+					text = <"Depressió postpart">
+					description = <"288256007">
+				>
+				["at0050"] = <
+					text = <"Psicosi puerperal">
+					description = <"726623007">
+				>
+				["at0051"] = <
+					text = <"Terme">
+					description = <"87527008">
+				>
+				["at0052"] = <
+					text = <"Preterme">
+					description = <"10761241000119100">
+				>
+				["at0053"] = <
+					text = <"Avortament">
+					description = <"17369002">
+				>
+				["at0054"] = <
+					text = <"Òbit fetal">
+					description = <"276507005">
+				>
+				["at0055"] = <
+					text = <"Mola">
+					description = <"416402001">
+				>
+				["at0056"] = <
+					text = <"Embaràs ectòpic">
+					description = <"34801009">
+				>
+				["at0057"] = <
+					text = <"Eutòcic">
+					description = <"289259007">
+				>
+				["at0058"] = <
+					text = <"Instrumentat">
+					description = <"236974004">
+				>
+				["at0059"] = <
+					text = <"Cesària">
+					description = <"200146002">
+				>
+				["at0060"] = <
+					text = <"Depressió postpart">
+					description = <"288256007">
+				>
+				["at0061"] = <
+					text = <"Psicosi puerperal">
+					description = <"266969002">
+				>
+				["at0062"] = <
+					text = <"Altres">
+					description = <"74964007">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Antecedentes personales de la mujer">
+					description = <"Antecedentes personales de la mujer">
+				>
+				["at0001"] = <
+					text = <"Tipo alimentación">
+					description = <"Tipo alimentación">
+				>
+				["at0003"] = <
+					text = <"AF de primer grado">
+					description = <"Antecedentes familiares de primer grado">
+				>
+				["at0004"] = <
+					text = <"Antecedentes ginecológicos">
+					description = <"Antecedentes ginecológicos">
+				>
+				["at0005"] = <
+					text = <"Antecedentes obstétricos">
+					description = <"Antecedentes obstétricos">
+				>
+				["at0006"] = <
+					text = <"Resultados gestacionales">
+					description = <"Resultados gestacionales">
+				>
+				["at0007"] = <
+					text = <"Tipo de parte anterior">
+					description = <"Tipo de parte anterior">
+				>
+				["at0008"] = <
+					text = <"omnívora">
+					description = <"omnívora">
+				>
+				["at0009"] = <
+					text = <"ovolacteovegetariana">
+					description = <"ovolacteovegetariana">
+				>
+				["at0010"] = <
+					text = <"vegana">
+					description = <"vegana">
+				>
+				["at0011"] = <
+					text = <"NO">
+					description = <"NO">
+				>
+				["at0012"] = <
+					text = <"Defectos congénitos y enfermedades hereditarias">
+					description = <"Defectos congénitos y enfermedades hereditarias">
+				>
+				["at0013"] = <
+					text = <"Endocrionpatías">
+					description = <"Endocrionpatías">
+				>
+				["at0014"] = <
+					text = <"Patología cardivascular">
+					description = <"Patología cardivascular">
+				>
+				["at0015"] = <
+					text = <"Hipertensión y nefropatías">
+					description = <"Hipertensión y nefropatías">
+				>
+				["at0016"] = <
+					text = <"Patología pulmonar">
+					description = <"Patología pulmonar">
+				>
+				["at0017"] = <
+					text = <"Enfermedades hematológicas y autoinmunitarias">
+					description = <"Enfermedades hematológicas y autoinmunitarias">
+				>
+				["at0018"] = <
+					text = <"Neoplasias">
+					description = <"Neoplasias">
+				>
+				["at0019"] = <
+					text = <"Embarazo múltiple">
+					description = <"Embarazo múltiple">
+				>
+				["at0020"] = <
+					text = <"Enfermedades infecciosas">
+					description = <"Enfermedades infecciosas">
+				>
+				["at0021"] = <
+					text = <"Patología mental en familiares de primer grado">
+					description = <"Patología mental en familiares de primer grado">
+				>
+				["at0022"] = <
+					text = <"suicidios">
+					description = <"suicidios">
+				>
+				["at0023"] = <
+					text = <"depresión postparto">
+					description = <"depresión postparto">
+				>
+				["at0024"] = <
+					text = <"psicosis puerperal">
+					description = <"psicosis puerperal">
+				>
+				["at0025"] = <
+					text = <"No">
+					description = <"No">
+				>
+				["at0026"] = <
+					text = <"Malformaciones uterinas">
+					description = <"Malformaciones uterinas">
+				>
+				["at0027"] = <
+					text = <"miomas">
+					description = <"miomas">
+				>
+				["at0028"] = <
+					text = <"conización">
+					description = <"conización">
+				>
+				["at0029"] = <
+					text = <"cirugías uterinas previas">
+					description = <"cirugías uterinas previas">
+				>
+				["at0030"] = <
+					text = <"mutilación genital femenina">
+					description = <"mutilación genital femenina">
+				>
+				["at0031"] = <
+					text = <"cirugía mama">
+					description = <"cirugía mama">
+				>
+				["at0032"] = <
+					text = <"No">
+					description = <"No">
+				>
+				["at0033"] = <
+					text = <"Antecedentes de retraso de crecimiento intrauterino y de bebés de peso bajo">
+					description = <"Antecedentes de retraso de crecimiento intrauterino y de bebés de peso bajo">
+				>
+				["at0034"] = <
+					text = <"Partes distócicos">
+					description = <"Partes distócicos">
+				>
+				["at0035"] = <
+					text = <"Cirugía uterina previa">
+					description = <"Cirugía uterina previa">
+				>
+				["at0036"] = <
+					text = <"Cesaria previa">
+					description = <"Cesaria previa">
+				>
+				["at0037"] = <
+					text = <"Esterilidad previa">
+					description = <"Esterilidad previa">
+				>
+				["at0038"] = <
+					text = <"Antecedentes de patología placentaria">
+					description = <"Antecedentes de patología placentaria">
+				>
+				["at0039"] = <
+					text = <"Antecedentes de patología obstétrica en gestaciones anteriores">
+					description = <"Antecedentes de patología obstétrica en gestaciones anteriores">
+				>
+				["at0040"] = <
+					text = <"Antecedentes personales de patología mental">
+					description = <"Antecedentes personales de patología mental">
+				>
+				["at0041"] = <
+					text = <"Antecedentes familiares hereditarios">
+					description = <"Antecedentes familiares hereditarios">
+				>
+				["at0042"] = <
+					text = <"Antecedentes de abortos">
+					description = <"Antecedentes de abortos">
+				>
+				["at0043"] = <
+					text = <"Antecedentes de Incompetencia cervical uterina">
+					description = <"Antecedentes de Incompetencia cervical uterina">
+				>
+				["at0044"] = <
+					text = <"Anomalía cromosómica previa">
+					description = <"Anomalía cromosómica previa">
+				>
+				["at0045"] = <
+					text = <"Embarazo ectópico previo">
+					description = <"Embarazo ectópico previo">
+				>
+				["at0046"] = <
+					text = <"Enfermedad trofoblástica gestacional previa">
+					description = <"Enfermedad trofoblástica gestacional previa">
+				>
+				["at0047"] = <
+					text = <"Parte prematuro previo">
+					description = <"Parte prematuro previo">
+				>
+				["at0048"] = <
+					text = <"Muerte perinatal previa">
+					description = <"Muerte perinatal previa">
+				>
+				["at0049"] = <
+					text = <"Depresión postparto">
+					description = <"Depresión postparto">
+				>
+				["at0050"] = <
+					text = <"Psicosis puerperal">
+					description = <"Psicosis puerperal">
+				>
+				["at0051"] = <
+					text = <"Término">
+					description = <"Término">
+				>
+				["at0052"] = <
+					text = <"Pretérmino">
+					description = <"Pretérmino">
+				>
+				["at0053"] = <
+					text = <"Aborto">
+					description = <"Aborto">
+				>
+				["at0054"] = <
+					text = <"Óbito fetal">
+					description = <"Óbito fetal">
+				>
+				["at0055"] = <
+					text = <"Mola">
+					description = <"Mola">
+				>
+				["at0056"] = <
+					text = <"Embarazo ectópico">
+					description = <"Embarazo ectópico">
+				>
+				["at0057"] = <
+					text = <"Eutócico">
+					description = <"Eutócico">
+				>
+				["at0058"] = <
+					text = <"Instrumentado">
+					description = <"Instrumentado">
+				>
+				["at0059"] = <
+					text = <"Cesarea">
+					description = <"Cesarea">
+				>
+				["at0060"] = <
+					text = <"*Depressió postpart (ca)">
+					description = <"*288256007 (ca)">
+				>
+				["at0061"] = <
+					text = <"*Psicosi puerperal (ca)">
+					description = <"*266969002 (ca)">
+				>
+				["at0062"] = <
+					text = <"*Altres (ca)">
+					description = <"*74964007 (ca)">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Personal background of the woman">
+					description = <"Personal background of the woman">
+				>
+				["at0001"] = <
+					text = <"Food type">
+					description = <"Food type">
+				>
+				["at0003"] = <
+					text = <"First degree family history">
+					description = <"First degree family history">
+				>
+				["at0004"] = <
+					text = <"Gynecological antecedents">
+					description = <"Gynecological antecedents">
+				>
+				["at0005"] = <
+					text = <"Obstetric antecedents">
+					description = <"Obstetric antecedents">
+				>
+				["at0006"] = <
+					text = <"Gestational results">
+					description = <"Gestational results">
+				>
+				["at0007"] = <
+					text = <"Type of previous birth">
+					description = <"Type of previous birth">
+				>
+				["at0008"] = <
+					text = <"omnivorous">
+					description = <"omnivorous">
+				>
+				["at0009"] = <
+					text = <"ovolactovegetarian">
+					description = <"ovolactovegetarian">
+				>
+				["at0010"] = <
+					text = <"vegan">
+					description = <"vegan">
+				>
+				["at0011"] = <
+					text = <"NO">
+					description = <"NO">
+				>
+				["at0012"] = <
+					text = <"Congenital defects and hereditary diseases">
+					description = <"Congenital defects and hereditary diseases">
+				>
+				["at0013"] = <
+					text = <"Endocrinopathies">
+					description = <"Endocrinopathies">
+				>
+				["at0014"] = <
+					text = <"Cardiovascular pathology">
+					description = <"Cardiovascular pathology">
+				>
+				["at0015"] = <
+					text = <"Hypertension and nephropathies">
+					description = <"Hypertension and nephropathies">
+				>
+				["at0016"] = <
+					text = <"Pulmonary pathology">
+					description = <"Pulmonary pathology">
+				>
+				["at0017"] = <
+					text = <"Hematological and autoimmune diseases">
+					description = <"Hematological and autoimmune diseases">
+				>
+				["at0018"] = <
+					text = <"neoplasms">
+					description = <"neoplasms">
+				>
+				["at0019"] = <
+					text = <"Multiple pregnancy">
+					description = <"Multiple pregnancy">
+				>
+				["at0020"] = <
+					text = <"Infectious diseases">
+					description = <"Infectious diseases">
+				>
+				["at0021"] = <
+					text = <"Mental pathology in first degree relatives">
+					description = <"Mental pathology in first degree relatives">
+				>
+				["at0022"] = <
+					text = <"suicides">
+					description = <"suicides">
+				>
+				["at0023"] = <
+					text = <"postpartum depression">
+					description = <"postpartum depression">
+				>
+				["at0024"] = <
+					text = <"puerperal psychosis">
+					description = <"puerperal psychosis">
+				>
+				["at0025"] = <
+					text = <"no">
+					description = <"no">
+				>
+				["at0026"] = <
+					text = <"Uterine malformations">
+					description = <"Uterine malformations">
+				>
+				["at0027"] = <
+					text = <"fibroids">
+					description = <"fibroids">
+				>
+				["at0028"] = <
+					text = <"conization">
+					description = <"conization">
+				>
+				["at0029"] = <
+					text = <"previous uterine surgeries">
+					description = <"previous uterine surgeries">
+				>
+				["at0030"] = <
+					text = <"female genital mutilation">
+					description = <"female genital mutilation">
+				>
+				["at0031"] = <
+					text = <"breast surgery">
+					description = <"breast surgery">
+				>
+				["at0032"] = <
+					text = <"no">
+					description = <"no">
+				>
+				["at0033"] = <
+					text = <"History of intrauterine growth retardation and low birth weight babies">
+					description = <"History of intrauterine growth retardation and low birth weight babies">
+				>
+				["at0034"] = <
+					text = <"Dystoic parts">
+					description = <"Dystoic parts">
+				>
+				["at0035"] = <
+					text = <"Previous uterine surgery">
+					description = <"Previous uterine surgery">
+				>
+				["at0036"] = <
+					text = <"Previous caesarean section">
+					description = <"Previous caesarean section">
+				>
+				["at0037"] = <
+					text = <"Previous sterility">
+					description = <"Previous sterility">
+				>
+				["at0038"] = <
+					text = <"History of placental pathology">
+					description = <"History of placental pathology">
+				>
+				["at0039"] = <
+					text = <"History of obstetric pathology in previous pregnancies">
+					description = <"History of obstetric pathology in previous pregnancies">
+				>
+				["at0040"] = <
+					text = <"Personal history of mental illness">
+					description = <"Personal history of mental illness">
+				>
+				["at0041"] = <
+					text = <"Hereditary family history">
+					description = <"Hereditary family history">
+				>
+				["at0042"] = <
+					text = <"History of abortions">
+					description = <"History of abortions">
+				>
+				["at0043"] = <
+					text = <"History of uterine cervical incompetence">
+					description = <"History of uterine cervical incompetence">
+				>
+				["at0044"] = <
+					text = <"Previous chromosomal abnormality">
+					description = <"Previous chromosomal abnormality">
+				>
+				["at0045"] = <
+					text = <"Previous ectopic pregnancy">
+					description = <"Previous ectopic pregnancy">
+				>
+				["at0046"] = <
+					text = <"Previous gestational trophoblastic disease">
+					description = <"Previous gestational trophoblastic disease">
+				>
+				["at0047"] = <
+					text = <"Previous preterm birth">
+					description = <"Previous preterm birth">
+				>
+				["at0048"] = <
+					text = <"Previous perinatal death">
+					description = <"Previous perinatal death">
+				>
+				["at0049"] = <
+					text = <"postpartum depression">
+					description = <"postpartum depression">
+				>
+				["at0050"] = <
+					text = <"Puerperal psychosis">
+					description = <"Puerperal psychosis">
+				>
+				["at0051"] = <
+					text = <"term">
+					description = <"term">
+				>
+				["at0052"] = <
+					text = <"preterm">
+					description = <"preterm">
+				>
+				["at0053"] = <
+					text = <"abortion">
+					description = <"abortion">
+				>
+				["at0054"] = <
+					text = <"Fetal death">
+					description = <"Fetal death">
+				>
+				["at0055"] = <
+					text = <"cool">
+					description = <"cool">
+				>
+				["at0056"] = <
+					text = <"Ectopic pregnancy">
+					description = <"Ectopic pregnancy">
+				>
+				["at0057"] = <
+					text = <"eutocic">
+					description = <"eutocic">
+				>
+				["at0058"] = <
+					text = <"instrumented">
+					description = <"instrumented">
+				>
+				["at0059"] = <
+					text = <"Caesarea">
+					description = <"Caesarea">
+				>
+				["at0060"] = <
+					text = <"*Depressió postpart (ca)">
+					description = <"*288256007 (ca)">
+				>
+				["at0061"] = <
+					text = <"*Psicosi puerperal (ca)">
+					description = <"*266969002 (ca)">
+				>
+				["at0062"] = <
+					text = <"*Altres (ca)">
+					description = <"*74964007 (ca)">
+				>
+			>
+		>
+	>

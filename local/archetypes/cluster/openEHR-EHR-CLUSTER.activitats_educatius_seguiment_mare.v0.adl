@@ -1,0 +1,551 @@
+﻿archetype (adl_version=1.4; uid=25e41670-4fb0-416c-959f-1835fb4d38c8)
+	openEHR-EHR-CLUSTER.activitats_educatius_seguiment_mare.v0
+
+concept
+	[at0000]	-- Educational activities
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["date"] = <"2024-07-24">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"E83BAA3C749655B17957F54AFEFFDD48">
+		["build_uid"] = <"013df44a-6f44-4947-9ebf-c78896da7f5c">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Educational activities
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Observance of visits. Frequency of controls. Place
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Information about complementary examinations and tests
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Reason for alarm during pregnancy
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Information about prenatal diagnosis
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Evolution of pregnancy. Anatomical, functional change
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Prevention and information of emotional state
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Action in case of discomfort
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Information on recommended vaccines
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Prevention of infectious diseases transmissible to the fetus
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Nutritional and weight balance (dietary advice)
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {    -- General and oral hygiene habits
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0012] occurrences matches {0..1} matches {    -- Information on the risks of toxic consumption in mother and fetus
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0013] occurrences matches {0..1} matches {    -- Abstention/abandonment of toxic habits
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0014] occurrences matches {0..1} matches {    -- Avoidance of medications and teratogenic agents
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0015] occurrences matches {0..1} matches {    -- Adherence to the birth preparation program
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0016] occurrences matches {0..1} matches {    -- Physical activity and work
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0017] occurrences matches {0..1} matches {    -- Trips
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0018] occurrences matches {0..1} matches {    -- Elaboration of the labor and birth plan
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0019] occurrences matches {0..1} matches {    -- Breastfeeding promotion and information
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {    -- Desire for natural breastfeeding
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0021] occurrences matches {0..1} matches {    -- basket
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0022] occurrences matches {0..1} matches {    -- Contraception information
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0023] occurrences matches {0..1} matches {    -- STI Information
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0024] occurrences matches {0..1} matches {    -- Lifestyle advice
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0025] occurrences matches {0..1} matches {    -- Sexuality information
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0026] occurrences matches {0..1} matches {    -- Incontinence prevention information/pelvic floor exercises
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0027] occurrences matches {0..1} matches {    -- Gynecological Ca prevention information
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Activitats educatives">
+					description = <"Activitats educatives">
+				>
+				["at0001"] = <
+					text = <"Control de les visites. Freqüència dels controls. Lloc">
+					description = <"Observança de les visites. Freqüència dels controls. Lloc">
+				>
+				["at0002"] = <
+					text = <"Informació sobre les exploracions i proves complementàries">
+					description = <"Informació sobre les exploracions i proves complementàries">
+				>
+				["at0003"] = <
+					text = <"Motiu d'alarma durant l'embaràs">
+					description = <"Motiu d'alarma durant l'embaràs">
+				>
+				["at0004"] = <
+					text = <"Informació sobre el diagnòstic prenatal">
+					description = <"Informació sobre el diagnòstic prenatal">
+				>
+				["at0005"] = <
+					text = <"Evolució de l'embaràs. Canvis anatòmics, funcionals">
+					description = <"Evolució de l'embaràs. Canvi anatòmic, funcionals">
+				>
+				["at0006"] = <
+					text = <"Prevenció i informació d'estat emocional">
+					description = <"Prevenció i informació d'estat emocional">
+				>
+				["at0007"] = <
+					text = <"Actuació davant molèsties">
+					description = <"Actuació davant molèsties">
+				>
+				["at0008"] = <
+					text = <"Informació vacunes recomanables">
+					description = <"Informació vacunes recomanables">
+				>
+				["at0009"] = <
+					text = <"Prevenció de malalties infeccioses transmissibles al fetus">
+					description = <"Prevenció de malalties infeccioses transmissibles al fetus">
+				>
+				["at0010"] = <
+					text = <"Equilibri nutricional i ponderal (consell alimentari)">
+					description = <"Equilibri nutricional i ponderal (consell alimentari)">
+				>
+				["at0011"] = <
+					text = <"Hàbits d'higiene general i bucodental">
+					description = <"Hàbits d'higiene general i bucodental">
+				>
+				["at0012"] = <
+					text = <"Informació dels riscos del consum de tòxics en mare i fetus">
+					description = <"Informació dels riscos del consum de tòxics en mare i fetus">
+				>
+				["at0013"] = <
+					text = <"Abstenció/abandonament d'hàbits tòxics">
+					description = <"Abstenció/abandonament d'hàbits tòxics">
+				>
+				["at0014"] = <
+					text = <"Evitació de medicaments i agents teratogènics">
+					description = <"Evitació de medicaments i agents teratogènics">
+				>
+				["at0015"] = <
+					text = <"Adhesió al programa de preparació al naixement">
+					description = <"Adhesió al programa de preparació al naixement">
+				>
+				["at0016"] = <
+					text = <"Activitat física i treball">
+					description = <"Activitat física i treball">
+				>
+				["at0017"] = <
+					text = <"Viatges">
+					description = <"Viatges">
+				>
+				["at0018"] = <
+					text = <"Elaboració del pla de part i naixement">
+					description = <"Pla de part">
+				>
+				["at0019"] = <
+					text = <"Promoció i informació alletament">
+					description = <"Promoció i informació alletament">
+				>
+				["at0020"] = <
+					text = <"Desig d'alletament natural">
+					description = <"Desig d'alletament natural">
+				>
+				["at0021"] = <
+					text = <"Panereta">
+					description = <"Panereta">
+				>
+				["at0022"] = <
+					text = <"Informació contracepció">
+					description = <"Informació contracepció">
+				>
+				["at0023"] = <
+					text = <"Informació ITS">
+					description = <"Informació ITS">
+				>
+				["at0024"] = <
+					text = <"Consell estils de vida">
+					description = <"Consell estils de vida">
+				>
+				["at0025"] = <
+					text = <"Informació sexualitat">
+					description = <"Informació sexualitat">
+				>
+				["at0026"] = <
+					text = <"Informació prevenció incontinència/exercicis sòl pelvià">
+					description = <"Informació prevenció incontinència/exercicis sòl pelvià">
+				>
+				["at0027"] = <
+					text = <"Informació prevenció càncer ginecològic">
+					description = <"Informació prevenció Ca ginecològic">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Actividades educativas">
+					description = <"*Activitats educatives (ca)">
+				>
+				["at0001"] = <
+					text = <"Observancia de las visitas. Frecuencia de los controles. Lugar">
+					description = <"Observancia de las visitas. Frecuencia de los controles. Lugar">
+				>
+				["at0002"] = <
+					text = <"Información sobre las exploraciones y pruebas complementarias">
+					description = <"Información sobre las exploraciones y pruebas complementarias">
+				>
+				["at0003"] = <
+					text = <"Motivo de alarma durante el embarazo">
+					description = <"Motivo de alarma durante el embarazo">
+				>
+				["at0004"] = <
+					text = <"Información sobre el diagnóstico prenatal">
+					description = <"Información sobre el diagnóstico prenatal">
+				>
+				["at0005"] = <
+					text = <"Evolución del embarazo. Cambio anatómico, funcionales">
+					description = <"Evolución del embarazo. Cambio anatómico, funcionales">
+				>
+				["at0006"] = <
+					text = <"Prevención e información de estado emocional">
+					description = <"Prevención e información de estado emocional">
+				>
+				["at0007"] = <
+					text = <"Actuación ante molestias">
+					description = <"Actuación ante molestias">
+				>
+				["at0008"] = <
+					text = <"Información vacunas recomendables">
+					description = <"Información vacunas recomendables">
+				>
+				["at0009"] = <
+					text = <"Prevención de enfermedades infecciosas transmisibles al feto">
+					description = <"Prevención de enfermedades infecciosas transmisibles al feto">
+				>
+				["at0010"] = <
+					text = <"Equilibrio nutricional y ponderal (consejo alimenticio)">
+					description = <"Equilibrio nutricional y ponderal (consejo alimenticio)">
+				>
+				["at0011"] = <
+					text = <"Hábitos de higiene general y bucodental">
+					description = <"Hábitos de higiene general y bucodental">
+				>
+				["at0012"] = <
+					text = <"Información de los riesgos del consumo de tóxicos en madre y feto">
+					description = <"Información de los riesgos del consumo de tóxicos en madre y feto">
+				>
+				["at0013"] = <
+					text = <"Abstención/abandono de hábitos tóxicos">
+					description = <"Abstención/abandono de hábitos tóxicos">
+				>
+				["at0014"] = <
+					text = <"Evitación de medicamentos y agentes teratogénicos">
+					description = <"Evitación de medicamentos y agentes teratogénicos">
+				>
+				["at0015"] = <
+					text = <"Adhesión al programa de preparación al nacimiento">
+					description = <"Adhesión al programa de preparación al nacimiento">
+				>
+				["at0016"] = <
+					text = <"Actividad física y trabajo">
+					description = <"Actividad física y trabajo">
+				>
+				["at0017"] = <
+					text = <"Viajes">
+					description = <"Viajes">
+				>
+				["at0018"] = <
+					text = <"Elaboración del plan de parto y nacimiento">
+					description = <"Plan de parto">
+				>
+				["at0019"] = <
+					text = <"Promoción e información amamantamiento">
+					description = <"Promoción e información amamantamiento">
+				>
+				["at0020"] = <
+					text = <"Deseo de amamantamiento natural">
+					description = <"Deseo de amamantamiento natural">
+				>
+				["at0021"] = <
+					text = <"Canastilla">
+					description = <"Canastilla">
+				>
+				["at0022"] = <
+					text = <"Información contracepción">
+					description = <"Información contracepción">
+				>
+				["at0023"] = <
+					text = <"Información ITS">
+					description = <"Información ITS">
+				>
+				["at0024"] = <
+					text = <"Consejo estilos de vida">
+					description = <"Consejo estilos de vida">
+				>
+				["at0025"] = <
+					text = <"Información sexualidad">
+					description = <"Información sexualidad">
+				>
+				["at0026"] = <
+					text = <"Información prevención incontinencia/ejercicios suelo pélvico">
+					description = <"Información prevención incontinencia/ejercicios suelo pélvico">
+				>
+				["at0027"] = <
+					text = <"Información prevención Ca ginecológico">
+					description = <"Información prevención Ca ginecológico">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Educational activities">
+					description = <"*Activitats educatives (ca)">
+				>
+				["at0001"] = <
+					text = <"Observance of visits. Frequency of controls. Place">
+					description = <"Observance of visits. Frequency of controls. Place">
+				>
+				["at0002"] = <
+					text = <"Information about complementary examinations and tests">
+					description = <"Information about complementary examinations and tests">
+				>
+				["at0003"] = <
+					text = <"Reason for alarm during pregnancy">
+					description = <"Reason for alarm during pregnancy">
+				>
+				["at0004"] = <
+					text = <"Information about prenatal diagnosis">
+					description = <"Information about prenatal diagnosis">
+				>
+				["at0005"] = <
+					text = <"Evolution of pregnancy. Anatomical, functional change">
+					description = <"Evolution of pregnancy. Anatomical, functional change">
+				>
+				["at0006"] = <
+					text = <"Prevention and information of emotional state">
+					description = <"Prevention and information of emotional state">
+				>
+				["at0007"] = <
+					text = <"Action in case of discomfort">
+					description = <"Action in case of discomfort">
+				>
+				["at0008"] = <
+					text = <"Information on recommended vaccines">
+					description = <"Information on recommended vaccines">
+				>
+				["at0009"] = <
+					text = <"Prevention of infectious diseases transmissible to the fetus">
+					description = <"Prevention of infectious diseases transmissible to the fetus">
+				>
+				["at0010"] = <
+					text = <"Nutritional and weight balance (dietary advice)">
+					description = <"Nutritional and weight balance (dietary advice)">
+				>
+				["at0011"] = <
+					text = <"General and oral hygiene habits">
+					description = <"General and oral hygiene habits">
+				>
+				["at0012"] = <
+					text = <"Information on the risks of toxic consumption in mother and fetus">
+					description = <"Information on the risks of toxic consumption in mother and fetus">
+				>
+				["at0013"] = <
+					text = <"Abstention/abandonment of toxic habits">
+					description = <"Abstention/abandonment of toxic habits">
+				>
+				["at0014"] = <
+					text = <"Avoidance of medications and teratogenic agents">
+					description = <"Avoidance of medications and teratogenic agents">
+				>
+				["at0015"] = <
+					text = <"Adherence to the birth preparation program">
+					description = <"Adherence to the birth preparation program">
+				>
+				["at0016"] = <
+					text = <"Physical activity and work">
+					description = <"Physical activity and work">
+				>
+				["at0017"] = <
+					text = <"Trips">
+					description = <"Trips">
+				>
+				["at0018"] = <
+					text = <"Elaboration of the labor and birth plan">
+					description = <"Birth plan">
+				>
+				["at0019"] = <
+					text = <"Breastfeeding promotion and information">
+					description = <"Breastfeeding promotion and information">
+				>
+				["at0020"] = <
+					text = <"Desire for natural breastfeeding">
+					description = <"Desire for natural breastfeeding">
+				>
+				["at0021"] = <
+					text = <"basket">
+					description = <"basket">
+				>
+				["at0022"] = <
+					text = <"Contraception information">
+					description = <"Contraception information">
+				>
+				["at0023"] = <
+					text = <"STI Information">
+					description = <"STI Information">
+				>
+				["at0024"] = <
+					text = <"Lifestyle advice">
+					description = <"Lifestyle advice">
+				>
+				["at0025"] = <
+					text = <"Sexuality information">
+					description = <"Sexuality information">
+				>
+				["at0026"] = <
+					text = <"Incontinence prevention information/pelvic floor exercises">
+					description = <"Incontinence prevention information/pelvic floor exercises">
+				>
+				["at0027"] = <
+					text = <"Gynecological Ca prevention information">
+					description = <"Gynecological Ca prevention information">
+				>
+			>
+		>
+	>
