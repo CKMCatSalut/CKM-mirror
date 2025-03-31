@@ -28,15 +28,15 @@ description
 			use = <"">
 			misuse = <"">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
+		["es"] = <
+			language = <[ISO_639-1::es]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
@@ -51,8 +51,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"BB4C172C7A4954B515DD965469AA6F0D">
-		["build_uid"] = <"75fbf1f2-0228-450f-b630-8dbd7e72ae4f">
+		["MD5-CAM-1.0.1"] = <"270E4F75EBDE6511B55323C42BC3E9F6">
+		["build_uid"] = <"738315d7-e4a9-4618-858f-c433265cccb9">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -296,7 +296,7 @@ ontology
 					description = <"">
 				>
 				["at0012"] = <
-					text = <"<48h">
+					text = <">48h">
 					description = <"">
 				>
 				["at0013"] = <
