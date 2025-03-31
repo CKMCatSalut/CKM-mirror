@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <id>b4f902b1-0b77-43f8-a0fd-cd57ea2d0998</id>
-    <name>PO_Pregnancy_onset_and mother_follow_up_v.0.15_FORMULARIS</name>
+    <name>PO_Pregnancy_onset_and mother_follow_up_v.0.16_FORMULARIS</name>
     <description>
         <original_author>
             <item>
@@ -46,7 +46,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>89.0.0</value>
+                <value>90.0.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -58,7 +58,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>f7a17776d5e54cb5d204484c51510368</value>
+                <value>37c76672bf12236842b151503eb62329</value>
             </item>
             <item>
                 <key>original_language</key>
@@ -888,24 +888,15 @@
                         <includedValues>SNOMED_CT_17::79922009::Epigastri</includedValues>
                         <includedValues>SNOMED_CT_17::25064002::Cefalees</includedValues>
                         <includedValues>SNOMED_CT_17::10601006::EEII</includedValues>
-                        <includedValues>SNOMED_CT_17::49650001::Disúria</includedValues>
-                        <includedValues>SNOMED_CT_17::162116003::Pol·laciúria</includedValues>
-                        <includedValues>SNOMED_CT_17::784285002::Tenesme vesical</includedValues>
-                        <includedValues>SNOMED_CT_17::165232002::Incontinència urinària</includedValues>
-                        <excludedValues>local::at0137</excludedValues>
-                        <excludedValues>local::at0138</excludedValues>
-                        <excludedValues>local::at0139</excludedValues>
-                        <excludedValues>local::at0140</excludedValues>
-                        <excludedValues>local::at0141</excludedValues>
-                        <excludedValues>local::at0142</excludedValues>
-                        <excludedValues>local::at0143</excludedValues>
-                        <excludedValues>local::at0144</excludedValues>
-                        <excludedValues>local::at0145</excludedValues>
-                        <excludedValues>local::at0146</excludedValues>
-                        <excludedValues>local::at0147</excludedValues>
-                        <excludedValues>local::at0148</excludedValues>
-                        <excludedValues>local::at0149</excludedValues>
-                    <excludedValues>local::at0137</excludedValues><excludedValues>local::at0138</excludedValues><excludedValues>local::at0139</excludedValues><excludedValues>local::at0140</excludedValues><excludedValues>local::at0141</excludedValues><excludedValues>local::at0142</excludedValues><excludedValues>local::at0143</excludedValues><excludedValues>local::at0144</excludedValues><excludedValues>local::at0145</excludedValues><excludedValues>local::at0146</excludedValues><excludedValues>local::at0147</excludedValues><excludedValues>local::at0148</excludedValues><excludedValues>local::at0149</excludedValues></constraint>
+                    </constraint>
+                </Rule>
+                <Rule path="/items[at0150]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>SNOMED_CT_19::49650001::Disúria</includedValues>
+                        <includedValues>SNOMED_CT_19::162116003::Pol·laciúria</includedValues>
+                        <includedValues>SNOMED_CT_19::784285002::Tenesme vesical</includedValues>
+                        <includedValues>SNOMED_CT_19::165232002::Incontinència urinària</includedValues>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0123]">
                     <constraint xsi:type="tem:textConstraint">
@@ -1165,7 +1156,7 @@
         <digest id="MD5-CAM-1.0.1">1297B08EA74EBD044E4BE028855433CD</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">140C54C00513D24408066DDCA4A6A03A</digest>
+        <digest id="MD5-CAM-1.0.1">AFF3D221EFAD0257DF0713ED14176DED</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.escales.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">BD08CD4D602BC1CD11E9D0F051F4265B</digest>
