@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <id>a989f371-ab8a-474f-982f-6a1a07e74e1e</id>
-    <name>PO_Mothers_Puerperium_v0.20_FORMULARIS</name>
+    <name>PO_Mothers_Puerperium_v0.21_FORMULARIS</name>
     <description>
         <original_author>
             <item>
@@ -840,7 +840,7 @@
         <digest id="MD5-CAM-1.0.1">3A61C6B4407BB598A82EA7F1C3C5528C</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.administrative_data_of_the_visit.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">BB4C172C7A4954B515DD965469AA6F0D</digest>
+        <digest id="MD5-CAM-1.0.1">270E4F75EBDE6511B55323C42BC3E9F6</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.physical_examination_findings.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">2E4DA7BAE0DAB45DBCAFDC67BD142556</digest>
