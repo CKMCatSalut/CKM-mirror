@@ -31,18 +31,18 @@ description
 			use = <"">
 			misuse = <"">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
-			purpose = <"">
-			use = <"">
-			misuse = <"">
-		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
 		>
 	>
 	lifecycle_state = <"in_development">
@@ -53,8 +53,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"140C54C00513D24408066DDCA4A6A03A">
-		["build_uid"] = <"53a17dd9-fdea-4c60-b73a-51b8518133cd">
+		["MD5-CAM-1.0.1"] = <"AFF3D221EFAD0257DF0713ED14176DED">
+		["build_uid"] = <"4b7d2e65-4e1f-44bb-89cf-5b854ce67ca9">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -280,37 +280,12 @@ definition
 			}
 			ELEMENT[at0109] occurrences matches {0..*} matches {    -- Painful processes
 				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0137,    -- *FIE (ca)
-							at0138,    -- *FID (ca)
-							at0139,    -- *Hipogastri (ca)
-							at0140,    -- *Fossa lumbar dreta (ca)
-							at0141,    -- *Fossa lumbar esquerra (ca)
-							at0142,    -- *Hipocondri (ca)
-							at0143,    -- *Epigastri (ca)
-							at0144,    -- *Cefalees (ca)
-							at0145,    -- *EEII (ca)
-							at0146,    -- *Disúria (ca)
-							at0147,    -- *Pol·laciúria (ca)
-							at0148,    -- *Tenesme vesical (ca)
-							at0149]    -- *Incontinència urinària (ca)
-						}
-					}
+					DV_CODED_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0150] occurrences matches {0..*} matches {    -- Urinary disorders
 				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0151,    -- *Disúria (ca)
-							at0152,    -- *Pol·laciúria (ca)
-							at0153,    -- *Tenesme vesical (ca)
-							at0154]    -- *Incontinència urinària (ca)
-						}
-					}
+					DV_CODED_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0123] occurrences matches {0..*} matches {    -- Dermatological disorders
@@ -784,77 +759,9 @@ ontology
 					text = <"*Risc molt alt (ca)">
 					description = <"">
 				>
-				["at0137"] = <
-					text = <"*FIE (ca)">
-					description = <"*162052001 (ca)">
-				>
-				["at0138"] = <
-					text = <"*FID (ca)">
-					description = <"*162051008 (ca)">
-				>
-				["at0139"] = <
-					text = <"*Hipogastri (ca)">
-					description = <"*162053006 (ca)">
-				>
-				["at0140"] = <
-					text = <"*Fossa lumbar dreta (ca)">
-					description = <"*1119217009 (ca)">
-				>
-				["at0141"] = <
-					text = <"*Fossa lumbar esquerra (ca)">
-					description = <"*1119218004 (ca)">
-				>
-				["at0142"] = <
-					text = <"*Hipocondri (ca)">
-					description = <"*271853005 (ca)">
-				>
-				["at0143"] = <
-					text = <"*Epigastri (ca)">
-					description = <"*79922009 (ca)">
-				>
-				["at0144"] = <
-					text = <"*Cefalees (ca)">
-					description = <"*25064002 (ca)">
-				>
-				["at0145"] = <
-					text = <"*EEII (ca)">
-					description = <"*10601006 (ca)">
-				>
-				["at0146"] = <
-					text = <"*Disúria (ca)">
-					description = <"*49650001 (ca)">
-				>
-				["at0147"] = <
-					text = <"*Pol·laciúria (ca)">
-					description = <"*162116003 (ca)">
-				>
-				["at0148"] = <
-					text = <"*Tenesme vesical (ca)">
-					description = <"*784285002 (ca)">
-				>
-				["at0149"] = <
-					text = <"*Incontinència urinària (ca)">
-					description = <"*165232002 (ca)">
-				>
 				["at0150"] = <
 					text = <"Urinary disorders">
 					description = <"">
-				>
-				["at0151"] = <
-					text = <"*Disúria (ca)">
-					description = <"*49650001 (ca)">
-				>
-				["at0152"] = <
-					text = <"*Pol·laciúria (ca)">
-					description = <"*162116003 (ca)">
-				>
-				["at0153"] = <
-					text = <"*Tenesme vesical (ca)">
-					description = <"*784285002 (ca)">
-				>
-				["at0154"] = <
-					text = <"*Incontinència urinària (ca)">
-					description = <"*165232002 (ca)">
 				>
 			>
 		>
@@ -1284,77 +1191,9 @@ ontology
 					text = <"Risc molt alt">
 					description = <"">
 				>
-				["at0137"] = <
-					text = <"FIE">
-					description = <"162052001">
-				>
-				["at0138"] = <
-					text = <"FID">
-					description = <"162051008">
-				>
-				["at0139"] = <
-					text = <"Hipogastri">
-					description = <"162053006">
-				>
-				["at0140"] = <
-					text = <"Fossa lumbar dreta">
-					description = <"1119217009">
-				>
-				["at0141"] = <
-					text = <"Fossa lumbar esquerra">
-					description = <"1119218004">
-				>
-				["at0142"] = <
-					text = <"Hipocondri">
-					description = <"271853005">
-				>
-				["at0143"] = <
-					text = <"Epigastri">
-					description = <"79922009">
-				>
-				["at0144"] = <
-					text = <"Cefalees">
-					description = <"25064002">
-				>
-				["at0145"] = <
-					text = <"EEII">
-					description = <"10601006">
-				>
-				["at0146"] = <
-					text = <"Disúria">
-					description = <"49650001">
-				>
-				["at0147"] = <
-					text = <"Pol·laciúria">
-					description = <"162116003">
-				>
-				["at0148"] = <
-					text = <"Tenesme vesical">
-					description = <"784285002">
-				>
-				["at0149"] = <
-					text = <"Incontinència urinària">
-					description = <"165232002">
-				>
 				["at0150"] = <
 					text = <"Molèsties urinàries">
 					description = <"">
-				>
-				["at0151"] = <
-					text = <"Disúria">
-					description = <"49650001">
-				>
-				["at0152"] = <
-					text = <"Pol·laciúria">
-					description = <"162116003">
-				>
-				["at0153"] = <
-					text = <"Tenesme vesical">
-					description = <"784285002">
-				>
-				["at0154"] = <
-					text = <"Incontinència urinària">
-					description = <"165232002">
 				>
 			>
 		>
@@ -1784,77 +1623,9 @@ ontology
 					text = <"*Risc molt alt (ca)">
 					description = <"">
 				>
-				["at0137"] = <
-					text = <"*FIE (ca)">
-					description = <"*162052001 (ca)">
-				>
-				["at0138"] = <
-					text = <"*FID (ca)">
-					description = <"*162051008 (ca)">
-				>
-				["at0139"] = <
-					text = <"*Hipogastri (ca)">
-					description = <"*162053006 (ca)">
-				>
-				["at0140"] = <
-					text = <"*Fossa lumbar dreta (ca)">
-					description = <"*1119217009 (ca)">
-				>
-				["at0141"] = <
-					text = <"*Fossa lumbar esquerra (ca)">
-					description = <"*1119218004 (ca)">
-				>
-				["at0142"] = <
-					text = <"*Hipocondri (ca)">
-					description = <"*271853005 (ca)">
-				>
-				["at0143"] = <
-					text = <"*Epigastri (ca)">
-					description = <"*79922009 (ca)">
-				>
-				["at0144"] = <
-					text = <"*Cefalees (ca)">
-					description = <"*25064002 (ca)">
-				>
-				["at0145"] = <
-					text = <"*EEII (ca)">
-					description = <"*10601006 (ca)">
-				>
-				["at0146"] = <
-					text = <"*Disúria (ca)">
-					description = <"*49650001 (ca)">
-				>
-				["at0147"] = <
-					text = <"*Pol·laciúria (ca)">
-					description = <"*162116003 (ca)">
-				>
-				["at0148"] = <
-					text = <"*Tenesme vesical (ca)">
-					description = <"*784285002 (ca)">
-				>
-				["at0149"] = <
-					text = <"*Incontinència urinària (ca)">
-					description = <"*165232002 (ca)">
-				>
 				["at0150"] = <
 					text = <"Molestias urinarias">
 					description = <"">
-				>
-				["at0151"] = <
-					text = <"*Disúria (ca)">
-					description = <"*49650001 (ca)">
-				>
-				["at0152"] = <
-					text = <"*Pol·laciúria (ca)">
-					description = <"*162116003 (ca)">
-				>
-				["at0153"] = <
-					text = <"*Tenesme vesical (ca)">
-					description = <"*784285002 (ca)">
-				>
-				["at0154"] = <
-					text = <"*Incontinència urinària (ca)">
-					description = <"*165232002 (ca)">
 				>
 			>
 		>
