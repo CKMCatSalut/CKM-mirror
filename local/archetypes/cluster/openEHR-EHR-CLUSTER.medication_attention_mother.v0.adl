@@ -29,18 +29,18 @@ description
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
-		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
-			purpose = <"">
-			use = <"">
-			misuse = <"">
 		>
 	>
 	lifecycle_state = <"in_development">
@@ -51,8 +51,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1A751C41BE84B9C0E47FEEF1825357CF">
-		["build_uid"] = <"0000c36d-4aee-4334-b8cf-daf58aa51b6c">
+		["MD5-CAM-1.0.1"] = <"947DB23FDA2B2B020A41754E6AECA53E">
+		["build_uid"] = <"130951f4-34f4-41c0-b278-feff72443216">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -70,7 +70,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..*} matches {    -- Analgesic treatment during childbirth
+			ELEMENT[at0002] occurrences matches {0..*} matches {    -- Analgesic treatment at childbirth
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
@@ -105,7 +105,7 @@ ontology
 					description = <"Profilaxis ATB">
 				>
 				["at0002"] = <
-					text = <"Tractament analgèsic durant el part">
+					text = <"Tractament analgèsic al part">
 					description = <"Tractament analgèsic durant el part">
 				>
 				["at0003"] = <
@@ -149,7 +149,7 @@ ontology
 					description = <"ATB prophylaxis">
 				>
 				["at0002"] = <
-					text = <"Analgesic treatment during childbirth">
+					text = <"Analgesic treatment at childbirth">
 					description = <"Analgesic treatment during childbirth">
 				>
 				["at0003"] = <
@@ -193,7 +193,7 @@ ontology
 					description = <"Profilaxis ATB">
 				>
 				["at0002"] = <
-					text = <"Tratamiento analgésico durante el parto">
+					text = <"Tratamiento analgésico en el parto">
 					description = <"Tratamiento analgésico durante el parto">
 				>
 				["at0003"] = <
