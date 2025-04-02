@@ -31,15 +31,15 @@ description
 			use = <"">
 			misuse = <"">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
+		["es"] = <
+			language = <[ISO_639-1::es]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
@@ -54,8 +54,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6B43FCA89A6D42A5F457535DD099FDD7">
-		["build_uid"] = <"4df902d2-86e3-4e88-b4bd-c4bfed1817cf">
+		["MD5-CAM-1.0.1"] = <"7B24473FC3ADDF749173EB3E26924D39">
+		["build_uid"] = <"77fdce83-c584-48b5-a011-537a6fb67ec9">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -1068,7 +1068,7 @@ ontology
 					description = <"Cribratge metabolopaties">
 				>
 				["at0025"] = <
-					text = <"Cribratge hiperbilirrubinèmia">
+					text = <"Cri. hiperbilirrubinèmia">
 					description = <"Cribratge de la hiperbilirrubinèmia">
 				>
 				["at0026"] = <
