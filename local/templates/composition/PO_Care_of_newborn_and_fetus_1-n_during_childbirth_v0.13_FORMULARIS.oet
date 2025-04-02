@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <id>bd1f882f-49cb-4326-be88-6fb911571c1f</id>
-    <name>PO_Care_of_newborn_and_fetus_1-n_during_childbirth_v0.12_FORMULARIS</name>
+    <name>PO_Care_of_newborn_and_fetus_1-n_during_childbirth_v0.13_FORMULARIS</name>
     <description>
         <original_author>
             <item>
@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>75.0.0</value>
+                <value>75.0.1</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -525,7 +525,7 @@
         <digest id="MD5-CAM-1.0.1">B107DAC18773461ED7D2C79B0A811DCB</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.newborn.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">08412020F244DB6F605A24961041689B</digest>
+        <digest id="MD5-CAM-1.0.1">E07B27749EF6D643A294BA2B29685AC8</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.comment.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">1D42DC6E256B5D2862D699B58CF8039A</digest>
