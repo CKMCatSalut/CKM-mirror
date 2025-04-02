@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <id>9e1a4871-ce9c-4da0-9bf4-33c7e9fcc512</id>
-    <name>PO_Newborn_Puerperium_v0.21_FORMULARIS</name>
+    <name>PO_Newborn_Puerperium_v0.22_FORMULARIS</name>
     <description>
         <original_author>
             <item>
@@ -46,7 +46,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>54.0.0</value>
+                <value>54.0.1</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -520,7 +520,7 @@
         <digest id="MD5-CAM-1.0.1">3A61C6B4407BB598A82EA7F1C3C5528C</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.newborn_puerperium.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">6B43FCA89A6D42A5F457535DD099FDD7</digest>
+        <digest id="MD5-CAM-1.0.1">7B24473FC3ADDF749173EB3E26924D39</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.educational_activities_newborn_puerperium.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">81A904597B4E0589A12DE726CBC8EDED</digest>
