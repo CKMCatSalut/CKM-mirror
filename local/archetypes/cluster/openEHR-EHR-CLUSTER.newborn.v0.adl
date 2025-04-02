@@ -28,15 +28,15 @@ description
 			use = <"">
 			misuse = <"">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
+		["es"] = <
+			language = <[ISO_639-1::es]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
@@ -51,8 +51,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"08412020F244DB6F605A24961041689B">
-		["build_uid"] = <"4d10e09f-1b89-4d51-a9df-8668201285e6">
+		["MD5-CAM-1.0.1"] = <"E07B27749EF6D643A294BA2B29685AC8">
+		["build_uid"] = <"5327ff71-271d-4651-b8a5-3b0949a972f7">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -1116,7 +1116,7 @@ ontology
 					description = <"Contacte físic">
 				>
 				["at0033"] = <
-					text = <"Inici lactància materna precoç">
+					text = <"Inici LM precoç">
 					description = <"Inici lactància materna precoç">
 				>
 				["at0034"] = <
