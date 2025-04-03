@@ -7,13 +7,61 @@
                 <key>date</key>
                 <value>2024-10-21</value>
             </item>
+            <item>
+                <key>name</key>
+                <value>Modelatge del Coneixement Clínic CatSalut</value>
+            </item>
+            <item>
+                <key>organisation</key>
+                <value>Departament de Salut de la Generalitat de Catalunya</value>
+            </item>
+            <item>
+                <key>email</key>
+                <value>ckm.salut@gencat.cat</value>
+            </item>
         </original_author>
-        <lifecycle_state>unmanaged</lifecycle_state>
-        <details/>
+        <lifecycle_state>published</lifecycle_state>
+        <details>
+            <purpose>To record a series of questions and their associated answers used to screen for allergy typologies, document an overall exclusion statement regarding all allergies, and provide a positive statement indicating that no information is available at the time of recording</purpose>
+            <keywords>
+                <item>Condition</item>
+                <item>state</item>
+                <item>questionnaire</item>
+                <item>screening</item>
+                <item>allergy</item>
+                <item>allergic</item>
+                <item>adverse</item>
+                <item>event</item>
+                <item>sensitivity</item>
+                <item>intolerance</item>
+                <item>hypersensitivity</item>
+                <item>side effect</item>
+                <item>toxicity</item>
+                <item>drug</item>
+                <item>food</item>
+                <item>agent</item>
+                <item>substance</item>
+                <item>immune</item>
+                <item>non-immune</item>
+                <item>chemical</item>
+                <item>anaphylaxis</item>
+                <item>allergen</item>
+                <item>medication</item>
+                <item>immunological</item>
+                <item>non-immunological</item>
+                <item>risk</item>
+            </keywords>
+            <use>Use to document responses to the screening question "Any known allergy?" with possible answers: Allergies (AM+ANM), Medication allergy (AM) and Non-medication allergy (ANM).
+It is also used to document any overall exclusion statement regarding allergies or provide a positive statement when no information is available about the patient’s allergies at the time of recording.</use>
+            <misuse>Not to be used for creating a framework to document screening answers related to non-immune-mediated adverse reactions.
+
+Not to be used to record details about a specific allergy outside of a screening context. Use the “air_adverse_reaction_record” template for this purpose.</misuse>
+            <copyright>© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya</copyright>
+        </details>
         <other_details>
             <item>
                 <key>licence</key>
-                <value/>
+                <value>&lt;“This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.”&gt;</value>
             </item>
             <item>
                 <key>custodian_organisation</key>
