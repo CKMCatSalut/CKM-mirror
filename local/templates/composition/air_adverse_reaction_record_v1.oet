@@ -7,13 +7,78 @@
                 <key>date</key>
                 <value>2024-06-14</value>
             </item>
+            <item>
+                <key>name</key>
+                <value>Modelatge del Coneixement Clínic CatSalut</value>
+            </item>
+            <item>
+                <key>organisation</key>
+                <value>Departament de Salut de la Generalitat de Catalunya</value>
+            </item>
+            <item>
+                <key>email</key>
+                <value>ckm.salut@gencat.cat</value>
+            </item>
         </original_author>
-        <lifecycle_state>unmanaged</lifecycle_state>
-        <details/>
+        <lifecycle_state>published</lifecycle_state>
+        <details>
+            <purpose>To record the clinical assessment of the propensity for an individual to experience an adverse reaction if exposed, or re-exposed, to a specified substance or class of substances and record traceability details associated with the adverse reaction notification to Pharmacovigilance.</purpose>
+            <keywords>
+                <item>reaction</item>
+                <item>allergy</item>
+                <item>allergic</item>
+                <item>adverse</item>
+                <item>event</item>
+                <item>sensitivity</item>
+                <item>intolerance</item>
+                <item>hypersensitivity</item>
+                <item>side effect</item>
+                <item>toxicity</item>
+                <item>drug</item>
+                <item>food</item>
+                <item>agent</item>
+                <item>substance</item>
+                <item>immune</item>
+                <item>non-immune</item>
+                <item>chemical</item>
+                <item>anaphylaxis</item>
+                <item>allergen</item>
+                <item>medication</item>
+                <item>immunological</item>
+                <item>non-immunological</item>
+                <item>risk</item>
+            </keywords>
+            <use>Use to record a clinical assessment of a propensity for an adverse reaction upon future exposure to a specified substance or class of substances, and to record traceability details related to the notification of the adverse reaction to Pharmacovigilance.
+
+This template is intended to provide a single place within the health record to document the propensity for the full range of reactions, from trivial to life-threatening:
+- immune-mediated: Types I-IV (including allergic reactions and hypersensitivities)
+- non-immune-mediated: including pseudo-allergic reactions, side effects, intolerances, and drug toxicities.
+In clinical practice distinguishing between immune-mediated and non-immune-mediated reactions can be difficult. Identification of the type of reaction is not a proxy for seriousness or risk of harm to the patient.
+
+
+Use to record information about the positive presence of the risk of an adverse reaction:
+- to support the direct clinical care of an individual; 
+- as part of a managed adverse reaction or allergy/intolerance list; 
+- to support the exchange of information about the propensity and events related to adverse reactions; 
+- to inform adverse reaction reporting
+- to assist with computerised knowledge-based activities such as clinical decision support and alerts.</use>
+            <misuse>Not to be used for recording physiological reactions to physical agents, such as heat, cold, sunlight, vibration, exercise activity, by infectious agents or food contaminants.
+
+Not to be used to record adverse events, including failures of clinical process, interventions or products. For example: abnormal use, incorrect dosage or maladministration of an agent or substance; mislabelling; harm or injury caused by an intervention or procedure; overdose/poisoning etc.
+
+Not to be used to record an adverse reaction where the substance is unknown.
+
+Not to be used to record reactions to transfusions of blood products.
+
+Not to be used for recording 'alerts'.
+
+Not to be used for recording failed therapy.</misuse>
+            <copyright>© openEHR Foundation, Departament de Salut de la Generalitat de Catalunya</copyright>
+        </details>
         <other_details>
             <item>
                 <key>licence</key>
-                <value/>
+                <value>&lt;“This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.”&gt;</value>
             </item>
             <item>
                 <key>custodian_organisation</key>
@@ -41,7 +106,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>ce483f59cfc9fc8cbea9f2f885089313</value>
+                <value>eaa2059df769a6ef152c0ecde095b345</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -668,7 +733,7 @@
         <digest id="MD5-CAM-1.0.1">2A0984E55C6DC58F573BF9914054CBA6</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.pharmacovigilance_notification_details.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">02BE2517D98FAC26F4BEEBF0A734F81F</digest>
+        <digest id="MD5-CAM-1.0.1">BD74C450091E6D06860E19113A6E5DD1</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-SECTION.adhoc.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">8FE80F3E80C594AAF99D3BA540A53D73</digest>
