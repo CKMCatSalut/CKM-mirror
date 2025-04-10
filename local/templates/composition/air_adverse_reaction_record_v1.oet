@@ -20,7 +20,7 @@
                 <value>ckm.salut@gencat.cat</value>
             </item>
         </original_author>
-        <lifecycle_state>published</lifecycle_state>
+        <lifecycle_state>unmanaged</lifecycle_state>
         <details>
             <purpose>To record the clinical assessment of the propensity for an individual to experience an adverse reaction if exposed, or re-exposed, to a specified substance or class of substances and record traceability details associated with the adverse reaction notification to Pharmacovigilance.</purpose>
             <keywords>
@@ -106,7 +106,7 @@ Not to be used for recording failed therapy.</misuse>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>eaa2059df769a6ef152c0ecde095b345</value>
+                <value>cd6fbf6174ab96cc118b9a8d5bacf897</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
