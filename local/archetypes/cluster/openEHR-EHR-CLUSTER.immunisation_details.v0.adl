@@ -1,0 +1,96 @@
+﻿archetype (adl_version=1.4; uid=d2af90a4-98a6-4389-9421-75829b394c4f)
+	openEHR-EHR-CLUSTER.immunisation_details.v0
+
+concept
+	[at0000]	-- Immunisation details
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2024-10-29">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"56AD70E19D25476925A75EED43CB6D4F">
+		["build_uid"] = <"44a960ee-bf35-466c-856d-182de95af8fa">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Immunisation details
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Dose effectiveness
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002,    -- Effective
+							at0003;    -- Not effective
+							at0002]
+						}
+					}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Loss reason
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Loss datetime
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Immunisation details">
+					description = <"Immunisation details">
+				>
+				["at0001"] = <
+					text = <"Dose effectiveness">
+					description = <"This data is used to determine whether or not an administered vaccine dose is effective and requires re-administration. This may occur, for example, due to factors such as a possible bone marrow transplant that disables the patient's possible immunisation.
+ ">
+				>
+				["at0002"] = <
+					text = <"Effective">
+					description = <"The administered vaccine dose is effective and does not require re-administration">
+				>
+				["at0003"] = <
+					text = <"Not effective">
+					description = <"The administered vaccine dose is not effective and requires re-administration">
+				>
+				["at0005"] = <
+					text = <"Loss reason">
+					description = <"Free text or coded if possible, indicating the reason for the patient's loss of immunity. It shall always be accompanied by a dose effectiveness value with ‘not effective’.
+ ">
+				>
+				["at0006"] = <
+					text = <"Loss datetime">
+					description = <"Date and time at which it is determined that the patient has lost immunity to the vaccine in question.
+ ">
+				>
+			>
+		>
+	>
