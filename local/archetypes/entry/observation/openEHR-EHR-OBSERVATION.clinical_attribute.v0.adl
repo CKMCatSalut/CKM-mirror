@@ -25,8 +25,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3B76AEE6C04D44A7250A396FE5202B8C">
-		["build_uid"] = <"75228d1c-9662-435b-bc52-e18be1b40af2">
+		["MD5-CAM-1.0.1"] = <"F146E163A1B7DD7C1949B4DA24A80AB8">
+		["build_uid"] = <"ffd50ab4-2a21-4397-a14f-3167fb93a04e">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -39,15 +39,59 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] matches {    -- Clinical attribute name
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- Description
 										value matches {
-											DV_CODED_TEXT matches {*}
+											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at0005] matches {    -- Result
+									CLUSTER[at0010] occurrences matches {0..*} matches {    -- Specific clinical attribute
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0011] occurrences matches {0..1} matches {    -- Clinical attribute name
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0012] occurrences matches {0..*} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+													DV_CODED_TEXT matches {*}
+													DV_COUNT matches {*}
+													DV_INTERVAL<DV_COUNT> matches {*}
+													DV_EHR_URI matches {*}
+													DV_ORDINAL matches {*}
+													DV_URI matches {*}
+													DV_TEXT matches {*}
+													DV_SCALE matches {*}
+													DV_QUANTITY matches {*}
+													DV_PROPORTION matches {*}
+													DV_PARSABLE matches {*}
+													DV_MULTIMEDIA matches {*}
+												}
+											}
+											ELEMENT[at0013] occurrences matches {0..*} matches {    -- Timing
+												value matches {
+													DV_DATE_TIME matches {*}
+													DV_DATE matches {*}
+													DV_DURATION matches {*}
+													DV_INTERVAL<DV_DATE> matches {*}
+													DV_INTERVAL<DV_DATE_TIME> matches {*}
+													DV_INTERVAL<DV_DURATION> matches {*}
+													DV_INTERVAL<DV_TIME> matches {*}
+												}
+											}
+											ELEMENT[at0015] occurrences matches {0..*} matches {    -- Specific comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0016] occurrences matches {0..*} matches {    -- Additional details
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..*} matches {    -- Overall comment
 										value matches {
-											DV_QUANTITY matches {*}
-											DV_CODED_TEXT matches {*}
 											DV_TEXT matches {*}
 										}
 									}
@@ -91,20 +135,44 @@ ontology
 					text = <"Tree">
 					description = <"@ internal @">
 				>
-				["at0004"] = <
-					text = <"Clinical attribute name">
-					description = <"">
-				>
-				["at0005"] = <
-					text = <"Result">
-					description = <"">
-				>
 				["at0006"] = <
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
 				["at0009"] = <
 					text = <"Extension">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Specific clinical attribute">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Clinical attribute name">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Result">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Timing">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Overall comment">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Specific comment">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Additional details">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Description">
 					description = <"">
 				>
 			>
