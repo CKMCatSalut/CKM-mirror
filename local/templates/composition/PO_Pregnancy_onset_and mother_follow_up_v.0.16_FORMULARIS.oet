@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<template xmlns="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
     <id>b4f902b1-0b77-43f8-a0fd-cd57ea2d0998</id>
     <name>PO_Pregnancy_onset_and mother_follow_up_v.0.16_FORMULARIS</name>
     <description>
@@ -46,7 +45,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>90.0.0</value>
+                <value>0.16.1</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -54,7 +53,7 @@
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
-                <value>6ef9e1249182645814310495df3985e6</value>
+                <value>41A4313C92D9588F78E99230CBA5D2E1</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
@@ -544,7 +543,8 @@
                     </constraint>
                 </Rule>
                 <Rule path="/items[at0007]">
-                    </Rule>
+                    <constraint xsi:type="tem:quantityConstraint"/>
+                </Rule>
                 <Rule path="/items[at0009]">
                     <constraint xsi:type="tem:textConstraint">
                         <includedValues>SNOMED_CT_1::309309002::Negatiu per cèl·lules malignes</includedValues>
@@ -579,7 +579,7 @@
                         <excludedValues>local::at0060</excludedValues>
                         <excludedValues>local::at0061</excludedValues>
                         <excludedValues>local::at0062</excludedValues>
-                    <excludedValues>local::at0010</excludedValues><excludedValues>local::at0011</excludedValues><excludedValues>local::at0012</excludedValues><excludedValues>local::at0013</excludedValues><excludedValues>local::at0014</excludedValues><excludedValues>local::at0015</excludedValues><excludedValues>local::at0016</excludedValues><excludedValues>local::at0017</excludedValues><excludedValues>local::at0018</excludedValues><excludedValues>local::at0019</excludedValues><excludedValues>local::at0020</excludedValues><excludedValues>local::at0021</excludedValues><excludedValues>local::at0059</excludedValues><excludedValues>local::at0060</excludedValues><excludedValues>local::at0061</excludedValues><excludedValues>local::at0062</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0023]">
                     <constraint xsi:type="tem:textConstraint">
@@ -589,7 +589,7 @@
                         <excludedValues>local::at0024</excludedValues>
                         <excludedValues>local::at0025</excludedValues>
                         <excludedValues>local::at0026</excludedValues>
-                    <excludedValues>local::at0024</excludedValues><excludedValues>local::at0025</excludedValues><excludedValues>local::at0026</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0032]">
                     <constraint xsi:type="tem:textConstraint">
@@ -601,7 +601,7 @@
                         <excludedValues>local::at0034</excludedValues>
                         <excludedValues>local::at0035</excludedValues>
                         <excludedValues>local::at0036</excludedValues>
-                    <excludedValues>local::at0033</excludedValues><excludedValues>local::at0034</excludedValues><excludedValues>local::at0035</excludedValues><excludedValues>local::at0036</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0039]">
                     <constraint xsi:type="tem:textConstraint">
@@ -613,7 +613,7 @@
                         <excludedValues>local::at0041</excludedValues>
                         <excludedValues>local::at0042</excludedValues>
                         <excludedValues>local::at0043</excludedValues>
-                    <excludedValues>local::at0040</excludedValues><excludedValues>local::at0041</excludedValues><excludedValues>local::at0042</excludedValues><excludedValues>local::at0043</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0044]">
                     <constraint xsi:type="tem:textConstraint">
@@ -621,10 +621,11 @@
                         <includedValues>SNOMED_CT_20::165746003::Negatiu</includedValues>
                         <excludedValues>local::at0045</excludedValues>
                         <excludedValues>local::at0046</excludedValues>
-                    <excludedValues>local::at0045</excludedValues><excludedValues>local::at0046</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0053]">
-                    </Rule>
+                    <constraint xsi:type="tem:quantityConstraint"/>
+                </Rule>
             </Items>
             <Items archetype_id="openEHR-EHR-CLUSTER.antecedents_personals_de_la_dona.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
                 <Rule path="/items[at0001]">
@@ -635,7 +636,7 @@
                         <excludedValues>local::at0008</excludedValues>
                         <excludedValues>local::at0009</excludedValues>
                         <excludedValues>local::at0010</excludedValues>
-                    <excludedValues>local::at0008</excludedValues><excludedValues>local::at0009</excludedValues><excludedValues>local::at0010</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0003]">
                     <constraint xsi:type="tem:textConstraint">
@@ -673,7 +674,7 @@
                         <excludedValues>local::at0060</excludedValues>
                         <excludedValues>local::at0061</excludedValues>
                         <excludedValues>local::at0062</excludedValues>
-                    <excludedValues>local::at0011</excludedValues><excludedValues>local::at0012</excludedValues><excludedValues>local::at0013</excludedValues><excludedValues>local::at0014</excludedValues><excludedValues>local::at0015</excludedValues><excludedValues>local::at0016</excludedValues><excludedValues>local::at0017</excludedValues><excludedValues>local::at0018</excludedValues><excludedValues>local::at0019</excludedValues><excludedValues>local::at0020</excludedValues><excludedValues>local::at0021</excludedValues><excludedValues>local::at0022</excludedValues><excludedValues>local::at0023</excludedValues><excludedValues>local::at0024</excludedValues><excludedValues>local::at0060</excludedValues><excludedValues>local::at0061</excludedValues><excludedValues>local::at0062</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0004]">
                     <constraint xsi:type="tem:textConstraint">
@@ -691,7 +692,7 @@
                         <excludedValues>local::at0029</excludedValues>
                         <excludedValues>local::at0030</excludedValues>
                         <excludedValues>local::at0031</excludedValues>
-                    <excludedValues>local::at0025</excludedValues><excludedValues>local::at0026</excludedValues><excludedValues>local::at0027</excludedValues><excludedValues>local::at0028</excludedValues><excludedValues>local::at0029</excludedValues><excludedValues>local::at0030</excludedValues><excludedValues>local::at0031</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0005]">
                     <constraint xsi:type="tem:textConstraint">
@@ -733,7 +734,7 @@
                         <excludedValues>local::at0048</excludedValues>
                         <excludedValues>local::at0049</excludedValues>
                         <excludedValues>local::at0050</excludedValues>
-                    <excludedValues>local::at0032</excludedValues><excludedValues>local::at0033</excludedValues><excludedValues>local::at0034</excludedValues><excludedValues>local::at0035</excludedValues><excludedValues>local::at0036</excludedValues><excludedValues>local::at0037</excludedValues><excludedValues>local::at0038</excludedValues><excludedValues>local::at0039</excludedValues><excludedValues>local::at0040</excludedValues><excludedValues>local::at0041</excludedValues><excludedValues>local::at0042</excludedValues><excludedValues>local::at0043</excludedValues><excludedValues>local::at0044</excludedValues><excludedValues>local::at0045</excludedValues><excludedValues>local::at0046</excludedValues><excludedValues>local::at0047</excludedValues><excludedValues>local::at0048</excludedValues><excludedValues>local::at0049</excludedValues><excludedValues>local::at0050</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0006]">
                     <constraint xsi:type="tem:textConstraint">
@@ -749,7 +750,7 @@
                         <excludedValues>local::at0054</excludedValues>
                         <excludedValues>local::at0055</excludedValues>
                         <excludedValues>local::at0056</excludedValues>
-                    <excludedValues>local::at0051</excludedValues><excludedValues>local::at0052</excludedValues><excludedValues>local::at0053</excludedValues><excludedValues>local::at0054</excludedValues><excludedValues>local::at0055</excludedValues><excludedValues>local::at0056</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0007]">
                     <constraint xsi:type="tem:textConstraint">
@@ -759,12 +760,13 @@
                         <excludedValues>local::at0057</excludedValues>
                         <excludedValues>local::at0058</excludedValues>
                         <excludedValues>local::at0059</excludedValues>
-                    <excludedValues>local::at0057</excludedValues><excludedValues>local::at0058</excludedValues><excludedValues>local::at0059</excludedValues></constraint>
+                    </constraint>
                 </Rule>
             </Items>
             <Items archetype_id="openEHR-EHR-CLUSTER.dades_de_la_parella.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
                 <Rule path="/items[at0003]">
-                    </Rule>
+                    <constraint xsi:type="tem:quantityConstraint"/>
+                </Rule>
                 <Rule path="/items[at0005]">
                     <constraint xsi:type="tem:textConstraint">
                         <includedValues>SNOMED_CT_10::130969003::No</includedValues>
@@ -787,7 +789,7 @@
                         <excludedValues>local::at0015</excludedValues>
                         <excludedValues>local::at0016</excludedValues>
                         <excludedValues>local::at0040</excludedValues>
-                    <excludedValues>local::at0008</excludedValues><excludedValues>local::at0009</excludedValues><excludedValues>local::at0010</excludedValues><excludedValues>local::at0011</excludedValues><excludedValues>local::at0012</excludedValues><excludedValues>local::at0013</excludedValues><excludedValues>local::at0014</excludedValues><excludedValues>local::at0015</excludedValues><excludedValues>local::at0016</excludedValues><excludedValues>local::at0040</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0006]">
                     <constraint xsi:type="tem:textConstraint">
@@ -799,7 +801,7 @@
                         <excludedValues>local::at0018</excludedValues>
                         <excludedValues>local::at0019</excludedValues>
                         <excludedValues>local::at0038</excludedValues>
-                    <excludedValues>local::at0017</excludedValues><excludedValues>local::at0018</excludedValues><excludedValues>local::at0019</excludedValues><excludedValues>local::at0038</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0007]">
                     <constraint xsi:type="tem:textConstraint">
@@ -837,7 +839,7 @@
                         <excludedValues>local::at0034</excludedValues>
                         <excludedValues>local::at0035</excludedValues>
                         <excludedValues>local::at0039</excludedValues>
-                    <excludedValues>local::at0020</excludedValues><excludedValues>local::at0021</excludedValues><excludedValues>local::at0022</excludedValues><excludedValues>local::at0023</excludedValues><excludedValues>local::at0024</excludedValues><excludedValues>local::at0025</excludedValues><excludedValues>local::at0026</excludedValues><excludedValues>local::at0027</excludedValues><excludedValues>local::at0028</excludedValues><excludedValues>local::at0029</excludedValues><excludedValues>local::at0030</excludedValues><excludedValues>local::at0031</excludedValues><excludedValues>local::at0032</excludedValues><excludedValues>local::at0033</excludedValues><excludedValues>local::at0034</excludedValues><excludedValues>local::at0035</excludedValues><excludedValues>local::at0039</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0036]">
                     <constraint xsi:type="tem:textConstraint">
@@ -990,7 +992,7 @@
                         <includedValues>FORMULARIS_HES_7817::at0003::Cribratge positiu. Administrar l'Escala de depressió embaràs Edimburg</includedValues>
                         <excludedValues>local::at0044</excludedValues>
                         <excludedValues>local::at0045</excludedValues>
-                    <excludedValues>local::at0044</excludedValues><excludedValues>local::at0045</excludedValues></constraint>
+                    </constraint>
                 </Rule>
             </Items>
             <Items archetype_id="openEHR-EHR-CLUSTER.assist_test.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
@@ -1002,7 +1004,7 @@
                         <excludedValues>local::at0012</excludedValues>
                         <excludedValues>local::at0013</excludedValues>
                         <excludedValues>local::at0014</excludedValues>
-                    <excludedValues>local::at0012</excludedValues><excludedValues>local::at0013</excludedValues><excludedValues>local::at0014</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0015]">
                     <constraint xsi:type="tem:textConstraint">
@@ -1012,7 +1014,7 @@
                         <excludedValues>local::at0016</excludedValues>
                         <excludedValues>local::at0017</excludedValues>
                         <excludedValues>local::at0018</excludedValues>
-                    <excludedValues>local::at0016</excludedValues><excludedValues>local::at0017</excludedValues><excludedValues>local::at0018</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0019]">
                     <constraint xsi:type="tem:textConstraint">
@@ -1022,7 +1024,7 @@
                         <excludedValues>local::at0020</excludedValues>
                         <excludedValues>local::at0021</excludedValues>
                         <excludedValues>local::at0022</excludedValues>
-                    <excludedValues>local::at0020</excludedValues><excludedValues>local::at0021</excludedValues><excludedValues>local::at0022</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0023]">
                     <constraint xsi:type="tem:textConstraint">
@@ -1032,7 +1034,7 @@
                         <excludedValues>local::at0024</excludedValues>
                         <excludedValues>local::at0025</excludedValues>
                         <excludedValues>local::at0026</excludedValues>
-                    <excludedValues>local::at0024</excludedValues><excludedValues>local::at0025</excludedValues><excludedValues>local::at0026</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0027]">
                     <constraint xsi:type="tem:textConstraint">
@@ -1042,7 +1044,7 @@
                         <excludedValues>local::at0028</excludedValues>
                         <excludedValues>local::at0029</excludedValues>
                         <excludedValues>local::at0030</excludedValues>
-                    <excludedValues>local::at0028</excludedValues><excludedValues>local::at0029</excludedValues><excludedValues>local::at0030</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0031]">
                     <constraint xsi:type="tem:textConstraint">
@@ -1052,7 +1054,7 @@
                         <excludedValues>local::at0032</excludedValues>
                         <excludedValues>local::at0033</excludedValues>
                         <excludedValues>local::at0034</excludedValues>
-                    <excludedValues>local::at0032</excludedValues><excludedValues>local::at0033</excludedValues><excludedValues>local::at0034</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0035]">
                     <constraint xsi:type="tem:textConstraint">
@@ -1062,7 +1064,7 @@
                         <excludedValues>local::at0036</excludedValues>
                         <excludedValues>local::at0037</excludedValues>
                         <excludedValues>local::at0038</excludedValues>
-                    <excludedValues>local::at0036</excludedValues><excludedValues>local::at0037</excludedValues><excludedValues>local::at0038</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0039]">
                     <constraint xsi:type="tem:textConstraint">
@@ -1072,7 +1074,7 @@
                         <excludedValues>local::at0040</excludedValues>
                         <excludedValues>local::at0041</excludedValues>
                         <excludedValues>local::at0042</excludedValues>
-                    <excludedValues>local::at0040</excludedValues><excludedValues>local::at0041</excludedValues><excludedValues>local::at0042</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0043]">
                     <constraint xsi:type="tem:textConstraint">
@@ -1082,7 +1084,7 @@
                         <excludedValues>local::at0048</excludedValues>
                         <excludedValues>local::at0049</excludedValues>
                         <excludedValues>local::at0050</excludedValues>
-                    <excludedValues>local::at0048</excludedValues><excludedValues>local::at0049</excludedValues><excludedValues>local::at0050</excludedValues></constraint>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0044]">
                     <constraint xsi:type="tem:textConstraint">
@@ -1092,7 +1094,7 @@
                         <excludedValues>local::at0045</excludedValues>
                         <excludedValues>local::at0046</excludedValues>
                         <excludedValues>local::at0047</excludedValues>
-                    <excludedValues>local::at0045</excludedValues><excludedValues>local::at0046</excludedValues><excludedValues>local::at0047</excludedValues></constraint>
+                    </constraint>
                 </Rule>
             </Items>
             <Items archetype_id="openEHR-EHR-CLUSTER.pregnancy_follow_up_complementary_tests.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER"/>
@@ -1120,7 +1122,8 @@
             </Items>
             <Items archetype_id="openEHR-EHR-CLUSTER.admin_professional.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
                 <Rule path="/items[at0013]">
-                    </Rule>
+                    <constraint xsi:type="tem:textConstraint"/>
+                </Rule>
             </Items>
             <Items archetype_id="openEHR-EHR-CLUSTER.health_thread.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
                 <Rule max="0" path="/items[at0001]"/>
@@ -1128,6 +1131,15 @@
                 <Rule max="0" path="/items[at0004]"/>
                 <Rule max="0" path="/items[at0005]"/>
                 <Rule max="0" path="/items[at0006]"/>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.version_lifecycle_state.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0001]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <excludedValues>local::at0004</excludedValues>
+                        <excludedValues>local::at0005</excludedValues>
+                        <excludedValues>local::at0006</excludedValues>
+                    </constraint>
+                </Rule>
             </Items>
         </Context>
     </definition>
@@ -1143,6 +1155,9 @@
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.health_thread.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">724FB4896F4B5124B1BFC81E674968D2</digest>
     </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.version_lifecycle_state.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">7DD858EBAC160F4426A54468433ADAE7</digest>
+    </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.probs_base_observation.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">3A61C6B4407BB598A82EA7F1C3C5528C</digest>
     </integrity_checks>
@@ -1156,7 +1171,7 @@
         <digest id="MD5-CAM-1.0.1">1297B08EA74EBD044E4BE028855433CD</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">AFF3D221EFAD0257DF0713ED14176DED</digest>
+        <digest id="MD5-CAM-1.0.1">D7BE6E7E0F5FC4B78B53D7ABC81A60E8</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.escales.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">BD08CD4D602BC1CD11E9D0F051F4265B</digest>
@@ -1165,7 +1180,7 @@
         <digest id="MD5-CAM-1.0.1">D0EDE531EB5927AE10A24B3A16F4F542</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.pregnancy_follow_up_complementary_tests.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">C1BCB5056C6E68C7749242A11164B090</digest>
+        <digest id="MD5-CAM-1.0.1">15D88860B4E52D33872F8DA6D9517A1A</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.activitats_educatius_seguiment_mare.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">E83BAA3C749655B17957F54AFEFFDD48</digest>
