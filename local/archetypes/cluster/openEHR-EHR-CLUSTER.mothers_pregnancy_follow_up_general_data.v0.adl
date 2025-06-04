@@ -53,8 +53,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"AFF3D221EFAD0257DF0713ED14176DED">
-		["build_uid"] = <"4b7d2e65-4e1f-44bb-89cf-5b854ce67ca9">
+		["MD5-CAM-1.0.1"] = <"D7BE6E7E0F5FC4B78B53D7ABC81A60E8">
+		["build_uid"] = <"71764ab7-fc15-4372-a2a7-5a7933c34283">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -325,6 +325,11 @@ definition
 			ELEMENT[at0130] occurrences matches {0..1} matches {    -- Health education observations
 				value matches {
 					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0151] occurrences matches {0..1} matches {    -- Pregnancy passport document
+				value matches {
+					DV_URI matches {*}
 				}
 			}
 		}
@@ -763,6 +768,10 @@ ontology
 					text = <"Urinary disorders">
 					description = <"">
 				>
+				["at0151"] = <
+					text = <"Pregnancy passport document">
+					description = <"">
+				>
 			>
 		>
 		["ca"] = <
@@ -1195,6 +1204,10 @@ ontology
 					text = <"Molèsties urinàries">
 					description = <"">
 				>
+				["at0151"] = <
+					text = <"Document carnet embaràs">
+					description = <"">
+				>
 			>
 		>
 		["es"] = <
@@ -1625,6 +1638,10 @@ ontology
 				>
 				["at0150"] = <
 					text = <"Molestias urinarias">
+					description = <"">
+				>
+				["at0151"] = <
+					text = <"Documento carnet embarazo">
 					description = <"">
 				>
 			>
