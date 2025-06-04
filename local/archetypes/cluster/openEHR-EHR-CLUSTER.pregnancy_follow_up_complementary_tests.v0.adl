@@ -54,8 +54,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"C1BCB5056C6E68C7749242A11164B090">
-		["build_uid"] = <"727d6274-0521-4d73-9966-dc7e8adfaf57">
+		["MD5-CAM-1.0.1"] = <"15D88860B4E52D33872F8DA6D9517A1A">
+		["build_uid"] = <"f3f51ceb-9c85-49c0-b227-abd551b750fb">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -217,6 +217,11 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
+			ELEMENT[at0095] occurrences matches {0..1} matches {    -- Document of screening for chromosomal abnormalities 1st trimester
+				value matches {
+					DV_URI matches {*}
+				}
+			}
 			ELEMENT[at0038] occurrences matches {0..1} matches {    -- 2 T abnormality screening
 				value matches {
 					DV_CODED_TEXT matches {
@@ -234,6 +239,11 @@ definition
 			ELEMENT[at0039] occurrences matches {0..1} matches {    -- Observation of screening for chromosomal abnormalities 2nd trimester
 				value matches {
 					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0096] occurrences matches {0..1} matches {    -- Document of screening for chromosomal abnormalities 2nd trimester
+				value matches {
+					DV_URI matches {*}
 				}
 			}
 			ELEMENT[at0045] occurrences matches {0..1} matches {    -- Modified combined screening
@@ -270,6 +280,11 @@ definition
 			ELEMENT[at0056] occurrences matches {0..1} matches {    -- Observation of fetal DNA
 				value matches {
 					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0097] occurrences matches {0..1} matches {    -- Document of fetal DNA observation
+				value matches {
+					DV_URI matches {*}
 				}
 			}
 			ELEMENT[at0057] occurrences matches {0..1} matches {    -- Kariotype
@@ -683,6 +698,18 @@ ontology
 					text = <"*No procedeix (ca)">
 					description = <"">
 				>
+				["at0095"] = <
+					text = <"Document of screening for chromosomal abnormalities 1st trimester">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Document of screening for chromosomal abnormalities 2nd trimester">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Document of fetal DNA observation">
+					description = <"">
+				>
 			>
 		>
 		["es"] = <
@@ -1031,6 +1058,18 @@ ontology
 					text = <"*No procedeix (ca)">
 					description = <"">
 				>
+				["at0095"] = <
+					text = <"Documento cribado de anomalías cromosómicas 1r trimestre">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Documento cribado de anomalías cromosómicas 2º trimestre">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Documento observación ADN fetal">
+					description = <"">
+				>
 			>
 		>
 		["ca"] = <
@@ -1377,6 +1416,18 @@ ontology
 				>
 				["at0094"] = <
 					text = <"No procedeix">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Document cribratge d'anomalies cromosòmiques 1r T">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Document cribratge d'anomalies cromosòmiques 2n T">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Document ADN fetal">
 					description = <"">
 				>
 			>
