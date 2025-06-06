@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<template xmlns="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
     <id>591334a4-0db3-41b8-9044-25e7fc0f1d30</id>
     <name>PO_Foetus_pregnancy_follow_up_v0.15_FORMULARIS</name>
     <description>
@@ -34,7 +33,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>22.0.1</value>
+                <value>0.15.1</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -42,11 +41,15 @@
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
-                <value>6ef9e1249182645814310495df3985e6</value>
+                <value>41A4313C92D9588F78E99230CBA5D2E1</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
                 <value>a98caef9313ef707252fdf2846178301</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::ca</value>
             </item>
             <item>
                 <key>original_language</key>
@@ -106,14 +109,21 @@
                         <includedValues>SNOMED_CT::6096002::Natges</includedValues>
                         <includedValues>SNOMED_CT::49097002::Podálica</includedValues>
                         <includedValues>SNOMED_CT::74964007::Altres</includedValues>
-                    <excludedValues>local::at0020</excludedValues><excludedValues>local::at0021</excludedValues><excludedValues>local::at0022</excludedValues><excludedValues>local::at0023</excludedValues></constraint>
+                        <excludedValues>local::at0020</excludedValues>
+                        <excludedValues>local::at0021</excludedValues>
+                        <excludedValues>local::at0022</excludedValues>
+                        <excludedValues>local::at0023</excludedValues>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0005]">
                     <constraint xsi:type="tem:textConstraint">
                         <includedValues>SNOMED_CT::249063009::Longitudinal</includedValues>
                         <includedValues>SNOMED_CT::199362007::Tranversal</includedValues>
                         <includedValues>SNOMED_CT::63750008::Obliqüa</includedValues>
-                    <excludedValues>local::at0011</excludedValues><excludedValues>local::at0012</excludedValues><excludedValues>local::at0013</excludedValues></constraint>
+                        <excludedValues>local::at0011</excludedValues>
+                        <excludedValues>local::at0012</excludedValues>
+                        <excludedValues>local::at0013</excludedValues>
+                    </constraint>
                 </Rule>
                 <Rule path="/items[at0006]">
                     <constraint xsi:type="tem:textConstraint">
@@ -123,7 +133,13 @@
                         <includedValues>SNOMED_CT::261089000::Inferior</includedValues>
                         <includedValues>SNOMED_CT::255549009::Anterior</includedValues>
                         <includedValues>SNOMED_CT::255551008::Posterior</includedValues>
-                    <excludedValues>local::at0014</excludedValues><excludedValues>local::at0015</excludedValues><excludedValues>local::at0016</excludedValues><excludedValues>local::at0017</excludedValues><excludedValues>local::at0018</excludedValues><excludedValues>local::at0019</excludedValues></constraint>
+                        <excludedValues>local::at0014</excludedValues>
+                        <excludedValues>local::at0015</excludedValues>
+                        <excludedValues>local::at0016</excludedValues>
+                        <excludedValues>local::at0017</excludedValues>
+                        <excludedValues>local::at0018</excludedValues>
+                        <excludedValues>local::at0019</excludedValues>
+                    </constraint>
                 </Rule>
             </Items>
             <Items archetype_id="openEHR-EHR-CLUSTER.comment.v0" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" xsi:type="tem:CLUSTER"/>
@@ -132,17 +148,17 @@
             <Items archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
                 <Rule path="/items[at0005]/items[at0026]">
                     <constraint xsi:type="tem:textConstraint">
-                        <termQueryId queryName="CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.5" terminologyID="//fhir.hl7.org/"/>
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.5" terminologyID="CATÀLEG EP ST"/>
                     </constraint>
                 </Rule>
                 <Rule path="/items[at0005]/items[at0013]">
                     <constraint xsi:type="tem:textConstraint">
-                        <termQueryId queryName="CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.6" terminologyID="//fhir.hl7.org/"/>
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.6" terminologyID="CATÀLEG UP ST"/>
                     </constraint>
                 </Rule>
                 <Rule path="/items[at0005]/items[at0011]">
                     <constraint xsi:type="tem:textConstraint">
-                        <termQueryId queryName="CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12" terminologyID="//fhir.hl7.org/"/>
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12" terminologyID="CATÀLEG CENTRES ST"/>
                     </constraint>
                 </Rule>
             </Items>
@@ -160,6 +176,15 @@
                 <Rule max="0" path="/items[at0005]"/>
                 <Rule max="0" path="/items[at0006]"/>
             </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.version_lifecycle_state.v0" max="1" path="/context/other_context[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0001]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <excludedValues>local::at0004</excludedValues>
+                        <excludedValues>local::at0005</excludedValues>
+                        <excludedValues>local::at0006</excludedValues>
+                    </constraint>
+                </Rule>
+            </Items>
         </Context>
     </definition>
     <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.probs_base_composition.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
@@ -173,6 +198,9 @@
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.health_thread.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">724FB4896F4B5124B1BFC81E674968D2</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.version_lifecycle_state.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">7DD858EBAC160F4426A54468433ADAE7</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.probs_base_observation.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">3A61C6B4407BB598A82EA7F1C3C5528C</digest>
