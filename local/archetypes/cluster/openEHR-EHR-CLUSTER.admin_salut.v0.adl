@@ -51,8 +51,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8B41A545D448137713B8815907732588">
-		["build_uid"] = <"e105d446-43b9-4d4b-851d-2686be1875fd">
+		["MD5-CAM-1.0.1"] = <"0298AE139970942938E630B28EBF217E">
+		["build_uid"] = <"69e285de-17b2-480a-86b7-1404c31b90a8">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -194,11 +194,13 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Admin Salut">
-					description = <"Admin Salut">
+					description = <"Administrative data relating to the recorded healthcare action, necessary to complement the semantics of the clinical content, which are not present in the Reference Model, or which it is decided to model in the Template for technical reasons.">
+					comment = <"Non-clinical data relating to a healthcare procedure that is necessary to correctly understand the clinical record when consulted (location of the procedure, type of healthcare activity, etc.) should be recorded in the Composition.
+They can be recorded in the Reference Model (non-modelable) if they are covered by the specifications. If this is not possible in the Reference Model or is preferable for technical reasons, they can be modelled as a Cluster at the Composition context level.">
 				>
 				["at0001"] = <
 					text = <"Document authorisation date">
-					description = <"">
+					description = <"Date on which the document is authorised for publication.">
 				>
 				["at0002"] = <
 					text = <"Document creation date">
@@ -207,75 +209,132 @@ ontology
 				>
 				["at0003"] = <
 					text = <"Economic code">
-					description = <"">
+					description = <"Type of insurance entity that provides the level of health coverage (the health benefits to which insured citizens are entitled). For example: Own (Catalan Health Service), Other autonomous communities (Catalan Health Service), Free insurance entities, Private...
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"Terminology Server ‘U-DT 0072’ OID 2.16.840.1.113883.12.72">
 				>
 				["at0004"] = <
 					text = <"Responsible region">
-					description = <"">
+					description = <"In the Catalan healthcare system, a healthcare region is a territorial unit that organises the provision of healthcare services to the population of a specific area.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"Each health region has primary and specialised healthcare resources and is organised into health sectors, which group together the so-called basic health areas, consisting of neighbourhoods or districts in urban areas, or one or more municipalities in rural areas.
+Terminology Server ‘RS’ OID 2.16.724.4.9.20.7">
 				>
 				["at0005"] = <
 					text = <"Performing institution">
-					description = <"">
+					description = <"Data relating to the institution performing the documented healthcare activity, including identification of the entity, administrative subdivisions (provider units, centres) and the type of healthcare activity provided.
+The lists of possible response values for the elements contained should be restricted to those in the corresponding catalogues of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
 				>
 				["at0007"] = <
 					text = <"Publishing institution">
-					description = <"">
+					description = <"Data relating to the institution publishing the results of the documented healthcare activity, including identification of the entity, administrative subdivisions (provider units, centres) and the type of healthcare activity provided.
+The lists of possible response values for the elements contained should be restricted to those in the corresponding catalogues of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
 				>
 				["at0009"] = <
 					text = <"Requesting institution">
-					description = <"">
+					description = <"Data relating to the institution requesting the documented healthcare action, including identification of the entity, administrative subdivisions (provider units, centres) and the type of healthcare activity provided.
+The lists of possible response values for the elements contained therein should be restricted to those in the corresponding catalogues of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
 				>
 				["at0010"] = <
 					text = <"Custodial institution">
-					description = <"">
+					description = <"Data relating to the institution that holds the results of the documented healthcare action, including identification of the entity, administrative subdivisions (provider units, centres) and the type of healthcare activity provided.
+The lists of possible response values for the elements contained should be restricted to those in the corresponding catalogues of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
 				>
 				["at0011"] = <
 					text = <"Performing centre">
-					description = <"">
+					description = <"Physical facility equipped with technical resources where trained professionals have performed the documented healthcare procedure.
+The list of possible response values for this Element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"Health centre: an organised set of facilities and technical resources where trained professionals, under the direction of a health manager, carry out healthcare activities. Each centre belongs to a Provider Entity (EP) and carries out healthcare activities that are administratively framed within one or more Provider Units (UP).
+Terminology Server ‘Catàleg centres’ OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0012"] = <
 					text = <"Performing SA">
-					description = <"">
+					description = <"Code indicating the type of healthcare service where the documented healthcare action is performed, according to the category of healthcare activity performed.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"A Health Service is a functional healthcare unit with a distinct organisation, equipped with professionals and technical resources to carry out specific healthcare activities within a healthcare centre, and is categorised by the type of activity it provides (general/family medicine, nursing, podiatry, vaccination, allergology, cardiology, dermatology, etc.).
+The concept recorded here coincides with that described in the ‘Practice Setting Code’ element of the ‘XDS Metadata’ cluster.
+It is recommended to use the ‘Practice Setting Code’ element instead of ‘Healthcare Service provided’ to record the type of activity provided in a Healthcare Service (type of healthcare service).
+It is only recommended to use this element when you want to simultaneously record the type of activity of other healthcare services involved (request, publication or custody of the healthcare action result). In this case, it is recommended to record the type of healthcare service that performs the healthcare action in both ‘Practice Setting Code’ and ‘Healthcare Service Provided’ to avoid inconsistencies in the information.
+Terminology Server ‘ET99 SER’ OID 2.16.724.4.9.40.4">
 				>
 				["at0013"] = <
 					text = <"Performing UP">
-					description = <"">
+					description = <"Operational subdivision within a ‘providing entity’ that manages the specific set of services responsible for performing the documented healthcare action.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"UP (Providing Unit): administrative division of a Providing Entity (EP) according to the type of healthcare service (care lines) agreed with Catsalut (e.g. primary care, mental health, hospitalisation, social healthcare, etc.). Each UP may include several healthcare centres.
+Terminology Server ‘Catàleg UPs’ OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0014"] = <
 					text = <"Publishing centre">
-					description = <"">
+					description = <"Physical facility equipped with technical resources where trained professionals have published the results of documented healthcare activities.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"Health centre: an organised set of facilities and technical resources where trained professionals, under the direction of a health manager, carry out healthcare activities. Each centre belongs to a Provider Entity (EP) and carries out healthcare activities that are administratively framed within one or more Provider Units (UP).
+Terminology Server ‘Catàleg centres’ OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0015"] = <
 					text = <"Publishing SA">
-					description = <"">
+					description = <"Code indicating the type of healthcare service where the result of the documented healthcare action is published, according to the category of healthcare activity performed.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"A Health Service is a functional healthcare unit with a distinct organisation, equipped with professionals and technical resources to carry out specific healthcare activities within a healthcare centre, and is categorised by the type of activity it provides (general/family medicine, nursing, podiatry, vaccination, allergology, cardiology, dermatology, etc.).
+The concept recorded here coincides with that described in the ‘Practice Setting Code’ element of the ‘XDS Metadata’ cluster.
+It is recommended to use the ‘Practice Setting Code’ element instead of ‘Healthcare Service provided’ to record the type of activity provided in a Healthcare Service (type of healthcare service).
+It is only recommended to use this element when you want to simultaneously record the type of activity of other healthcare services involved (request, publication or custody of the healthcare action result). In this case, it is recommended to record the type of healthcare service that performs the healthcare action in both ‘Practice Setting Code’ and ‘Healthcare Service Provided’ to avoid inconsistencies in the information.
+Terminology Server ‘ET99 SER’ OID 2.16.724.4.9.40.4">
 				>
 				["at0016"] = <
 					text = <"Publishing UP">
-					description = <"">
+					description = <"Operational subdivision within a ‘providing entity’ that manages the specific set of services responsible for publishing the outcome of the documented healthcare action.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"UP (Providing Unit): administrative division of a Providing Entity (EP) according to the type of healthcare service (care lines) agreed with Catsalut (e.g. primary care, mental health, hospitalisation, social healthcare, etc.). Each UP may include several healthcare centres.
+Terminology Server ‘Catàleg UPs’ OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0017"] = <
 					text = <"Custodial centre">
-					description = <"">
+					description = <"Physical facility equipped with technical resources where trained professionals safeguard the results of documented healthcare activities.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"Health centre: an organised set of facilities and technical resources where trained professionals, under the direction of a health manager, carry out healthcare activities. Each centre belongs to a Provider Entity (EP) and carries out healthcare activities that are administratively framed within one or more Provider Units (UP).
+Terminology Server ‘Catàleg centres’ OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0018"] = <
 					text = <"Custodial SA">
-					description = <"">
+					description = <"Code indicating the type of healthcare service where the result of the documented healthcare action is stored, according to the category of healthcare activity performed.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"A Health Service is a functional healthcare unit with a distinct organisation, equipped with professionals and technical resources to carry out specific healthcare activities within a healthcare centre, and is categorised by the type of activity it provides (general/family medicine, nursing, podiatry, vaccination, allergology, cardiology, dermatology, etc.).
+The concept recorded here coincides with that described in the ‘Practice Setting Code’ element of the ‘XDS Metadata’ cluster.
+It is recommended to use the ‘Practice Setting Code’ element instead of ‘Healthcare Service provided’ to record the type of activity provided in a Healthcare Service (type of healthcare service).
+It is only recommended to use this element when you want to simultaneously record the type of activity of other healthcare services involved (request, publication or custody of the healthcare action result). In this case, it is recommended to record the type of healthcare service that performs the healthcare action in both ‘Practice Setting Code’ and ‘Healthcare Service Provided’ to avoid inconsistencies in the information.
+Terminology Server ‘ET99 SER’ OID 2.16.724.4.9.40.4">
 				>
 				["at0019"] = <
 					text = <"Custodial UP">
-					description = <"">
+					description = <"Operational subdivision within a ‘providing entity’ that manages the specific set of services responsible for safeguarding the outcome of the documented healthcare action.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"UP (Providing Unit): administrative division of a Providing Entity (EP) according to the type of healthcare service (care lines) agreed with Catsalut (e.g. primary care, mental health, hospitalisation, social healthcare, etc.). Each UP may include several healthcare centres.
+Terminology Server ‘Catàleg UPs’ OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0020"] = <
 					text = <"Requesting centre">
-					description = <"">
+					description = <"Physical facility equipped with technical resources where trained professionals request the performance of documented healthcare procedures.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"Health centre: an organised set of facilities and technical resources where trained professionals, under the direction of a health manager, carry out healthcare activities. Each centre belongs to a Provider Entity (EP) and carries out healthcare activities that are administratively framed within one or more Provider Units (UP).
+Terminology Server ‘Catàleg centres’ OID 2.16.840.1.113883.4.292.10.12">
 				>
 				["at0021"] = <
 					text = <"Requesting SA">
-					description = <"">
+					description = <"Code indicating the type of health service requested for the documented health action, according to the category of healthcare activity performed.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"A Health Service is a functional healthcare unit with a distinct organisation, equipped with professionals and technical resources to carry out specific healthcare activities within a healthcare centre, and is categorised by the type of activity it provides (general/family medicine, nursing, podiatry, vaccination, allergology, cardiology, dermatology, etc.).
+The concept recorded here coincides with that described in the ‘Practice Setting Code’ element of the ‘XDS Metadata’ cluster.
+It is recommended to use the ‘Practice Setting Code’ element instead of ‘Healthcare Service provided’ to record the type of activity provided in a Healthcare Service (type of healthcare service).
+It is only recommended to use this element when you want to simultaneously record the type of activity of other healthcare services involved (request, publication or custody of the healthcare action result). In this case, it is recommended to record the type of healthcare service that performs the healthcare action in both ‘Practice Setting Code’ and ‘Healthcare Service Provided’ to avoid inconsistencies in the information.
+Terminology Server ‘ET99 SER’ OID 2.16.724.4.9.40.4">
 				>
 				["at0022"] = <
 					text = <"Requesting UP">
-					description = <"">
+					description = <"Operational subdivision within a ‘providing entity’ that manages the specific set of services responsible for requesting the performance of the documented healthcare action.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Catalan Department of Health, where they are available in standardised and coded form.">
+					comment = <"UP (Providing Unit): administrative division of a Providing Entity (EP) according to the type of healthcare service (care lines) agreed with Catsalut (e.g. primary care, mental health, hospitalisation, social healthcare, etc.). Each UP may include several healthcare centres.
+Terminology Server ‘Catàleg UPs’ OID 2.16.840.1.113883.4.292.10.12.6">
 				>
 				["at0023"] = <
 					text = <"Document publication date">
@@ -287,19 +346,31 @@ ontology
 				>
 				["at0026"] = <
 					text = <"Performing EP">
-					description = <"">
+					description = <"Organisation that provides health services in Catalonia, within the Comprehensive Public Health System of Catalonia (SISCAT), and which has carried out the documented health action.
+The list of possible response values for this element should be restricted to those in the corresponding catalogue of the Terminology Server of the Department of Health of Catalonia, where they are available in standardised and coded form.">
+					comment = <"EP (Provisioning Entity): a legal entity that agrees with Catsalut (insurer) to provide healthcare services to users (insured persons).
+Terminology Server ‘Catálogo EPs' OID 2.16.840.1.113883.4.292.10.12.5">
 				>
 				["at0027"] = <
 					text = <"Publishing EP">
-					description = <"">
+					description = <"Organisation that provides health services in Catalonia, within the Comprehensive Public Health System of Catalonia (SISCAT), and publishes the results of documented health interventions.
+The list of possible response values for this Element should be restricted to those in the corresponding catalogue of the Terminology Server of the Department of Health of Catalonia, where they are available in standardised and coded form.">
+					comment = <"EP (Provisioning Entity): a legal entity that agrees with Catsalut (insurer) to provide healthcare services to users (insured persons).
+Terminology Server ‘Catálogo EPs' OID 2.16.840.1.113883.4.292.10.12.5">
 				>
 				["at0028"] = <
 					text = <"Custodial EP">
-					description = <"">
+					description = <"Organisation that provides health services in Catalonia, within the Comprehensive Public Health System of Catalonia (SISCAT), and which safeguards the results of documented healthcare activities.
+The list of possible response values for this Element should be restricted to those in the corresponding catalogue of the Terminology Server of the Department of Health of Catalonia, where they are available in standardised and coded form.">
+					comment = <"EP (Provisioning Entity): a legal entity that agrees with Catsalut (insurer) to provide healthcare services to users (insured persons).
+Terminology Server ‘Catálogo EPs' OID 2.16.840.1.113883.4.292.10.12.5">
 				>
 				["at0029"] = <
 					text = <"Requesting EP">
-					description = <"">
+					description = <"Organisation that provides health services in Catalonia, within the Comprehensive Public Health System of Catalonia (SISCAT), and that requests the performance of the documented health action.
+The list of possible response values for this Element should be restricted to those in the corresponding catalogue of the Terminology Server of the Department of Health of Catalonia, where they are available in standardised and coded form.">
+					comment = <"EP (Provisioning Entity): a legal entity that agrees with Catsalut (insurer) to provide healthcare services to users (insured persons).
+Terminology Server ‘Catálogo EPs' OID 2.16.840.1.113883.4.292.10.12.5">
 				>
 			>
 		>
