@@ -1,0 +1,762 @@
+﻿archetype (adl_version=1.4; uid=8dfbd807-cc97-4b18-a2f5-9037257216b7)
+	openEHR-EHR-ACTION.whole_transfusion_management.v0
+
+concept
+	[at0000]	-- Blood transfusion management
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+				["name"] = <"Ana Pascual Segura, Laura Moral López">
+				["organisation"] = <"Modelatge del Coneixement Clínic Catsalut">
+				["email"] = <"anapascual@catsalut.cat, lauramoral@catsalut.cat">
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+				["name"] = <"Ana Pascual Segura, Laura Moral López">
+				["organisation"] = <"Modelatge del Coneixement Clínic Catsalut">
+				["email"] = <"anapascual@catsalut.cat, lauramoral@catsalut.cat">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Ana Pascual Segura">
+		["organisation"] = <"Modelatge del Coneixement Clínic Catsalut">
+		["email"] = <"anapascual@catsalut.cat">
+		["date"] = <"2025-03-24">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details about a blood transfusion procedure.">
+			use = <"Use to record all or part of a blood transfusion procedure.
+
+Additional structured and detailed information about the transfusion can be captured using purpose-specific archetypes inserted into the 'Additional details' slot, where required. 
+More specific information about each unit of blood product transfused can be captured using the archetype ACTION.unit_transfusion_management.v0
+
+Specific timings related to a transfusion can be managed in one of two ways:
+- Using the reference model - the time for performance of any pathway step will use the ACTION time attribute for each step.
+- Archetyped data elements:
+--> 'Scheduled date/time' data element is intended to record the precise time when the transfusion is planned. Note: the corresponding ACTION time attribute for the 'Transfusion scheduled' step will record the time that the transfusion was scheduled into a system, not the intended date/time on which the transfusion is intended to be carried out.">
+			keywords = <"transfusion, blood, plasma, blood products, apheresis", ...>
+			misuse = <"Not to be used to record the order for a transfusion. Use the INSTRUCTION.service_request.v1 archetype for this purpose.
+
+Not to be used to record other types of transfusions (Bone Marrow Transfusions (Transplants), Stem Cell Transfusions, Immunoglobulin Therapy, Platelet-Rich Plasma (PRP) Injections and Clotting Factor Concentrates).">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Para registrar detalladamente un procedimiento de transfusión de sangre.">
+			use = <"Se utiliza para registrar todo o parte de un procedimiento de transfusión de sangre.
+
+Se puede capturar información estructurada y detallada sobre la transfusión mediante arquetipos específicos para diferentes propósitos insertados en la ranura \"Detalle adicional\", cuando sea necesario. 
+Se puede capturar información más específica sobre cada unidad de producto sanguíneo transfundido mediante el arquetipo ACTION.unit_transfusion_management.v0
+
+Los registros horarios/de fechas relacionados con una transfusión se pueden gestionar de dos formas:
+- Utilizando el modelo de referencia: el tiempo de realización de cualquier estado utilizará el propio atributo Time de la ACCIÓN.
+- Elementos de datos arquetipados:
+--> El elemento de datos \"Fecha/hora programada\" está pensado para registrar la hora precisa en la que se planifica la transfusión. Nota: el atributo Time de la ACCIÓN correspondiente al estado \"Transfusión programada\" registrará la hora en que se programó la transfusión en un sistema, no la fecha/hora prevista en la que se desea llevar a cabo la transfusión.">
+			keywords = <"transfusión, sangre, plasma, productos sanguíneos, aféresis", ...>
+			misuse = <"No debe utilizarse para registrar la instrucción de una transfusión. Utilice el arquetipo INSTRUCTION.service_request.v1 para este propósito.
+
+No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de médula ósea (trasplantes), transfusiones de células madre, terapia con inmunoglobulinas, inyecciones de plasma rico en plaquetas (PRP) y concentrados de factores de coagulación).">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Per registrar detalls sobre un procediment de transfusió de sang.">
+			use = <"S'utilitza per registrar tot o part d'un procediment de transfusió de sang.
+
+Es pot capturar informació estructurada i detallada sobre la transfusió mitjançant arquetips específics per diferents propòsits inserits a la ranura \"Detalls addicionals\", quan sigui necessari. 
+Es pot capturar informació més específica sobre cada unitat de producte sanguini transfos mitjançant l'arquetip ACTION.unit_transfusion_management.v0
+
+Els registres horaris/de dates relacionats amb una transfusió es poden gestionar de dues maneres:
+- Utilitzant el model de referència: el temps de realització de qualsevol estat utilitzarà el propi atribut Time de l'ACCIÓ.
+- Elements de dades arquetipats:
+--> L'element de dades \"Data/hora programada\" està pensat per registrar l'hora precisa en què es planifica la transfusió. Nota: l'atribut Time de l'ACCIÓ corresponent a l'estat \"Transfusió programada\" registrarà l'hora en què es va programar la transfusió en un sistema, no la data/hora prevista en la qual es vol dur a terme la transfusió.">
+			keywords = <"transfusió, sang, plasma, productes sanguinis, afèresi", ...>
+			misuse = <"No s'ha d'utilitzar per registrar l'instrucció d'una transfusió. Utilitzeu l'arquetip INSTRUCTION.service_request.v1 per a aquest propòsit.
+
+No s'ha d'utilitzar per registrar altres tipus de transfusions (transfusions de medul·la òssia (trasplantaments), transfusions de cèl·lules mare, teràpia amb immunoglobulines, injeccions de plasma ric en plaquetes (PRP) i concentrats de factors de coagulació).">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Laura Moral López, Modelatge del Coneixement Clínic Catsalut, Spain", ...>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"544E971619A66395BCBA72A03886165D">
+		["build_uid"] = <"ccb7a058-e05b-4dd6-b8ee-953abbbff640">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ACTION[at0000] matches {    -- Blood transfusion management
+		description matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0003] matches {    -- Blood product name
+						value matches {
+							DV_CODED_TEXT matches {*}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Total volume
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Number of units
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Unit volume
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Product location
+						value matches {
+							DV_CODED_TEXT matches {*}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..*} matches {    -- Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Total volume administered
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..*} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Scheduled date/time
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0011] occurrences matches {0..*} matches {    -- Additional details
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0012] occurrences matches {0..*} matches {    -- Adverse reaction
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {    -- Device details
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0002] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Transfusion identifier
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0016] occurrences matches {0..1} matches {    -- Requestor order identifier
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0031] occurrences matches {0..1} matches {    -- Receiver order identifier
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0029] occurrences matches {0..*} matches {    -- Requestor
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0030] occurrences matches {0..*} matches {    -- Receiver
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0028] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+		ism_transition matches {
+			ISM_TRANSITION[at0018] matches {    -- Transfusion planned
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::526]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0018]    -- Transfusion planned
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0019] matches {    -- Blood products ordered
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::526]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0019]    -- Blood products ordered
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0020] matches {    -- Blood products delivered
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::526]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0020]    -- Blood products delivered
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0021] matches {    -- Transfusion scheduled
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::529]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0021]    -- Transfusion scheduled
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0022] matches {    -- Transfusion postponed
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::527]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0022]    -- Transfusion postponed
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0023] matches {    -- Transfusion cancelled
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::528]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0023]    -- Transfusion cancelled
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0024] matches {    -- Transfusion started
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::245]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0024]    -- Transfusion started
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0025] matches {    -- Transfusion suspended
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::530]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0025]    -- Transfusion suspended
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0026] matches {    -- Transfusion abandoned
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::531]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0026]    -- Transfusion abandoned
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0027] matches {    -- Transfusion completed
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::532]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0027]    -- Transfusion completed
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Blood transfusion management">
+					description = <"Procedure to transfer blood or its components from a donor to a recipient to replenish depleted blood elements.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Blood product name">
+					description = <"The blood product transfused.">
+					comment = <"Examples: red cells, platelets, plasma...">
+				>
+				["at0004"] = <
+					text = <"Total volume">
+					description = <"Total volume of blood product transfused.">
+				>
+				["at0005"] = <
+					text = <"Number of units">
+					description = <"Number of units of product transfused.">
+				>
+				["at0006"] = <
+					text = <"Unit volume">
+					description = <"The amount of blood product contained in each unit.">
+				>
+				["at0007"] = <
+					text = <"Product location">
+					description = <"The physical location of the product after delivery and prior to administration.">
+				>
+				["at0008"] = <
+					text = <"Description">
+					description = <"Narrative description about the transfusion.">
+				>
+				["at0009"] = <
+					text = <"Total volume administered">
+					description = <"The cumulative total volume of the blood product that has been administered.">
+				>
+				["at0010"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the activity or pathway step not captured in other fields, including details of any variance between the intended action and the action actually performed.">
+				>
+				["at0011"] = <
+					text = <"Additional details">
+					description = <"Further structured details of the action, possibly specific to a pathway step.">
+				>
+				["at0012"] = <
+					text = <"Adverse reaction">
+					description = <"Additional information regarding a specific adverse reaction event caused by exposure to a specific substance.">
+				>
+				["at0013"] = <
+					text = <"Scheduled date/time">
+					description = <"The date and/or time on which the transfusion is intended to be performed.">
+				>
+				["at0014"] = <
+					text = <"Transfusion identifier">
+					description = <"Unique identifier for the transfusion.">
+				>
+				["at0016"] = <
+					text = <"Requestor order identifier">
+					description = <"The local ID assigned to the order by the healthcare provider or organisation requesting the service.">
+					comment = <"This is equivalent to Placer Order Number in HL7 v2 specifications.">
+				>
+				["at0017"] = <
+					text = <"Device details">
+					description = <"Use to record details about durable or persisting medical device used during the transfusion.">
+				>
+				["at0018"] = <
+					text = <"Transfusion planned">
+					description = <"Transfusion has been planned.">
+				>
+				["at0019"] = <
+					text = <"Blood products ordered">
+					description = <"The blood products have been ordered.">
+				>
+				["at0020"] = <
+					text = <"Blood products delivered">
+					description = <"The blood products have been delivered to the physical place where the transfusion will take place.">
+				>
+				["at0021"] = <
+					text = <"Transfusion scheduled">
+					description = <"Transfusion has been scheduled to be performed.">
+				>
+				["at0022"] = <
+					text = <"Transfusion postponed">
+					description = <"Transfusion has been postponed.">
+				>
+				["at0023"] = <
+					text = <"Transfusion cancelled">
+					description = <"The transfusion has been cancelled as no longer appropriate or required.">
+				>
+				["at0024"] = <
+					text = <"Transfusion started">
+					description = <"Administration of the first unit of blood product has commenced.">
+				>
+				["at0025"] = <
+					text = <"Transfusion suspended">
+					description = <"The transfusion has been suspended and may restart.">
+				>
+				["at0026"] = <
+					text = <"Transfusion abandoned">
+					description = <"An ongoing blood transfusion is discontinued before its completion.">
+				>
+				["at0027"] = <
+					text = <"Transfusion completed">
+					description = <"All blood products have been administered.">
+				>
+				["at0028"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+				>
+				["at0029"] = <
+					text = <"Requestor">
+					description = <"Details about the healthcare provider or organisation requesting the service.">
+				>
+				["at0030"] = <
+					text = <"Receiver">
+					description = <"Details about the healthcare provider or organisation receiving the request for service.">
+				>
+				["at0031"] = <
+					text = <"Receiver order identifier">
+					description = <"The ID assigned to the order by the healthcare provider or organisation receiving the request for service. This is also referred to as Filler Order Identifier.">
+					comment = <"This is equivalent to Filler Order Number in HL7 v2 specifications.">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Gestió de la transfusió">
+					description = <"Procediment per transferir sang o els seus components d'un donant a un receptor per reposar els elements sanguinis mancants.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Nom del producte sanguini">
+					description = <"Producte sanguini transfós.">
+					comment = <"Exemples: glòbuls vermells, plaquetes, plasma...">
+				>
+				["at0004"] = <
+					text = <"Volum total">
+					description = <"Volum total de producte sanguini transfós.">
+				>
+				["at0005"] = <
+					text = <"Nombre unitats">
+					description = <"Quantitat d'unitats de producte transfoses.">
+				>
+				["at0006"] = <
+					text = <"Volum unitat">
+					description = <"Quantitat de producte sanguini contingut a cada unitat.">
+				>
+				["at0007"] = <
+					text = <"Ubicació del producte">
+					description = <"La ubicació física del producte després del lliurament i abans de l'administració.">
+				>
+				["at0008"] = <
+					text = <"Descripció">
+					description = <"Descripció narrativa sobre la transfusió.">
+				>
+				["at0009"] = <
+					text = <"Volum total administrat">
+					description = <"El volum total acumulat del producte sanguini que s'ha administrat.">
+				>
+				["at0010"] = <
+					text = <"Comentari">
+					description = <"Comentaris addicionals sobre l'activitat o estat de l'acció no capturats en altres camps, incloent detalls de qualsevol variança entre l'acció prevista i l'acció realment realitzada.">
+				>
+				["at0011"] = <
+					text = <"Detalls addicionals">
+					description = <"Més detalls estructurats de l'acció, possiblement específics d'un estat d'aquesta acció.">
+				>
+				["at0012"] = <
+					text = <"Reacció adversa">
+					description = <"Informació addicional sobre un esdeveniment de reacció adversa específic causat per l'exposició a una substància específica.">
+				>
+				["at0013"] = <
+					text = <"Data/hora agendada per la transfusió">
+					description = <"La data i/o hora en què es pretén realitzar la transfusió.">
+				>
+				["at0014"] = <
+					text = <"Identificador de la transfusió">
+					description = <"Identificador únic de la transfusió.">
+				>
+				["at0016"] = <
+					text = <"Identificador d'ordre del sol·licitant">
+					description = <"L'ID local assignat a l'ordre pel proveïdor sanitari o l'organització que sol·licita el servei.">
+					comment = <"Equivalent al Placer Order Number a les especificacions HL7 v2.">
+				>
+				["at0017"] = <
+					text = <"Detalls del dispositiu mèdic">
+					description = <"Utilitzat per registrar detalls sobre dispositius mèdics fets servir durant la transfusió.">
+				>
+				["at0018"] = <
+					text = <"Transfusió planejada">
+					description = <"La transfusió està planejada.">
+				>
+				["at0019"] = <
+					text = <"Productes sanguinis sol·licitats">
+					description = <"Els productes sanguinis estan sol·licitats.">
+				>
+				["at0020"] = <
+					text = <"Productes sanguinis entregats">
+					description = <"Els productes sanguinis s'han lliurat al lloc físic on es realitzarà la transfusió.">
+				>
+				["at0021"] = <
+					text = <"Transfusió agendada">
+					description = <"Transfusió agendada per ser duta a terme.">
+				>
+				["at0022"] = <
+					text = <"Transfusió postposada">
+					description = <"La transfusió s'ha postposat.">
+				>
+				["at0023"] = <
+					text = <"Transfusió cancel·lada">
+					description = <"La transfusió s'ha cancel·lat per no ser ja apropiada o requerida.">
+				>
+				["at0024"] = <
+					text = <"Transfusió començada">
+					description = <"S'ha començat a transfondre la primera unitat de producte sanguini.">
+				>
+				["at0025"] = <
+					text = <"Transfusió suspesa">
+					description = <"La transfusió s'ha interromput i es pot reiniciar.">
+				>
+				["at0026"] = <
+					text = <"Transfusió aturada">
+					description = <"La transfusió que s'estava duent a terme s'ha aturat abans de ser completada.">
+				>
+				["at0027"] = <
+					text = <"Transfusió completada">
+					description = <"Tots els productes sanguinis han estat administrats.">
+				>
+				["at0028"] = <
+					text = <"Extensió">
+					description = <"Informació addicional requerida per capturar contingut local o per alinear-se amb altres models de referència/formalismes.">
+				>
+				["at0029"] = <
+					text = <"Sol·licitant">
+					description = <"Dades del professional sanitari o organització que sol·licita el servei.">
+				>
+				["at0030"] = <
+					text = <"Receptor">
+					description = <"Dades sobre el proveïdor o organització sanitària que rep la sol·licitud de servei.">
+				>
+				["at0031"] = <
+					text = <"Identificador d'ordre del receptor">
+					description = <"L'identificador assignat a l'ordre pel proveïdor sanitari o organització que rep la sol·licitud de servei. També s'anomena identificador d'ordre d'emplenament.">
+					comment = <"Equivalent al Filler Order Number a les especificacions HL7 v2.">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Gestión de la transfusión">
+					description = <"Procedimiento para transferir sangre o sus componentes de un donante a un receptor para reponer los elementos sanguíneos necesarios.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Nombre del producto sanguíneo">
+					description = <"Producto sanguíneo transfundido.">
+					comment = <"Ejemplos: glóbulos rojos, plaquetas, plasma...">
+				>
+				["at0004"] = <
+					text = <"Volumen total">
+					description = <"Volumen total de producto sanguíneo transfundido.">
+				>
+				["at0005"] = <
+					text = <"Número de unidades">
+					description = <"Cantidad de unidades de producto transfundidas.">
+				>
+				["at0006"] = <
+					text = <"Volumen de la unidad">
+					description = <"Cantidad de producto sanguíneo contenido en cada unidad.">
+				>
+				["at0007"] = <
+					text = <"Ubicación del producto">
+					description = <"La ubicación física del producto después de la entrega y antes de la administración.">
+				>
+				["at0008"] = <
+					text = <"Descripción">
+					description = <"Descripción narrativa sobre la transfusión.">
+				>
+				["at0009"] = <
+					text = <"Volumen total administrado">
+					description = <"El volumen total acumulado del producto sanguíneo administrado.">
+				>
+				["at0010"] = <
+					text = <"Comentario">
+					description = <"Comentarios adicionales sobre la actividad o estado de la acción no capturados en otros campos, incluyendo detalles de cualquier varianza entre la acción prevista y la acción realmente realizada.">
+				>
+				["at0011"] = <
+					text = <"Detalles adicionales">
+					description = <"Más detalles estructurados de la acción, posiblemente específicos de un estado de esa acción.">
+				>
+				["at0012"] = <
+					text = <"Reacción adversa">
+					description = <"Información adicional sobre un evento de reacción adversa específico causado por la exposición a una sustancia específica.">
+				>
+				["at0013"] = <
+					text = <"Fecha/hora agendada">
+					description = <"La fecha y/o hora en la que se pretende realizar la transfusión.">
+				>
+				["at0014"] = <
+					text = <"Identificador de la transfusión">
+					description = <"Identificador único de la transfusión.">
+				>
+				["at0016"] = <
+					text = <"Identificador de orden del solicitante">
+					description = <"El ID local asignado a la orden por el proveedor sanitario o la organización que solicita el servicio.">
+					comment = <"Equivalente al Placer Order Number en las especificaciones HL7 v2.">
+				>
+				["at0017"] = <
+					text = <"Detalles del dispositivo médico">
+					description = <"Utilizado para registrar detalles sobre dispositivos mèdicos usados durante la transfusión.">
+				>
+				["at0018"] = <
+					text = <"Transfusión planeada">
+					description = <"La transfusión está planeada.">
+				>
+				["at0019"] = <
+					text = <"Productos sanguíneos solicitados">
+					description = <"Los productos sanguíneos están solicitados.">
+				>
+				["at0020"] = <
+					text = <"Productos sanguíneos entregados">
+					description = <"Los productos sanguíneos se han entregado en el lugar físico donde se realizará la transfusión.">
+				>
+				["at0021"] = <
+					text = <"Transfusión agendada">
+					description = <"Transfusión agendada para ser llevada a cabo.">
+				>
+				["at0022"] = <
+					text = <"Transfusión pospuesta">
+					description = <"La transfusión ha sido pospuesta.">
+				>
+				["at0023"] = <
+					text = <"Transfusión cancelada">
+					description = <"La transfusión ha sido cancelada por no ser ya apropiada o necesaria.">
+				>
+				["at0024"] = <
+					text = <"Transfusión empezada">
+					description = <"Ha comenzado la administración de la primera unidad de producto sanguíneo.">
+				>
+				["at0025"] = <
+					text = <"Transfusión suspendida">
+					description = <"La transfusión se ha interrumpido y se puede reiniciar.">
+				>
+				["at0026"] = <
+					text = <"Transfusión parada">
+					description = <"La transfusión de sangre en curso se interrumpe antes de su finalización.">
+				>
+				["at0027"] = <
+					text = <"Transfusión completada">
+					description = <"Se han administrado todos los productos sanguíneos.">
+				>
+				["at0028"] = <
+					text = <"Extensión">
+					description = <"Información adicional requerida para capturar contenido local o para alinearse con otros modelos de referencia/formalismos.">
+				>
+				["at0029"] = <
+					text = <"Solicitante">
+					description = <"Datos del profesional sanitario u organización que solicita el servicio.">
+				>
+				["at0030"] = <
+					text = <"Receptor">
+					description = <"Datos sobre el proveedor u organización sanitaria que recibe la solicitud de servicio.">
+				>
+				["at0031"] = <
+					text = <"Identificador de orden del receptor">
+					description = <"El identificador asignado a la orden por el proveedor sanitario o la organización que recibe la solicitud de servicio. También se denomina Identificador de Orden de Cumplimentación.">
+					comment = <"Equivalente al Filler Order Number en las especificaciones HL7 v2.">
+				>
+			>
+		>
+	>

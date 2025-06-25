@@ -1,0 +1,60 @@
+﻿archetype (adl_version=1.4; uid=9e759959-f7c1-43cc-8875-baa7dc7b7be4)
+	openEHR-EHR-CLUSTER.autotransfusion_.v0
+
+concept
+	[at0000]	-- Autotransfusion
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2023-10-16">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"54897E3D7F145F195D716A1D8DB46256">
+		["build_uid"] = <"bc3944e2-9990-40a9-820f-7e790469b7fc">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Autotransfusion
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Autotransfusion
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Autotransfusion">
+					description = <"Autotransfusion ">
+				>
+				["at0002"] = <
+					text = <"Autotransfusion">
+					description = <"">
+				>
+			>
+		>
+	>
