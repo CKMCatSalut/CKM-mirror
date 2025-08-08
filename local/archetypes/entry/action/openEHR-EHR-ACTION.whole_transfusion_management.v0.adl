@@ -2,7 +2,7 @@
 	openEHR-EHR-ACTION.whole_transfusion_management.v0
 
 concept
-	[at0000]	-- Blood transfusion management
+	[at0000]	-- Whole transfusion management
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -33,56 +33,110 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record details about a blood transfusion procedure.">
-			use = <"Use to record all or part of a blood transfusion procedure.
+			purpose = <"To record detailed information about a blood transfusion procedure globally, including data on all units of blood products administered during the transfusion episode.">
+			use = <"This archetype is used to record all or part of a blood transfusion procedure.
 
-Additional structured and detailed information about the transfusion can be captured using purpose-specific archetypes inserted into the 'Additional details' slot, where required. 
-More specific information about each unit of blood product transfused can be captured using the archetype ACTION.unit_transfusion_management.v0
+It represents the global capture of information about the transfusion process, i.e., the set or summary of all actions related to the administration of blood products during a clinical episode. It is not an EVALUATION archetype, as it does not represent a clinical assessment, but rather reflects the care process as it actually occurred, fulfilling legal and clinical requirements to document the execution of a prescribed transfusion.
 
-Specific timings related to a transfusion can be managed in one of two ways:
-- Using the reference model - the time for performance of any pathway step will use the ACTION time attribute for each step.
-- Archetyped data elements:
---> 'Scheduled date/time' data element is intended to record the precise time when the transfusion is planned. Note: the corresponding ACTION time attribute for the 'Transfusion scheduled' step will record the time that the transfusion was scheduled into a system, not the intended date/time on which the transfusion is intended to be carried out.">
-			keywords = <"transfusion, blood, plasma, blood products, apheresis", ...>
-			misuse = <"Not to be used to record the order for a transfusion. Use the INSTRUCTION.service_request.v1 archetype for this purpose.
+Each administered blood product unit should be recorded using separate instances of the ACTION.unit_transfusion_management.v0 archetype, to ensure full traceability of each transfused product. This allows detailed and structured information to be captured for each unit (e.g., bag identifier, product type, transfusion start and end time, adverse reactions, etc.).
 
-Not to be used to record other types of transfusions (Bone Marrow Transfusions (Transplants), Stem Cell Transfusions, Immunoglobulin Therapy, Platelet-Rich Plasma (PRP) Injections and Clotting Factor Concentrates).">
+This archetype should be used to describe the transfusion procedure in an aggregated or global manner. It is especially useful when the overall process needs to be documented for legal, clinical traceability or reporting purposes. It is recommended to use it in combination with:
+
+ACTION.unit_transfusion_management.v0, to document each transfused unit.
+
+CLUSTER.transfusion_details (or similar), inserted in the \"Additional details\" slot, when more structured information is needed.
+
+Date and time records related to the transfusion process can be managed in two ways:
+
+Using the reference model: the time attribute of any ACTION instance indicates when the current state of the action was recorded (e.g., scheduled, started, completed).
+
+Using archetyped data elements:
+
+The “Scheduled date/time” element is intended to record the precise time at which the transfusion is planned to occur.
+
+The end time of the overall transfusion process should match the end time of the last unit administered.
+
+In cases where the transfusion of more than one type of blood product is prescribed (e.g., red blood cells and platelets), it is recommended to record a separate instance of ACTION.unit_transfusion_management for each product, as they are usually transfused separately and not simultaneously.
+
+This main ACTION.transfusion archetype summarizes the complete transfusion process, in alignment with clinical practice, and can be complemented by individual transfusion actions to ensure comprehensive and traceable documentation of each component of the procedure.">
+			keywords = <"transfusion, blood, plasma, blood products, platelets", ...>
+			misuse = <"This archetype must not be used to record the instruction for a transfusion. Use the INSTRUCTION.service_request.v1 archetype for that purpose.
+
+It must not be used to record other types of transfusions (e.g., bone marrow transfusions [transplants], stem cell transfusions, immunoglobulin therapy, platelet-rich plasma [PRP] injections, or coagulation factor concentrates).
+
+It must also not be used to record the intravenous administration of blood-derived products when the therapeutic intent is different from that of a transfusion in the strict sense —that is, the replacement of lost blood or blood components (such as in cases of hemorrhage) or the treatment of hematopoietic deficiencies. In cases such as immunoglobulin therapy, platelet-rich plasma (PRP), or other products used as medications, these products should be considered medicinal products and the appropriate medication administration archetype should be used instead.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
-			purpose = <"Para registrar detalladamente un procedimiento de transfusión de sangre.">
-			use = <"Se utiliza para registrar todo o parte de un procedimiento de transfusión de sangre.
+			purpose = <"Para registrar información detallada sobre un procedimiento de transfusión de sangre de forma global, incluyendo datos sobre todas las unidades de productos sanguíneos administradas durante el episodio transfusional.">
+			use = <"Este arquetipo se utiliza para registrar total o parcialmente un procedimiento de transfusión de sangre.
 
-Se puede capturar información estructurada y detallada sobre la transfusión mediante arquetipos específicos para diferentes propósitos insertados en la ranura \"Detalle adicional\", cuando sea necesario. 
-Se puede capturar información más específica sobre cada unidad de producto sanguíneo transfundido mediante el arquetipo ACTION.unit_transfusion_management.v0
+Representa la captura de información global sobre el proceso de transfusión, es decir, el conjunto o resumen de todas las acciones relacionadas con la administración de productos sanguíneos durante un episodio clínico. No se trata de un arquetipo de tipo EVALUATION, ya que no documenta una valoración clínica, sino que refleja el proceso asistencial tal como ocurrió, respondiendo a la necesidad legal y clínica de dejar constancia del seguimiento efectivo de una prescripción de transfusión.
 
-Los registros horarios/de fechas relacionados con una transfusión se pueden gestionar de dos formas:
-- Utilizando el modelo de referencia: el tiempo de realización de cualquier estado utilizará el propio atributo Time de la ACCIÓN.
-- Elementos de datos arquetipados:
---> El elemento de datos \"Fecha/hora programada\" está pensado para registrar la hora precisa en la que se planifica la transfusión. Nota: el atributo Time de la ACCIÓN correspondiente al estado \"Transfusión programada\" registrará la hora en que se programó la transfusión en un sistema, no la fecha/hora prevista en la que se desea llevar a cabo la transfusión.">
-			keywords = <"transfusión, sangre, plasma, productos sanguíneos, aféresis", ...>
+Cada unidad de producto sanguíneo administrada debe registrarse mediante instancias separadas del arquetipo ACTION.unit_transfusion_management.v0, para garantizar una trazabilidad completa de cada producto transfundido. Esto permite capturar información estructurada y específica de cada unidad (por ejemplo, identificador de la bolsa, tipo de producto, hora de inicio y finalización de la transfusión, reacciones adversas, etc.).
+
+Este arquetipo debe utilizarse para describir el procedimiento de transfusión de forma agregada o global. Es especialmente útil cuando se necesita documentar el proceso completo, ya sea por motivos legales, de trazabilidad clínica o para la elaboración de informes clínicos resumidos. Se recomienda utilizarlo en combinación con:
+
+ACTION.unit_transfusion_management.v0, para registrar cada unidad transfundida.
+
+CLUSTER.transfusion_details (u otro similar), insertado en la ranura \"Detalles adicionales\", si se desea capturar información estructurada adicional.
+
+Los registros horarios o de fechas relacionados con la transfusión pueden gestionarse de dos maneras:
+
+Usando el modelo de referencia: el atributo time de cualquier instancia de ACTION indica el momento en que se registra el estado actual de la acción (por ejemplo, programada, iniciada o completada).
+
+Mediante elementos arquetipados:
+
+El elemento \"Fecha/hora programada\" permite registrar el momento previsto para realizar la transfusión.
+
+El tiempo de finalización del procedimiento global de transfusión debe coincidir con la hora de finalización de la última unidad administrada.
+
+En casos en que se prescriba la transfusión de más de un tipo de producto sanguíneo (por ejemplo, hematíes y plaquetas), se recomienda registrar una instancia separada del arquetipo ACTION.unit_transfusion_management para cada producto, ya que habitualmente se administran de forma separada y no simultánea.
+
+Este arquetipo principal ACTION.transfusion resume el proceso completo de transfusión, de forma coherente con la práctica clínica, y puede complementarse con acciones individuales para asegurar una documentación exhaustiva y trazable de cada componente del procedimiento.">
+			keywords = <"transfusión, sangre, plasma, productos sanguíneos, plaquetas", ...>
 			misuse = <"No debe utilizarse para registrar la instrucción de una transfusión. Utilice el arquetipo INSTRUCTION.service_request.v1 para este propósito.
 
-No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de médula ósea (trasplantes), transfusiones de células madre, terapia con inmunoglobulinas, inyecciones de plasma rico en plaquetas (PRP) y concentrados de factores de coagulación).">
+No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de médula ósea [trasplantes], transfusiones de células madre, terapia con inmunoglobulinas, inyecciones de plasma rico en plaquetas [PRP] y concentrados de factores de coagulación).
+
+No debe utilizarse para registrar la administración intravenosa de productos sanguíneos con un propósito terapéutico distinto al transfusional propiamente dicho —es decir, la reposición de sangre o de componentes sanguíneos perdidos (como en casos de hemorragia) o el tratamiento de déficits hematopoyéticos. En casos como la terapia con inmunoglobulinas, el plasma rico en plaquetas (PRP) u otros productos utilizados como medicamentos, dichos productos deben considerarse fármacos y se debe utilizar el arquetipo correspondiente para la administración de medicación.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
-			purpose = <"Per registrar detalls sobre un procediment de transfusió de sang.">
+			purpose = <"Per registrar informació detallada sobre un procediment de transfusió de sang de manera global, incloent-hi dades sobre totes les unitats de productes sanguinis administrades durant l’episodi transfusional.">
 			use = <"S'utilitza per registrar tot o part d'un procediment de transfusió de sang.
 
-Es pot capturar informació estructurada i detallada sobre la transfusió mitjançant arquetips específics per diferents propòsits inserits a la ranura \"Detalls addicionals\", quan sigui necessari. 
-Es pot capturar informació més específica sobre cada unitat de producte sanguini transfos mitjançant l'arquetip ACTION.unit_transfusion_management.v0
+Aquest arquetip representa la captura de la informació global del procés de transfusió, és a dir, el conjunt o resum de totes les accions relacionades amb la transfusió de productes sanguinis durant un episodi clínic. No es tracta d’un arquetip de tipus EVALUATION perquè no documenta una valoració clínica, sinó que reflecteix el procés assistencial tal com ha esdevingut, donant resposta a requisits legals i clínics per registrar el seguiment efectiu d’una prescripció de transfusió.
 
-Els registres horaris/de dates relacionats amb una transfusió es poden gestionar de dues maneres:
-- Utilitzant el model de referència: el temps de realització de qualsevol estat utilitzarà el propi atribut Time de l'ACCIÓ.
-- Elements de dades arquetipats:
---> L'element de dades \"Data/hora programada\" està pensat per registrar l'hora precisa en què es planifica la transfusió. Nota: l'atribut Time de l'ACCIÓ corresponent a l'estat \"Transfusió programada\" registrarà l'hora en què es va programar la transfusió en un sistema, no la data/hora prevista en la qual es vol dur a terme la transfusió.">
-			keywords = <"transfusió, sang, plasma, productes sanguinis, afèresi", ...>
-			misuse = <"No s'ha d'utilitzar per registrar l'instrucció d'una transfusió. Utilitzeu l'arquetip INSTRUCTION.service_request.v1 per a aquest propòsit.
+Cada unitat de producte sanguini administrada hauria de ser registrada mitjançant instàncies separades de l’arquetip ACTION.unit_transfusion_management.v0, per garantir la traçabilitat completa de cada producte transfós. Això permet capturar informació específica i estructurada de cada unitat (per exemple, identificador de la bossa, tipus de producte, hora d’inici i fi de la transfusió, reaccions adverses, etc.).
 
-No s'ha d'utilitzar per registrar altres tipus de transfusions (transfusions de medul·la òssia (trasplantaments), transfusions de cèl·lules mare, teràpia amb immunoglobulines, injeccions de plasma ric en plaquetes (PRP) i concentrats de factors de coagulació).">
+Aquest arquetip s’hauria d’utilitzar per descriure el procediment de transfusió de manera agregada o global. És especialment útil quan es necessita documentar el conjunt del procés, com a traçabilitat clínica o legal, o en informes clínics resumits. Es recomana utilitzar-lo en combinació amb:
+
+ACTION.unit_transfusion_management.v0, per a la traçabilitat de cada unitat de producte transfós.
+
+CLUSTER.transfusion_details (o similar), inserit dins la ranura \"Detalls addicionals\", quan es vulgui capturar informació estructurada addicional.
+
+Els registres horaris/de dates relacionats amb la transfusió es poden gestionar de dues maneres:
+
+Utilitzant el model de referència: l'atribut time de qualsevol instància d’ACTION indica el moment en què es registra l'estat actual de l'acció (p. ex., programada, iniciada, completada).
+
+Mitjançant elements arquetipats:
+
+L’element “Data/hora agendada per la transfusió” permet registrar el moment en què està prevista la transfusió.
+
+El temps de finalització del procés de transfusió global hauria de coincidir amb l’hora de finalització de l’última unitat administrada.
+
+En el cas que es prescrigui la transfusió de més d’un tipus de producte sanguini (p. ex. hematies i plaquetes), es recomana registrar una instància d’ACTION.unit_transfusion_management per a cada producte, ja que habitualment es transfonen per separat i no simultàniament.
+
+Aquest arquetip principal ACTION.transfusion resumeix el procés complet, de forma coherent amb la pràctica clínica, i pot complementar-se amb accions individuals per assegurar una documentació exhaustiva i traçable de cada component del procediment transfusional.">
+			keywords = <"transfusió, sang, plasma, productes sanguinis, plaquetes", ...>
+			misuse = <"No s'ha d'utilitzar per registrar la instrucció d'una transfusió. Utilitzeu l'arquetip INSTRUCTION.service_request.v1 per a aquest propòsit.
+
+No s'ha d'utilitzar per registrar altres tipus de transfusions (transfusions de medul·la òssia (trasplantaments), transfusions de cèl·lules mare, teràpia amb immunoglobulines, injeccions de plasma ric en plaquetes (PRP) i concentrats de factors de coagulació).
+
+No s’ha d’utilitzar per registrar l’administració intravenosa de productes sanguinis amb una finalitat terapèutica diferent de la transfusional pròpiament dita —és a dir, la substitució de sang o components sanguinis perduts (com en casos d’hemorràgia) o el tractament de dèficits hematopoètics. En casos com ara la teràpia amb immunoglobulines, el plasma ric en plaquetes (PRP) o altres productes utilitzats com a medicaments, s’hauria de considerar aquests productes com medicaments i utilitzar l’arquetip adequat per a l’administració de medicació.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
@@ -91,16 +145,17 @@ No s'ha d'utilitzar per registrar altres tipus de transfusions (transfusions de 
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
 		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["references"] = <"https://www.sciencedirect.com/science/article/pii/S2211419X13000724#:~:text=The%20bone%20marrow%20consists%20of,administered%20through%20the%20IO%20route">
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"544E971619A66395BCBA72A03886165D">
-		["build_uid"] = <"ccb7a058-e05b-4dd6-b8ee-953abbbff640">
+		["MD5-CAM-1.0.1"] = <"3FF506B8311D5CC23414D62E97BFBE38">
+		["build_uid"] = <"b0844b9f-f334-44d8-8e51-7468715cdfbc">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	ACTION[at0000] matches {    -- Blood transfusion management
+	ACTION[at0000] matches {    -- Whole transfusion management
 		description matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
@@ -108,11 +163,6 @@ definition
 						value matches {
 							DV_CODED_TEXT matches {*}
 							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Total volume
-						value matches {
-							DV_QUANTITY matches {*}
 						}
 					}
 					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Number of units
@@ -369,7 +419,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Blood transfusion management">
+					text = <"Whole transfusion management">
 					description = <"Procedure to transfer blood or its components from a donor to a recipient to replenish depleted blood elements.">
 				>
 				["at0001"] = <
@@ -385,10 +435,6 @@ ontology
 					description = <"The blood product transfused.">
 					comment = <"Examples: red cells, platelets, plasma...">
 				>
-				["at0004"] = <
-					text = <"Total volume">
-					description = <"Total volume of blood product transfused.">
-				>
 				["at0005"] = <
 					text = <"Number of units">
 					description = <"Number of units of product transfused.">
@@ -396,6 +442,7 @@ ontology
 				["at0006"] = <
 					text = <"Unit volume">
 					description = <"The amount of blood product contained in each unit.">
+					comment = <"In case it is necessary to record different unit volumes for the same product, use the CLUSTER openEHR-EHR-CLUSTER.transfusion_unit.">
 				>
 				["at0007"] = <
 					text = <"Product location">
@@ -420,6 +467,7 @@ ontology
 				["at0012"] = <
 					text = <"Adverse reaction">
 					description = <"Additional information regarding a specific adverse reaction event caused by exposure to a specific substance.">
+					comment = <"It is strongly recommended to use the CLUSTER \"Adverse reaction event\".">
 				>
 				["at0013"] = <
 					text = <"Scheduled date/time">
@@ -427,7 +475,8 @@ ontology
 				>
 				["at0014"] = <
 					text = <"Transfusion identifier">
-					description = <"Unique identifier for the transfusion.">
+					description = <"Unique identifier for the transfusion, normally defined by the transfusion request.">
+					comment = <"This identifier allows linking the corresponding request with its transfusion process.">
 				>
 				["at0016"] = <
 					text = <"Requestor order identifier">
@@ -437,6 +486,7 @@ ontology
 				["at0017"] = <
 					text = <"Device details">
 					description = <"Use to record details about durable or persisting medical device used during the transfusion.">
+					comment = <"It is strongly recommended to use the CLUSTER \"Medical Device\".">
 				>
 				["at0018"] = <
 					text = <"Transfusion planned">
@@ -500,7 +550,7 @@ ontology
 		["ca"] = <
 			items = <
 				["at0000"] = <
-					text = <"Gestió de la transfusió">
+					text = <"Gestió de la transfusió completa">
 					description = <"Procediment per transferir sang o els seus components d'un donant a un receptor per reposar els elements sanguinis mancants.">
 				>
 				["at0001"] = <
@@ -516,10 +566,6 @@ ontology
 					description = <"Producte sanguini transfós.">
 					comment = <"Exemples: glòbuls vermells, plaquetes, plasma...">
 				>
-				["at0004"] = <
-					text = <"Volum total">
-					description = <"Volum total de producte sanguini transfós.">
-				>
 				["at0005"] = <
 					text = <"Nombre unitats">
 					description = <"Quantitat d'unitats de producte transfoses.">
@@ -527,6 +573,7 @@ ontology
 				["at0006"] = <
 					text = <"Volum unitat">
 					description = <"Quantitat de producte sanguini contingut a cada unitat.">
+					comment = <"En cas de necessitar registrar diferents volums d'unitat pel mateix producte, utilitzar el CLUSTER openEHR-EHR-CLUSTER.transfusion_unit.">
 				>
 				["at0007"] = <
 					text = <"Ubicació del producte">
@@ -551,6 +598,7 @@ ontology
 				["at0012"] = <
 					text = <"Reacció adversa">
 					description = <"Informació addicional sobre un esdeveniment de reacció adversa específic causat per l'exposició a una substància específica.">
+					comment = <"Es recomana la utilització del CLUSTER \"Adverse reaction event\".">
 				>
 				["at0013"] = <
 					text = <"Data/hora agendada per la transfusió">
@@ -558,7 +606,8 @@ ontology
 				>
 				["at0014"] = <
 					text = <"Identificador de la transfusió">
-					description = <"Identificador únic de la transfusió.">
+					description = <"Identificador únic de la transfusió global, que normalment és definit per la sol·licitud de la transfusió.">
+					comment = <"Aquest identificador permet enllaçar la sol·licitud corresponent amb el seu procés de transfusió.">
 				>
 				["at0016"] = <
 					text = <"Identificador d'ordre del sol·licitant">
@@ -568,6 +617,7 @@ ontology
 				["at0017"] = <
 					text = <"Detalls del dispositiu mèdic">
 					description = <"Utilitzat per registrar detalls sobre dispositius mèdics fets servir durant la transfusió.">
+					comment = <"Es recomana la utilització del 	CLUSTER \"Medical Device\".">
 				>
 				["at0018"] = <
 					text = <"Transfusió planejada">
@@ -631,7 +681,7 @@ ontology
 		["es"] = <
 			items = <
 				["at0000"] = <
-					text = <"Gestión de la transfusión">
+					text = <"Gestión de la transfusión completa">
 					description = <"Procedimiento para transferir sangre o sus componentes de un donante a un receptor para reponer los elementos sanguíneos necesarios.">
 				>
 				["at0001"] = <
@@ -647,10 +697,6 @@ ontology
 					description = <"Producto sanguíneo transfundido.">
 					comment = <"Ejemplos: glóbulos rojos, plaquetas, plasma...">
 				>
-				["at0004"] = <
-					text = <"Volumen total">
-					description = <"Volumen total de producto sanguíneo transfundido.">
-				>
 				["at0005"] = <
 					text = <"Número de unidades">
 					description = <"Cantidad de unidades de producto transfundidas.">
@@ -658,6 +704,7 @@ ontology
 				["at0006"] = <
 					text = <"Volumen de la unidad">
 					description = <"Cantidad de producto sanguíneo contenido en cada unidad.">
+					comment = <"En caso de necesitar registrar diferentes volumentes de una unidad para el mismo producto, utilizar el CLUSTER openEHR-EHR-CLUSTER.transfusion_unit.">
 				>
 				["at0007"] = <
 					text = <"Ubicación del producto">
@@ -682,6 +729,7 @@ ontology
 				["at0012"] = <
 					text = <"Reacción adversa">
 					description = <"Información adicional sobre un evento de reacción adversa específico causado por la exposición a una sustancia específica.">
+					comment = <"Se recomienda la utilización del CLUSTER \"Adverse reaction event\".">
 				>
 				["at0013"] = <
 					text = <"Fecha/hora agendada">
@@ -689,7 +737,8 @@ ontology
 				>
 				["at0014"] = <
 					text = <"Identificador de la transfusión">
-					description = <"Identificador único de la transfusión.">
+					description = <"Identificador único de la transfusión, normalmente definido por la solicitud de transfusión.">
+					comment = <"Este identificador permite enlazar la solicitud correspondiente con su proceso de transfusión.">
 				>
 				["at0016"] = <
 					text = <"Identificador de orden del solicitante">
@@ -699,6 +748,7 @@ ontology
 				["at0017"] = <
 					text = <"Detalles del dispositivo médico">
 					description = <"Utilizado para registrar detalles sobre dispositivos mèdicos usados durante la transfusión.">
+					comment = <"Se recomienda la utilización del CLUSTER \"Medical Device\".">
 				>
 				["at0018"] = <
 					text = <"Transfusión planeada">
