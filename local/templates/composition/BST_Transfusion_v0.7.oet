@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
     <id>f98ba261-15b2-4bcd-a8da-7ed98da5c629</id>
-    <name>BST_Transfusion_v0.6</name>
+    <name>BST_Transfusion_v0.7</name>
     <description>
         <original_author>
             <item>
@@ -208,7 +208,6 @@
                         <includedTypes>Text</includedTypes>
                     </constraint>
                 </Rule>
-                <Rule max="0" path="/description[at0001]/items[at0004]"/>
                 <Rule max="0" path="/description[at0001]/items[at0005]"/>
                 <Rule max="0" path="/description[at0001]/items[at0006]"/>
                 <Rule max="0" path="/description[at0001]/items[at0007]">
@@ -295,16 +294,16 @@
         <digest id="MD5-CAM-1.0.1">0298AE139970942938E630B28EBF217E</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-SECTION.adhoc.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">8FE80F3E80C594AAF99D3BA540A53D73</digest>
+        <digest id="MD5-CAM-1.0.1">E7D2CBE63256A27215D368CB0FCC3960</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.age_assertion.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">0F8EBF69612730A9C7D473F90B6CD92B</digest>
+        <digest id="MD5-CAM-1.0.1">60CDC878F9DB9810B55BD0207645BD40</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-EVALUATION.gender.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">475CE45FB410FE25CB6D74B36146CC85</digest>
+        <digest id="MD5-CAM-1.0.1">8D3CADD926A38AF2A5F2DE3922CB1F90</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">F3BA1A6809F466FF10AB50CC86EC78C5</digest>
+        <digest id="MD5-CAM-1.0.1">89470078C0364ACBA5B6A5F286E56C79</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-INSTRUCTION.service_request.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">552568349490A2FA815607DD29B53F55</digest>
@@ -319,12 +318,12 @@
         <digest id="MD5-CAM-1.0.1">189016652B796FD2552171C762A5602E</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-ACTION.whole_transfusion_management.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">544E971619A66395BCBA72A03886165D</digest>
+        <digest id="MD5-CAM-1.0.1">EEF6BAF94E5856FDFEFD9979B49CDBFB</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.adverse_reaction_event.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">859E3E1B5E2CC7F763194716F7A8660B</digest>
+        <digest id="MD5-CAM-1.0.1">EF2E88ACDF6FE3D05F990397A74EA636</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.transfusion_unit.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">D41637FE6EE7680790DDEEC7DF841E43</digest>
+        <digest id="MD5-CAM-1.0.1">77F314302CDF167256F6D86B06ABB2E1</digest>
     </integrity_checks>
 </template>
