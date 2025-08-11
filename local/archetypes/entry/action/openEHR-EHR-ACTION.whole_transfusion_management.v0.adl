@@ -67,42 +67,6 @@ It must not be used to record other types of transfusions (e.g., bone marrow tra
 It must also not be used to record the intravenous administration of blood-derived products when the therapeutic intent is different from that of a transfusion in the strict sense —that is, the replacement of lost blood or blood components (such as in cases of hemorrhage) or the treatment of hematopoietic deficiencies. In cases such as immunoglobulin therapy, platelet-rich plasma (PRP), or other products used as medications, these products should be considered medicinal products and the appropriate medication administration archetype should be used instead.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
-			purpose = <"Para registrar información detallada sobre un procedimiento de transfusión de sangre de forma global, incluyendo datos sobre todas las unidades de productos sanguíneos administradas durante el episodio transfusional.">
-			use = <"Este arquetipo se utiliza para registrar total o parcialmente un procedimiento de transfusión de sangre.
-
-Representa la captura de información global sobre el proceso de transfusión, es decir, el conjunto o resumen de todas las acciones relacionadas con la administración de productos sanguíneos durante un episodio clínico. No se trata de un arquetipo de tipo EVALUATION, ya que no documenta una valoración clínica, sino que refleja el proceso asistencial tal como ocurrió, respondiendo a la necesidad legal y clínica de dejar constancia del seguimiento efectivo de una prescripción de transfusión.
-
-Cada unidad de producto sanguíneo administrada debe registrarse mediante instancias separadas del arquetipo ACTION.unit_transfusion_management.v0, para garantizar una trazabilidad completa de cada producto transfundido. Esto permite capturar información estructurada y específica de cada unidad (por ejemplo, identificador de la bolsa, tipo de producto, hora de inicio y finalización de la transfusión, reacciones adversas, etc.).
-
-Este arquetipo debe utilizarse para describir el procedimiento de transfusión de forma agregada o global. Es especialmente útil cuando se necesita documentar el proceso completo, ya sea por motivos legales, de trazabilidad clínica o para la elaboración de informes clínicos resumidos. Se recomienda utilizarlo en combinación con:
-
-ACTION.unit_transfusion_management.v0, para registrar cada unidad transfundida.
-
-CLUSTER.transfusion_details (u otro similar), insertado en la ranura \"Detalles adicionales\", si se desea capturar información estructurada adicional.
-
-Los registros horarios o de fechas relacionados con la transfusión pueden gestionarse de dos maneras:
-
-Usando el modelo de referencia: el atributo time de cualquier instancia de ACTION indica el momento en que se registra el estado actual de la acción (por ejemplo, programada, iniciada o completada).
-
-Mediante elementos arquetipados:
-
-El elemento \"Fecha/hora programada\" permite registrar el momento previsto para realizar la transfusión.
-
-El tiempo de finalización del procedimiento global de transfusión debe coincidir con la hora de finalización de la última unidad administrada.
-
-En casos en que se prescriba la transfusión de más de un tipo de producto sanguíneo (por ejemplo, hematíes y plaquetas), se recomienda registrar una instancia separada del arquetipo ACTION.unit_transfusion_management para cada producto, ya que habitualmente se administran de forma separada y no simultánea.
-
-Este arquetipo principal ACTION.transfusion resume el proceso completo de transfusión, de forma coherente con la práctica clínica, y puede complementarse con acciones individuales para asegurar una documentación exhaustiva y trazable de cada componente del procedimiento.">
-			keywords = <"transfusión, sangre, plasma, productos sanguíneos, plaquetas", ...>
-			misuse = <"No debe utilizarse para registrar la instrucción de una transfusión. Utilice el arquetipo INSTRUCTION.service_request.v1 para este propósito.
-
-No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de médula ósea [trasplantes], transfusiones de células madre, terapia con inmunoglobulinas, inyecciones de plasma rico en plaquetas [PRP] y concentrados de factores de coagulación).
-
-No debe utilizarse para registrar la administración intravenosa de productos sanguíneos con un propósito terapéutico distinto al transfusional propiamente dicho —es decir, la reposición de sangre o de componentes sanguíneos perdidos (como en casos de hemorragia) o el tratamiento de déficits hematopoyéticos. En casos como la terapia con inmunoglobulinas, el plasma rico en plaquetas (PRP) u otros productos utilizados como medicamentos, dichos productos deben considerarse fármacos y se debe utilizar el arquetipo correspondiente para la administración de medicación.">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
-		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
 			purpose = <"Per registrar informació detallada sobre un procediment de transfusió de sang de manera global, incloent-hi dades sobre totes les unitats de productes sanguinis administrades durant l’episodi transfusional.">
@@ -139,6 +103,42 @@ No s'ha d'utilitzar per registrar altres tipus de transfusions (transfusions de 
 No s’ha d’utilitzar per registrar l’administració intravenosa de productes sanguinis amb una finalitat terapèutica diferent de la transfusional pròpiament dita —és a dir, la substitució de sang o components sanguinis perduts (com en casos d’hemorràgia) o el tractament de dèficits hematopoètics. En casos com ara la teràpia amb immunoglobulines, el plasma ric en plaquetes (PRP) o altres productes utilitzats com a medicaments, s’hauria de considerar aquests productes com medicaments i utilitzar l’arquetip adequat per a l’administració de medicació.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Para registrar información detallada sobre un procedimiento de transfusión de sangre de forma global, incluyendo datos sobre todas las unidades de productos sanguíneos administradas durante el episodio transfusional.">
+			use = <"Este arquetipo se utiliza para registrar total o parcialmente un procedimiento de transfusión de sangre.
+
+Representa la captura de información global sobre el proceso de transfusión, es decir, el conjunto o resumen de todas las acciones relacionadas con la administración de productos sanguíneos durante un episodio clínico. No se trata de un arquetipo de tipo EVALUATION, ya que no documenta una valoración clínica, sino que refleja el proceso asistencial tal como ocurrió, respondiendo a la necesidad legal y clínica de dejar constancia del seguimiento efectivo de una prescripción de transfusión.
+
+Cada unidad de producto sanguíneo administrada debe registrarse mediante instancias separadas del arquetipo ACTION.unit_transfusion_management.v0, para garantizar una trazabilidad completa de cada producto transfundido. Esto permite capturar información estructurada y específica de cada unidad (por ejemplo, identificador de la bolsa, tipo de producto, hora de inicio y finalización de la transfusión, reacciones adversas, etc.).
+
+Este arquetipo debe utilizarse para describir el procedimiento de transfusión de forma agregada o global. Es especialmente útil cuando se necesita documentar el proceso completo, ya sea por motivos legales, de trazabilidad clínica o para la elaboración de informes clínicos resumidos. Se recomienda utilizarlo en combinación con:
+
+ACTION.unit_transfusion_management.v0, para registrar cada unidad transfundida.
+
+CLUSTER.transfusion_details (u otro similar), insertado en la ranura \"Detalles adicionales\", si se desea capturar información estructurada adicional.
+
+Los registros horarios o de fechas relacionados con la transfusión pueden gestionarse de dos maneras:
+
+Usando el modelo de referencia: el atributo time de cualquier instancia de ACTION indica el momento en que se registra el estado actual de la acción (por ejemplo, programada, iniciada o completada).
+
+Mediante elementos arquetipados:
+
+El elemento \"Fecha/hora programada\" permite registrar el momento previsto para realizar la transfusión.
+
+El tiempo de finalización del procedimiento global de transfusión debe coincidir con la hora de finalización de la última unidad administrada.
+
+En casos en que se prescriba la transfusión de más de un tipo de producto sanguíneo (por ejemplo, hematíes y plaquetas), se recomienda registrar una instancia separada del arquetipo ACTION.unit_transfusion_management para cada producto, ya que habitualmente se administran de forma separada y no simultánea.
+
+Este arquetipo principal ACTION.transfusion resume el proceso completo de transfusión, de forma coherente con la práctica clínica, y puede complementarse con acciones individuales para asegurar una documentación exhaustiva y trazable de cada componente del procedimiento.">
+			keywords = <"transfusión, sangre, plasma, productos sanguíneos, plaquetas", ...>
+			misuse = <"No debe utilizarse para registrar la instrucción de una transfusión. Utilice el arquetipo INSTRUCTION.service_request.v1 para este propósito.
+
+No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de médula ósea [trasplantes], transfusiones de células madre, terapia con inmunoglobulinas, inyecciones de plasma rico en plaquetas [PRP] y concentrados de factores de coagulación).
+
+No debe utilizarse para registrar la administración intravenosa de productos sanguíneos con un propósito terapéutico distinto al transfusional propiamente dicho —es decir, la reposición de sangre o de componentes sanguíneos perdidos (como en casos de hemorragia) o el tratamiento de déficits hematopoyéticos. En casos como la terapia con inmunoglobulinas, el plasma rico en plaquetas (PRP) u otros productos utilizados como medicamentos, dichos productos deben considerarse fármacos y se debe utilizar el arquetipo correspondiente para la administración de medicación.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Laura Moral López, Modelatge del Coneixement Clínic Catsalut, Spain", ...>
@@ -149,8 +149,8 @@ No s’ha d’utilitzar per registrar l’administració intravenosa de producte
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"3FF506B8311D5CC23414D62E97BFBE38">
-		["build_uid"] = <"b0844b9f-f334-44d8-8e51-7468715cdfbc">
+		["MD5-CAM-1.0.1"] = <"609409C35EE9779184F08ADEE863BB3E">
+		["build_uid"] = <"8c45be97-6c17-4779-9000-f1d1acdac5bb">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -362,6 +362,22 @@ definition
 					}
 				}
 			}
+			ISM_TRANSITION[at0032] matches {    -- Transfusion restarted
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::245]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0032]    -- Transfusion restarted
+						}
+					}
+				}
+			}
 			ISM_TRANSITION[at0025] matches {    -- Transfusion suspended
 				current_state matches {
 					DV_CODED_TEXT matches {
@@ -545,6 +561,10 @@ ontology
 					description = <"The ID assigned to the order by the healthcare provider or organisation receiving the request for service. This is also referred to as Filler Order Identifier.">
 					comment = <"This is equivalent to Filler Order Number in HL7 v2 specifications.">
 				>
+				["at0032"] = <
+					text = <"Transfusion restarted">
+					description = <"">
+				>
 			>
 		>
 		["ca"] = <
@@ -676,6 +696,10 @@ ontology
 					description = <"L'identificador assignat a l'ordre pel proveïdor sanitari o organització que rep la sol·licitud de servei. També s'anomena identificador d'ordre d'emplenament.">
 					comment = <"Equivalent al Filler Order Number a les especificacions HL7 v2.">
 				>
+				["at0032"] = <
+					text = <"Transfusió reiniciada">
+					description = <"">
+				>
 			>
 		>
 		["es"] = <
@@ -806,6 +830,10 @@ ontology
 					text = <"Identificador de orden del receptor">
 					description = <"El identificador asignado a la orden por el proveedor sanitario o la organización que recibe la solicitud de servicio. También se denomina Identificador de Orden de Cumplimentación.">
 					comment = <"Equivalente al Filler Order Number en las especificaciones HL7 v2.">
+				>
+				["at0032"] = <
+					text = <"Transfusión reiniciada">
+					description = <"">
 				>
 			>
 		>
