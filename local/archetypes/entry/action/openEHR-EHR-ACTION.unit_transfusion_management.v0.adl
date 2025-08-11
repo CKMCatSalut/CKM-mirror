@@ -33,7 +33,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record details about the procedure of a blood unit transfusion product.">
+			purpose = <"To record details about the procedure of a transfusion of a blood product unit.">
 			use = <"Use to record a unit blood transfusion procedure.
 
 Additional structured and detailed information about the transfusion can be captured using purpose-specific archetypes inserted into the 'Additional details' slot, where required. 
@@ -43,52 +43,58 @@ Specific timings related to a transfusion can be managed in one of two ways:
 - Using the reference model - the time for performance of any pathway step will use the ACTION time attribute for each step.
 - Archetyped data elements:
 --> 'Scheduled date/time' data element is intended to record the precise time when the transfusion is planned. Note: the corresponding ACTION time attribute for the 'Transfusion scheduled' step will record the time that the transfusion was scheduled into a system, not the intended date/time on which the transfusion is intended to be carried out.">
-			keywords = <"transfusion, blood, plasma, blood products, apheresis", ...>
+			keywords = <"transfusion, blood, plasma, blood products, platelets", ...>
 			misuse = <"Not to be used to record the action of a complete transfusion that may include several units. Use the ACTION.whole_transfusion_management.v0 archetype for this purpose.
 
 Not to be used to record the order for a transfusion. Use the INSTRUCTION.service_request.v1 archetype for this purpose.
 
-Not to be used to record other types of transfusions (Bone Marrow Transfusions (Transplants), Stem Cell Transfusions, Immunoglobulin Therapy, Platelet-Rich Plasma (PRP) Injections and Clotting Factor Concentrates).">
+Not to be used to record other types of transfusions (Bone Marrow Transfusions (Transplants), Stem Cell Transfusions, Immunoglobulin Therapy, Platelet-Rich Plasma (PRP) Injections and Clotting Factor Concentrates).
+
+When used in conjunction with the CLUSTER.transfusion_unit archetype, ensure that there is no redundant information.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
-			purpose = <"Per registrar detalls sobre el procediment de transfusió de sang d'una unitat de producte sanguini. ">
-			use = <"S'utilitza per registrar el procediment de transfusió de sang d'una unitat.
+			purpose = <"Per registrar detalls sobre el procediment de transfusió de sang d'una unitat de producte sanguini.">
+			use = <"S'utilitza per registrar el procediment de transfusió de sang d'una unitat de producte sanguini.
 
 Es pot capturar informació estructurada i detallada sobre la transfusió mitjançant arquetips específics per diferents propòsits inserits a la ranura \"Detalls addicionals\", quan sigui necessari. 
 Es pot capturar informació més específica d'una transfusió completa de vàries unitats de producte sanguini transfós mitjançant l'arquetip ACTION.whole_transfusion_management.v0
 
 Els registres horaris/de dates relacionats amb una transfusió es poden gestionar de dues maneres:
-- Utilitzant el model de referència: el temps de realització de qualsevol estat utilitzarà el propi atribut Time de l'ACCIÓ.
+- Utilitzant el model de referència: el temps de realització de qualsevol estat utilitzarà el propi atribut Time de l'ACTION.
 - Elements de dades arquetipats:
---> L'element de dades \"Data/hora programada\" està pensat per registrar l'hora precisa en què es planifica la transfusió. Nota: l'atribut Time de l'ACCIÓ corresponent a l'estat \"Transfusió programada\" registrarà l'hora en què es va programar la transfusió en un sistema, no la data/hora prevista en la qual es vol dur a terme la transfusió.">
-			keywords = <"transfusió, sang, plasma, productes sanguinis, afèresi", ...>
+--> L'element de dades \"Data/hora programada\" està pensat per registrar l'hora precisa en què es planifica la transfusió. Nota: l'atribut Time de l'ACTION corresponent a l'estat \"Transfusió programada\" registrarà l'hora en què es va programar la transfusió en un sistema, no la data/hora prevista en la qual es vol dur a terme la transfusió.">
+			keywords = <"transfusió, sang, plasma, productes sanguinis, plaquetes", ...>
 			misuse = <"No s'ha d'utilitzar per registrar l'acció d'una transfusió completa que pot incloure diverses unitats. Utilitzeu l'arquetip ACTION.whole_transfusion_management.v0 per a aquest propòsit.
 
 No s'ha d'utilitzar per registrar la instrucció d'una transfusió. Utilitzeu l'arquetip INSTRUCTION.service_request.v1 per a aquest propòsit.
 
-No s'ha d'utilitzar per registrar altres tipus de transfusions (transfusions de medul·la òssia (trasplantaments), transfusions de cèl·lules mare, teràpia amb immunoglobulines, injeccions de plasma ric en plaquetes (PRP) i concentrats de factors de coagulació).">
+No s'ha d'utilitzar per registrar altres tipus de transfusions (transfusions de medul·la òssia (trasplantaments), transfusions de cèl·lules mare, teràpia amb immunoglobulines, injeccions de plasma ric en plaquetes (PRP) i concentrats de factors de coagulació).
+
+En cas d'utilitzar-se conjuntament amb el CLUSTER.transfusion_unit, vigilar que no hi hagi informació redundant.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
 			purpose = <"Para registrar detalladamente un procedimiento de transfusión de una unidad de producto sanguíneo.">
-			use = <"Se utiliza para registrar un procedimiento de transfusión de sangre de una unidad.
+			use = <"Se utiliza para registrar un procedimiento de transfusión de sangre de una unidad de producto sanguíneo.
 
 Se puede capturar información estructurada y detallada sobre la transfusión mediante arquetipos específicos para diferentes propósitos insertados en la ranura \"Detalle adicional\", cuando sea necesario. 
 Se puede capturar información más específica sobre una transfusión completa de varias unidades mediante el arquetipo ACTION.whole_transfusion_management.v0
 
 Los registros horarios/de fechas relacionados con una transfusión se pueden gestionar de dos formas:
-- Utilizando el modelo de referencia: el tiempo de realización de cualquier estado utilizará el propio atributo Time de la ACCIÓN.
+- Utilizando el modelo de referencia: el tiempo de realización de cualquier estado utilizará el propio atributo Time de la ACTION.
 - Elementos de datos arquetipados:
---> El elemento de datos \"Fecha/hora programada\" está pensado para registrar la hora precisa en la que se planifica la transfusión. Nota: el atributo Time de la ACCIÓN correspondiente al estado \"Transfusión programada\" registrará la hora en que se programó la transfusión en un sistema, no la fecha/hora prevista en la que se desea llevar a cabo la transfusión.">
-			keywords = <"transfusión, sangre, plasma, productos sanguíneos, aféresis", ...>
+--> El elemento de datos \"Fecha/hora programada\" está pensado para registrar la hora precisa en la que se planifica la transfusión. Nota: el atributo Time de la ACTION correspondiente al estado \"Transfusión programada\" registrará la hora en que se programó la transfusión en un sistema, no la fecha/hora prevista en la que se desea llevar a cabo la transfusión.">
+			keywords = <"transfusión, sangre, plasma, productos sanguíneos, plaquetas", ...>
 			misuse = <"No debe utilitzarse para registrar la acción de una transfusión completa que puede incluir varias unidades. Utilice el archivo ACTION.whole_transfusion_management.v0 para esta propuesta.
 
 No debe utilizarse para registrar la instrucción de una transfusión. Utilice el arquetipo INSTRUCTION.service_request.v1 para este propósito.
 
-No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de médula ósea (trasplantes), transfusiones de células madre, terapia con inmunoglobulinas, inyecciones de plasma rico en plaquetas (PRP) y concentrados de factores de coagulación).">
+No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de médula ósea (trasplantes), transfusiones de células madre, terapia con inmunoglobulinas, inyecciones de plasma rico en plaquetas (PRP) y concentrados de factores de coagulación).
+
+En caso de utilizarse conjuntamente con el arquetipo CLUSTER.transfusion_unit, vigilar que no haya información redundante.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
@@ -101,8 +107,8 @@ No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"78C2A9E4A6AF20C6261C05135C9ECCEC">
-		["build_uid"] = <"a3e06d0d-ba22-4910-b6a9-88cfc99647bc">
+		["MD5-CAM-1.0.1"] = <"5AC0DA0A94EDC8771089A9B383BA7789">
+		["build_uid"] = <"d40ad767-0c7f-491b-9e31-24433f32b01c">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -326,6 +332,22 @@ definition
 					}
 				}
 			}
+			ISM_TRANSITION[at0039] matches {    -- Unit administration restarted
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::245]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0039]    -- Unit administration restarted
+						}
+					}
+				}
+			}
 			ISM_TRANSITION[at0035] matches {    -- Unit administration suspended
 				current_state matches {
 					DV_CODED_TEXT matches {
@@ -434,6 +456,7 @@ ontology
 				["at0019"] = <
 					text = <"Adverse reaction">
 					description = <"Additional information regarding a specific adverse reaction event caused by exposure to a specific substance.">
+					comment = <"It is strongly recommended to use the CLUSTER \"Adverse reaction event\".">
 				>
 				["at0020"] = <
 					text = <"Scheduled date/time">
@@ -513,6 +536,10 @@ ontology
 					text = <"Administration details">
 					description = <"Details of body site of administration of the unit transfusion.">
 				>
+				["at0039"] = <
+					text = <"Unit administration restarted">
+					description = <"Unit blood product administration has restarted.">
+				>
 			>
 		>
 		["ca"] = <
@@ -543,7 +570,7 @@ ontology
 					description = <"La data efectiva després de la qual no s'ha de transfondre el producte sanguini.">
 				>
 				["at0013"] = <
-					text = <"Identificador de la unitat">
+					text = <"Seqüència d'administració de la unitat">
 					description = <"La seqüència d'unitat transfosa durant els estats de l'acció 'Administració unitat començada' o 'Administració unitat acabada'.">
 				>
 				["at0014"] = <
@@ -569,6 +596,7 @@ ontology
 				["at0019"] = <
 					text = <"Reacció adversa">
 					description = <"Informació addicional sobre un esdeveniment de reacció adversa específic causat per l'exposició a una substància específica.">
+					comment = <"Es recomana la utilització del CLUSTER \"Adverse reaction event\".">
 				>
 				["at0020"] = <
 					text = <"Data/Hora programada">
@@ -614,15 +642,15 @@ ontology
 				>
 				["at0030"] = <
 					text = <"Administració de la unitat agendada">
-					description = <"La transfusió de la unitat sanguínea s'ha programat.">
+					description = <"La transfusió de la unitat sanguínia s'ha programat.">
 				>
 				["at0031"] = <
 					text = <"Administració de la unitat postposada">
-					description = <"La transfusió de la unitat sanguínea s'ha postposat.">
+					description = <"La transfusió de la unitat sanguínia s'ha postposat.">
 				>
 				["at0032"] = <
 					text = <"Administració de la unitat cancelada">
-					description = <"La transfusió de la unitat sanguínea s'ha cancel·lat.">
+					description = <"La transfusió de la unitat sanguínia s'ha cancel·lat.">
 				>
 				["at0033"] = <
 					text = <"Verificació pre-transfusió">
@@ -647,6 +675,10 @@ ontology
 				["at0038"] = <
 					text = <"Detalls de l'administració">
 					description = <"Detalls de l'administració.">
+				>
+				["at0039"] = <
+					text = <"Administració unitat reiniciada">
+					description = <"La transfusió de la unitat sanguínia s'ha reiniciat.">
 				>
 			>
 		>
@@ -678,7 +710,7 @@ ontology
 					description = <"La fecha efectiva después de la cual no debe transfundirse el producto sanguíneo.">
 				>
 				["at0013"] = <
-					text = <"Identificador de la unidad">
+					text = <"Secuencia de administración de la unidad">
 					description = <"La secuencia de unidad transfundida durante los estados de la acción 'Administración de unidad empezada' o 'Administración unidad completada'.">
 				>
 				["at0014"] = <
@@ -704,6 +736,7 @@ ontology
 				["at0019"] = <
 					text = <"Reacción adversa">
 					description = <"Información adicional sobre un evento de reacción adversa específico causado por la exposición a una sustancia específica.">
+					comment = <"Se recomienda la utilización del CLUSTER \"Adverse reaction event\".">
 				>
 				["at0020"] = <
 					text = <"Fecha/Hora programada">
@@ -782,6 +815,10 @@ ontology
 				["at0038"] = <
 					text = <"Detalles de la administración">
 					description = <"Detalles de la administración.">
+				>
+				["at0039"] = <
+					text = <"Administración unidad reiniciada">
+					description = <"La transfusión de la unidad sanguínea se ha reiniciado.">
 				>
 			>
 		>
