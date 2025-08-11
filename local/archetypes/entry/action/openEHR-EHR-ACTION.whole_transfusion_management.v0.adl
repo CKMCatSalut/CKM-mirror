@@ -67,42 +67,6 @@ It must not be used to record other types of transfusions (e.g., bone marrow tra
 It must also not be used to record the intravenous administration of blood-derived products when the therapeutic intent is different from that of a transfusion in the strict sense —that is, the replacement of lost blood or blood components (such as in cases of hemorrhage) or the treatment of hematopoietic deficiencies. In cases such as immunoglobulin therapy, platelet-rich plasma (PRP), or other products used as medications, these products should be considered medicinal products and the appropriate medication administration archetype should be used instead.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
-			purpose = <"Per registrar informació detallada sobre un procediment de transfusió de sang de manera global, incloent-hi dades sobre totes les unitats de productes sanguinis administrades durant l’episodi transfusional.">
-			use = <"S'utilitza per registrar tot o part d'un procediment de transfusió de sang.
-
-Aquest arquetip representa la captura de la informació global del procés de transfusió, és a dir, el conjunt o resum de totes les accions relacionades amb la transfusió de productes sanguinis durant un episodi clínic. No es tracta d’un arquetip de tipus EVALUATION perquè no documenta una valoració clínica, sinó que reflecteix el procés assistencial tal com ha esdevingut, donant resposta a requisits legals i clínics per registrar el seguiment efectiu d’una prescripció de transfusió.
-
-Cada unitat de producte sanguini administrada hauria de ser registrada mitjançant instàncies separades de l’arquetip ACTION.unit_transfusion_management.v0, per garantir la traçabilitat completa de cada producte transfós. Això permet capturar informació específica i estructurada de cada unitat (per exemple, identificador de la bossa, tipus de producte, hora d’inici i fi de la transfusió, reaccions adverses, etc.).
-
-Aquest arquetip s’hauria d’utilitzar per descriure el procediment de transfusió de manera agregada o global. És especialment útil quan es necessita documentar el conjunt del procés, com a traçabilitat clínica o legal, o en informes clínics resumits. Es recomana utilitzar-lo en combinació amb:
-
-ACTION.unit_transfusion_management.v0, per a la traçabilitat de cada unitat de producte transfós.
-
-CLUSTER.transfusion_details (o similar), inserit dins la ranura \"Detalls addicionals\", quan es vulgui capturar informació estructurada addicional.
-
-Els registres horaris/de dates relacionats amb la transfusió es poden gestionar de dues maneres:
-
-Utilitzant el model de referència: l'atribut time de qualsevol instància d’ACTION indica el moment en què es registra l'estat actual de l'acció (p. ex., programada, iniciada, completada).
-
-Mitjançant elements arquetipats:
-
-L’element “Data/hora agendada per la transfusió” permet registrar el moment en què està prevista la transfusió.
-
-El temps de finalització del procés de transfusió global hauria de coincidir amb l’hora de finalització de l’última unitat administrada.
-
-En el cas que es prescrigui la transfusió de més d’un tipus de producte sanguini (p. ex. hematies i plaquetes), es recomana registrar una instància d’ACTION.unit_transfusion_management per a cada producte, ja que habitualment es transfonen per separat i no simultàniament.
-
-Aquest arquetip principal ACTION.transfusion resumeix el procés complet, de forma coherent amb la pràctica clínica, i pot complementar-se amb accions individuals per assegurar una documentació exhaustiva i traçable de cada component del procediment transfusional.">
-			keywords = <"transfusió, sang, plasma, productes sanguinis, plaquetes", ...>
-			misuse = <"No s'ha d'utilitzar per registrar la instrucció d'una transfusió. Utilitzeu l'arquetip INSTRUCTION.service_request.v1 per a aquest propòsit.
-
-No s'ha d'utilitzar per registrar altres tipus de transfusions (transfusions de medul·la òssia (trasplantaments), transfusions de cèl·lules mare, teràpia amb immunoglobulines, injeccions de plasma ric en plaquetes (PRP) i concentrats de factors de coagulació).
-
-No s’ha d’utilitzar per registrar l’administració intravenosa de productes sanguinis amb una finalitat terapèutica diferent de la transfusional pròpiament dita —és a dir, la substitució de sang o components sanguinis perduts (com en casos d’hemorràgia) o el tractament de dèficits hematopoètics. En casos com ara la teràpia amb immunoglobulines, el plasma ric en plaquetes (PRP) o altres productes utilitzats com a medicaments, s’hauria de considerar aquests productes com medicaments i utilitzar l’arquetip adequat per a l’administració de medicació.">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
-		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
 			purpose = <"Para registrar información detallada sobre un procedimiento de transfusión de sangre de forma global, incluyendo datos sobre todas las unidades de productos sanguíneos administradas durante el episodio transfusional.">
@@ -139,6 +103,42 @@ No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de
 No debe utilizarse para registrar la administración intravenosa de productos sanguíneos con un propósito terapéutico distinto al transfusional propiamente dicho —es decir, la reposición de sangre o de componentes sanguíneos perdidos (como en casos de hemorragia) o el tratamiento de déficits hematopoyéticos. En casos como la terapia con inmunoglobulinas, el plasma rico en plaquetas (PRP) u otros productos utilizados como medicamentos, dichos productos deben considerarse fármacos y se debe utilizar el arquetipo correspondiente para la administración de medicación.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Per registrar informació detallada sobre un procediment de transfusió de sang de manera global, incloent-hi dades sobre totes les unitats de productes sanguinis administrades durant l’episodi transfusional.">
+			use = <"S'utilitza per registrar tot o part d'un procediment de transfusió de sang.
+
+Aquest arquetip representa la captura de la informació global del procés de transfusió, és a dir, el conjunt o resum de totes les accions relacionades amb la transfusió de productes sanguinis durant un episodi clínic. No es tracta d’un arquetip de tipus EVALUATION perquè no documenta una valoració clínica, sinó que reflecteix el procés assistencial tal com ha esdevingut, donant resposta a requisits legals i clínics per registrar el seguiment efectiu d’una prescripció de transfusió.
+
+Cada unitat de producte sanguini administrada hauria de ser registrada mitjançant instàncies separades de l’arquetip ACTION.unit_transfusion_management.v0, per garantir la traçabilitat completa de cada producte transfós. Això permet capturar informació específica i estructurada de cada unitat (per exemple, identificador de la bossa, tipus de producte, hora d’inici i fi de la transfusió, reaccions adverses, etc.).
+
+Aquest arquetip s’hauria d’utilitzar per descriure el procediment de transfusió de manera agregada o global. És especialment útil quan es necessita documentar el conjunt del procés, com a traçabilitat clínica o legal, o en informes clínics resumits. Es recomana utilitzar-lo en combinació amb:
+
+ACTION.unit_transfusion_management.v0, per a la traçabilitat de cada unitat de producte transfós.
+
+CLUSTER.transfusion_details (o similar), inserit dins la ranura \"Detalls addicionals\", quan es vulgui capturar informació estructurada addicional.
+
+Els registres horaris/de dates relacionats amb la transfusió es poden gestionar de dues maneres:
+
+Utilitzant el model de referència: l'atribut time de qualsevol instància d’ACTION indica el moment en què es registra l'estat actual de l'acció (p. ex., programada, iniciada, completada).
+
+Mitjançant elements arquetipats:
+
+L’element “Data/hora agendada per la transfusió” permet registrar el moment en què està prevista la transfusió.
+
+El temps de finalització del procés de transfusió global hauria de coincidir amb l’hora de finalització de l’última unitat administrada.
+
+En el cas que es prescrigui la transfusió de més d’un tipus de producte sanguini (p. ex. hematies i plaquetes), es recomana registrar una instància d’ACTION.unit_transfusion_management per a cada producte, ja que habitualment es transfonen per separat i no simultàniament.
+
+Aquest arquetip principal ACTION.transfusion resumeix el procés complet, de forma coherent amb la pràctica clínica, i pot complementar-se amb accions individuals per assegurar una documentació exhaustiva i traçable de cada component del procediment transfusional.">
+			keywords = <"transfusió, sang, plasma, productes sanguinis, plaquetes", ...>
+			misuse = <"No s'ha d'utilitzar per registrar la instrucció d'una transfusió. Utilitzeu l'arquetip INSTRUCTION.service_request.v1 per a aquest propòsit.
+
+No s'ha d'utilitzar per registrar altres tipus de transfusions (transfusions de medul·la òssia (trasplantaments), transfusions de cèl·lules mare, teràpia amb immunoglobulines, injeccions de plasma ric en plaquetes (PRP) i concentrats de factors de coagulació).
+
+No s’ha d’utilitzar per registrar l’administració intravenosa de productes sanguinis amb una finalitat terapèutica diferent de la transfusional pròpiament dita —és a dir, la substitució de sang o components sanguinis perduts (com en casos d’hemorràgia) o el tractament de dèficits hematopoètics. En casos com ara la teràpia amb immunoglobulines, el plasma ric en plaquetes (PRP) o altres productes utilitzats com a medicaments, s’hauria de considerar aquests productes com medicaments i utilitzar l’arquetip adequat per a l’administració de medicació.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Laura Moral López, Modelatge del Coneixement Clínic Catsalut, Spain", ...>
@@ -149,8 +149,8 @@ No debe utilizarse para registrar la administración intravenosa de productos sa
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"609409C35EE9779184F08ADEE863BB3E">
-		["build_uid"] = <"8c45be97-6c17-4779-9000-f1d1acdac5bb">
+		["MD5-CAM-1.0.1"] = <"EEF6BAF94E5856FDFEFD9979B49CDBFB">
+		["build_uid"] = <"301d2031-26cd-4430-ac07-546175c7286a">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -563,7 +563,7 @@ ontology
 				>
 				["at0032"] = <
 					text = <"Transfusion restarted">
-					description = <"">
+					description = <"Administration of one unit of blood product has commenced again.">
 				>
 			>
 		>
@@ -698,7 +698,7 @@ ontology
 				>
 				["at0032"] = <
 					text = <"Transfusió reiniciada">
-					description = <"">
+					description = <"S'ha començat a transfondre de nou una unitat de producte sanguini.">
 				>
 			>
 		>
@@ -833,7 +833,7 @@ ontology
 				>
 				["at0032"] = <
 					text = <"Transfusión reiniciada">
-					description = <"">
+					description = <"Ha comenzado la administración de una unidad de producto sanguíneo.">
 				>
 			>
 		>
