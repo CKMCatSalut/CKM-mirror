@@ -31,15 +31,15 @@ description
 			use = <"">
 			misuse = <"">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
+		["es"] = <
+			language = <[ISO_639-1::es]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
@@ -54,8 +54,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7B24473FC3ADDF749173EB3E26924D39">
-		["build_uid"] = <"77fdce83-c584-48b5-a011-537a6fb67ec9">
+		["MD5-CAM-1.0.1"] = <"22531ABA27B7EE25236DE1877D8C47EB">
+		["build_uid"] = <"4ff68516-62e9-473b-97f9-14f32bac85a2">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -171,8 +171,8 @@ definition
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0124,    -- *Si (ca)
-							at0125]    -- *No (ca)
+							at0124,    -- Yes
+							at0125]    -- No
 						}
 					}
 				}
@@ -224,8 +224,8 @@ definition
 						defining_code matches {
 							[local::
 							at0026,    -- positive
-							at0027,    -- *Situació molt favorable que no requereix intervenció (ca)
-							at0028]    -- *Requereix atenció per part de l'equip de professionals (ca)
+							at0027,    -- Very favorable situation that does not require intervention
+							at0028]    -- Requires attention from the team of professionals
 						}
 					}
 				}
@@ -414,11 +414,11 @@ definition
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0127,    -- *Zona 1   Cap i coll    (5,9 ± 0,3 mg/dl) (ca)
-							at0128,    -- *Zona 2   Fins melic   (8,9 ± 1,7 mg/dl) (ca)
-							at0129,    -- *Zona 3   Fins genolls  (11,8 ± 1,8 mg/dl) (ca)
-							at0130,    -- *Zona 4   Turmells  (15,0 ± 1,7 mg/dl) (ca)
-							at0131]    -- *Zona 5   planta peu/palma ma  (>15 mg/dl) (ca)
+							at0127,    -- Zone 1 Head and neck (5.9 ± 0.3 mg/dl) (ca)
+							at0128,    -- Zone 2 Up to the navel (8.9 ± 1.7 mg/dl)
+							at0129,    -- Zone 3 Up to the knees (11.8 ± 1.8 mg/dl)
+							at0130,    -- Zone 4 Ankles (15.0 ± 1.7 mg/dl)
+							at0131]    -- Zone 5 sole/palm (>15 mg/dl)
 						}
 					}
 				}
@@ -428,9 +428,9 @@ definition
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0132,    -- *1 - 0 a 5  F. Deteriorada (ca)
-							at0133,    -- *2 - 6 a 7  F. Limit (ca)
-							at0134]    -- *3 - >8  F. normal (ca)
+							at0132,    -- 1 - 0 a 5  impairment of tongue function
+							at0133,    -- 2 - 6 a 7  borderline
+							at0134]    -- 3 - >8  normal function
 						}
 					}
 				}
@@ -440,8 +440,8 @@ definition
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0135,    -- *0-12 Sense límit (ca)
-							at0136]    -- *13-25 Amb limitació (ca)
+							at0135,    -- 0-12 No limitation
+							at0136]    -- 13-25 With limitation
 						}
 					}
 				}
@@ -458,12 +458,66 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0027,    -- *Situació molt favorable que no requereix intervenció (ca)
-									at0028]    -- *Requereix atenció per part de l'equip de professionals (ca)
+									at0027,    -- Very favorable situation that does not require intervention
+									at0028]    -- Requires attention from the team of professionals
 								}
 							}
 						}
 					}
+				}
+			}
+			CLUSTER[at0137] occurrences matches {0..1} matches {    -- Educational activities newborn puerperium
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0138] occurrences matches {0..1} matches {    -- Breastfeeding / feeding
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0139] occurrences matches {0..1} matches {    -- Weight control
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0140] occurrences matches {0..1} matches {    -- Roundworm cures
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0141] occurrences matches {0..1} matches {    -- Hygiene
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0142] occurrences matches {0..1} matches {    -- Baby behavior
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0143] occurrences matches {0..1} matches {    -- Warning signs
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0144] occurrences matches {0..1} matches {    -- Health card
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0145] occurrences matches {0..1} matches {    -- Vaccines
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0146] occurrences matches {0..1} matches {    -- Information toxic consumption risks in the child
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0147] occurrences matches {0..1} matches {    -- Comment
+				value matches {
+					DV_TEXT matches {*}
 				}
 			}
 		}
@@ -583,11 +637,11 @@ ontology
 					description = <"positive">
 				>
 				["at0027"] = <
-					text = <"*Situació molt favorable que no requereix intervenció (ca)">
+					text = <"Very favorable situation that does not require intervention">
 					description = <"">
 				>
 				["at0028"] = <
-					text = <"*Requereix atenció per part de l'equip de professionals (ca)">
+					text = <"Requires attention from the team of professionals">
 					description = <"">
 				>
 				["at0029"] = <
@@ -912,11 +966,11 @@ ontology
 					description = <"">
 				>
 				["at0124"] = <
-					text = <"*Si (ca)">
+					text = <"Yes">
 					description = <"">
 				>
 				["at0125"] = <
-					text = <"*No (ca)">
+					text = <"No">
 					description = <"">
 				>
 				["at0126"] = <
@@ -924,43 +978,87 @@ ontology
 					description = <"">
 				>
 				["at0127"] = <
-					text = <"*Zona 1   Cap i coll    (5,9 ± 0,3 mg/dl) (ca)">
+					text = <"Zone 1 Head and neck (5.9 ± 0.3 mg/dl) (ca)">
 					description = <"">
 				>
 				["at0128"] = <
-					text = <"*Zona 2   Fins melic   (8,9 ± 1,7 mg/dl) (ca)">
+					text = <"Zone 2 Up to the navel (8.9 ± 1.7 mg/dl)">
 					description = <"">
 				>
 				["at0129"] = <
-					text = <"*Zona 3   Fins genolls  (11,8 ± 1,8 mg/dl) (ca)">
+					text = <"Zone 3 Up to the knees (11.8 ± 1.8 mg/dl)">
 					description = <"">
 				>
 				["at0130"] = <
-					text = <"*Zona 4   Turmells  (15,0 ± 1,7 mg/dl) (ca)">
+					text = <"Zone 4 Ankles (15.0 ± 1.7 mg/dl)">
 					description = <"">
 				>
 				["at0131"] = <
-					text = <"*Zona 5   planta peu/palma ma  (>15 mg/dl) (ca)">
+					text = <"Zone 5 sole/palm (>15 mg/dl)">
 					description = <"">
 				>
 				["at0132"] = <
-					text = <"*1 - 0 a 5  F. Deteriorada (ca)">
+					text = <"1 - 0 a 5  impairment of tongue function">
 					description = <"">
 				>
 				["at0133"] = <
-					text = <"*2 - 6 a 7  F. Limit (ca)">
+					text = <"2 - 6 a 7  borderline">
 					description = <"">
 				>
 				["at0134"] = <
-					text = <"*3 - >8  F. normal (ca)">
+					text = <"3 - >8  normal function">
 					description = <"">
 				>
 				["at0135"] = <
-					text = <"*0-12 Sense límit (ca)">
+					text = <"0-12 No limitation">
 					description = <"">
 				>
 				["at0136"] = <
-					text = <"*13-25 Amb limitació (ca)">
+					text = <"13-25 With limitation">
+					description = <"">
+				>
+				["at0137"] = <
+					text = <"Educational activities newborn puerperium">
+					description = <"">
+				>
+				["at0138"] = <
+					text = <"Breastfeeding / feeding">
+					description = <"Breastfeeding / feeding">
+				>
+				["at0139"] = <
+					text = <"Weight control">
+					description = <"Weight control">
+				>
+				["at0140"] = <
+					text = <"Roundworm cures">
+					description = <"Roundworm cures">
+				>
+				["at0141"] = <
+					text = <"Hygiene">
+					description = <"Hygiene">
+				>
+				["at0142"] = <
+					text = <"Baby behavior">
+					description = <"Baby behavior">
+				>
+				["at0143"] = <
+					text = <"Warning signs">
+					description = <"Warning signs">
+				>
+				["at0144"] = <
+					text = <"Health card">
+					description = <"Health card">
+				>
+				["at0145"] = <
+					text = <"Vaccines">
+					description = <"Vaccines">
+				>
+				["at0146"] = <
+					text = <"Information toxic consumption risks in the child">
+					description = <"Information toxic consumption risks in the child">
+				>
+				["at0147"] = <
+					text = <"Comment">
 					description = <"">
 				>
 			>
@@ -1455,6 +1553,50 @@ ontology
 					text = <"13-25 Amb limitació">
 					description = <"">
 				>
+				["at0137"] = <
+					text = <"Activitats educatives puerperi nadó">
+					description = <"">
+				>
+				["at0138"] = <
+					text = <"Alletament / alimentació">
+					description = <"Alletament / alimentació">
+				>
+				["at0139"] = <
+					text = <"Control pes">
+					description = <"Control pes">
+				>
+				["at0140"] = <
+					text = <"Cures llombrígol">
+					description = <"Cures llombrígol">
+				>
+				["at0141"] = <
+					text = <"Higiene">
+					description = <"Higiene">
+				>
+				["at0142"] = <
+					text = <"Conducta nadó">
+					description = <"Conducta nadó">
+				>
+				["at0143"] = <
+					text = <"Signes d'alarma">
+					description = <"Signes d'alarma">
+				>
+				["at0144"] = <
+					text = <"Carnet de salut">
+					description = <"Carnet de salut">
+				>
+				["at0145"] = <
+					text = <"Vacunes">
+					description = <"Vacunes">
+				>
+				["at0146"] = <
+					text = <"Informació riscos de consum toxics en la criatura">
+					description = <"Informació riscos de consum toxics en la criatura">
+				>
+				["at0147"] = <
+					text = <"Observacions">
+					description = <"Observacions">
+				>
 			>
 		>
 		["es"] = <
@@ -1568,11 +1710,11 @@ ontology
 					description = <"positivo">
 				>
 				["at0027"] = <
-					text = <"*Situació molt favorable que no requereix intervenció (ca)">
+					text = <"Situación muy favorable que no requiere intervención">
 					description = <"">
 				>
 				["at0028"] = <
-					text = <"*Requereix atenció per part de l'equip de professionals (ca)">
+					text = <"Requiere atención por parte del equipo de profesionales">
 					description = <"">
 				>
 				["at0029"] = <
@@ -1896,11 +2038,11 @@ ontology
 					description = <"">
 				>
 				["at0124"] = <
-					text = <"*Si (ca)">
+					text = <"Si">
 					description = <"">
 				>
 				["at0125"] = <
-					text = <"*No (ca)">
+					text = <"No">
 					description = <"">
 				>
 				["at0126"] = <
@@ -1908,43 +2050,87 @@ ontology
 					description = <"">
 				>
 				["at0127"] = <
-					text = <"*Zona 1   Cap i coll    (5,9 ± 0,3 mg/dl) (ca)">
+					text = <"Zona 1   Cara y cuello    (5,9 ± 0,3 mg/dl)">
 					description = <"">
 				>
 				["at0128"] = <
-					text = <"*Zona 2   Fins melic   (8,9 ± 1,7 mg/dl) (ca)">
+					text = <"Zona 2   Hasta ombligo   (8,9 ± 1,7 mg/dl)">
 					description = <"">
 				>
 				["at0129"] = <
-					text = <"*Zona 3   Fins genolls  (11,8 ± 1,8 mg/dl) (ca)">
+					text = <"Zona 3   Hasta rodillas  (11,8 ± 1,8 mg/dl)">
 					description = <"">
 				>
 				["at0130"] = <
-					text = <"*Zona 4   Turmells  (15,0 ± 1,7 mg/dl) (ca)">
+					text = <"Zona 4   Tobillos  (15,0 ± 1,7 mg/dl)">
 					description = <"">
 				>
 				["at0131"] = <
-					text = <"*Zona 5   planta peu/palma ma  (>15 mg/dl) (ca)">
+					text = <"Zona 5   planta pie/palma mano  (>15 mg/dl)">
 					description = <"">
 				>
 				["at0132"] = <
-					text = <"*1 - 0 a 5  F. Deteriorada (ca)">
+					text = <"1 - 0 a 5  F. Deteriorada">
 					description = <"">
 				>
 				["at0133"] = <
-					text = <"*2 - 6 a 7  F. Limit (ca)">
+					text = <"2 - 6 a 7  F. Límite">
 					description = <"">
 				>
 				["at0134"] = <
-					text = <"*3 - >8  F. normal (ca)">
+					text = <"3 - >8  F. normal">
 					description = <"">
 				>
 				["at0135"] = <
-					text = <"*0-12 Sense límit (ca)">
+					text = <"0-12 Sin limitación">
 					description = <"">
 				>
 				["at0136"] = <
-					text = <"*13-25 Amb limitació (ca)">
+					text = <"13-25 Con limitación">
+					description = <"">
+				>
+				["at0137"] = <
+					text = <"Actividades educativas puerperio neonato">
+					description = <"">
+				>
+				["at0138"] = <
+					text = <"Lactancia  / alimentación">
+					description = <"Lactancia  / alimentación">
+				>
+				["at0139"] = <
+					text = <"Control peso">
+					description = <"Control peso">
+				>
+				["at0140"] = <
+					text = <"Cuidados ombligo">
+					description = <"Cuidados ombligo">
+				>
+				["at0141"] = <
+					text = <"Higiene">
+					description = <"Higiene">
+				>
+				["at0142"] = <
+					text = <"Conducta bebé">
+					description = <"Conducta bebé">
+				>
+				["at0143"] = <
+					text = <"Signos de alarma">
+					description = <"Signos de alarma">
+				>
+				["at0144"] = <
+					text = <"Carnet de salud">
+					description = <"Carnet de salud">
+				>
+				["at0145"] = <
+					text = <"Vacunas">
+					description = <"Vacunas">
+				>
+				["at0146"] = <
+					text = <"Información riesgos de consumo tóxicos en la criatura">
+					description = <"Información riesgos de consumo tóxicos en la criatura">
+				>
+				["at0147"] = <
+					text = <"Observaciones">
 					description = <"">
 				>
 			>
