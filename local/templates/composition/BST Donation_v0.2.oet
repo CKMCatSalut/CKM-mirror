@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>32.0.0</value>
+                <value>1.0.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -42,7 +42,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>b12721ccce4679dad4941adc0fb439f3</value>
+                <value>c58572356fa892d04dcb092c7b827a05</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -240,8 +240,62 @@
                     </constraint>
                 </Rule>
                 <Items
-                    archetype_id="openEHR-EHR-CLUSTER.specimen_measurements.v1"
+                    archetype_id="openEHR-EHR-CLUSTER.physical_dimensions.v1"
                     max="1" path="/description[at0001]/items[at0003]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0049]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Quantity</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0050]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Quantity</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0054]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Quantity</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0053]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Quantity</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0082]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Quantity</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0052]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Quantity</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0080]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Quantity</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0055]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Quantity</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0081]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Quantity</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
                     <Rule min="1" path="/items[at0046]">
                         <constraint xsi:type="tem:quantityConstraint">
                             <excludedUnits>[foz_us]</excludedUnits>
@@ -261,24 +315,6 @@
                                 <includesMaximum>false</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </unitMagnitude>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0042]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Quantity</includedTypes>
-                            <includedTypes>Interval</includedTypes>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0055]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Quantity</includedTypes>
-                            <includedTypes>Interval</includedTypes>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0020]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Quantity</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                 </Items>
@@ -598,10 +634,10 @@
         <digest id="MD5-CAM-1.0.1">05ED7C59B4D7C1B888B4F9616CA4B9A8</digest>
     </integrity_checks>
     <integrity_checks
-        archetype_id="openEHR-EHR-CLUSTER.specimen_measurements.v1"
+        archetype_id="openEHR-EHR-CLUSTER.physical_dimensions.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">3469A60230040CB30E2DAFD00B6CE775</digest>
+        <digest id="MD5-CAM-1.0.1">25C5D06E922D1FB6C6616CF60A9505BA</digest>
     </integrity_checks>
     <integrity_checks
         archetype_id="openEHR-EHR-OBSERVATION.laboratory_test_result.v1"
@@ -619,7 +655,7 @@
         archetype_id="openEHR-EHR-OBSERVATION.blood_pressure.v2"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">F5DB932744CD963FB5079719C817901C</digest>
+        <digest id="MD5-CAM-1.0.1">6C5243199E0CC4A559C0F4F32140E1F0</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.pulse.v2"
         xmlns:tem="openEHR/v1/Template"
