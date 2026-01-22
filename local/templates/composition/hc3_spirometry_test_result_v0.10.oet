@@ -63,6 +63,10 @@
                 <key>original_language</key>
                 <value>ISO_639-1::en</value>
             </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
         </other_details>
     </description>
     <definition archetype_id="openEHR-EHR-COMPOSITION.report-result.v1" concept_name="Result report" name="HC3 Spirometry test result" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
@@ -90,8 +94,27 @@
                 <Rule max="0" path="/data[at0001]/events[at0002]/state[at0013]/items[at0014]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002]/state[at0013]/items[at0019]"/>
                 <Rule max="0" path="/data[at0001]/events[at0021]"/>
-                <Rule clone="true" name="Simple" path="/data[at0001]/events[at0021]/data[at0003]"/>
-                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0021]/state[at0013]"/>
+                <Rule name="Height" path="/data[at0001]/events[at0021]/data[at0003]/items[at0004]">
+                    <constraint xsi:type="tem:quantityConstraint">
+                        <unitMagnitude>
+                            <unit>[in_i]</unit>
+                            <maxMagnitude>250.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                        <unitMagnitude>
+                            <unit>cm</unit>
+                            <maxMagnitude>1000.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0021]/data[at0003]/items[at0018]"/>
+                <Rule max="0" path="/data[at0001]/events[at0021]/state[at0013]/items[at0014]"/>
+                <Rule max="0" path="/data[at0001]/events[at0021]/state[at0013]/items[at0019]"/>
             </Item>
             <Item archetype_id="openEHR-EHR-OBSERVATION.body_weight.v2" concept_name="Body weight" max="1" name="Weight" path="/items" xsi:type="tem:OBSERVATION">
                 <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at0004]">
@@ -123,8 +146,34 @@
                 <Rule max="0" path="/data[at0002]/events[at0003]/state[at0008]/items[at0009]"/>
                 <Rule max="0" path="/data[at0002]/events[at0003]/state[at0008]/items[at0025]"/>
                 <Rule max="0" path="/data[at0002]/events[at0026]"/>
-                <Rule clone="true" name="Simple" path="/data[at0002]/events[at0026]/data[at0001]"/>
-                <Rule clone="true" name="state structure" path="/data[at0002]/events[at0026]/state[at0008]"/>
+                <Rule path="/data[at0002]/events[at0026]/data[at0001]/items[at0004]">
+                    <constraint xsi:type="tem:quantityConstraint">
+                        <unitMagnitude>
+                            <unit>g</unit>
+                            <maxMagnitude>1000000.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                        <unitMagnitude>
+                            <unit>kg</unit>
+                            <maxMagnitude>1000.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                        <unitMagnitude>
+                            <unit>[lb_av]</unit>
+                            <maxMagnitude>2000.0</maxMagnitude>
+                            <minMagnitude>0.0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </unitMagnitude>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0002]/events[at0026]/data[at0001]/items[at0024]"/>
+                <Rule max="0" path="/data[at0002]/events[at0026]/state[at0008]/items[at0009]"/>
+                <Rule max="0" path="/data[at0002]/events[at0026]/state[at0008]/items[at0025]"/>
             </Item>
             <Item archetype_id="openEHR-EHR-EVALUATION.ethnicity.v1" concept_name="Ethnic identity" max="1" name="Ethnicity" path="/items" xsi:type="tem:EVALUATION">
                 <Rule max="0" path="/data[at0001]/items[at0002]"/>
@@ -148,9 +197,31 @@
                 <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0019]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0021]"/>
                 <Rule max="0" path="/data[at0001]/events[at0023]"/>
-                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0023]/data[at0003]"/>
+                <Rule max="0" path="/data[at0001]/events[at0023]/data[at0003]/items[at0004]"/>
+                <Rule max="0" path="/data[at0001]/events[at0023]/data[at0003]/items[at0005]/items[at0006]"/>
+                <Rule path="/data[at0001]/events[at0023]/data[at0003]/items[at0005]/items[at0015]/items[at0014]">
+                    <constraint xsi:type="tem:quantityConstraint"/>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0023]/data[at0003]/items[at0005]/items[at0015]/items[at0016]">
+                    <constraint xsi:type="tem:quantityConstraint"/>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0023]/data[at0003]/items[at0005]/items[at0017]"/>
+                <Rule max="0" path="/data[at0001]/events[at0023]/data[at0003]/items[at0005]/items[at0018]"/>
+                <Rule max="0" path="/data[at0001]/events[at0023]/data[at0003]/items[at0019]"/>
+                <Rule max="0" path="/data[at0001]/events[at0023]/data[at0003]/items[at0021]"/>
                 <Rule max="0" path="/data[at0001]/events[at0022]"/>
-                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0022]/data[at0003]"/>
+                <Rule max="0" path="/data[at0001]/events[at0022]/data[at0003]/items[at0004]"/>
+                <Rule max="0" path="/data[at0001]/events[at0022]/data[at0003]/items[at0005]/items[at0006]"/>
+                <Rule path="/data[at0001]/events[at0022]/data[at0003]/items[at0005]/items[at0015]/items[at0014]">
+                    <constraint xsi:type="tem:quantityConstraint"/>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0022]/data[at0003]/items[at0005]/items[at0015]/items[at0016]">
+                    <constraint xsi:type="tem:quantityConstraint"/>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0022]/data[at0003]/items[at0005]/items[at0017]"/>
+                <Rule max="0" path="/data[at0001]/events[at0022]/data[at0003]/items[at0005]/items[at0018]"/>
+                <Rule max="0" path="/data[at0001]/events[at0022]/data[at0003]/items[at0019]"/>
+                <Rule max="0" path="/data[at0001]/events[at0022]/data[at0003]/items[at0021]"/>
             </Item>
             <Item archetype_id="openEHR-EHR-OBSERVATION.age.v0" max="1" path="/items" xsi:type="tem:OBSERVATION">
                 <Rule min="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]">
@@ -455,7 +526,7 @@
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/state[at0031]/items[at0115]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test']/state[at0031]/items[at0098]"/>
                 <Rule clone="true" name="Basal test - best result" path="/data[at0001]/events[at0002]"/>
-                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]"/>
+                <Rule name="Tree" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]"/>
                 <Rule max="1" name="FVC" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0052]">
                     <nameConstraint>
                         <excludedValues>local::at0064</excludedValues>
@@ -739,11 +810,13 @@
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0055.1, 'FEF50%/FIF50% ratio']/items[at0018]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0130]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0101]"/>
-                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Basal test - best result']/state[at0031]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]"/>
+                <Rule name="Tree" path="/data[at0001]/events[at0002, 'Basal test - best result']/state[at0031]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/state[at0031]/items[at0115]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Basal test - best result']/state[at0031]/items[at0098]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Basal test - best result']/state[at0031]"/>
                 <Rule clone="true" name="Post-bronchodilator test" path="/data[at0001]/events[at0002]"/>
-                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]"/>
+                <Rule name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]"/>
                 <Rule max="1" name="FVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0052]">
                     <nameConstraint>
                         <excludedValues>local::at0064</excludedValues>
@@ -1027,11 +1100,13 @@
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0055.1, 'FEF50%/FIF50% ratio']/items[at0018]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0130]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0101]"/>
-                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/state[at0031]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]"/>
+                <Rule name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/state[at0031]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/state[at0031]/items[at0115]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/state[at0031]/items[at0098]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/state[at0031]"/>
                 <Rule clone="true" name="Post-bronchodilator test - best result" path="/data[at0001]/events[at0002]"/>
-                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]"/>
+                <Rule name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]"/>
                 <Rule max="1" name="FVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0052]">
                     <nameConstraint>
                         <excludedValues>local::at0064</excludedValues>
@@ -1315,9 +1390,11 @@
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0055.1, 'FEF50%/FIF50% ratio']/items[at0018]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0130]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0101]"/>
-                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/state[at0031]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]"/>
+                <Rule name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/state[at0031]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/state[at0031]/items[at0115]"/>
                 <Rule max="0" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/state[at0031]/items[at0098]"/>
+                <Rule clone="true" name="Tree" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/state[at0031]"/>
                 <Rule max="0" path="/protocol[at0029]/items[at0196]"/>
                 <Rule max="0" path="/protocol[at0029]/items[at0199]"/>
                 <Rule max="0" path="/protocol[at0029]/items[at0192]"/>
@@ -1334,7 +1411,6 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
@@ -1352,7 +1428,6 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
@@ -1370,7 +1445,6 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
@@ -1388,7 +1462,6 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
@@ -1406,7 +1479,6 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
@@ -1502,63 +1574,7 @@
                     <Rule max="0" path="/items[at0010]/items[at0026]"/>
                     <Rule max="0" path="/items[at0010]/items[at0027]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
-                    <Rule max="0" path="/items[at0003.1]">
-                        <constraint xsi:type="tem:quantityConstraint">
-                            <unitMagnitude>
-                                <unit>m/s</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                            <unitMagnitude>
-                                <unit>m/h</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                            <unitMagnitude>
-                                <unit>km/h</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0005.1]">
-                        <constraint xsi:type="tem:quantityConstraint">
-                            <unitMagnitude>
-                                <unit>[degF]</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                            <unitMagnitude>
-                                <unit>Cel</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0010.1]">
-                        <constraint xsi:type="tem:quantityConstraint">
-                            <unitMagnitude>
-                                <unit>[degF]</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                            <unitMagnitude>
-                                <unit>Cel</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                        </constraint>
-                    </Rule>
-                </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SVTFVC" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SVTFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
                     <Rule name="SVTFVC graphic" path="/items[at0001]"/>
                     <Rule max="0" path="/items[at0002]"/>
                     <Rule max="0" path="/items[at0010]">
@@ -1571,12 +1587,11 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SFVFVC" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SFVFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
                     <Rule name="SFVFVC graphic" path="/items[at0001]"/>
                     <Rule max="0" path="/items[at0002]"/>
                     <Rule max="0" path="/items[at0010]">
@@ -1589,12 +1604,11 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SVTFVC" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SVTFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
                     <Rule name="SFVFVC graphic" path="/items[at0001]"/>
                     <Rule max="0" path="/items[at0002]"/>
                     <Rule max="0" path="/items[at0010]">
@@ -1607,12 +1621,11 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SFVFVC" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SFVFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
                     <Rule name="Signals SFVFVC" path="/items[at0001]"/>
                     <Rule max="0" path="/items[at0002]"/>
                     <Rule max="0" path="/items[at0010]">
@@ -1625,12 +1638,11 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Graphic URL" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Graphic URL" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
                     <Rule name="Graphic URL" path="/items[at0001]"/>
                     <Rule max="0" path="/items[at0002]"/>
                     <Rule max="0" path="/items[at0010]">
@@ -1643,12 +1655,11 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test - best result']/data[at0003]/items[at0.2]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0.2]" xsi:type="tem:CLUSTER">
                     <Rule max="1" name="PEFT" path="/items[at0002]">
                         <nameConstraint>
                             <excludedValues>local::at0005</excludedValues>
@@ -1742,63 +1753,7 @@
                     <Rule max="0" path="/items[at0010]/items[at0026]"/>
                     <Rule max="0" path="/items[at0010]/items[at0027]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test - best result']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
-                    <Rule max="0" path="/items[at0003.1]">
-                        <constraint xsi:type="tem:quantityConstraint">
-                            <unitMagnitude>
-                                <unit>m/s</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                            <unitMagnitude>
-                                <unit>m/h</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                            <unitMagnitude>
-                                <unit>km/h</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0005.1]">
-                        <constraint xsi:type="tem:quantityConstraint">
-                            <unitMagnitude>
-                                <unit>[degF]</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                            <unitMagnitude>
-                                <unit>Cel</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0010.1]">
-                        <constraint xsi:type="tem:quantityConstraint">
-                            <unitMagnitude>
-                                <unit>[degF]</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                            <unitMagnitude>
-                                <unit>Cel</unit>
-                                <minMagnitude>0.0</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
-                                <includesMinimum>true</includesMinimum>
-                            </unitMagnitude>
-                        </constraint>
-                    </Rule>
-                </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SVTFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SVTFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
                     <Rule name="SVTFVC graphic" path="/items[at0001]"/>
                     <Rule max="0" path="/items[at0002]"/>
                     <Rule max="0" path="/items[at0010]">
@@ -1811,12 +1766,11 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SFVFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SFVFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
                     <Rule name="SFVFVC graphic" path="/items[at0001]"/>
                     <Rule max="0" path="/items[at0002]"/>
                     <Rule max="0" path="/items[at0010]">
@@ -1829,12 +1783,11 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SVTFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SVTFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
                     <Rule name="SFVFVC graphic" path="/items[at0001]"/>
                     <Rule max="0" path="/items[at0002]"/>
                     <Rule max="0" path="/items[at0010]">
@@ -1847,12 +1800,11 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SFVFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Signals SFVFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
                     <Rule name="Signals SFVFVC" path="/items[at0001]"/>
                     <Rule max="0" path="/items[at0002]"/>
                     <Rule max="0" path="/items[at0010]">
@@ -1865,12 +1817,11 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Graphic URL" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Graphic URL" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
                     <Rule name="Graphic URL" path="/items[at0001]"/>
                     <Rule max="0" path="/items[at0002]"/>
                     <Rule max="0" path="/items[at0010]">
@@ -1883,12 +1834,11 @@
                     <Rule max="0" path="/items[at0004]">
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0007]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" max="1" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/data[at0003]/items[at0.2]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0.2]" xsi:type="tem:CLUSTER">
                     <Rule max="1" name="PEFT" path="/items[at0002]">
                         <nameConstraint>
                             <excludedValues>local::at0005</excludedValues>
@@ -1979,7 +1929,77 @@
                     <Rule max="0" path="/items[at0010]/items[at0026]"/>
                     <Rule max="0" path="/items[at0010]/items[at0027]"/>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Post-bronchodilator test']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SVTFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SVTFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SFVFVC" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="SFVFVC graphic" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Graphic URL" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
+                    <Rule name="Graphic URL" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0010]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date_Time</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0007]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test']/data[at0003]/items[at0.2]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" name="VTCL" path="/items[at0002]">
+                        <nameConstraint>
+                            <excludedValues>local::at0004</excludedValues>
+                            <excludedValues>local::at0005</excludedValues>
+                            <excludedValues>local::at0006</excludedValues>
+                            <excludedValues>local::at0007</excludedValues>
+                            <excludedValues>local::at0009</excludedValues>
+                        </nameConstraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002]/items[at0022]"/>
+                    <Rule max="0" path="/items[at0002]/items[at0024]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0011]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0021]">
+                        <constraint xsi:type="tem:quantityConstraint"/>
+                    </Rule>
+                    <Rule max="0" path="/items[at0010]/items[at0026]"/>
+                    <Rule max="0" path="/items[at0010]/items[at0027]"/>
+                </Items>
+                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
                     <Rule max="0" path="/items[at0003.1]">
                         <constraint xsi:type="tem:quantityConstraint">
                             <unitMagnitude>
@@ -2035,80 +2055,119 @@
                         </constraint>
                     </Rule>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SVTFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
-                    <Rule name="SVTFVC graphic" path="/items[at0001]"/>
-                    <Rule max="0" path="/items[at0002]"/>
-                    <Rule max="0" path="/items[at0010]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Identifier</includedTypes>
-                            <includedTypes>Text</includedTypes>
+                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0003.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>m/s</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>m/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>km/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
                         </constraint>
                     </Rule>
-                    <Rule max="0" path="/items[at0005]"/>
-                    <Rule max="0" path="/items[at0004]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
+                    <Rule max="0" path="/items[at0005.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
                         </constraint>
                     </Rule>
-                    <Rule max="0" path="/items[at0007]"/>
+                    <Rule max="0" path="/items[at0010.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="SFVFVC" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
-                    <Rule name="SFVFVC graphic" path="/items[at0001]"/>
-                    <Rule max="0" path="/items[at0002]"/>
-                    <Rule max="0" path="/items[at0010]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Identifier</includedTypes>
-                            <includedTypes>Text</includedTypes>
+                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0003.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>m/s</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>m/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>km/h</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
                         </constraint>
                     </Rule>
-                    <Rule max="0" path="/items[at0005]"/>
-                    <Rule max="0" path="/items[at0004]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
+                    <Rule max="0" path="/items[at0005.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
                         </constraint>
                     </Rule>
-                    <Rule max="0" path="/items[at0007]"/>
+                    <Rule max="0" path="/items[at0010.1]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>[degF]</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>Cel</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
                 </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.media_file.v1" concept_name="Media file" max="1" name="Graphic URL" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0131]" xsi:type="tem:CLUSTER">
-                    <Rule name="Graphic URL" path="/items[at0001]"/>
-                    <Rule max="0" path="/items[at0002]"/>
-                    <Rule max="0" path="/items[at0010]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Identifier</includedTypes>
-                            <includedTypes>Text</includedTypes>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0005]"/>
-                    <Rule max="0" path="/items[at0004]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Date_Time</includedTypes>
-                            <includedTypes>Interval</includedTypes>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0007]"/>
-                </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.spirometry_test_additional_information.v0" max="1" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/data[at0003]/items[at0.2]" xsi:type="tem:CLUSTER">
-                    <Rule max="0" name="VTCL" path="/items[at0002]">
-                        <nameConstraint>
-                            <excludedValues>local::at0004</excludedValues>
-                            <excludedValues>local::at0005</excludedValues>
-                            <excludedValues>local::at0006</excludedValues>
-                            <excludedValues>local::at0007</excludedValues>
-                            <excludedValues>local::at0009</excludedValues>
-                        </nameConstraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0002]/items[at0022]"/>
-                    <Rule max="0" path="/items[at0002]/items[at0024]"/>
-                    <Rule max="0" path="/items[at0010]/items[at0011]"/>
-                    <Rule max="0" path="/items[at0010]/items[at0021]">
-                        <constraint xsi:type="tem:quantityConstraint"/>
-                    </Rule>
-                    <Rule max="0" path="/items[at0010]/items[at0026]"/>
-                    <Rule max="0" path="/items[at0010]/items[at0027]"/>
-                </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Post-bronchodilator test - best result']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
+                <Items archetype_id="openEHR-EHR-CLUSTER.environmental_conditions-CatSalut.v0" max="1" path="/data[at0001]/events[at0002, 'Basal test']/state[at0031]/items[at0209]" xsi:type="tem:CLUSTER">
                     <Rule max="0" path="/items[at0003.1]">
                         <constraint xsi:type="tem:quantityConstraint">
                             <unitMagnitude>
@@ -2201,7 +2260,6 @@
                         <Rule max="0" path="/items[at0012]">
                             <constraint xsi:type="tem:multipleConstraint">
                                 <includedTypes>Text</includedTypes>
-                                <includedTypes>Interval</includedTypes>
                             </constraint>
                         </Rule>
                         <Rule max="0" path="/items[at0013]">
