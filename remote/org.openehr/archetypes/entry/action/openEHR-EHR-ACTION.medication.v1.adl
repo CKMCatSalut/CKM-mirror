@@ -471,9 +471,9 @@ Norwegian regulations for medication management (Forskrift om legemiddelhåndter
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3D1BC0A83030F032CBCDBEF3357CD665">
-		["build_uid"] = <"cbff8274-2aad-42c4-a1a4-f44c0240b673">
-		["revision"] = <"1.5.0">
+		["MD5-CAM-1.0.1"] = <"F37648882B3DD5A6D87B8A14F7E02892">
+		["build_uid"] = <"fc502c10-3834-4375-aefa-b70d0a51f8a1">
+		["revision"] = <"1.6.0">
 	>
 
 definition
@@ -785,6 +785,22 @@ definition
 					}
 				}
 			}
+			ISM_TRANSITION[at0158] matches {    -- Dose administration aborted
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::245]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0158]    -- Dose administration aborted
+						}
+					}
+				}
+			}
 			ISM_TRANSITION[at0008] matches {    -- Prescription supply delayed
 				current_state matches {
 					DV_CODED_TEXT matches {
@@ -877,22 +893,6 @@ definition
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::at0151]    -- Prescription invalid or expired
-						}
-					}
-				}
-			}
-			ISM_TRANSITION[at0158] matches {    -- Dose administration aborted
-				current_state matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[openehr::531]
-						}
-					}
-				}
-				careflow_step matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::at0158]    -- Dose administration aborted
 						}
 					}
 				}
@@ -2565,8 +2565,8 @@ Dersom bare denne arketypen blir brukt for å dokumentere legemiddeladministerin
 					description = <"Det istandgjorte legemiddelet har blitt dobbeltkontrollert.">
 				>
 				["at0158"] = <
-					text = <"*Dose administration aborted (en)">
-					description = <"*An administration of a dose of the medication was started but was subsequently aborted. (en)">
+					text = <"Administrering avbrutt">
+					description = <"Administrering av en enkeltdose av legemiddelet ble påbegynt men deretter avbrutt.">
 				>
 			>
 		>
