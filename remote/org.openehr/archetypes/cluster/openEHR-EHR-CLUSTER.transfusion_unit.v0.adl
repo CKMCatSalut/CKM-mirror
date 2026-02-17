@@ -43,7 +43,7 @@ This archetype is designed to be nested within the ACTION.whole_transfusion_mana
 Not to be used to record information about the blood product instead of a unit of this product.
 
 When used with the ACTION.unit_transfusion_management archetype, be aware that there is no redundant information.">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya, openEHR Foundation">
 		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
@@ -57,7 +57,7 @@ Aquest arquetip està dissenyat per ser inclòs dins de la ACTION.whole_transfus
 No s'ha d'utilitzar per registrar informació sobre el producte sanguini en lloc d'una unitat d'aquest producte.
 
 En cas d'utilitzar-se conjuntament amb el ACTION.unit_transfusion_management, vigilar que no hi hagi informació redundant.">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya, openEHR Foundation">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
@@ -71,19 +71,19 @@ Este arquetipo está diseñado para ser incluido dentro de la ACTION.whole_trans
 No debe utilizarse para registrar información sobre el producto sanguíneo en lugar de una unidad de dicho producto.
 
 En caso de utilizarse conjuntamente con el arquetipo ACTION.unit_transfusion_management, vigilar que no haya información redundante.">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya, openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Laura Moral López, Modelatge del Coneixement Clínic Catsalut, Spain", ...>
 	other_details = <
-		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
-		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
-		["original_namespace"] = <"org.catsalut">
-		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
-		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"77F314302CDF167256F6D86B06ABB2E1">
-		["build_uid"] = <"d092ec60-fff2-4b87-a30d-d443e132a3b5">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"46DE0FA44748B33E7D2BCDE19B14D367">
+		["build_uid"] = <"215cc6fb-6601-4438-a82d-48882e315c3b">
 		["revision"] = <"0.0.1-alpha">
 	>
 
