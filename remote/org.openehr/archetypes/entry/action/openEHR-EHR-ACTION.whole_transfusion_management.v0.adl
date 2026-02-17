@@ -65,7 +65,7 @@ This main ACTION.transfusion archetype summarizes the complete transfusion proce
 It must not be used to record other types of transfusions (e.g., bone marrow transfusions [transplants], stem cell transfusions, immunoglobulin therapy, platelet-rich plasma [PRP] injections, or coagulation factor concentrates).
 
 It must also not be used to record the intravenous administration of blood-derived products when the therapeutic intent is different from that of a transfusion in the strict sense —that is, the replacement of lost blood or blood components (such as in cases of hemorrhage) or the treatment of hematopoietic deficiencies. In cases such as immunoglobulin therapy, platelet-rich plasma (PRP), or other products used as medications, these products should be considered medicinal products and the appropriate medication administration archetype should be used instead.">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya, openEHR Foundation">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
@@ -101,7 +101,7 @@ Este arquetipo principal ACTION.transfusion resume el proceso completo de transf
 No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de médula ósea [trasplantes], transfusiones de células madre, terapia con inmunoglobulinas, inyecciones de plasma rico en plaquetas [PRP] y concentrados de factores de coagulación).
 
 No debe utilizarse para registrar la administración intravenosa de productos sanguíneos con un propósito terapéutico distinto al transfusional propiamente dicho —es decir, la reposición de sangre o de componentes sanguíneos perdidos (como en casos de hemorragia) o el tratamiento de déficits hematopoyéticos. En casos como la terapia con inmunoglobulinas, el plasma rico en plaquetas (PRP) u otros productos utilizados como medicamentos, dichos productos deben considerarse fármacos y se debe utilizar el arquetipo correspondiente para la administración de medicación.">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya, openEHR Foundation">
 		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
@@ -137,20 +137,20 @@ Aquest arquetip principal ACTION.transfusion resumeix el procés complet, de for
 No s'ha d'utilitzar per registrar altres tipus de transfusions (transfusions de medul·la òssia (trasplantaments), transfusions de cèl·lules mare, teràpia amb immunoglobulines, injeccions de plasma ric en plaquetes (PRP) i concentrats de factors de coagulació).
 
 No s’ha d’utilitzar per registrar l’administració intravenosa de productes sanguinis amb una finalitat terapèutica diferent de la transfusional pròpiament dita —és a dir, la substitució de sang o components sanguinis perduts (com en casos d’hemorràgia) o el tractament de dèficits hematopoètics. En casos com ara la teràpia amb immunoglobulines, el plasma ric en plaquetes (PRP) o altres productes utilitzats com a medicaments, s’hauria de considerar aquests productes com medicaments i utilitzar l’arquetip adequat per a l’administració de medicació.">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya, openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Laura Moral López, Modelatge del Coneixement Clínic Catsalut, Spain", ...>
 	other_details = <
-		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
-		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"https://www.sciencedirect.com/science/article/pii/S2211419X13000724#:~:text=The%20bone%20marrow%20consists%20of,administered%20through%20the%20IO%20route">
-		["original_namespace"] = <"org.catsalut">
-		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
-		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"EEF6BAF94E5856FDFEFD9979B49CDBFB">
-		["build_uid"] = <"301d2031-26cd-4430-ac07-546175c7286a">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"A23FB32ED0C27B4BCE18584DD516FDF4">
+		["build_uid"] = <"5d33a217-0189-4aad-9563-f5f3f3c7ead9">
 		["revision"] = <"0.0.1-alpha">
 	>
 
