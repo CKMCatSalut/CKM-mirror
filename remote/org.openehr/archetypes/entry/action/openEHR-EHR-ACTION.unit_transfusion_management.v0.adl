@@ -51,7 +51,7 @@ Not to be used to record the order for a transfusion. Use the INSTRUCTION.servic
 Not to be used to record other types of transfusions (Bone Marrow Transfusions (Transplants), Stem Cell Transfusions, Immunoglobulin Therapy, Platelet-Rich Plasma (PRP) Injections and Clotting Factor Concentrates).
 
 When used in conjunction with the CLUSTER.transfusion_unit archetype, ensure that there is no redundant information.">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya, openEHR Foundation">
 		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
@@ -73,7 +73,7 @@ No s'ha d'utilitzar per registrar la instrucció d'una transfusió. Utilitzeu l'
 No s'ha d'utilitzar per registrar altres tipus de transfusions (transfusions de medul·la òssia (trasplantaments), transfusions de cèl·lules mare, teràpia amb immunoglobulines, injeccions de plasma ric en plaquetes (PRP) i concentrats de factors de coagulació).
 
 En cas d'utilitzar-se conjuntament amb el CLUSTER.transfusion_unit, vigilar que no hi hagi informació redundant.">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya, openEHR Foundation">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
@@ -95,20 +95,20 @@ No debe utilizarse para registrar la instrucción de una transfusión. Utilice e
 No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de médula ósea (trasplantes), transfusiones de células madre, terapia con inmunoglobulinas, inyecciones de plasma rico en plaquetas (PRP) y concentrados de factores de coagulación).
 
 En caso de utilizarse conjuntamente con el arquetipo CLUSTER.transfusion_unit, vigilar que no haya información redundante.">
-			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya, openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Ana Pascual Segura, Modelatge del Coneixement Clínic Catsalut, Spain", ...>
 	other_details = <
-		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
-		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"https://www.sciencedirect.com/science/article/pii/S2211419X13000724#:~:text=The%20bone%20marrow%20consists%20of,administered%20through%20the%20IO%20route.">
-		["original_namespace"] = <"org.catsalut">
-		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
-		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"5AC0DA0A94EDC8771089A9B383BA7789">
-		["build_uid"] = <"d40ad767-0c7f-491b-9e31-24433f32b01c">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"090FD285453846C8AA380B057D7B3C08">
+		["build_uid"] = <"ec942f8b-e88b-4603-acc2-17a8981db291">
 		["revision"] = <"0.0.1-alpha">
 	>
 
