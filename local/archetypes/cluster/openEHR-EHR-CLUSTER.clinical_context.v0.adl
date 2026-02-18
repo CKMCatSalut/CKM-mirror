@@ -33,7 +33,7 @@ description
 			misuse = <"Not be used to record a clinical concept as a primary information entry . Not be used to record further details of the clinical concept. The clinical concept information is recorded in another Composition. For each clinical concept the corresponding archetype must be used. 
 
  NOT TO BE USED to record a new 'diagnosis' as a primary information entry, or details of the diagnosis, such as severity, certainty or others - Use specifc archetype for this purpose  openEHR-EHR-EVALUATION.problem_diagnosis archetype to record detailed information about the above concept.
-NOT TO BE USED to record a new 'allergy' as a primary information entry - Use specifc archetype for this purpose. For example:  EVALUATION.adverse_reaction_risk.
+NOT TO BE USED to record a new 'allergy' as a primary information entry - Use specifc archetype for this purpose. For example:  openEHR-EHR-EVALUATION.adverse_reaction_risk.
 
 ">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
@@ -45,8 +45,8 @@ NOT TO BE USED to record a new 'allergy' as a primary information entry - Use sp
 			keywords = <"Contexto, concepto clínico, referencia", ...>
 			misuse = <"No se debe utilizar para registrar un concepto clínico como entrada de información primaria. No se debe utilizar para registrar más detalles del concepto clínico. La información del concepto clínico se registra en otra composición. Para cada concepto clínico, se debe utilizar el arquetipo correspondiente.
 
-NO SE DEBE UTILIZAR para registrar un nuevo «diagnóstico» como entrada de información principal, ni detalles del diagnóstico, como gravedad, certeza u otros. Utilice el arquetipo específico para este fin. openEHR-EHR-EVALUATION.problem_diagnosis archetype para registrar información detallada sobre el concepto mencionado.
-NO SE DEBE UTILIZAR para registrar una nueva «alergia» como entrada de información principal. Utilice el arquetipo específico para este fin. Por ejemplo: EVALUATION.adverse_reaction_risk.
+NO SE DEBE UTILIZAR para registrar un nuevo «diagnóstico» como entrada de información principal, ni detalles del diagnóstico, como gravedad, certeza u otros. Utilice el arquetipo específico para este fin. openEHR-EHR-EVALUATION.problem_diagnosis para registrar información detallada sobre el concepto mencionado.
+NO SE DEBE UTILIZAR para registrar una nueva «alergia» como entrada de información principal. Utilice el arquetipo específico para este fin. Por ejemplo: openEHR-EHR-EVALUATION.adverse_reaction_risk
 ">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
@@ -58,7 +58,7 @@ NO SE DEBE UTILIZAR para registrar una nueva «alergia» como entrada de informa
 			misuse = <"No s'ha d'utilitzar per registrar un concepte clínic com a entrada d'informació primària. No s'ha d'utilitzar per registrar més detalls del concepte clínic. La informació del concepte clínic es registra en una altra composició. Per a cada concepte clínic s'ha d'utilitzar l'arquetip corresponent.
 
 NO S'HA D'UTILITZAR per registrar un nou \"diagnòstic\" com a entrada d'informació primària, o detalls del diagnòstic, com ara la gravetat, la certesa o altres: utilitzeu l'arquetip específic per a aquest propòsit openEHR-EHR-EVALUATION.problem_diagnosis arquetip per registrar informació detallada sobre el concepte anterior.
-NO S'HA D'UTILITZAR per registrar una nova \"al·lèrgia\" com a entrada d'informació primària: utilitzeu l'arquetip específic per a aquest propòsit. Per exemple: AVALIATION.adverse_reaction_risk.">
+NO S'HA D'UTILITZAR per registrar una nova \"al·lèrgia\" com a entrada d'informació primària: utilitzeu l'arquetip específic per a aquest propòsit. Per exemple: openEHR-EHR-EVALUATION.adverse_reaction_risk.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
 		>
 	>
@@ -70,9 +70,13 @@ NO S'HA D'UTILITZAR per registrar una nova \"al·lèrgia\" com a entrada d'infor
 		["original_namespace"] = <"org.catsalut   ">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"0EC36F9EDA854B6EF165E27E69BEAF35">
-		["build_uid"] = <"6f1a8c55-2187-41a5-8f29-41791c877133">
-		["ip_acknowledgements"] = <"When coding the name of the diagnosis with a terminology, these Terminology might be copyright protected.  While openEHR archetypes are all freely available under an open license, the specific content of the Template in implementation might be copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.">
+		["MD5-CAM-1.0.1"] = <"5F9DEB205E6D2657343D3E5B03B7D3F9">
+		["build_uid"] = <"7af51f03-75d3-450b-bcdb-e00dcc37f93a">
+		["ip_acknowledgements"] = <"Quan es codifica el nom d'un concepte clínic (per exemple, un diagnòstic o una al·lèrgia) amb una terminologia, aquesta terminologia pot estar protegida per drets d'autor. Tot i que els arquetips d'openEHR estan disponibles gratuïtament sota una llicència oberta, el contingut específic de la plantilla en la implementació pot estar protegit per drets d'autor. Qualsevol ús d'aquest arquetip dins de les implementacions ha de complir els termes establerts pels propietaris dels drets d'autor.
+
+Al codificar el nombre de un concepto clínico (por ejemplo un diagnóstico o una alergia) con una terminología, esta podría estar protegida por derechos de autor. Si bien todos los arquetipos de openEHR están disponibles gratuitamente bajo una licencia abierta, el contenido específico de la plantilla en la implementación podría estar protegido por derechos de autor. Cualquier uso de este arquetipo en las implementaciones debe cumplir con los términos establecidos por los titulares de los derechos de autor.
+
+When coding the name of a clinical concept (for example, a diagnosis or an allergy) with a terminology, these Terminology might be copyright protected.  While openEHR archetypes are all freely available under an open license, the specific content of the Template in implementation might be copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -148,7 +152,7 @@ ontology
 				>
 				["at0030"] = <
 					text = <"Diagnosis name">
-					description = <"Mention of the diagnosis registered as a clinical concept in another Composition. P. example: reference the diagnosis recorded in another Composition in the \"Problem/Diagnosis name\" Element of the archetype openEHR-EHR-EVALUATION.problem_diagnosis.
+					description = <"Mention of the diagnosis registered as a clinical concept in another Composition.
 ">
 					comment = <"The element of this Cluster is intended to work as a reference. It doesn't have its own semantics.
 NOT TO BE USED to record new 'allergy' as a primary information entry - Use specifc archetype for this purpose. For example:  EVALUATION.adverse_reaction_risk.">
@@ -168,7 +172,7 @@ NOT TO BE USED to record new 'allergy' as a primary information entry - Use spec
 				>
 				["at0034"] = <
 					text = <"Date of registration of the Health indicator">
-					description = <"Original date of of recording of a health indicator as primary information in another Composition. This is the date on which a professional discharges or registers and therefore creates the patient's health indicator in another Composition.">
+					description = <"Original date of recording of a health indicator as primary information in another Composition. This is the date on which a professional discharges or registers and therefore creates the patient's health indicator in another Composition.">
 				>
 				["at0038"] = <
 					text = <"Allergy or Adverse reaction">
@@ -176,7 +180,7 @@ NOT TO BE USED to record new 'allergy' as a primary information entry - Use spec
 				>
 				["at0039"] = <
 					text = <"Allergy or Adverse reaction name">
-					description = <"Mention of the allergy or adverse reaction registered as a clinical concept  another Composition. P. example: reference the allergy registered in another Composition in the \"Substance\" Element of the openEHR-EHR-EVALUATION.adverse_reaction_risk archetype.">
+					description = <"Mention of the allergy or adverse reaction registered as a clinical concept in another Composition. ">
 					comment = <"The element of this Cluster is intended to work as a reference. It doesn't have its own semantics.
 NOT TO BE USED to record a new 'allergy' as a primary information entry - Use specifc archetype for this purpose. For example:  EVALUATION.adverse_reaction_risk.">
 				>
@@ -202,7 +206,7 @@ NOT TO BE USED to record a new 'allergy' as a primary information entry - Use sp
 				>
 				["at0030"] = <
 					text = <"Nom del diagnòstic">
-					description = <"Menció del diagnòstic registrat com a concepte clínic a altra Composition. P. exemple: consignar el diagnòstic registrat a altra Composition a l'Element \"Problem/Diagnosis name\" de l'arquetip openEHR-EHR-EVALUATION.problem_diagnosis.">
+					description = <"Menció del diagnòstic registrat com a concepte clínic a altra Composition.">
 					comment = <"L'element d'aquest Clúster està pensat per funcionar com a referència. No te una semàntica pròpia.
 NO S'HA D'UTILITZAR per registrar un nou \"diagnòstic\" com a entrada d'informació primària, o detalls del diagnòstic, com ara la gravetat, la certesa o altres: utilitzeu l'arquetip específic per a aquest propòsit openEHR-EHR-EVALUATION.problem_diagnosis arquetip per registrar informació detallada sobre el concepte anterior.
 ">
@@ -231,7 +235,7 @@ NO S'HA D'UTILITZAR per registrar un nou \"diagnòstic\" com a entrada d'informa
 				>
 				["at0039"] = <
 					text = <"Nom de la Alèrgia o reacció adversa">
-					description = <" Menció de l'al·lèrgia o reacció adversa registrada com a concepte clínic a altra Composition. P. exemple: consignar l'al·lèrgia registrada a altra Composition a l'Element \"Substance\" de l'arquetip openEHR-EHR-EVALUATION.adverse_reaction_risk.">
+					description = <" Menció de l'al·lèrgia o reacció adversa registrada com a concepte clínic a altra Composition. ">
 					comment = <"L'element d'aquest Clúster està pensat per funcionar com a referència. No te una semàntica pròpia.
 NO S'HA D'UTILITZAR per registrar una nova \"al·lèrgia\" com a entrada d'informació primària: utilitzeu l'arquetip específic per a aquest propòsit. Per exemple: AVALIATION.adverse_reaction_risk.">
 				>
@@ -257,7 +261,7 @@ NO S'HA D'UTILITZAR per registrar una nova \"al·lèrgia\" com a entrada d'infor
 				>
 				["at0030"] = <
 					text = <"Nombre del diagnóstico">
-					description = <"Mención del diagnóstico registrado como concepto clínico en otra Composition. P. ejemplo: consignar el diagnóstico registrado en otra Composition en el Elemento \"Problem/Diagnosis name\" del arquetipo openEHR-EHR-EVALUATION.problem_diagnosis.">
+					description = <"Mención del diagnóstico registrado como concepto clínico en otra Composition.">
 					comment = <"El elemento de este Clúster está pensado para funcionar como referencia. No tiene una semántica propia.
 NO SE DEBE UTILIZAR para registrar un nuevo «diagnóstico» como entrada de información principal, ni detalles del diagnóstico, como gravedad, certeza u otros. Utilice el arquetipo específico para este fin. openEHR-EHR-EVALUATION.problem_diagnosis archetype para registrar información detallada sobre el concepto mencionado.">
 				>
@@ -284,7 +288,7 @@ NO SE DEBE UTILIZAR para registrar un nuevo «diagnóstico» como entrada de inf
 				>
 				["at0039"] = <
 					text = <"Nombre de la Alergia o reaccion adversa">
-					description = <"Mención de la alergia o reacción adversa registrada como concepto clínico en otra Composition. P. ejemplo: consignar la alergia registrada a otra Composition en el Elemento \"Substance\" del arquetipo openEHR-EHR-EVALUATION.adverse_reaction_risk.">
+					description = <"Mención de la alergia o reacción adversa registrada como concepto clínico en otra Composition.">
 					comment = <"El elemento de este Clúster está pensado para funcionar como referencia. No tiene una semántica propia.
 NO SE DEBE UTILIZAR para registrar una nueva «alergia» como entrada de información principal. Utilice el arquetipo específico para este fin. Por ejemplo: EVALUATION.adverse_reaction_risk.">
 				>
