@@ -70,8 +70,8 @@ NO S'HA D'UTILITZAR per registrar una nova \"al·lèrgia\" com a entrada d'infor
 		["original_namespace"] = <"org.catsalut   ">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"C8E8BF727E486E43E0926BA5AD8A3089">
-		["build_uid"] = <"289a5855-2bd9-4afa-b3cb-3185990388ba">
+		["MD5-CAM-1.0.1"] = <"0EC36F9EDA854B6EF165E27E69BEAF35">
+		["build_uid"] = <"6f1a8c55-2187-41a5-8f29-41791c877133">
 		["ip_acknowledgements"] = <"When coding the name of the diagnosis with a terminology, these Terminology might be copyright protected.  While openEHR archetypes are all freely available under an open license, the specific content of the Template in implementation might be copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -136,7 +136,7 @@ ontology
 				["at0000"] = <
 					text = <"Clinical context">
 					description = <"Reference of a clinical concept, wich information is persisted in detail in another archetype in the same information system. Simple mention of a clinical concept, as a context. 
-e.g. In a Clinical note, a healthcare care professional, can be interested in pointing the problem or diagnosis the note is referred to.">
+">
 				>
 				["at0019"] = <
 					text = <"Additional details">
@@ -190,7 +190,7 @@ NOT TO BE USED to record a new 'allergy' as a primary information entry - Use sp
 			items = <
 				["at0000"] = <
 					text = <"Context Clínic">
-					description = <"Referència a un concepte clínic, la informació detallada del qual es persisteix en un altre arquetip del mateix sistema d'informació. Simple menció d'un concepte clínic, com a context. e.g. En un curs clínic, un professional sanitari pot estar interessat a indicar el problema o el diagnòstic al qual es refereix la nota.">
+					description = <"Referència a un concepte clínic, la informació detallada del qual es persisteix en un altre arquetip del mateix sistema d'informació. Simple menció d'un concepte clínic, com a context.">
 				>
 				["at0019"] = <
 					text = <"Detalls addicionals">
@@ -245,7 +245,7 @@ NO S'HA D'UTILITZAR per registrar una nova \"al·lèrgia\" com a entrada d'infor
 			items = <
 				["at0000"] = <
 					text = <"Contexto Clínico">
-					description = <"Referencia a un concepto clínico, cuya información detallada se persiste en otro arquetipo del propio sistema de información. Simple mención de un concepto clínico, como contexto. e.g. En un curso clínico, un profesional de la salud puede estar interesado en señalar el problema o diagnóstico al que se refiere la nota.">
+					description = <"Referencia a un concepto clínico, cuya información detallada se persiste en otro arquetipo del propio sistema de información. Simple mención de un concepto clínico, como contexto. ">
 				>
 				["at0019"] = <
 					text = <"Detalles adicionales">
