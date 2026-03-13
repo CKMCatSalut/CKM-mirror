@@ -45,7 +45,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>0.16.1</value>
+                <value>0.16.2</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -57,7 +57,11 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>37c76672bf12236842b151503eb62329</value>
+                <value>c9e6c7ca9fad4c14177a063a0f29c26c</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::ca</value>
             </item>
             <item>
                 <key>original_language</key>
@@ -68,464 +72,472 @@
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0005]">
         <items>
             <item>
-                <key>SNOMED_CT::162755006</key>
-                <value>Talla</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0023]">
-        <items>
-            <item>
-                <key>SNOMED_CT::35904009</key>
-                <value>Resultat última HPV</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>162755006</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0031]">
         <items>
             <item>
-                <key>SNOMED_CT::738070007</key>
-                <value>Data probable de part per ecografia</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>738070007</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0053]">
         <items>
             <item>
-                <key>SNOMED_CT::162763007</key>
-                <value>Pes a l'inici de l'embaràs</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>162763007</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0054]">
         <items>
             <item>
-                <key>SNOMED_CT::60621009</key>
-                <value>Índex de massa corporal pregestacional</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0006]">
-        <items>
-            <item>
-                <key>SNOMED_CT::308415008</key>
-                <value>Immunització rubeola</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0007]">
-        <items>
-            <item>
-                <key>SNOMED_CT::424144002</key>
-                <value>Edat de la dona a l'inici de l'embaràs</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0008]">
-        <items>
-            <item>
-                <key>SNOMED_CT::439272007</key>
-                <value>Data última citologia</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0022]">
-        <items>
-            <item>
-                <key>SNOMED_CT::439272007</key>
-                <value>Data última HPV</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0029]">
-        <items>
-            <item>
-                <key>SNOMED_CT::161714006</key>
-                <value>Data probable de part</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>60621009</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0038]">
         <items>
             <item>
-                <key>SNOMED_CT::424144002</key>
-                <value>Edat donant</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>424144002</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0048]">
         <items>
             <item>
-                <key>SNOMED_CT::440425000</key>
-                <value>Número de naixements a terme</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>440425000</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0049]">
         <items>
             <item>
-                <key>SNOMED_CT::440013005</key>
-                <value>Número de naixements prematurs</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>440013005</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0050]">
         <items>
             <item>
-                <key>SNOMED_CT::252113007</key>
-                <value>Número d'avortaments</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>252113007</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0051]">
         <items>
             <item>
-                <key>SNOMED_CT::248991006</key>
-                <value>Número de naixements vius</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0009]">
-        <items>
-            <item>
-                <key>SNOMED_CT::116147009</key>
-                <value>Resultat última citologia</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>248991006</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0032]">
         <items>
             <item>
-                <key>SNOMED_CT::176843009</key>
-                <value>Gestació donació gàmetes/embrions</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0027]">
-        <items>
-            <item>
-                <key>SNOMED_CT::439771001</key>
-                <value>Data adminstració gamma anti D</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0028]">
-        <items>
-            <item>
-                <key>SNOMED_CT::21840007</key>
-                <value>Data última regla</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>176843009</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0044]">
         <items>
             <item>
-                <key>SNOMED_CT::115758001</key>
-                <value>Rh</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>115758001</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0004]">
         <items>
             <item>
-                <key>SNOMED_CT::491000122104</key>
-                <value>Dificultats idiomàtiques</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>491000122104</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0006]">
+        <items>
+            <item>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>308415008</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0007]">
+        <items>
+            <item>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>424144002</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0008]">
+        <items>
+            <item>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>439272007</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0009]">
+        <items>
+            <item>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>116147009</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0022]">
+        <items>
+            <item>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>439272007</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0023]">
+        <items>
+            <item>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>35904009</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0027]">
+        <items>
+            <item>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>439771001</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0028]">
+        <items>
+            <item>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>21840007</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0029]">
+        <items>
+            <item>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>161714006</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mother_general_data.v0]/items[at0030]">
         <items>
             <item>
-                <key>SNOMED_CT::21840007</key>
-                <value>Data última regla corregida per ecografia</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>21840007</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.antecedents_personals_de_la_dona.v0]/items[at0001]">
         <items>
             <item>
-                <key>SNOMED_CT::230125005</key>
-                <value>Tipus alimentació</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>230125005</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.antecedents_personals_de_la_dona.v0]/items[at0007]">
         <items>
             <item>
-                <key>SNOMED_CT::118215003</key>
-                <value>Tipus de part anterior</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>118215003</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.antecedents_personals_de_la_dona.v0]/items[at0006]">
         <items>
             <item>
-                <key>SNOMED_CT::289203002</key>
-                <value>Resultats gestacionals</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>289203002</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.antecedents_personals_de_la_dona.v0]/items[at0003]">
         <items>
             <item>
-                <key>SNOMED_CT::57177007</key>
-                <value>Antecedents familiars de primer grau</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>57177007</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.antecedents_personals_de_la_dona.v0]/items[at0004]">
         <items>
             <item>
-                <key>SNOMED_CT::267011001</key>
-                <value>Antecedents ginecològics</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>267011001</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.antecedents_personals_de_la_dona.v0]/items[at0005]">
         <items>
             <item>
-                <key>SNOMED_CT::248983002</key>
-                <value>Antecedents obstètrics</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>248983002</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.dades_de_la_parella.v0]/items[at0002]">
         <items>
             <item>
-                <key>SNOMED_CT::371484003</key>
-                <value>Nom de la parella</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>371484003</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.dades_de_la_parella.v0]/items[at0004]">
         <items>
             <item>
-                <key>SNOMED_CT::842009</key>
-                <value>Consanguinitat</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>842009</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.dades_de_la_parella.v0]/items[at0005]">
         <items>
             <item>
-                <key>SNOMED_CT::228272008</key>
-                <value>Hàbits tòxics de la parella</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>228272008</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.dades_de_la_parella.v0]/items[at0006]">
         <items>
             <item>
-                <key>SNOMED_CT::307294006</key>
-                <value>Antecedents personals remarcables de la parella</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>307294006</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.dades_de_la_parella.v0]/items[at0001]">
         <items>
             <item>
-                <key>SNOMED_CT::408821002</key>
-                <value>Parella</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>408821002</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.dades_de_la_parella.v0]/items[at0007]">
         <items>
             <item>
-                <key>SNOMED_CT::57177007</key>
-                <value>Antecedents familiars de primer grau  de la parella</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>57177007</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.dades_de_la_parella.v0]/items[at0003]">
         <items>
             <item>
-                <key>SNOMED_CT::424144002</key>
-                <value>Edat de la parella a l'inici de l'embaràs</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>424144002</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0093]">
         <items>
             <item>
-                <key>SNOMED_CT::364253002</key>
-                <value>Alçada uterina</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>364253002</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0126]">
         <items>
             <item>
-                <key>SNOMED_CT::266918002</key>
-                <value>Tabac</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>266918002</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0127]">
         <items>
             <item>
-                <key>SNOMED_CT::394871007</key>
-                <value>Deixar de fumar</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>394871007</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0128]">
         <items>
             <item>
-                <key>SNOMED_CT::</key>
-                <value>Número de cigarretes</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>230057008</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0094]">
         <items>
             <item>
-                <key>SNOMED_CT::404684003</key>
-                <value>Simptomatologia</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>404684003</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0098]">
         <items>
             <item>
-                <key>SNOMED_CT::404684003</key>
-                <value>Simptomatologia</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>404684003</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0102]">
         <items>
             <item>
-                <key>SNOMED_CT::404684003</key>
-                <value>Simptomatologia</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>404684003</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0109]">
         <items>
             <item>
-                <key>SNOMED_CT::404684003</key>
-                <value>Simptomatologia</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>404684003</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0123]">
         <items>
             <item>
-                <key>SNOMED_CT::404684003</key>
-                <value>Simptomatologia</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>404684003</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0007]">
         <items>
             <item>
-                <key>SNOMED_CT::289203002</key>
-                <value>Risc embaràs</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>289203002</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0076]">
         <items>
             <item>
-                <key>SNOMED_CT::398254007</key>
-                <value>Fracció de risc de preeclampsia</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>398254007</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0077]">
         <items>
             <item>
-                <key>SNOMED_CT::162763007</key>
-                <value>Pes</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>162763007</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0078]">
         <items>
             <item>
-                <key>SNOMED_CT::8943002</key>
-                <value>Augment de pes</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>8943002</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0079]">
         <items>
             <item>
-                <key>SNOMED_CT::72313002</key>
-                <value>TAS</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>72313002</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0080]">
         <items>
             <item>
-                <key>SNOMED_CT::271650006</key>
-                <value>TAD</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>271650006</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0129]">
         <items>
             <item>
-                <key>SNOMED_CT::386053000</key>
-                <value>Valoració professional</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>386053000</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0130]">
         <items>
             <item>
-                <key>SNOMED_CT::460615006</key>
-                <value>Observacions educació sanitària</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>460615006</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0002]">
         <items>
             <item>
-                <key>SNOMED_CT::289203002</key>
-                <value>Classificació risc embaràs</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>289203002</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0071]">
         <items>
             <item>
-                <key>SNOMED_CT::398254007</key>
-                <value>Risc preeclàmpsia precoç</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>398254007</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0001]">
         <items>
             <item>
-                <key>SNOMED_CT::1156738004</key>
-                <value>Setmana de gestació</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>1156738004</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.mothers_pregnancy_follow_up_general_data.v0]/items[at0151]">
+        <items>
+            <item>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>114431000135102</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.assist_test.v0]">
         <items>
             <item>
-                <key>SNOMED_CT::345191000135109</key>
-                <value>Test ASSIST</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>345191000135109</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.activitats_educatius_seguiment_mare.v0]/items[at0018]">
         <items>
             <item>
-                <key>SNOMED_CT::405613005</key>
-                <value>Elaboració del pla de part i naixement</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>405613005</value>
             </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.activitats_educatius_seguiment_mare.v0]/items[at0020]">
         <items>
             <item>
-                <key>SNOMED_CT::1260078007</key>
-                <value>Desig d'alletament natural</value>
+                <key>MAP_SUGGESTION::SNOMED_CT</key>
+                <value>1260078007</value>
             </item>
         </items>
     </annotations>
@@ -1147,7 +1159,7 @@
         <digest id="MD5-CAM-1.0.1">41A4313C92D9588F78E99230CBA5D2E1</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">8B41A545D448137713B8815907732588</digest>
+        <digest id="MD5-CAM-1.0.1">0298AE139970942938E630B28EBF217E</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_professional.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">7E183962DEDD78345CAC6C71C1441777</digest>
