@@ -1,0 +1,156 @@
+﻿archetype (adl_version=1.4; uid=504a5cbe-6f82-4baf-8c9e-5144a8c26759)
+	openEHR-EHR-CLUSTER.episode_details.v0
+
+concept
+	[at0000]	-- Episode details
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Clinical Modelling Group">
+		["date"] = <"2026-01-28">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record simple details about an episode to an inpatient facility.">
+			use = <"Use to record simple details about an episode to an inpatient facility.">
+			misuse = <"">
+			copyright = <"© Catalan Health Service, Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Clinical Modelling Group", ...>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"FFA349B1F749581D52B6F6AC3BA9CB1E">
+		["build_uid"] = <"ee7d03f4-5820-4f6f-9007-7c40c5336aa8">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Episode details
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Admission place
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Source place
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Destination place
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Reason for admission
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Admission category
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Admission date
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Separation date
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Separation outcome
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {    -- Structured admission place
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {    -- Additional details
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Episode details">
+					description = <"Details about an episode to an inpatient facility.">
+				>
+				["at0001"] = <
+					text = <"Admission place">
+					description = <"The physical location where the patient has been admitted.">
+					comment = <"This data element has multiple occurrences to support more than one level of location to be recorded. For example, both the hospital and the ward. Should be coded with a terminology, where possible.
+">
+				>
+				["at0002"] = <
+					text = <"Source place">
+					description = <"The type of residence where the individual resided prior to admission.
+">
+					comment = <"Comment: For example: hospital, community, or nursing home. 'Source place' should be coded with a terminology, where possible.
+">
+				>
+				["at0003"] = <
+					text = <"Destination place">
+					description = <"The type of residence where the individual resided after the episode of care.
+">
+					comment = <"Comment: For example: home; hospital; nursing home; or rehabilitation hospital. Should be coded with a terminology, where possible.
+
+">
+				>
+				["at0004"] = <
+					text = <"Reason for admission">
+					description = <"The reason for admission.">
+					comment = <"For example: admission diagnosis. Should be coded with a terminology, where possible.
+">
+				>
+				["at0005"] = <
+					text = <"Admission category">
+					description = <"The type of admission.
+">
+					comment = <"Comment: For example: day surgery; elective surgery or em. Should be coded with a terminology, where possible.
+">
+				>
+				["at0006"] = <
+					text = <"Admission date">
+					description = <"The date of admission to the inpatient facility.">
+				>
+				["at0007"] = <
+					text = <"Separation date">
+					description = <"The date of when the individual left to the inpatient facility.">
+				>
+				["at0008"] = <
+					text = <"Separation outcome">
+					description = <"The state of the individual as they left the facility.">
+					comment = <"For example: alive and well; dead. Should be coded with a terminology, where possible.
+">
+				>
+				["at0009"] = <
+					text = <"Structured admission place">
+					description = <"Structured details about the place of admission.">
+				>
+				["at0010"] = <
+					text = <"Additional details">
+					description = <"Additional details not recorded in other fields.">
+				>
+			>
+		>
+	>

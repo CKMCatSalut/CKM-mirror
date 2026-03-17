@@ -1,0 +1,411 @@
+﻿archetype (adl_version=1.4; uid=716b0451-45c9-4252-b802-fc34db46e4f2)
+	openEHR-EHR-OBSERVATION.diagnostic_test_result.v0
+
+concept
+	[at0000]	-- Diagnostic test result
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2025-11-10">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"893101A194F673552DB1C6DABB2F5249">
+		["build_uid"] = <"0a4f8982-9735-45ec-9636-199c2d37f39d">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Diagnostic test result
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Test name
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Target body site
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {    -- Structured target body site
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Test date
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Overall result status
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0009,    -- Registered
+													at0010,    -- Partial
+													at0011,    -- Preliminary
+													at0012,    -- Final
+													at0013,    -- Amended
+													at0014,    -- Corrected
+													at0015,    -- Appended
+													at0016,    -- Cancelled
+													at0017]    -- Unknown
+												}
+											}
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- Status timestamp
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Clinical indication
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Clinical summary
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Result findings
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0022] occurrences matches {0..*} matches {    -- Structured result findings
+										include
+											archetype_id/value matches {/.*/}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Comparison findings
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0024] occurrences matches {0..1} matches {    -- Overall impression
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0027] occurrences matches {0..1} matches {    -- Result differential diagnosis
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- Result diagnosis
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0026] occurrences matches {0..1} matches {    -- Recommendation
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0028] occurrences matches {0..*} matches {    -- Report representation
+										include
+											archetype_id/value matches {/.*/}
+									}
+									ELEMENT[at0029] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0030] occurrences matches {0..*} matches {    -- Additional details
+										include
+											archetype_id/value matches {/.*/}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[at0033] matches {    -- Item tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- Confounding factors
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0035] occurrences matches {0..1} matches {    -- Position
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0031] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0036] occurrences matches {0..1} matches {    -- Report identifier
+						value matches {
+							DV_IDENTIFIER matches {*}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0037] occurrences matches {0..1} matches {    -- Method
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0038] occurrences matches {0..1} matches {    -- Method description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0043] occurrences matches {0..*} matches {    -- Device
+						include
+							archetype_id/value matches {/.*/}
+					}
+					CLUSTER[at0044] occurrences matches {0..1} matches {    -- Examination request details
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0045] occurrences matches {0..1} matches {    -- Receiver order identifier
+								value matches {
+									DV_IDENTIFIER matches {*}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0046] occurrences matches {0..1} matches {    -- Requester order identifier
+								value matches {
+									DV_IDENTIFIER matches {*}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0047] occurrences matches {0..1} matches {    -- Diagnostic test requested name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0048] occurrences matches {0..*} matches {    -- Requester
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Diagnostic test result">
+					description = <"Diagnostic test result">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Test name">
+					description = <"The name of the diagnostic test performed.">
+					comment = <"For example: 'Spirometry test'; 'Electrocardiogram' or 'Audiometry'. Coding with a terminology is strongly recommended.">
+				>
+				["at0005"] = <
+					text = <"Target body site">
+					description = <"Description of the simple body site or region targetted for test.">
+					comment = <"Coding of 'Target body site' with a terminology, such as SNOMED CT, is desirable.">
+				>
+				["at0006"] = <
+					text = <"Structured target body site">
+					description = <"Structured detail about the body site or region targetted for test.">
+				>
+				["at0007"] = <
+					text = <"Test date">
+					description = <"Date/time when the test started.">
+				>
+				["at0008"] = <
+					text = <"Overall result status">
+					description = <"The status of the diagnostic test result as a whole.">
+					comment = <"The values have been aligned with the FHIR Diagnostic report status, with the exception of 'Entered in error' which is relevant only to a messaging-oriented paradigm. Other local codes/terms can be used via the Text 'choice'. In most use cases, only one status is applicable at any time, however this data element allows multiple occurrences for the use cases where there are a variety of types of status that need to be specified, usually within a template. Equivalent to DiagnosticReport.status in FHIR. ">
+				>
+				["at0009"] = <
+					text = <"Registered">
+					description = <"The existence of the study is registered, but no result is yet available.">
+				>
+				["at0010"] = <
+					text = <"Partial">
+					description = <"This is a partial (e.g. initial, interim or preliminary) result but data may be incomplete or unverified.">
+				>
+				["at0011"] = <
+					text = <"Preliminary">
+					description = <"Verified early results are available, but not all results are final. This is a sub-category of 'Partial'.">
+				>
+				["at0012"] = <
+					text = <"Final">
+					description = <"The result is complete and verified by an authorised person.">
+				>
+				["at0013"] = <
+					text = <"Amended">
+					description = <"Subsequent to being final, the result has been modified.">
+				>
+				["at0014"] = <
+					text = <"Corrected">
+					description = <"Subsequent to being final, the result has been modified to correct an error. This is a sub-category of 'Amended'.">
+				>
+				["at0015"] = <
+					text = <"Appended">
+					description = <"Subsequent to being final, the result has been modified by adding new content. The existing content is unchanged. This is a sub-category of 'Amended'.">
+				>
+				["at0016"] = <
+					text = <"Cancelled">
+					description = <"The result is unavailable because the test was not started or not completed (also sometimes called 'aborted').">
+				>
+				["at0017"] = <
+					text = <"Unknown">
+					description = <"The status of the result is not known.">
+				>
+				["at0018"] = <
+					text = <"Status timestamp">
+					description = <"The date and/or time that ‘Overall result status’ was assigned.">
+				>
+				["at0019"] = <
+					text = <"Clinical indication">
+					description = <"Narrative description about the reason the test was originally requested.">
+					comment = <"Also known as 'Clinical question' or 'Clinical query'.">
+				>
+				["at0020"] = <
+					text = <"Clinical summary">
+					description = <"Narrative description of relevant clinical history that provides context for the test and interpretation of results.">
+				>
+				["at0021"] = <
+					text = <"Result findings">
+					description = <"Narrative description or overview of all clinical findings.">
+				>
+				["at0022"] = <
+					text = <"Structured result findings">
+					description = <"Structured details about the test findings targeting a specific structure or region.">
+				>
+				["at0023"] = <
+					text = <"Comparison findings">
+					description = <"Narrative description about the comparison of this test with previous similar tests.">
+				>
+				["at0024"] = <
+					text = <"Overall impression">
+					description = <"Narrative concise, clinically relevant interpretation of all test findings, and include a comparison with previous tests where appropriate.">
+				>
+				["at0025"] = <
+					text = <"Result diagnosis">
+					description = <"Single word, phrase or brief description representing the likely condition or diagnosis.">
+					comment = <"This data element has multiple occurrences to allow for more than one diagnosis. Coding with a terminology such as SNOMED CT is preferred, where possible">
+				>
+				["at0026"] = <
+					text = <"Recommendation">
+					description = <"Suggestion for further tests, investigations and/or referral, and associated rationale.">
+					comment = <"This data element has 0..* occurrences to allow for more than one recommendation. Formal orders for additional imaging examination, investigation should be recorded using an INSTRUCTION archetype, such as INSTRUCTION.service_request.">
+				>
+				["at0027"] = <
+					text = <"Result differential diagnosis">
+					description = <"Single word, phrase or brief description representing a possible condition or diagnosis.">
+					comment = <"This data element has multiple occurrences to allow for more than one differential diagnosis. Coding with a terminology such as SNOMED CT is preferred, where possible.">
+				>
+				["at0028"] = <
+					text = <"Report representation">
+					description = <"Digital representation of the test result.">
+				>
+				["at0029"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the test not captured in other fields.">
+				>
+				["at0030"] = <
+					text = <"Additional details">
+					description = <"Additional details about the test not captured in other fields.">
+				>
+				["at0031"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0033"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0034"] = <
+					text = <"Confounding factors">
+					description = <"Narrative description of factors, not recorded elsewhere, that may influence the test findings and/or result.">
+				>
+				["at0035"] = <
+					text = <"Position">
+					description = <"Position of the individual during the imaging test.">
+					comment = <"For example: standing or lying.">
+				>
+				["at0036"] = <
+					text = <"Report identifier">
+					description = <"Unique identifier for the test, if assigned.">
+				>
+				["at0037"] = <
+					text = <"Method">
+					description = <"Name of the specific method or procedural modality used to perform the diagnostic test.">
+				>
+				["at0038"] = <
+					text = <"Method description">
+					description = <"Additional narrative of the specific method or procedural modality used to perform the diagnostic test.">
+				>
+				["at0043"] = <
+					text = <"Device">
+					description = <"Details about imaging device/s used to perform the test.">
+				>
+				["at0044"] = <
+					text = <"Examination request details">
+					description = <"Details about a single test requested.">
+				>
+				["at0045"] = <
+					text = <"Receiver order identifier">
+					description = <"Unique identifier for the test order assigned by the ordering service.">
+				>
+				["at0046"] = <
+					text = <"Requester order identifier">
+					description = <"Unique identifier for the test order assigned by the requester.">
+				>
+				["at0047"] = <
+					text = <"Diagnostic test requested name">
+					description = <"Identification of diagnostic test requested.">
+					comment = <"This can be useful in situations where the test requested differs from the test performed.">
+				>
+				["at0048"] = <
+					text = <"Requester">
+					description = <"Details about the clinician and/or organisation requesting the test.">
+				>
+			>
+		>
+	>
