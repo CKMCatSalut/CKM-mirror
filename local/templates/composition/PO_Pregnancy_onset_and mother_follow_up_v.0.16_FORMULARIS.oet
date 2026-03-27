@@ -45,7 +45,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>0.16.2</value>
+                <value>0.16.3</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -517,7 +517,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.assist_test.v0]">
+    <annotations path="[openEHR-EHR-COMPOSITION.probs_base_composition.v0]/content[openEHR-EHR-OBSERVATION.probs_base_observation.v0]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.assist_test.v0]/items[at0051]">
         <items>
             <item>
                 <key>MAP_SUGGESTION::SNOMED_CT</key>
@@ -1189,7 +1189,7 @@
         <digest id="MD5-CAM-1.0.1">BD08CD4D602BC1CD11E9D0F051F4265B</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.assist_test.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">D0EDE531EB5927AE10A24B3A16F4F542</digest>
+        <digest id="MD5-CAM-1.0.1">554D55623F0CB538C1FBA24056742470</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.pregnancy_follow_up_complementary_tests.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">15D88860B4E52D33872F8DA6D9517A1A</digest>
