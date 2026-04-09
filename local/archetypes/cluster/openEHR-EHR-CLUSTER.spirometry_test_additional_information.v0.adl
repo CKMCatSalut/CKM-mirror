@@ -5,20 +5,49 @@ concept
 	[at0000]	-- Spirometry test additional information
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
 description
 	original_author = <
-		["name"] = <"Clara Calleja Vega">
-		["organisation"] = <"CatSalut">
-		["email"] = <"ccalleja@catsalut.cat">
+		["name"] = <"Modelatge del coneixement clínic - Catsalut">
+		["organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["email"] = <"ckm.salut@gencat.cat">
 		["date"] = <"2023-09-22">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"">
-			use = <"">
-			misuse = <"">
+			purpose = <"To record additional spirometry parameters and maneuver quality indicators.">
+			use = <"Used to capture detailed spirometry metrics, maneuver execution data and derived parameters.">
+			keywords = <"Spirometry, pulmonary function test, maneuver quality.", ...>
+			misuse = <"This archetype should not be used to other purpose than capture spirometry metrics, maneuver execution data and derived parameters.">
 			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Registrar paràmetres addicionals d’espirometria i indicadors de qualitat de les maniobres.">
+			use = <"Peristir de manera detallada les mètriques d’espirometria, la informació sobre l’execució de les maniobres i els paràmetres derivats.">
+			keywords = <"Espirometria, prova de funció pulmonar, funció respiratòria, qualitat de la maniobra, diagnòstic respiratori.", ...>
+			misuse = <"Aquest arquetip no s’ha d’utilitzar per a cap altre propòsit que no sigui la recollida de mètriques d’espirometria, dades d’execució de les maniobres i paràmetres derivats.">
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Registrar parámetros adicionales de espirometría e indicadores de calidad de las maniobras.">
+			use = <"Persistir de manera detallada las métricas de espirometría, la información sobre la ejecución de las maniobras y los parámetros derivados.">
+			keywords = <"Espirometría, prueba de función pulmonar, función respiratoria, calidad de la maniobra, diagnóstico respiratorio.", ...>
+			misuse = <"Este arquetipo no debe utilizarse para ningún otro propósito que no sea la recogida de métricas de espirometría, datos de ejecución de las maniobras y parámetros derivados.">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
@@ -26,11 +55,12 @@ description
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
 		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["references"] = <"">
 		["original_namespace"] = <"org.catsalut">
 		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
 		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"CAFD7D72DAA3CF30764D9399E91E02AE">
-		["build_uid"] = <"9df26e37-2249-45fc-8fc8-56042b5087f6">
+		["MD5-CAM-1.0.1"] = <"32D91E1191AFFDF50E67FB634E7F2EDB">
+		["build_uid"] = <"a9e16750-b079-49d3-8491-09f3b004696b">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -64,7 +94,9 @@ definition
 							at0006,    -- T0
 							at0007,    -- BEV
 							at0008,    -- VTCL
-							at0009]    -- FVCL
+							at0009,    -- FVCL
+							at0029,    -- FVC
+							at0030]    -- FEV1
 						}
 					}
 				}
@@ -102,12 +134,19 @@ definition
 					}
 					ELEMENT[at0026] occurrences matches {0..1} matches {    -- Total number of basal maneuvers
 						value matches {
+							DV_COUNT matches {*}
 							DV_QUANTITY matches {*}
 						}
 					}
 					ELEMENT[at0027] occurrences matches {0..1} matches {    -- Total number of postbronchodilator maneuvers
 						value matches {
 							DV_QUANTITY matches {*}
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0028] occurrences matches {0..1} matches {    -- Total number of maneuvers
+						value matches {
+							DV_COUNT matches {*}
 						}
 					}
 				}
@@ -122,15 +161,15 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Spirometry test additional information">
-					description = <"Spirometry test additional information">
+					description = <"Additional parameters associated with spirometry testing, including metrics obtained as well as information describing maneuver execution and quality. ">
 				>
 				["at0002"] = <
 					text = <"Measure name">
-					description = <"">
+					description = <"Logical grouping of individual derived spirometric parameters. Each instance represents a specific measurement extracted from the spirometry maneuver (e.g., PEFT, BEV, T0), including its quantitative value, predicted reference, and normalized ratio.">
 				>
 				["at0003"] = <
 					text = <"Result">
-					description = <"">
+					description = <"Quantitative result of the specific spirometric parameter, expressed in appropriate physical units (e.g., liters, seconds, liters/second).">
 				>
 				["at0004"] = <
 					text = <"PEFT">
@@ -158,11 +197,11 @@ ontology
 				>
 				["at0010"] = <
 					text = <"Maneuver information">
-					description = <"">
+					description = <"This cluster supports detailed evaluation of test performance and enables traceability of individual maneuvers.">
 				>
 				["at0011"] = <
 					text = <"Maneuver number">
-					description = <"">
+					description = <"Sequential identifier assigned to each spirometry maneuver within a testing session.">
 				>
 				["at0012"] = <
 					text = <"1">
@@ -198,27 +237,272 @@ ontology
 				>
 				["at0020"] = <
 					text = <"Quality of maneuver">
-					description = <"">
+					description = <"Qualitative assessment of maneuver acceptability and technical quality based on standardized criteria (e.g., ATS/ERS grading systems). ">
 				>
 				["at0021"] = <
 					text = <"Sampling frequency">
-					description = <"">
+					description = <"Frequency at which spirometry signals (flow and volume) are digitally acquired, typically expressed in Hertz (Hz). ">
 				>
 				["at0022"] = <
 					text = <"Predicted result">
-					description = <"">
+					description = <"Reference (predicted) value derived from validated equations (e.g., GLI), adjusted for age, sex, height, and ethnicity where applicable. This value provides the expected normal measurement against which the observed result is compared for clinical interpretation.">
 				>
 				["at0024"] = <
 					text = <"Measured/predicted ratio">
-					description = <"">
+					description = <"Normalized ratio expressing the relationship between the measured value and its predicted reference (typically expressed as a percentage).">
 				>
 				["at0026"] = <
 					text = <"Total number of basal maneuvers">
-					description = <"">
+					description = <"Total number of spirometry maneuvers performed under baseline (pre-bronchodilator) conditions during the testing session. This value is used to assess adherence to minimum repeatability requirements.">
 				>
 				["at0027"] = <
 					text = <"Total number of postbronchodilator maneuvers">
+					description = <"Total number of spirometry maneuvers performed after administration of a bronchodilator. These measurements are used to assess bronchodilator responsiveness and reversibility of airflow limitation.">
+				>
+				["at0028"] = <
+					text = <"Total number of maneuvers">
+					description = <"Total number of spirometry maneuvers performed during the entire test session, including baseline and post-bronchodilator attempts.">
+				>
+				["at0029"] = <
+					text = <"FVC">
+					description = <"Forced vital capacity. The total volume of air that can be forcibly exhaled after full inspiration.">
+				>
+				["at0030"] = <
+					text = <"FEV1">
+					description = <"Forced expiratory volume in one second. The volume of air exhaled during the first second of the FVC maneuver.">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Informació addicional de la prova d’espirometria">
+					description = <"Paràmetres addicionals associats a la prova d’espirometria, incloent els resultats obtinguts així com la informació rellevant sobre l’execució i la qualitat de les maniobres.">
+				>
+				["at0002"] = <
+					text = <"Nom de la mesura">
+					description = <"Agrupació paràmetres  relacionats amb la espirometria. Cada instància representa una mesura específica extreta de la maniobra d’espirometria (p. ex., PEFT, BEV, T0), incloent el seu valor quantitatiu, el valor de referència predit i el seu valor normalitzat.">
+				>
+				["at0003"] = <
+					text = <"Resultat">
+					description = <"Resultat quantitatiu del paràmetre espiromètric específic, expressat en les unitats físiques corresponents (p. ex., litres, segons, litres/segon).">
+				>
+				["at0004"] = <
+					text = <"*PEFT (en)">
+					description = <"*Time to peak expiratory flow. (en)">
+				>
+				["at0005"] = <
+					text = <"*EOTV (en)">
+					description = <"*End of test volume. (en)">
+				>
+				["at0006"] = <
+					text = <"*T0 (en)">
+					description = <"*Tzero or back-extrapolated time. (en)">
+				>
+				["at0007"] = <
+					text = <"*BEV (en)">
+					description = <"*Back-extrapolated volume. (en)">
+				>
+				["at0008"] = <
+					text = <"*VTCL (en)">
+					description = <"*Volume-time curve length. (en)">
+				>
+				["at0009"] = <
+					text = <"*FVCL (en)">
+					description = <"*Flow-volume curve length. (en)">
+				>
+				["at0010"] = <
+					text = <"Informació de maniobra">
+					description = <"Aquest clúster permet una avaluació detallada del rendiment de la prova i facilita la traçabilitat de les maniobres individuals.">
+				>
+				["at0011"] = <
+					text = <"Número de maniobra">
+					description = <"Identificador seqüencial assignat a cada maniobra dins d’una sessió d’espirometria. Permet diferenciar, ordenar i traçar les maniobres individuals.
+">
+				>
+				["at0012"] = <
+					text = <"*1 (en)">
 					description = <"">
+				>
+				["at0013"] = <
+					text = <"*2 (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*3 (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*4 (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*5 (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*6 (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*7 (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*8 (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Qualitat de la maniobra">
+					description = <"Avaluació qualitativa de la maniobra basada en criteris estandarditzats (p.ex: ATS/ERS). ">
+				>
+				["at0021"] = <
+					text = <"Freqüència de mostreig">
+					description = <"Freqüència a la qual s’adquireixen digitalment les senyals de flux i volum, expressada en Hertz (Hz). ">
+				>
+				["at0022"] = <
+					text = <"Valor predit">
+					description = <"Valor de referència (predit) obtingut a partir d’equacions poblacionals validades (per exemple, GLI), ajustades per edat, sexe, alçada i ètnia quan correspon. Aquest valor representa la normalitat esperada amb la qual es compara el resultat observat per a la seva interpretació clínica.">
+				>
+				["at0024"] = <
+					text = <"Relació valor mesurat/predit">
+					description = <"Ratio que expressa la comparació entre el valor mesurat i el seu valor de referència predit (expressat com a percentatge).">
+				>
+				["at0026"] = <
+					text = <"Número de maniobres basals">
+					description = <"Nombre total de maniobres realitzades en condicions basals (pre-broncodilatador). S’utilitza per avaluar el compliment dels requisits mínims de repetibilitat.">
+				>
+				["at0027"] = <
+					text = <"Número de maniobres post-broncodilatador">
+					description = <"Nombre total de maniobres realitzades després de l’administració d’un broncodilatador. S’utilitzen per avaluar la resposta broncodilatadora i la reversibilitat.">
+				>
+				["at0028"] = <
+					text = <"Número total de maniobres">
+					description = <"Nombre total de maniobres realitzades durant tota la sessió, incloent basals i post-broncodilatador.">
+				>
+				["at0029"] = <
+					text = <"*FVC (en)">
+					description = <"*Forced vital capacity. The total volume of air that can be forcibly exhaled after full inspiration. (en)">
+				>
+				["at0030"] = <
+					text = <"*FEV1 (en)">
+					description = <"*Forced expiratory volume in one second. The volume of air exhaled during the first second of the FVC maneuver. (en)">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Información adicional de la prueba de espirometría">
+					description = <"Parámetros adicionales asociados a la prueba de espirometría, incluyendo los resultados obtenidos así como la información relevante sobre la ejecución y la calidad de las maniobras.">
+				>
+				["at0002"] = <
+					text = <"Nombre de medida">
+					description = <"Agrupación de parámetros relacionados con la espirometría. Cada instancia representa una medida específica extraída de la maniobra de espirometría (p. ej., PEFT, BEV, T0), incluyendo su valor cuantitativo, el valor de referencia predicho y su valor normalizado.">
+				>
+				["at0003"] = <
+					text = <"Resultado">
+					description = <"Resultado cuantitativo del parámetro espirométrico específico, expresado en las unidades físicas correspondientes (p. ej., litros, segundos, litros/segundo).">
+				>
+				["at0004"] = <
+					text = <"*PEFT (en)">
+					description = <"*Time to peak expiratory flow. (en)">
+				>
+				["at0005"] = <
+					text = <"*EOTV (en)">
+					description = <"*End of test volume. (en)">
+				>
+				["at0006"] = <
+					text = <"*T0 (en)">
+					description = <"*Tzero or back-extrapolated time. (en)">
+				>
+				["at0007"] = <
+					text = <"*BEV (en)">
+					description = <"*Back-extrapolated volume. (en)">
+				>
+				["at0008"] = <
+					text = <"*VTCL (en)">
+					description = <"*Volume-time curve length. (en)">
+				>
+				["at0009"] = <
+					text = <"*FVCL (en)">
+					description = <"*Flow-volume curve length. (en)">
+				>
+				["at0010"] = <
+					text = <"Información de maniobra">
+					description = <"Este clúster permite una evaluación detallada de la prueba y facilita la trazabilidad de las maniobras individuales.">
+				>
+				["at0011"] = <
+					text = <"Número de maniobra">
+					description = <"Identificador secuencial asignado a cada maniobra dentro de una sesión de espirometría. Permite diferenciar, ordenar y trazar las maniobras individuales.">
+				>
+				["at0012"] = <
+					text = <"*1 (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*2 (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*3 (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*4 (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*5 (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*6 (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*7 (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*8 (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Calidad de la maniobra">
+					description = <"Evaluación cualitativa de la aceptabilidad y calidad técnica de la maniobra basada en criterios estandarizados (por ejemplo, ATS/ERS). ">
+				>
+				["at0021"] = <
+					text = <"Frecuencia de muestreo">
+					description = <"Frecuencia a la que se adquieren digitalmente las señales de flujo y volumen, expresada en Hertz (Hz). ">
+				>
+				["at0022"] = <
+					text = <"Valor predicho">
+					description = <"Valor de referencia (predicho) obtenido a partir de ecuaciones poblacionales validadas (por ejemplo, GLI), ajustadas por edad, sexo, talla y etnia cuando corresponda. Este valor representa la normalidad esperada frente a la cual se compara el resultado observado para su interpretación clínica.">
+				>
+				["at0024"] = <
+					text = <"Relación valor medido/predicho">
+					description = <"Ratio que expresa la comparación entre el valor medido y su valor de referencia predicho (expresado como porcentaje).">
+				>
+				["at0026"] = <
+					text = <"Número de maniobras basales">
+					description = <"Número total de maniobras realizadas en condiciones basales (pre-broncodilatador) durante la sesión. Se utiliza para evaluar el cumplimiento de los requisitos mínimos de repetición.">
+				>
+				["at0027"] = <
+					text = <"Número de maniobras post-broncodilatador">
+					description = <"Número total de maniobras realizadas tras la administración de un broncodilatador. Se utilizan para evaluar la respuesta broncodilatadora y la reversibilidad de la limitación al flujo aéreo.">
+				>
+				["at0028"] = <
+					text = <"Número total de maniobras">
+					description = <"Número total de maniobras realizadas durante toda la sesión, incluyendo las basales y las posteriores al broncodilatador.">
+				>
+				["at0029"] = <
+					text = <"*FVC (en)">
+					description = <"*Forced vital capacity. The total volume of air that can be forcibly exhaled after full inspiration. (en)">
+				>
+				["at0030"] = <
+					text = <"*FEV1 (en)">
+					description = <"*Forced expiratory volume in one second. The volume of air exhaled during the first second of the FVC maneuver. (en)">
 				>
 			>
 		>
