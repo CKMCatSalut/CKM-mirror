@@ -1,0 +1,106 @@
+﻿archetype (adl_version=1.4; uid=056bbac6-0ff1-4c72-98c5-a9a009f17c8e)
+	openEHR-EHR-CLUSTER.record_validation.v0
+
+concept
+	[at0000]	-- Record validation
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Tara Bonet, Ana Pascual">
+		["organisation"] = <"Modelatge del Coneixement Clínic Catsalut">
+		["email"] = <"ckm.salut@gencat.cat">
+		["date"] = <"2026-04-30">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"This cluster represents the validation of a clinical record, indicating whether the recorded information is correct or incorrect, together with the justification for that assessment and any additional contextual details. It is particularly intended to identify records that were entered in error and do not correspond to an actual clinical event (e.g. a medication or immunization recorded but not administered).">
+			use = <"This cluster is used to document the professional assessment of the validity of a clinical record.
+
+Typical use cases include:
+- A healthcare professional records an immunization, but it is ultimately not administered, and the record must be marked as incorrect and removed.
+- A previously recorded dose is later identified as not having been administered and is therefore considered an erroneous entry.
+- Clinical data quality processes, audits, or record validation workflows where incorrect entries must be identified and justified.">
+			keywords = <"validation, data quality, erroneous record, incorrect entry, record correction, audit, data validation", ...>
+			misuse = <"This cluster should not be used for:
+- Representing whether a clinical act (e.g. immunization, medication administration) has been performed or not. This must be recorded in the appropriate clinical archetype (e.g. ACTION).
+- Replacing workflow or status attributes such as “completed”, “cancelled”, or “not done”.
+- Capturing patient clinical conditions or outcomes.
+- Performing automatic system validations without professional assessment.
+
+This cluster is strictly intended to evaluate the correctness of a record, not the execution status of a clinical activity.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Clara Calleja, David Hernández, Martin Koch, David Alonso, Hugo Briceño, Lluis Valle, Laura Moral", ...>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"C9F1DCBC38C8231D98AA10D7EC498961">
+		["build_uid"] = <"a84ad783-edd1-4ebb-85f2-b73ba35921d9">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Record validation
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Validation outcome
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002,    -- Correct
+							at0003]    -- Incorrect
+						}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Reason
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- Additional details
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Record validation">
+					description = <"Record validation">
+				>
+				["at0001"] = <
+					text = <"Validation outcome">
+					description = <"The outcome of the validation process, indicating whether the clinical record is considered correct or incorrect.">
+				>
+				["at0002"] = <
+					text = <"Correct">
+					description = <"The record accurately reflects a clinical event or action that was actually performed.">
+				>
+				["at0003"] = <
+					text = <"Incorrect">
+					description = <"The record was entered in error and does not correspond to a clinical event or action that actually occurred.">
+				>
+				["at0004"] = <
+					text = <"Reason">
+					description = <"The main justification for the validation result, explaining why the record is considered correct or incorrect.">
+				>
+				["at0005"] = <
+					text = <"Additional details">
+					description = <"Supplementary information providing further context or clarification about the validation assessment.">
+				>
+			>
+		>
+	>
