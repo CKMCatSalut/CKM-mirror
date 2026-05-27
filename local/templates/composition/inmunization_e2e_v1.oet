@@ -7,17 +7,42 @@
                 <key>date</key>
                 <value>2023-01-13</value>
             </item>
+            <item>
+                <key>name</key>
+                <value>Tara Bonet, Ana Pascual</value>
+            </item>
+            <item>
+                <key>organisation</key>
+                <value>Modelatge del Coneixement Clínic Catsalut</value>
+            </item>
+            <item>
+                <key>email</key>
+                <value>ckm.salut@gencat.cat</value>
+            </item>
         </original_author>
         <lifecycle_state>unmanaged</lifecycle_state>
-        <details/>
+        <details>
+            <purpose>To record structured and longitudinal information about a patient’s vaccination and immunization status, including administered vaccines, overall status, and evidence of immunity.</purpose>
+            <keywords>
+                <item>vaccination, immunization, vaccine record, vaccine status, immunization status, contraindication, immunity</item>
+            </keywords>
+            <use>Use to record information about a patient’s vaccination and immunization history, including vaccines that have been administered and the current immunization status. This archetype supports the documentation of relevant clinical context such as contraindications.
+
+Recording information using this archetype indicates that the vaccination-related data reflects known or documented status, rather than planned or hypothetical interventions.</use>
+            <misuse>Not to be used to record diagnoses of infectious diseases or past illnesses — use appropriate EVALUATION or CONDITION archetypes for this purpose.
+Not to be used to document non-vaccine-related medications or treatments — use MEDICATION or PROCEDURE archetypes as appropriate.
+Not to be used to record general allergy information unrelated to vaccines — use a dedicated allergy or adverse reaction archetype.
+Not to be used to plan or schedule future vaccinations — use INSTRUCTION or care planning archetypes for this purpose.</misuse>
+            <copyright>© Departament de Salut de la Generalitat de Catalunya</copyright>
+        </details>
         <other_details>
             <item>
                 <key>licence</key>
-                <value/>
+                <value>This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.</value>
             </item>
             <item>
                 <key>custodian_organisation</key>
-                <value/>
+                <value>Departament de Salut de la Generalitat de Catalunya</value>
             </item>
             <item>
                 <key>original_namespace</key>
@@ -33,7 +58,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>1.0.0</value>
+                <value>28.0.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -41,7 +66,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>ac5b0a6b3eb664255c5d719d68deac37</value>
+                <value>9459ff88019b26306385255d327a46d7</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -54,7 +79,7 @@
         </other_details>
     </description>
     <definition archetype_id="openEHR-EHR-COMPOSITION.vaccination_list.v0" concept_name="Vaccination list" name="Inmunizaciones E2E" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
-        <Content archetype_id="openEHR-EHR-SECTION.immunisation_list.v0" concept_name="Vaccination list" max="1" name="Immunization list" path="/content" xsi:type="tem:SECTION">
+        <Content archetype_id="openEHR-EHR-SECTION.immunisation_list.v0" concept_name="Vaccination list" max="1" name="Immunisation list" path="/content" xsi:type="tem:SECTION">
             <Item archetype_id="openEHR-EHR-ACTION.medication.v1" concept_name="Medication management" name="Immunization management" path="/items[at0001]" xsi:type="tem:ACTION">
                 <Rule max="0" min="0" path="/ism_transition[at0109]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0145]"/>
@@ -68,11 +93,13 @@
                 <Rule max="0" min="0" path="/ism_transition[at0106]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0010]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0148]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0157]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0004]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0041]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0005]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0018]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0044]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0158]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0008]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0009]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0011]"/>
@@ -94,7 +121,6 @@
                 <Rule max="0" path="/description[at0017]/items[at0132]"/>
                 <Rule max="0" path="/description[at0017]/items[at0133]"/>
                 <Rule max="0" path="/description[at0017]/items[at0043]"/>
-                <Rule max="0" path="/description[at0017]/items[at0154]"/>
                 <Rule max="0" path="/description[at0017]/items[at0155]"/>
                 <Rule path="/description[at0017]/items[at0021]">
                     <constraint xsi:type="tem:multipleConstraint">
@@ -102,13 +128,13 @@
                     </constraint>
                 </Rule>
                 <Rule path="/description[at0017]/items[at0140]/items[at0147]">
-                    <constraint xsi:type="tem:multipleConstraint">
-                        <includedTypes>Coded_text</includedTypes>
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.340" terminologyID="Tipus Via Administració Vacunació"/>
                     </constraint>
                 </Rule>
                 <Rule path="/description[at0017]/items[at0140]/items[at0141]">
-                    <constraint xsi:type="tem:multipleConstraint">
-                        <includedTypes>Coded_text</includedTypes>
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.341" terminologyID="Tipus Localització Vacunació"/>
                     </constraint>
                 </Rule>
                 <Rule max="0" path="/description[at0017]/items[at0140]/items[at0143]">
@@ -119,7 +145,11 @@
                 <Rule max="0" path="/description[at0017]/items[at0033]"/>
                 <Rule max="0" path="/description[at0017]/items[at0149]"/>
                 <Rule max="0" path="/description[at0017]/items[at0025]"/>
-                <Rule max="0" path="/protocol[at0030]/items[at0103]"/>
+                <Rule max="0" path="/protocol[at0030]/items[at0103]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
                 <Items archetype_id="openEHR-EHR-CLUSTER.medication.v2" max="1" path="/description[at0017]/items[at0104]" xsi:type="tem:CLUSTER">
                     <Rule path="/items[at0132]">
                         <constraint xsi:type="tem:multipleConstraint">
@@ -145,50 +175,26 @@
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0133]"/>
-                    <Items archetype_id="openEHR-EHR-CLUSTER.medication.v2" concept_name="Medication details" max="1" name="Constituent details" path="/items[at0138]" xsi:type="tem:CLUSTER">
-                        <Rule path="/items[at0132]">
-                            <constraint xsi:type="tem:textConstraint">
-                                <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.800.120.3" terminologyID="Catàleg d'Antigens del catàleg SIVAIN"/>
-                            </constraint>
-                        </Rule>
-                        <Rule max="0" path="/items[at0071]"/>
-                        <Rule max="0" path="/items[at0142]">
-                            <constraint xsi:type="tem:multipleConstraint">
-                                <includedTypes>Coded_text</includedTypes>
-                                <includedTypes>Text</includedTypes>
-                            </constraint>
-                        </Rule>
-                        <Rule max="0" path="/items[at0152]"/>
-                        <Rule max="0" path="/items[at0115]"/>
-                        <Rule max="0" path="/items[at0151]"/>
-                        <Rule max="0" path="/items[at0150]">
-                            <constraint xsi:type="tem:multipleConstraint">
-                                <includedTypes>Text</includedTypes>
-                                <includedTypes>Identifier</includedTypes>
-                            </constraint>
-                        </Rule>
-                        <Rule max="0" path="/items[at0003]"/>
-                        <Rule max="0" path="/items[at0139]"/>
-                        <Rule max="0" path="/items[at0148]"/>
-                        <Rule max="0" path="/items[at0127]">
-                            <constraint xsi:type="tem:multipleConstraint">
-                                <includedTypes>Coded_text</includedTypes>
-                                <includedTypes>Text</includedTypes>
-                            </constraint>
-                        </Rule>
-                        <Rule max="0" path="/items[at0133]"/>
-                    </Items>
                 </Items>
                 <Items archetype_id="openEHR-EHR-CLUSTER.immunisation_details.v0" max="1" path="/description[at0017]/items[at0053]" xsi:type="tem:CLUSTER"/>
                 <Items archetype_id="openEHR-EHR-CLUSTER.product_origin.v0" max="1" path="/protocol[at0030]/items[at0085]" xsi:type="tem:CLUSTER"/>
-                <Items archetype_id="openEHR-EHR-CLUSTER.location_of_administration.v0" max="1" path="/protocol[at0030]/items[at0085]" xsi:type="tem:CLUSTER"/>
+                <Items archetype_id="openEHR-EHR-CLUSTER.location_of_administration.v0" max="1" path="/protocol[at0030]/items[at0085]" xsi:type="tem:CLUSTER">
+                    <Rule path="/items[at0001]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <includedValues>local_terms::A::Centre administrador</includedValues>
+                            <includedValues>local_terms::C::Administrada en mateixa CCAA (però altre centre)</includedValues>
+                            <includedValues>local_terms::E::Administrada a altra CA de l'estat espanyol</includedValues>
+                            <includedValues>local_terms::P::Administrada en altre país (fora Espanya)</includedValues>
+                        </constraint>
+                    </Rule>
+                </Items>
             </Item>
         </Content>
         <Content archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" name="Contraindications" path="/content" xsi:type="tem:SECTION">
             <Item archetype_id="openEHR-EHR-EVALUATION.contraindication.v1" max="1" path="/items" xsi:type="tem:EVALUATION">
                 <Rule name="Contraindicated vaccine" path="/data[at0001]/items[at0002]">
-                    <constraint xsi:type="tem:multipleConstraint">
-                        <includedTypes>Coded_text</includedTypes>
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.800.120.1" terminologyID="Catàleg de Productes del catàleg SIVAIN"/>
                     </constraint>
                 </Rule>
                 <Rule max="0" path="/data[at0001]/items[at0014]">
@@ -199,8 +205,8 @@
                 </Rule>
                 <Rule max="0" path="/data[at0001]/items[at0007]"/>
                 <Rule name="Contraindication reason" path="/data[at0001]/items[at0021]">
-                    <constraint xsi:type="tem:multipleConstraint">
-                        <includedTypes>Coded_text</includedTypes>
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.345" terminologyID="Tipus motius de No Vacunació"/>
                     </constraint>
                 </Rule>
                 <Rule max="0" path="/data[at0001]/items[at0003]"/>
@@ -209,17 +215,143 @@
                 <Rule max="0" path="/protocol[at0006]/items[at0004]"/>
             </Item>
         </Content>
+        <Content archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" name="Immunisation status" path="/content" xsi:type="tem:SECTION">
+            <Item archetype_id="openEHR-EHR-EVALUATION.immunisation_status.v0" max="1" path="/items" xsi:type="tem:EVALUATION">
+                <Rule path="/data[at0001]/items[at0002]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.800.120.3" terminologyID="Catàleg d'Antigens del catàleg SIVAIN"/>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/items[at0004]"/>
+                <Rule max="0" path="/data[at0001]/items[at0011]"/>
+                <Rule max="0" path="/protocol[at0012]/items[at0014]"/>
+            </Item>
+        </Content>
         <Context>
-            <Items archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" max="1" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER"/>
-            <Items archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" max="1" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER"/>
-            <Items archetype_id="openEHR-EHR-CLUSTER.clinical_context.v0" max="1" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER">
-                <Rule max="0" path="/items[at0029]/items[at0031]"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.record_validation.v0" max="1" min="1" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER"/>
+            <Items archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" max="1" min="1" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER">
+                <Rule min="1" path="/items[at0001]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.50.5" terminologyID="Professional"/>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/items[at0002]"/>
+                <Rule max="0" path="/items[at0003]"/>
+                <Rule max="0" path="/items[at0004]"/>
                 <Rule max="0" path="/items[at0032]"/>
-                <Rule max="0" path="/items[at0032]/items[at0033]"/>
-                <Rule max="0" path="/items[at0032]/items[at0034]"/>
-                <Rule max="0" path="/items[at0038]"/>
-                <Rule max="0" path="/items[at0038]/items[at0039]"/>
-                <Rule max="0" path="/items[at0038]/items[at0040]"/>
+                <Rule path="/items[at0009]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.40.4" terminologyID="Serveis"/>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/items[at0011]"/>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" max="1" min="1" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER">
+                <Rule max="0" path="/items[at0001]"/>
+                <Rule max="0" path="/items[at0002]"/>
+                <Rule max="0" path="/items[at0023]"/>
+                <Rule max="0" path="/items[at0003]"/>
+                <Rule max="0" path="/items[at0004]"/>
+                <Rule min="1" path="/items[at0005]"/>
+                <Rule min="1" path="/items[at0005]/items[at0026]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.5" terminologyID="Catàleg EPs"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0005]/items[at0013]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.6" terminologyID="Catàleg UPs"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0005]/items[at0011]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12" terminologyID="Catàleg centres"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0005]/items[at0012]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.40.4" terminologyID="Serveis"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0007]"/>
+                <Rule min="1" path="/items[at0007]/items[at0027]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.5" terminologyID="Catàleg EPs"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0007]/items[at0016]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.6" terminologyID="Catàleg UPs"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0007]/items[at0014]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12" terminologyID="Catàleg centres"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0007]/items[at0015]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.40.4" terminologyID="Serveis"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0010]"/>
+                <Rule min="1" path="/items[at0010]/items[at0028]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.5" terminologyID="Catàleg EPs"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0010]/items[at0019]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.6" terminologyID="Catàleg UPs"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0010]/items[at0017]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12" terminologyID="Catàleg centres"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0010]/items[at0018]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.40.4" terminologyID="Serveis"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0009]"/>
+                <Rule min="1" path="/items[at0009]/items[at0029]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.5" terminologyID="Catàleg EPs"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0009]/items[at0022]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.6" terminologyID="Catàleg UPs"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0009]/items[at0020]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12" terminologyID="Catàleg centres"/>
+                    </constraint>
+                </Rule>
+                <Rule min="1" path="/items[at0009]/items[at0021]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.40.4" terminologyID="Serveis"/>
+                    </constraint>
+                </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.person.v1" concept_name="Person" max="1" min="1" name="Composer" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER">
+                <Rule min="1" path="/items[at0001]"/>
+                <Rule max="0" path="/items[at0011]"/>
+                <Rule min="1" path="/items[at0003]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Identifier</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="1" min="1" name="Professional category" path="/items[at0004]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.50.5" terminologyID="Professional"/>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/items[at0010]"/>
             </Items>
         </Context>
     </definition>
@@ -233,26 +365,29 @@
     <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.vaccination_list.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">F2C3BD9252691BB3975C53648208D672</digest>
     </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.record_validation.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">C9F1DCBC38C8231D98AA10D7EC498961</digest>
+    </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">16AC7AFFA686A2550EAE2E1513BDFFFF</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.admin_salut.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">8B41A545D448137713B8815907732588</digest>
+        <digest id="MD5-CAM-1.0.1">0298AE139970942938E630B28EBF217E</digest>
     </integrity_checks>
-    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.clinical_context.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">78A3E8622F44F6B8B8715AEF2C3EC112</digest>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.person.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">DA9FD834B9864E87235D863A313D152B</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-SECTION.immunisation_list.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">6D33ECAE951870774131B9C6BB600560</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-ACTION.medication.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">8BEC919844E82D2FCE2272FD3CDE7E12</digest>
+        <digest id="MD5-CAM-1.0.1">F37648882B3DD5A6D87B8A14F7E02892</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.medication.v2" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">89BA41E6CD217F7E2639D05A6B02465C</digest>
+        <digest id="MD5-CAM-1.0.1">E0717A8949D32C0FFFC8339CDFC9A7C9</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.immunisation_details.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">56AD70E19D25476925A75EED43CB6D4F</digest>
+        <digest id="MD5-CAM-1.0.1">3788A784DA221C6D5068837029EAA086</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.product_origin.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">576E65D396C8CDDA38B0053B0A5995EB</digest>
@@ -261,9 +396,12 @@
         <digest id="MD5-CAM-1.0.1">C688029DC11F2769DECA377BC1806E8B</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-SECTION.adhoc.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">8FE80F3E80C594AAF99D3BA540A53D73</digest>
+        <digest id="MD5-CAM-1.0.1">9FC6BA2D63BE451F034CE25153F4E298</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-EVALUATION.contraindication.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">5DA20010F4C4E40F5C5B5342334000E4</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-EVALUATION.immunisation_status.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">DE5F5E24158C7CCE8199D14BE158D8EA</digest>
     </integrity_checks>
 </template>
