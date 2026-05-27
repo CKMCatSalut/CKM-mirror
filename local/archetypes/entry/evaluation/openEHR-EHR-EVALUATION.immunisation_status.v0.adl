@@ -1,0 +1,187 @@
+﻿archetype (adl_version=1.4; uid=2854b7d4-9e9b-4287-93de-71ab04f5eb6b)
+	openEHR-EHR-EVALUATION.immunisation_status.v0
+
+concept
+	[at0000]	-- Immunisation status
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Tara Bonet, Ana Pascual, Clara Calleja, Laura Moral, Martin Koch, David Hernández, Hugo Briceño, David Alonso,  Lluis Valle">
+		["organisation"] = <"Modelatge del Coneixement Clínic Catsalut ">
+		["email"] = <"ckm.salut@gencat.cat">
+		["date"] = <"2026-03-03">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the patient’s immunization status in relation to a specific disease.">
+			use = <"To record the patient’s immunization status in relation to a specific disease.
+">
+			keywords = <"immunization, status, patient record", ...>
+			misuse = <"Not to record patient vaccinations, only verified immunizations.">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["original_namespace"] = <"org.catsalut">
+		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_namespace"] = <"org.catsalut">
+		["MD5-CAM-1.0.1"] = <"DE5F5E24158C7CCE8199D14BE158D8EA">
+		["build_uid"] = <"a5200073-8a83-4834-8382-dd2ddeca7f78">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Immunisation status
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- Target disease
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Immunity status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0015,    -- Immune
+									at0016,    -- Not immune
+									at0017,    -- Suspected immune
+									at0018,    -- Partially immune
+									at0019]    -- Unknown
+								}
+							}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Acquisition immunisation date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Clinical evidence
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {    -- Structured clinical evidence
+						include
+							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.clinical_evidence\.v1/}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0009] occurrences matches {0..1} matches {    -- Additional details
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0012] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Last updated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0013] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Immunisation status">
+					description = <"To record the patient’s immunization status in relation to a specific disease.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Target disease">
+					description = <"The disease or pathogen for which immunity is being recorded. Is strongly recommended to code with a terminology when possible.">
+					comment = <"Examples: COVID-19, Measles, Varicella, Hepatitis B">
+				>
+				["at0003"] = <
+					text = <"Immunity status">
+					description = <"The current immunity status of the patient regarding the target disease.">
+				>
+				["at0004"] = <
+					text = <"Acquisition immunisation date">
+					description = <"The date when immunity was acquired or when the disease occurred (if natural immunity). ">
+				>
+				["at0008"] = <
+					text = <"Comment">
+					description = <"Additional clarifications not covered elsewhere.">
+				>
+				["at0009"] = <
+					text = <"Additional details">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Structured clinical evidence">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Clinical evidence">
+					description = <"Nature of the evidence supporting the status.">
+					comment = <"Documented in medical record
+Patient-reported
+Laboratory confirmed
+Vaccination registry
+Unknown">
+				>
+				["at0012"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Last updated">
+					description = <"The date at which the immunisation status was last updated.">
+				>
+				["at0015"] = <
+					text = <"Immune">
+					description = <"The patient has confirmed immunity to the disease">
+				>
+				["at0016"] = <
+					text = <"Not immune">
+					description = <"There is no evidence that the patient has immunity to the disease">
+				>
+				["at0017"] = <
+					text = <"Suspected immune">
+					description = <"The patient is suspected to be immune, but immunity has not been definitively confirmed">
+				>
+				["at0018"] = <
+					text = <"Partially immune">
+					description = <"The patient has partial immunity">
+				>
+				["at0019"] = <
+					text = <"Unknown">
+					description = <"The patient’s immunity status is unknown or there is insufficient information available">
+				>
+			>
+		>
+	>
