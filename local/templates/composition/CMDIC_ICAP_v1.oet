@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
     <id>2761ebb0-2e4e-4260-8017-3c52f8a9dab4</id>
-    <name>CMDIC_ICAP_v0.13</name>
+    <name>CMDIC_ICAP_v1</name>
     <description>
         <original_author>
             <item>
@@ -53,7 +53,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>06bcb97c66782049badd0470980a32aa</value>
+                <value>a848b7cc83e0c7ad9dcd7c5661f73fc7</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
