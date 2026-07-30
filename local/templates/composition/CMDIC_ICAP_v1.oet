@@ -53,7 +53,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>a848b7cc83e0c7ad9dcd7c5661f73fc7</value>
+                <value>06bcb97c66782049badd0470980a32aa</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -813,8 +813,8 @@
                 <Rule max="0" path="/description[at0001]/items[at0048]"/>
                 <Rule max="0" path="/description[at0001]/items[at0069]"/>
                 <Rule max="0" path="/description[at0001]/items[at0006]"/>
-                <Rule max="0" path="/description[at0001]/items[at0066]"/>
-                <Rule max="0" path="/description[at0001]/items[at0060]"/>
+                <Rule max="0" name="Scheduled datetime" path="/description[at0001]/items[at0066]"/>
+                <Rule max="0" name="End datetime" path="/description[at0001]/items[at0060]"/>
                 <Rule max="0" path="/description[at0001]/items[at0061]">
                     <constraint xsi:type="tem:durationConstraint">
                         <minMagnitude>PT0S</minMagnitude>
@@ -1633,7 +1633,7 @@
         <digest id="MD5-CAM-1.0.1">189016652B796FD2552171C762A5602E</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.medication.v2" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">7005D43F63C820CBC6AB2EDC7B19962A</digest>
+        <digest id="MD5-CAM-1.0.1">301D939F428B1A2F46DDE641AAFC47E5</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.adverse_reaction_screening.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">D3A1E58463261BAA824EAFACFFD75704</digest>
@@ -1672,10 +1672,10 @@
         <digest id="MD5-CAM-1.0.1">C5C6B6FF98874D3207D569A6722DA6AA</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">9B0D50B3F044BA754FBFDD974AE612E0</digest>
+        <digest id="MD5-CAM-1.0.1">23814F45898EDABAB347AF0E329C95B5</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-ACTION.procedure.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">4D0EE4A88E9AB4CD945DED9C4F3E53B0</digest>
+        <digest id="MD5-CAM-1.0.1">45BC112EC407C650BE2526518737BED2</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-INSTRUCTION.medication_order.v3" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">88AFFD99A7191E8D2D5E518AE376978B</digest>
