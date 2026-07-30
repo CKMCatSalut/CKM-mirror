@@ -61,7 +61,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>0c3b85281f384a182262100737e3f5f4</value>
+                <value>08797d1fed078b032966560177c4e49e</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -1459,6 +1459,35 @@
                 <Rule max="0" path="/activities[at0001]/description[at0002]/items[at0129]"/>
                 <Rule max="0" path="/activities[at0001]/description[at0002]/items[at0167]"/>
                 <Rule max="0" path="/protocol[at0005]/items[at0004]"/>
+                <Items archetype_id="openEHR-EHR-CLUSTER.medication.v2" max="1" path="/activities[at0001]/description[at0002]/items[at0143]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0132]"/>
+                    <Rule max="0" path="/items[at0071]"/>
+                    <Rule max="0" path="/items[at0142]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Coded_text</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0152]"/>
+                    <Rule max="0" path="/items[at0115]"/>
+                    <Rule max="0" path="/items[at0151]"/>
+                    <Rule max="0" path="/items[at0150]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Text</includedTypes>
+                            <includedTypes>Identifier</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]"/>
+                    <Rule max="0" path="/items[at0139]"/>
+                    <Rule max="0" path="/items[at0148]"/>
+                    <Rule max="0" path="/items[at0127]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Coded_text</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0133]"/>
+                </Items>
                 <Items archetype_id="openEHR-EHR-CLUSTER.therapeutic_direction.v1" max="1" path="/activities[at0001]/description[at0002]/items[at0177]" xsi:type="tem:CLUSTER">
                     <Rule max="0" path="/items[at0057]">
                         <constraint xsi:type="tem:countConstraint">
@@ -1648,35 +1677,6 @@
                         <Rule max="0" path="/items[at0006]"/>
                         <Rule max="0" path="/items[at0010]"/>
                     </Items>
-                </Items>
-                <Items archetype_id="openEHR-EHR-CLUSTER.medication.v2" max="1" path="/activities[at0001]/description[at0002]/items[at0143]" xsi:type="tem:CLUSTER">
-                    <Rule max="0" path="/items[at0132]"/>
-                    <Rule max="0" path="/items[at0071]"/>
-                    <Rule max="0" path="/items[at0142]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Coded_text</includedTypes>
-                            <includedTypes>Text</includedTypes>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0152]"/>
-                    <Rule max="0" path="/items[at0115]"/>
-                    <Rule max="0" path="/items[at0151]"/>
-                    <Rule max="0" path="/items[at0150]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Text</includedTypes>
-                            <includedTypes>Identifier</includedTypes>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0003]"/>
-                    <Rule max="0" path="/items[at0139]"/>
-                    <Rule max="0" path="/items[at0148]"/>
-                    <Rule max="0" path="/items[at0127]">
-                        <constraint xsi:type="tem:multipleConstraint">
-                            <includedTypes>Coded_text</includedTypes>
-                            <includedTypes>Text</includedTypes>
-                        </constraint>
-                    </Rule>
-                    <Rule max="0" path="/items[at0133]"/>
                 </Items>
             </Item>
             <Item archetype_id="openEHR-EHR-INSTRUCTION.medication_order.v3" concept_name="Medication order" max="1" name="Vaccination order" path="/items" xsi:type="tem:INSTRUCTION">
@@ -2025,7 +2025,7 @@
         <digest id="MD5-CAM-1.0.1">189016652B796FD2552171C762A5602E</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.medication.v2" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">E0717A8949D32C0FFFC8339CDFC9A7C9</digest>
+        <digest id="MD5-CAM-1.0.1">301D939F428B1A2F46DDE641AAFC47E5</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.adverse_reaction_screening.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">D3A1E58463261BAA824EAFACFFD75704</digest>
@@ -2076,10 +2076,10 @@
         <digest id="MD5-CAM-1.0.1">23814F45898EDABAB347AF0E329C95B5</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.problem_qualifier.v2" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">292840701D3FA6B7194CE29922FF897D</digest>
+        <digest id="MD5-CAM-1.0.1">4CDADBD2921B543F7F6BB42B334CB18F</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-ACTION.procedure.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">4D0EE4A88E9AB4CD945DED9C4F3E53B0</digest>
+        <digest id="MD5-CAM-1.0.1">45BC112EC407C650BE2526518737BED2</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-INSTRUCTION.medication_order.v3" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">88AFFD99A7191E8D2D5E518AE376978B</digest>
