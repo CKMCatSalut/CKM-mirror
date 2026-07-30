@@ -61,7 +61,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>200b1a7949b6aa72c5548b11617e77e8</value>
+                <value>90dbe2565886b4e10ed73b8b886f2187</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -726,6 +726,7 @@
                             <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.6.96" terminologyID="SNOMED-CT"/>
                         </constraint>
                     </Rule>
+                    <Rule max="0" path="/items[at0031]"/>
                     <Rule max="0" path="/items[at0025]"/>
                     <Rule max="0" path="/items[at0005]">
                         <constraint xsi:type="tem:multipleConstraint">
@@ -738,6 +739,12 @@
                         <constraint xsi:type="tem:multipleConstraint">
                             <includedTypes>Identifier</includedTypes>
                             <includedTypes>URI</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0032]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Boolean</includedTypes>
+                            <includedTypes>Text</includedTypes>
                         </constraint>
                     </Rule>
                     <Rule name="Test result comment" path="/items[at0003]"/>
