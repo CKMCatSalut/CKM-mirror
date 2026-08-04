@@ -58,7 +58,7 @@ Not to be used to plan or schedule future vaccinations — use INSTRUCTION or ca
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>31.0.0</value>
+                <value>33.0.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -71,6 +71,10 @@ Not to be used to plan or schedule future vaccinations — use INSTRUCTION or ca
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
                 <value>F2C3BD9252691BB3975C53648208D672</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
             </item>
             <item>
                 <key>original_language</key>
@@ -229,8 +233,8 @@ Not to be used to plan or schedule future vaccinations — use INSTRUCTION or ca
         </Content>
         <Context>
             <Items archetype_id="openEHR-EHR-CLUSTER.record_validation.v0" max="1" min="1" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER"/>
-            <Items archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" max="1" min="1" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER">
-                <Rule min="1" path="/items[at0001]">
+            <Items archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0" max="1" path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER">
+                <Rule path="/items[at0001]">
                     <constraint xsi:type="tem:textConstraint">
                         <termQueryId queryName="terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.724.4.9.50.5" terminologyID="Professional"/>
                     </constraint>
