@@ -98,7 +98,6 @@ definition
 		}
 	}
 
-
 ontology
 	terminologies_available = <"CATÀLEG TIPUS PROFESSIONAL ST", ...>
 	term_definitions = <
