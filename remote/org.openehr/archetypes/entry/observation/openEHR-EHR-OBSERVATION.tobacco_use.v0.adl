@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=aa864d9c-40c0-489b-be32-f7b24af099c0)
+﻿archetype (adl_version=1.4; uid=bb38981a-65ed-45ba-bdfd-fff947cdb479)
 	openEHR-EHR-OBSERVATION.tobacco_use.v0
 
 concept
@@ -23,58 +23,59 @@ A smoking or tobacco use diary could be built up over time by recording the use 
 A record of typical tobacco use during a period can be recorded by recording the amount of tobacco used using the 'Average use' event - the mean use over a specified period of time.">
 			keywords = <"tobacco", "cigarette", "cigar", "pipe", "snuff", "kretek", "beebi", "bibi", "shisha", "snuff", "snus", "hookah", "gutka", "smoking", "chewing">
 			misuse = <"Not to be used for recording persistent, summary details about tobacco use and consumption - this should be captured using the EVALUATION.tobacco_use_summary archetype.">
-			copyright = <"© 2011 National E-Health Transition Authority, openEHR Foundation, Departament de Salut de la Generalitat de Catalunya">
+			copyright = <"© 2011 National E-Health Transition Authority, openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", "Sam Heard, Ocean Informatics, Australia">
 	other_details = <
-		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
-		["custodian_organisation"] = <"Departament de Salut de la Generalitat de Catalunya">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Derived from: Tobacco Use, Draft archetype [Internet]. Australian Digital Health Agency (NEHTA), ADHA Clinical Knowledge Manager. Authored: 2009 May 06. Available at:  http://dcm.nehta.org.au/ckm#showArchetype_1013.1.1025_1 (discontinued)
 Tobacco Use draft archetype [Internet]. London: openEHR Clinical Knowledge Manager, openEHR Foundation; 06 May 2009 [cited 2011 Jul 15]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.149_3.">
-		["original_namespace"] = <"org.catsalut">
-		["original_publisher"] = <"Departament de Salut de la Generalitat de Catalunya">
-		["custodian_namespace"] = <"org.catsalut">
-		["MD5-CAM-1.0.1"] = <"CB10AB9F57704A50401952AC53BA5E05">
-		["build_uid"] = <"1a4831a8-eaf3-46ca-9e1f-e5116cff8541">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"E073C9BCDD78A8A12C972C7B7378067F">
+		["build_uid"] = <"8873ff10-18a5-4aab-bb2e-b3993a0af719">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- Tobacco Use
+	OBSERVATION[at0000] matches {	-- Tobacco Use
 		data matches {
-			HISTORY[at0001] matches {    -- Event Series
+			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {    -- Any event
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {    -- Tree
+							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Tobacco Use?
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Tobacco Use?
 										value matches {
-											DV_BOOLEAN matches {*}
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
 										}
 									}
-									CLUSTER[at0005] occurrences matches {0..*} matches {    -- Usage Details
+									CLUSTER[at0005] occurrences matches {0..*} matches {	-- Usage Details
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0006] occurrences matches {0..1} matches {    -- Form
+											ELEMENT[at0006] occurrences matches {0..1} matches {	-- Form
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
 															[local::
-															at0007,    -- Cigarette
-															at0008,    -- Roll-Your-Own
-															at0009,    -- Cigar
-															at0010,    -- Pipe
-															at0012,    -- Waterpipe
-															at0013]    -- Smokeless tobacco
+															at0007, 	-- Cigarette
+															at0008, 	-- Roll-Your-Own
+															at0009, 	-- Cigar
+															at0010, 	-- Pipe
+															at0012, 	-- Waterpipe
+															at0013]	-- Smokeless tobacco
 														}
 													}
 												}
 											}
-											CLUSTER[at0015] occurrences matches {0..1} matches {    -- Amount
-												items cardinality matches {1..1; unordered} matches {
-													ELEMENT[at0014] occurrences matches {0..1} matches {    -- Number Smoked
+											CLUSTER[at0015] occurrences matches {0..1} matches {	-- Amount
+												items cardinality matches {1; unordered} matches {
+													ELEMENT[at0014] occurrences matches {0..1} matches {	-- Number Smoked
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::382]>
@@ -95,7 +96,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0016] occurrences matches {0..1} matches {    -- Weight Consumed
+													ELEMENT[at0016] occurrences matches {0..1} matches {	-- Weight Consumed
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::347]>
@@ -112,24 +113,24 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0017] occurrences matches {0..1} matches {    -- Triggers
+											ELEMENT[at0017] occurrences matches {0..1} matches {	-- Triggers
 												value matches {
 													DV_TEXT matches {*}
 												}
 											}
-											ELEMENT[at0018] occurrences matches {0..1} matches {    -- Context
+											ELEMENT[at0018] occurrences matches {0..1} matches {	-- Context
 												value matches {
 													DV_TEXT matches {*}
 												}
 											}
 										}
 									}
-									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Evidence of Dependence
+									ELEMENT[at0019] occurrences matches {0..1} matches {	-- Evidence of Dependence
 										value matches {
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Comment
+									ELEMENT[at0021] occurrences matches {0..1} matches {	-- Comment
 										value matches {
 											DV_TEXT matches {*}
 										}
@@ -138,21 +139,19 @@ definition
 							}
 						}
 					}
-					POINT_EVENT[at0023] occurrences matches {0..*} matches {    -- Specified Day
+					POINT_EVENT[at0023] occurrences matches {0..*} matches {	-- Specified Day
 						data matches {
-							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[Tree]
 						}
 					}
-					INTERVAL_EVENT[at0022] occurrences matches {0..*} matches {    -- Average Use Interval
+					INTERVAL_EVENT[at0022] occurrences matches {0..*} matches {	-- Average Use Interval
 						math_function matches {
 							DV_CODED_TEXT matches {
-								defining_code matches {
-									[openehr::146]
-								}
+								defining_code matches {[openehr::146]}
 							}
 						}
 						data matches {
-							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[Tree]
 						}
 					}
 				}
